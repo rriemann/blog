@@ -1,0 +1,6 @@
+#Redirect permanent /users/stud/rriemann/public_html/index.html http://salout.github.com
+#Options +Indexes
+ReadmeName footer.html 
+HeaderName header.html
+IndexStyleSheet style.css
+IndexIgnore style.css footer.html header.html me.png publication

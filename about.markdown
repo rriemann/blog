@@ -2,8 +2,12 @@
 title: About
 layout: master
 ---
+<div style="float:right; margin-left: 1em;">
+  <img width="256px" height="256px" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
+  <hr />
+  Robert Riemann, 2010
+</div>
 
-<div markdown="1" class='home_box' id="home_left">
 ## About Me
 
 I study physics in Berlin (Germany) at the Humboldt-University.
@@ -35,13 +39,7 @@ GitHub
 
 : [saLOUt](http://github.com/saLOUt/)
 
+
 ## About This Site
 
 This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The source code used to create this library is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.
-</div>
-<div class='home_box' id="home_right">
-  <img style="width:100%" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
-  <hr />
-  Robert Riemann, 2010
-</div>
-<div class="clearfix"></div>

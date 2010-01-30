@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Georgia/*DejaVu Sans,Verdana,sans-serif*/ /*Arial, sans-serif*/;
   background: #A4CFBE;
   color: #6C6E58;
 }
@@ -76,11 +76,21 @@ a:visited {
 }
 
 #menu ul li a {
-  color: white;
+  padding: 0.1em;
+  background-color: #6C6E58;
+  color: #fff;
   font-size: 1.3em;
   padding: 0 0.5em;
-  line-height: 2.5em;  
+  margin: 0 0.5em;
+  line-height: 2.5em;
   font-weight: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+#menu ul li a:hover {
+  background-color: #959C57;
+  /*color: #6C6E58;*/
 }
 
 #content {
@@ -129,9 +139,31 @@ div.post {
   font-weight: bold;
 }
 
-.post br { margin-bottom: 10px;}
+.post br {
+  margin-bottom: 10px;
+}
 
-pre {
+pre, code {
+  font-family:Consolas,"Andale Mono","Courier New",Courier,mono !important;
+  font-weight: 400;
+}
+
+*:not(PRE) > code {
+  background-color: #333;
+  color: #fff;
+}
+
+pre:not([class]) {
+  background-color: #333;
+  border: 1px solid #000;
+  color: #fff;
+  margin: 1em 0;
+  overflow: auto;
+  padding: 0.5em;
+}
+
+
+div.highlight pre:not([class]) {
   background: #f8f8f8;
   border: 1px solid #E7E5DC;
   border-width: 1px 0 4px 6px;
@@ -139,8 +171,6 @@ pre {
   overflow: auto;
   color: black;
   line-height: 120%;
-  font-family: "Consolas","Courier New",Courier,mono;
-  font-size: 12px;
   letter-spacing: 0;
 }
 
@@ -183,7 +213,7 @@ div.related {
   float: left;
 }
 
-#content .home_box h2 {
+h2.block {
   background: #417378;
   padding: 0.3em 0.5em;
   border-bottom: 3px solid #255;
@@ -250,3 +280,51 @@ div.related {
 .float-right { float: right; }
 
 a img { border: 0; }
+
+
+/*
+Flickr
+======
+Images are wrapped in divs classed "flickr_badge_image" with ids "flickr_badge_imageX" where "X" is an integer specifying ordinal position. Below are some styles to get you started!
+*/
+#flickr_badge_uber_wrapper {
+  text-align:center;
+}
+#flickr_badge_wrapper {
+  padding:10px 0 10px 0;
+}
+.flickr_badge_image {
+  margin:0 2px 2px;
+  display: inline-block;
+}
+.flickr_badge_image img {
+  border: 1px solid black !important;
+}
+#flickr_badge_source {
+  text-align:left;
+  margin:0 10px 0 10px;
+}
+#flickr_badge_icon {
+  float:left;
+  margin-right:5px;
+}
+#flickr_www {
+  display:block;
+  padding:0 10px 0 10px !important;
+  font: 11px Arial, Helvetica, Sans serif !important;
+  color:#3993ff !important;
+}
+#flickr_badge_uber_wrapper a:hover,
+#flickr_badge_uber_wrapper a:link,
+#flickr_badge_uber_wrapper a:active,
+#flickr_badge_uber_wrapper a:visited {
+  text-decoration:none !important;
+  background:inherit !important;
+  color:#3993ff;
+}
+#flickr_badge_wrapper {}
+#flickr_badge_source {
+  padding:0 !important;
+  font: 11px Arial, Helvetica, Sans serif !important;
+  color:#666666 !important;
+}

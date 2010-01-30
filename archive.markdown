@@ -4,7 +4,7 @@ title: Archive
 ---
 [Subscribe](/atom.xml){.float-right}
 
-<h3>Older Posts</h3>
+<h3>Blog Archive</h3>
 <table class='post-list'>
 {% for post in site.posts %}
   <tr>

@@ -2,7 +2,8 @@
 title: About
 layout: master
 ---
-![that's me](/images/me.jpg "that's me"){.right}
+
+<div markdown="1" class='home_box' id="home_left">
 ## About Me
 
 I study physics in Berlin (Germany) at the Humboldt-University.
@@ -12,7 +13,7 @@ linux, kde, latex, root, ruby and other programs related to my studies.
 ## Contact
 
 Mail
-: <saloution@googlemail.com>
+: saloution@googlemail.com
 
 jabber
 : saLOUt@jabber.org
@@ -37,3 +38,10 @@ GitHub
 ## About This Site
 
 This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The source code used to create this library is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.
+</div>
+<div class='home_box' id="home_right">
+  <img style="width:100%" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
+  <hr />
+  Robert Riemann, 2010
+</div>
+<div class="clearfix"></div>

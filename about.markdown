@@ -2,12 +2,37 @@
 title: About
 layout: master
 ---
+![that's me](/images/me.jpg "that's me"){.right}
+## About Me
 
-## About Robert Riemann
+I study physics in Berlin (Germany) at the Humboldt-University.
+In my free time I like to play with opensource, especially
+linux, kde, latex, root, ruby and other programs related to my studies.
 
-<span style="margin:0 10px; float:right"><a href="http://www.flickr.com/photos/chacon/208076922/" title="IMG_4087.JPG by schacon, on Flickr"><img src="http://farm1.static.flickr.com/69/208076922_ad9da3ea61_m.jpg" width="240" height="160" alt="IMG_4087.JPG" /></a></span>
+## Contact
 
-Text
+Mail
+: <saloution@googlemail.com>
+
+jabber
+: saLOUt@jabber.org
+
+IRC (freenode)
+: saLOUt on [#suse](irc://irc.opensuse.org/suse),
+  [#kde](irc://irc.opensuse.org/kde),
+  [#suse](irc://irc.opensuse.org/suse),
+  [#kde-ruby](irc://irc.opensuse.org/kde-ruby)
+  
+ICQ
+: \#303807280
+
+Skype
+
+: lordofunknown
+
+GitHub
+
+: [saLOUt](http://github.com/saLOUt/)
 
 ## About This Site
 

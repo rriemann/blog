@@ -7,41 +7,19 @@ title: Home
   <h2 class='block'><a href='/atom.xml' class='float-right'><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='/blog.html'>More</a>)</span></h2>
 
   <div class='post'>
+    {% assign page = site.posts.first %}
     <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
+    {% include meta-line.html %}
     <div class='body'>{{site.posts.first.content}}</div>
     <a href='{{site.posts.first.url}}#disqus_thread'>Comments</a>
   </div>
 </div>
 <div class='home_box' id='home_right'>
-  <h2 class='block'>Open Source <span class="more">(<a href='/open-source.html'>More</a>)</span></h2>
-  <div id='github-projects'>
-  </div>
+  {% include google_ajax_search.html %}
   <br />
-  <h2 class='block'>Flickr  <span class="more">(<a href='http://www.flickr.com/photos/27621704@N07/'>More</a>)</span></h2>
-  <div>
-    <!-- Start of Flickr Badge -->
-    <div id="flickr_badge_uber_wrapper"><div id="flickr_badge_wrapper">
-    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=random&size=s&layout=x&source=user&user=27621704%40N07"></script>
-    </div><a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a></div>
-    <!-- End of Flickr Badge -->
-  </div>
+  {% include latest_posts_widget.html %}
+  <br />
+  {% include github_repos_sidebar_widget.html %}
+  <br />
+  {% include flickr_widget.html %}
 </div>
-
-<script type="text/javascript" charset="utf-8">
-  $.githubUser('saLOUt', function(data) {
-    $('#github-projects').html('');
-
-    var repos = data.user.repositories;
-    repos.sort(function(a,b) {
-      return b.watchers - a.watchers;
-    });
-
-    $(repos.slice(0,6)).each(function() {
-      $('#github-projects').append("\
-<div class='repo message yellow_background'>\
-  <h3><a href='" + this.url + "'>" + this.name + "</a></h3>\
-  <span class='desc'>"+this.description+"</span>\
-</div>");
-    });
-  });
-</script>

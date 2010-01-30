@@ -1,0 +1,9 @@
+  <h2 class='block'>Latest Posts  <span class="more">(<a href='/archive.html'>More</a>)</span></h2>
+  <div>
+    <ul id='latest_posts_widget'>
+    {% for post in site.posts limit:4 %}
+      <!--<li><a href='{{ post.url }}'>{{ post.title }}</a> <span class='small'>({{ post.date | date_to_string }})</span></li>-->
+      <li><span>{{ post.date | date_to_string }} &raquo;</span> <a href='{{ post.url }}'>{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>

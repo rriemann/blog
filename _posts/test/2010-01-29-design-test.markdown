@@ -1,6 +1,12 @@
 ---
 layout: post
 title: First Test Post
+tags:
+- tag1
+- tag2
+categories:
+- cat1
+- cat2
 ---
 
 * toc
@@ -51,18 +57,6 @@ Quote from Wikipedia:
 
 *   footnotes [^foot]
 
-
-
-## tex
-
-
-some inline formula: $x^{n}+y^{n} \neq z^{n}$ for $n \geq 3$
-
-\[ 
-\sum_{n=1}^\infty \frac{1}{n} 
-\text{ is divergent, but } 
-\lim_{n \to \infty} \sum_{i=1}^n \frac{1}{i} - \ln n \text{exists.} 
-\]
 
 # Code
 

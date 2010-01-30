@@ -14,3 +14,5 @@ title: Archive
   </tr>
 {% endfor %}
 </table>
+
+{% include disqus_comments_number.html %}

@@ -3,8 +3,7 @@ layout: master
 title: Blog
 full_posts: 0
 ---
-
-<a href='/atom.xml' class='float-right'><img src='/images/subscribe.png' alt='Subscribe to XML Feed'/></a>
+[Subscribe](/atom.xml){.float-right}
 
 <h3>Older Posts</h3>
 <table class='post-list'>

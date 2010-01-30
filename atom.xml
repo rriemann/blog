@@ -7,7 +7,7 @@ layout: nil
  <title>Worth Mentioning</title>
  <link href="http://saLOUt.github.com/atom.xml" rel="self"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://saLOUt.github.com/</id>
+ <id>http://salout.github.com/</id>
  <author>
    <name>Robert "saLOUt" Riemann</name>
    <email>saLOUtion@googlemail.com</email>

@@ -1,7 +1,6 @@
 ---
 layout: master
-title: Blog
-full_posts: 0
+title: Archive
 ---
 [Subscribe](/atom.xml){.float-right}
 

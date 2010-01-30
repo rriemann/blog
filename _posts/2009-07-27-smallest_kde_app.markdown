@@ -4,7 +4,6 @@ title: The perhaps smallest KDE application in the world
 categories:
 - ruby
 - kde
-- kdee
 ---
 
 For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the necessary parts.

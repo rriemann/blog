@@ -130,7 +130,6 @@ a:visited {
 
 #content p {
   line-height: 140%;
-  letter-spacing: -0.03em;
 }
 
 span.date {
@@ -148,14 +147,15 @@ div.post {
 }
 .meta-line {
   background-color: #eee;
-  margin-bottom: 2em;
-  padding: 0.1em;
+  margin-bottom: 1em;
+  padding: 0.2em;
   color: #555;
 }
-.meta-line div.tags {
-  float: right;
-}
 .meta-line div.cats {
+  float: right;
+  font-weight: 400;
+}
+.meta-line div.tags {
   float: left;
 }
 .post h1 {
@@ -214,6 +214,7 @@ div.maruku_toc, div.blue_background {
 pre, code {
   font-family:Consolas,"Andale Mono","Courier New",Courier,mono !important;
   font-weight: 400;
+  font-size:0.9em;
 }
 
 *:not(PRE) > code {
@@ -258,7 +259,7 @@ table.post-list th {
 
 table.post-list td, table.post-list th {
   padding: 0.5em 0.3em;
-  border-bottom: 1px solid #dba;
+  border-bottom: 1px solid #333;
 }
 
 table.post-list tr:last-child td, table.post-list tr:last-child th {

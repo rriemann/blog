@@ -1,12 +1,8 @@
 ---
 layout: post
 title: First Test Post
-tags:
-- tag1
-- tag2
 categories:
-- cat1
-- cat2
+- test
 ---
 
 * toc

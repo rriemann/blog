@@ -1,5 +1,4 @@
 <div class='meta-line'>
-  <div class='tags'>tagged with {% for tag in page.tags %}{% if forloop.index > 1 %}, {% endif %}{{ tag }}{% endfor %}</div>
-  <div class='cats'>written in {% for cat in page.categories %}{% if forloop.index > 1 %}, {% endif %}{{ cat }}{% endfor %}</div>
-  <div class='clearfix'></div>
+  <div class='cats'>filled under {% for cat in page.categories %}{% if forloop.index > 1 %}{% if forloop.index == forloop.length %} and {% else %}, {% endif %}{% endif %}{{ cat | upcase }}{% endfor %}</div>
+  <div class="clearfix"></div>
 </div>

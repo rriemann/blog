@@ -1,2 +1,4 @@
 pygments: true
 lsi:      true
+maruku:
+  use_tex:true

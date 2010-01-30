@@ -1,7 +1,7 @@
 body {
   font-family: Georgia/*DejaVu Sans,Verdana,sans-serif*/ /*Arial, sans-serif*/;
-  background: #A4CFBE;
-  color: #6C6E58;
+  background: #C7D2D9;
+  color: #333;
 }
 
 .more { font-size: 0.6em;}
@@ -12,14 +12,25 @@ img.right {
 }
 
 a {
-  color: #3E423A;
   font-weight: bold;
+  color: #3E423A;
 }
 
+/*.post a {
+  color: #3E423A;
+  border-bottom: 1px solid #333;
+}
+
+.post a:hover {
+  background-color: #CADCE8;
+}*/
+
 a:visited {
-  color: #6C6E58;
+  color: #035E99;
   font-weight: normal;
 }
+
+
 
 #wrapper {
   width: 50em;
@@ -34,7 +45,7 @@ a:visited {
 #header {
   text-transform: lowercase;
   text-align: left;
-  background: #417378;
+  background: #0482D4;
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
   -moz-border-radius-topright: 1em;
@@ -48,7 +59,6 @@ a:visited {
 #header h1 {
   font-size: 4em;
   display: inline;
-  letter-spacing: -0.08em;
   color: #fff;
   font-weight: normal;
 }
@@ -62,7 +72,7 @@ a:visited {
 }
 
 #menu {
-  background: #3E423A;
+  background: #035E99;
 }
 
 #menu ul {
@@ -77,7 +87,7 @@ a:visited {
 
 #menu ul li a {
   padding: 0.1em;
-  background-color: #6C6E58;
+  background-color: #035E99;
   color: #fff;
   font-size: 1.3em;
   padding: 0 0.5em;
@@ -89,8 +99,8 @@ a:visited {
 }
 
 #menu ul li a:hover {
-  background-color: #959C57;
-  /*color: #6C6E58;*/
+  background-color: #144566;
+  /*color: #035E99;*/
 }
 
 #content {
@@ -99,7 +109,6 @@ a:visited {
 
 #content h2 {
   margin: 0 0 0.5em 0;
-  color: black;
   font-size: 1.5em;
 }
 
@@ -126,14 +135,15 @@ div.post {
   margin-top: 0.2em;
 }
 
-.post { color: #333; }
+.post {
+}
 
 .post h1 a {
   text-decoration: none;
   clear: left;
   display: block;
-  color: black;
-  padding: 0.3em 0;
+  color: #333;
+  padding-top: 0.3em;
   margin: 0 0 0.2em 0;
   border-bottom: 1px dashed #dba;
   font-weight: bold;
@@ -141,6 +151,35 @@ div.post {
 
 .post br {
   margin-bottom: 10px;
+}
+
+.post blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 5px solid #C7D2D9;
+}
+
+.maruku_toc:before {
+  content: "Content";
+  font-weight: bold;
+  font-size: 1.5em;
+  display:block;
+}
+div.maruku_toc, div.message {
+  padding: 0.7em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+div.maruku_toc, div.blue_background {
+  background-color: #CADCE8;
+  border: 2px solid #6BABD6;
+}
+.maruku_toc ul {
+  /*margin-top: 0;*/
+}
+.maruku_toc ul li {
+  margin-top: 0.1em;
 }
 
 pre, code {
@@ -203,7 +242,6 @@ div.related {
 
 #footer {
   margin-bottom: 2em;
-  color: #3E423A;
   font-size: 0.9em;
   padding: 0.5em;
   text-align: center;
@@ -214,15 +252,15 @@ div.related {
 }
 
 h2.block {
-  background: #417378;
+  background: #0482D4;
   padding: 0.3em 0.5em;
-  border-bottom: 3px solid #255;
+  border-bottom: 3px solid #035E99;
   margin-bottom: 0em;
-  color: white;
+  color: #000;
 }
 
 .home_box h2 a {
-  color: white;
+  color: #fff;
   margin: 0 0.2em;
 }
 
@@ -238,7 +276,7 @@ h2.block {
 .clearfix { clear: both;}
 
 #footer a {
-  color: #3E423A;
+  color: #035E99;
   font-weight: normal;
 }
 
@@ -246,16 +284,13 @@ h2.block {
   font-size: 0.7em;
 }
 
-.repo {
+div.yellow_background {
   background: #fff5cc;
   border: 2px solid #dda;
-  padding: 0.7em 1em;
+}
+.repo {
   font-size: 0.8em;
-  letter-spacing: -0.03em;
   margin: 1em 1em 0 0;
-  -moz-border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
-  border-radius: 0.5em;
 }
 .repo h3 {
   margin: 0 0 0.3em 0;

@@ -3,38 +3,46 @@ layout: post
 title: First Test Post
 ---
 
+* toc
+{:toc}
+
+# Some Text Elements
+
+## Lists
+
 - safd
 - sdaf2
 
-* This will become a table of contents (this text will be scraped).
-{:toc}
+1. the frist one of an ordered list
+2. the second one
 
-# Head 1
-
-# Head 2
-
-> Blogquote
-> Blogquote again
-
-## Head 2.1
-
-* footnotes [^foot]
 
 Definition list
 : something very hard to parse
+Apples
+: not here
 
-*   abbreviations or ABB for short.
+## Links
 
+a [link to wiki](http://wikipedia.org) between text <br />
+safd sdaf a fsdf sfd
 
-Examples of PHP Markdown Extra syntax {#extra}
--------------------------------------
+* Use of footnotes [^foot].
+* abbreviations or ABB for short.
+
+## quotes
+
+Quote from Wikipedia:
+> A blog (a contraction of the term "web log") is a type of website, usually maintained by an individual with regular entries of commentary, descriptions of events, or other material such as graphics or video. Entries are commonly displayed in reverse-chronological order. "Blog" can also be used as a verb, meaning to maintain or add content to a blog.
+>
+> Many blogs provide commentary or news on a particular subject; others function as more personal online diaries. A typical blog combines text, images, and links to other blogs, Web pages, and other media related to its topic. The ability of readers to leave comments in an interactive format is an important part of many blogs. Most blogs are primarily textual, although some focus on art (Art blog), photographs (photoblog), videos (Video blogging), music (MP3 blog), and audio (podcasting). Microblogging is another type of blogging, featuring very short posts.
+>
+> As of December 2007, blog search engine Technorati was tracking more than 112,000,000 blogs.
+
+## tables
+
 
 *   tables
-
-        Col1 | Very very long head | Very very long head|
-        -----|:-------------------:|-------------------:|
-        cell | center-align        | right-align        |
-    {:markdown}
 
     Col1 | Very very long head | Very very long head|
     -----|:-------------------:|-------------------:|
@@ -43,11 +51,31 @@ Examples of PHP Markdown Extra syntax {#extra}
 
 *   footnotes [^foot]
 
-Nun in `Backticks` etwas Code.
 
-    codeline1
-    codeline2
 
+## tex
+
+
+some inline formula: $x^{n}+y^{n} \neq z^{n}$ for $n \geq 3$
+
+\[ 
+\sum_{n=1}^\infty \frac{1}{n} 
+\text{ is divergent, but } 
+\lim_{n \to \infty} \sum_{i=1}^n \frac{1}{i} - \ln n \text{exists.} 
+\]
+
+# Code
+
+## simple
+
+First a command in `backticks`
+
+    > simple commands
+    > exit 0
+
+
+
+## with highlighting by pygments
 
 {% highlight ruby linenos %}
 #!/usr/bin/env ruby
@@ -89,6 +117,7 @@ w.show
 a.exec
 {% endhighlight %}
 
+## from refactormycode
 
 <div style="overflow:auto;border:solid 1px #ccc;background:#000;color:#F8F8F8">
           <div class="section">
@@ -132,6 +161,9 @@ a.<span style="color:#89BDFF;">exec</span>
         </div>
 
 <a href="http://refactormycode.com/codes/968-minimal-code-example-ruby-and-kde" style="color:#fff" title="As seen on RefactorMyCode.com"><img alt="Small_logo" src="http://refactormycode.com/images/small_logo.gif" style="border:0" /></a>
+
+
+## from pastie.org
 
 <script src='http://pastie.org/788392.js'> </script>
 

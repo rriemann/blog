@@ -1,10 +1,10 @@
 ---
 layout: master
-title: Worth Mentioning
+title: Home
 ---
 
 <div class='home_box' id='home_left'>
-  <h2 class='block'><a href='http://feeds.feedburner.com/JoinTheConversation' class='float-right'><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='/blog.html'>More</a>)</span></h2>
+  <h2 class='block'><a href='/atom.xml' class='float-right'><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='/blog.html'>More</a>)</span></h2>
 
   <div class='post'>
     <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
@@ -38,7 +38,7 @@ title: Worth Mentioning
 
     $(repos.slice(0,6)).each(function() {
       $('#github-projects').append("\
-<div class='repo'>\
+<div class='repo message yellow_background'>\
   <h3><a href='" + this.url + "'>" + this.name + "</a></h3>\
   <span class='desc'>"+this.description+"</span>\
 </div>");

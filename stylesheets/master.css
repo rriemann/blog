@@ -28,8 +28,9 @@ dt {
 }
 
 a {
-  font-weight: bold;
-  color: #3E423A;
+  /*font-weight: bold;*/
+  /*color: #3E423A;*/
+  color: #035E99;
 }
 
 /*.post a {
@@ -42,8 +43,8 @@ a {
 }*/
 
 a:visited {
-  color: #035E99;
   font-weight: normal;
+  color: #333;
 }
 
 

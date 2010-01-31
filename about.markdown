@@ -17,7 +17,7 @@ linux, kde, latex, root, ruby and other programs related to my studies.
 ## Contact
 
 Mail
-: saloution@googlemail.com
+: <saloution@googlemail.com>
 
 jabber
 : saLOUt@jabber.org

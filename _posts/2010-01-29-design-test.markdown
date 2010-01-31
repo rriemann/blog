@@ -2,7 +2,7 @@
 layout: post
 title: First Test Post
 categories:
-- test
+- meta
 ---
 
 * toc

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby Qt/KDE4 Template KMainWindow
-tags:
+categories:
 - ruby
 - kde
 ---

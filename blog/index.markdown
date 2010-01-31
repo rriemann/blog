@@ -1,6 +1,6 @@
 ---
 layout: master
-title: Archive
+title: Blog Archive
 ---
 [Subscribe](/atom.xml){.float-right}
 

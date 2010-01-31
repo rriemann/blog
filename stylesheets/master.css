@@ -200,6 +200,7 @@ div.maruku_toc, div.message {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
+  margin-bottom: 1em;
 }
 div.maruku_toc, div.blue_background {
   background-color: #CADCE8;

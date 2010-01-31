@@ -5,8 +5,10 @@ categories:
 - meta
 - css
 ---
+* toc
+{:toc}
 
-## Static Website Generators
+# Static Website Generators
 
 After using the static website generator [webgen][wg] I started to appreciate the idea not
 to depend on special hosts with php, mysql and so on enabled. You can put all files on a CD
@@ -19,14 +21,14 @@ at home the provided upload rate is not good enough to host a page serious. I do
 websites. There is so much *static* webspace in the www. So I switched over to the ruby[^rb] driven [Jekyll][jk]
 and got in addtion the hosting for free on <http://github.com>.
 
-## Building The Blog
+# Building The Blog
 
 I started with a copy of <http://github.com/schacon/schacon.github.com>. At this point a big "Horay!" to schacon
 and open source, that made a quick start possible.
 
 While editing the files I found some usefull tricks you, you maybe googled for.
 
-### CSS selector for elements without `class` attribute
+## CSS selector for elements without `class` attribute
 
 I wanted a template which allows to use nice CSS formatted `<code>` and `<pre>` tags for source code,
 but on the other hand I didn't want to change the style of included code snippets from <http://pastie.org> or
@@ -62,7 +64,7 @@ pre:not([class]) {
 First I define some basic font styles for all kind of code. After that I define styles for the code, which isn't
 in a `pre`-element and at last follows the style for the pygments-generated in-built code.
 
-### Integrating other static pages
+## Integrating other static pages
 
 As BSc physics student I got a userpage on the IT system of the physics institute, where I store some files.
 Furthermore I have an account at [DESY](http://desy.de), from where I also get a userpage. So I thought it would
@@ -83,7 +85,7 @@ You might also want to look in my [blog sources](http://github.com/saLOUt/salout
 files](http://github.com/saLOUt/salout.github.com/tree/master/other_pages_integration/) in the "other_page_integration" folder.
 
 
-### Generating pygments CSS files
+## Generating pygments CSS files
 
 I didn't found it immediately in the internet, so I want to increase the pages containting the hint by 1.
 

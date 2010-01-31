@@ -4,8 +4,8 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Worth Mentioning</title>
- <link href="http://saLOUt.github.com/atom.xml" rel="self"/>
+ <title>Worth Mentioning - tagged with kde</title>
+ <link href="http://saLOUt.github.com/kde.xml" rel="self"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://salout.github.com/</id>
  <author>
@@ -13,7 +13,7 @@ layout: nil
    <email>saLOUtion@googlemail.com</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.categories.kde %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="http://saLOUt.github.com/{{ post.url }}"/>

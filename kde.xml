@@ -1,26 +1,6 @@
 ---
-layout: nil
+layout: feed
+title: Worth Mentioning - tagged with kde
+permalink: kde.xml
+cat: kde
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
- <title>Worth Mentioning - tagged with kde</title>
- <link href="http://saLOUt.github.com/kde.xml" rel="self"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://salout.github.com/</id>
- <author>
-   <name>Robert "saLOUt" Riemann</name>
-   <email>saLOUtion@googlemail.com</email>
- </author>
-
- {% for post in site.categories.kde %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="http://saLOUt.github.com/{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://salout.github.com/{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
-
-</feed>

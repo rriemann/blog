@@ -11,7 +11,7 @@
   {% case page.cat %}{% when 'kde' %}{% assign posts = site.categories.kde %}{% when 'ruby' %}{% assign posts = site.categories.ruby %}{% else %}{% assign posts = site.posts %}{% endcase %}{% for post in posts %}
   <entry>
     <title>{{ post.title }}</title>
-    <link href="{{ site.url }}/{{ post.url }}"/>
+    <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>http://salout.github.com/{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>

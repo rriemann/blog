@@ -1,17 +1,14 @@
 <script type="text/javascript">
-//   var disqus_developer = "1"
-//   var disqus_url = "http://salout.github.com{{page.url}}";
 //<![CDATA[
 (function() {
     var links = document.getElementsByTagName('a');
     var query = '?';
     for(var i = 0; i < links.length; i++) {
       if(links[i].href.indexOf('#disqus_thread') >= 0) {
-        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
       }
     }
     document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/worthmentioning/get_num_replies.js' + query + '"></' + 'script>');
-    alert('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/worthmentioning/get_num_replies.js' + query + '"></' + 'script>');
-  })();
+})();
 //]]>
 </script>

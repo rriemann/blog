@@ -29,7 +29,7 @@ The plasmoid sends the content of a *QLineEdit* to the clipboard when pressing t
 ## Test It
 
 If you want to try it yourself, you just have to extract
-[simple_ruby_plasmoid_clipboard.tar.gz][file], change the directory to
+[simple\_ruby\_plasmoid\_clipboard.tar.gz][file], change the directory to
 *ruby-test-applet* and start the plasmoid in a special viewer with
 `plasmoidviewer`.
 

@@ -8,9 +8,9 @@ categories:
 * toc
 {:toc}
 
-# Some Text Elements
+# This is a markdown, jekyll blog post test page
 
-Y22AT5HH98S2
+Technorati Token: 59JNJK4EH86E
 
 ## Lists
 

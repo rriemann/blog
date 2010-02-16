@@ -1,4 +1,104 @@
+#Redirect permanent /users/stud/rriemann/public_html/index.html http://salout.github.com
+#Options +Indexes
 ReadmeName footer.html 
 HeaderName header.html
 IndexStyleSheet style.css
-IndexIgnore style.css footer.html header.html publication
+IndexIgnore style.css footer.html header.html me.png publication icons
+
+#
+# Directives controlling the display of server-generated directory listings.
+#
+# see http://httpd.apache.org/docs-2.2/mod/mod_autoindex.html
+#
+
+# Oxygen icons for Apache
+# More info on: /usr/share/doc/packages/apache2-icons-oxygen/README.SuSE
+# Got comments/suggestions? javier@opensuse.org
+
+#<IfModule mod_autoindex.c>
+
+# 	IndexOptions FancyIndexing VersionSort NameWidth=*
+# 	IndexOptions SuppressDescription
+
+	# Add Last-Modified and ETag values for the listed directory in the HTTP header, 
+	# based on files' modification dates
+	#IndexOptions +TrackModified
+
+	AddIconByEncoding (CMP,/~rriemann/icons/tgz.png) x-compress x-gzip
+
+	AddIconByType (TXT,/~rriemann/icons/product.png) text/x-suse-ymp
+	AddIconByType (TXT,/~rriemann/icons/product.png) text/x-suse-ymu
+	AddIconByType (VID,/~rriemann/icons/video.png) video/*
+
+	AddIcon /~rriemann/icons/rpm.png .rpm
+	AddIcon /~rriemann/icons/deb.png .deb
+	AddIcon /~rriemann/icons/deb.png Packages
+	AddIcon /~rriemann/icons/folder_red.png .repo
+	AddIcon /~rriemann/icons/product.png .ymp
+	AddIcon /~rriemann/icons/binary.png .bin
+	AddIcon /~rriemann/icons/exe.png .exe
+#	AddIcon /~rriemann/icons/binhex.gif .hqx
+#	AddIcon /~rriemann/icons/world2.gif .wrl .wrl.gz .vrml .vrm .iv
+	AddIcon /~rriemann/icons/tgz.png .tar.gz .tgz .tar
+	AddIcon /~rriemann/icons/tar.png .tar.bz .tar.bz2 .tbz .tbz2 .zip
+	AddIcon /~rriemann/icons/gz.png .gz .bz .bz2 .Z .z
+#	AddIcon /~rriemann/icons/a.gif .ai .eps
+	AddIcon /~rriemann/icons/postscript.png .ps
+	AddIcon /~rriemann/icons/html.png .html .shtml .htm
+	AddIcon /~rriemann/icons/xhtml.png .xhtml
+	AddIcon /~rriemann/icons/xml.png .xml
+	AddIcon /~rriemann/icons/php.png .php .phps
+	AddIcon /~rriemann/icons/js.png .js
+	AddIcon /~rriemann/icons/pdf.png .pdf
+	AddIcon /~rriemann/icons/font_truetype.png .otf .ttf .ttc .ttx
+	AddIcon /~rriemann/icons/font_type1.png .gsf .pfa .pfb
+	AddIcon /~rriemann/icons/document.png .odt .fodt
+	AddIcon /~rriemann/icons/msword.png .doc .docx
+	AddIcon /~rriemann/icons/presentation.png .odp .fodp .otp
+	AddIcon /~rriemann/icons/mspowerpoint.png .ppt .pps .pptx .ppsx
+	AddIcon /~rriemann/icons/spreadsheet.png .ods .fods
+	AddIcon /~rriemann/icons/msexcel.png .xls .xlsx
+	AddIcon /~rriemann/icons/scribus.png .scd .scd.gz .sla .sla.gz .slaz
+	AddIcon /~rriemann/icons/database.png .odb
+	AddIcon /~rriemann/icons/sql.png .sql
+	AddIcon /~rriemann/icons/image.png .ico .png .jpeg .jpg
+	AddIcon /~rriemann/icons/krita.png .kra
+	AddIcon /~rriemann/icons/svg.png .svg
+	AddIcon /~rriemann/icons/svgz.png .svgz
+	AddIcon /~rriemann/icons/desktop.png .desktop .kdelnk
+	AddIcon /~rriemann/icons/txt.png .txt .conf
+	AddIcon /~rriemann/icons/torrent.png .torrent
+	AddIcon /~rriemann/icons/cdtrack.png .iso
+	AddIcon /~rriemann/icons/midi.png .midi .mid .kar
+	AddIcon /~rriemann/icons/encrypted.png .pgp .gpg .asc
+	AddIcon /~rriemann/icons/source_c.png .c
+	AddIcon /~rriemann/icons/source_cpp.png .cpp
+	AddIcon /~rriemann/icons/source_pl.png .pl
+	AddIcon /~rriemann/icons/source_py.png .py
+#	AddIcon /~rriemann/icons/f.gif .for
+#	AddIcon /~rriemann/icons/dvi.png .dvi
+#	AddIcon /~rriemann/icons/uuencoded.gif .uu
+	AddIcon /~rriemann/icons/shellscript.png .sh .shar .csh .ksh .tcl
+	AddIcon /~rriemann/icons/tcl.png .tcl
+	AddIcon /~rriemann/icons/tex.png .tex
+	AddIcon /~rriemann/icons/core.png core
+	AddIcon /~rriemann/icons/ogg.png .ogg
+	AddIcon /~rriemann/icons/ogv.png .ogv
+
+	AddIconByType (TXT,/~rriemann/icons/txt.png) text/*
+	AddIconByType (IMG,/~rriemann/icons/image.png) image/*
+	AddIconByType (SND,/~rriemann/icons/sound.png) audio/*
+
+	AddIcon /~rriemann/icons/up2.png ..
+	AddIcon /~rriemann/icons/txt.png COPYING COPYING.de COPYRIGHT COPYRIGHT.de ChangeLog
+	AddIcon /~rriemann/icons/info.png README README.BETA README.DOS LIESMICH LIESMICH.DOS
+	AddIcon /~rriemann/icons/folder.png ^^DIRECTORY^^
+	AddIcon /~rriemann/icons/symlink.png ^^SYMLINK^^
+	AddIcon /~rriemann/icons/blank.gif ^^BLANKICON^^	
+
+	DefaultIcon /~rriemann/icons/unknown.png
+
+
+	IndexIgnore .??* *~ *# HEADER* RCS CVS *,v *,t
+
+#</IfModule>

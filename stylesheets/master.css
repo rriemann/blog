@@ -1,5 +1,6 @@
 body {
-  font-family: Georgia,DejaVu Sans,Verdana,sans-serif;
+/*   font-family: Georgia,DejaVu Sans,Verdana,sans-serif; */
+  font-family: Georgia,FreeSerif,"DejaVu Serif",serif;
   background: #C7D2D9;
   color: #333;
 }

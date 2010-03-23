@@ -32,6 +32,7 @@ a {
   /*font-weight: bold;*/
   /*color: #3E423A;*/
   color: #035E99;
+  text-decoration: underline;
 }
 
 /*.post a {
@@ -42,13 +43,10 @@ a {
 .post a:hover {
   background-color: #CADCE8;
 }*/
-
 a:visited {
   font-weight: normal;
   color: #333;
 }
-
-
 
 #wrapper {
   width: 50em;

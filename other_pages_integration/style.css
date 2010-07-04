@@ -1,6 +1,7 @@
 
 body {
-  font-family: Georgia,DejaVu Sans,Verdana,sans-serif;
+/*   font-family: Georgia,DejaVu Sans,Verdana,sans-serif; */
+  font-family: "Droid Serif",Georgia,FreeSerif,"DejaVu Serif",serif;
   background: #C7D2D9;
   color: #333;
 }
@@ -206,7 +207,7 @@ ul#latest_posts_widget {
 }
 
 ul#latest_posts_widget li span {
-  font-family: Consolas,"Andale Mono","Courier New",Courier,mono !important;
+  font-family: "Droid Sans Mono",Consolas,"Andale Mono","Courier New",Courier,mono !important;
   font-size: 0.8em;
   color: #555;
 }
@@ -226,5 +227,5 @@ ul#latest_posts_widget li span {
 a img { border: 0; }
 
 pre {
-  font-family: Georgia,DejaVu Sans,Verdana,sans-serif;
+  font-family: "Droid Serif",Georgia,DejaVu Sans,Verdana,sans-serif;
 }

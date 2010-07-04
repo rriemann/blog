@@ -1,6 +1,6 @@
 body {
 /*   font-family: Georgia,DejaVu Sans,Verdana,sans-serif; */
-  font-family: Georgia,FreeSerif,"DejaVu Serif",serif;
+  font-family: "Droid Serif",Georgia,FreeSerif,"DejaVu Serif",serif;
   background: #C7D2D9;
   color: #333;
 }
@@ -79,7 +79,7 @@ a:visited {
 }
 
 #header h1 {
-  font-size: 4em;
+  font-size: 3.8em;
 }
 
 #header h2 {
@@ -213,7 +213,7 @@ div.maruku_toc, div.blue_background {
 }
 
 pre, code {
-  font-family:Consolas,"Andale Mono","Courier New",Courier,mono !important;
+  font-family:"Droid Sans Mono",Consolas,"Andale Mono","Courier New",Courier,mono !important;
   font-weight: 400;
   font-size:0.9em;
 }
@@ -339,7 +339,7 @@ ul#latest_posts_widget {
 }
 
 ul#latest_posts_widget li span {
-  font-family: Consolas,"Andale Mono","Courier New",Courier,mono !important;
+  font-family: "Droid Sans Mono",Consolas,"Andale Mono","Courier New",Courier,mono !important;
   font-size: 0.8em;
   color: #555;
 }

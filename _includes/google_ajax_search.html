@@ -13,9 +13,15 @@
     // Add in a full set of searchers
     // var localSearch = new google.search.LocalSearch();
     // searchControl.addSearcher(localSearch);
-    searchControl.addSearcher(new google.search.WebSearch());
+    var siteSearch = new google.search.WebSearch();
+    siteSearch.setUserDefinedLabel("saLOUt.github.com");
+    siteSearch.setSiteRestriction("salout.github.com");
+    options = new google.search.SearcherOptions();
+    options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN)
+    searchControl.addSearcher(siteSearch, options);
+    // searchControl.addSearcher(new google.search.WebSearch());
     // searchControl.addSearcher(new google.search.VideoSearch());
-    searchControl.addSearcher(new google.search.BlogSearch());
+    //s earchControl.addSearcher(new google.search.BlogSearch());
 
     // Set the Local Search center point
     // localSearch.setCenterPoint("New York, NY");

@@ -16,12 +16,14 @@ body {
 
 img.right { 
   float: right;
-  margin: 15px 0px 15px 15px;
+/*   margin: 15px 0px 15px 15px; */
+  margin: 0px 0px 0px 15px;
 }
 
 img.left { 
-  float: right;
-  margin: 15px 51px 15px 0px;
+  float: left;
+/*   margin: 15px 15px 15px 0px; */
+  margin: 0px 15px 0px 0px;
 }
 
 dt {

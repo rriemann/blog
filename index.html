@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class='home_box' id='home_left'>
-  <h2 class='block'><a href='/atom.xml' class='float-right'><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='/blog/'>More</a>)</span></h2>
+  <h2 class='block'><a href='{{ site.url }}/atom.xml' class='float-right'><img src='{{ site.url }}/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='{{ site.url }}/blog/'>More</a>)</span></h2>
 
   <div class='post'>
     {% assign page = site.posts.first %}

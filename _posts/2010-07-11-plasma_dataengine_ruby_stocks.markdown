@@ -15,7 +15,7 @@ Friday I just started to do some hacking on KDE. As it should be something simpl
 for the beginning and something useful, too, I decided to provide a new plasma
 dataengine for retrieving stocks information.
 
-I used the Ruby, because plasma hacking with ruby is freaking awesome and totally
+I used ruby, because plasma hacking with ruby is freaking awesome and totally
 easy. Let's prove it!
 
 # How To Use It

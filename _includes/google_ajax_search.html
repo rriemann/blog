@@ -9,6 +9,7 @@
   function OnLoad() {
     // Create a search control
     var searchControl = new google.search.SearchControl();
+    google.search.Search.LINK_TARGET_SELF
 
     // Add in a full set of searchers
     // var localSearch = new google.search.LocalSearch();
@@ -19,6 +20,7 @@
     options = new google.search.SearcherOptions();
     options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN)
     searchControl.addSearcher(siteSearch, options);
+    searchControl.setLinkTarget(siteSearch.LINK_TARGET_SELF)
     // searchControl.addSearcher(new google.search.WebSearch());
     // searchControl.addSearcher(new google.search.VideoSearch());
     //s earchControl.addSearcher(new google.search.BlogSearch());

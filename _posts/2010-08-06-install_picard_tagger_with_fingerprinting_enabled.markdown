@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Picard Tagger Installieren mit aktiviertem Fingerprint
+categories:
+- music
 ---
 
 # Funktionalität von Picard

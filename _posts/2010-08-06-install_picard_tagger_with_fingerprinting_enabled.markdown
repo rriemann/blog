@@ -7,16 +7,15 @@ categories:
 
 # Funktionalität von Picard
 
-![Screenshot von Picard][img]{.right}
 Nachdem ich festgestellt habe, dass Musik hören via Handy nicht der Weisheit
 letzter Schluss sein kann, habe ich mir einen neues Gerät bestellt, welches in
 I-Pod-Manier die einzelnen Titel an Hand ihrer
 [ID3-Tags](http://de.wikipedia.org/wiki/ID3-Tag "Identify an MP3") sortiert und
 anzeigt. Natürlich funktioniert das nur gut, sofern diese Tags auch sorgfälltig
 gesetzt wurden. Und hierfür gibt es eben
-[Picard](http://de.wikipedia.org/wiki/MusicBrainz_Picard "Dt. Wikipedia-Eintrag zu Picard").
+[Picard][wiki0].
 
-Auf der [Projektseite](http://musicbrainz.org/doc/Picard "Picard, the Next-Generation MusicBrainz Tagger")
+Auf der [Projektseite][picard]
 findet man hierzu folgende Beschreibung des Programms:
 > Picard is the next generation MusicBrainz tagging application.
 > This new tagging concept is album oriented, as opposed to track/file oriented
@@ -25,9 +24,9 @@ findet man hierzu folgende Beschreibung des Programms:
 > to run both on Windows, Linux and Mac OS X.
 
 Picard greift, um die ID3-Tags zu setzen, auf die Musikdatenbank
-[MusicBrainz](http://musicbrainz.org "Community Musik Tag-Datenbank") zu und
+[MusicBrainz][mb] zu und
 vergleicht bereits vorhandene Daten mit den bereits existierenden. Weiterhin
-kann zu jedem Titel ein [Fingerabdruck](http://musicbrainz.org/doc/HowPUIDsWork)
+kann zu jedem Titel ein [Fingerabdruck][fp]
 erzeugt werden, der das automatische Taggen auch *ohne* vorher bekannte
 Informationen (Artist, Titel, etc.) erlaubt. Das ist hierbei auch die
 Besonderheit.
@@ -35,7 +34,7 @@ Besonderheit.
 ## Installation von Picard
 
 Vorneweg: Ich werde Picard manuell installieren. Hinterher habe ich
-gesehen, dass es durchaus [Binär-Pakete](http://software.opensuse.org/search?p=1&q=picard "Link zur One Click-Installation")
+gesehen, dass es durchaus [Binär-Pakete][suse]
 (\*.rpm) für Picard gibt. Jedoch soll es hierbei Probleme mit dem Erstellen
 der Fingerabdrücke geben, doch das ist ja grade der Vorteil.
 
@@ -84,7 +83,7 @@ Pakete installiert werden müssen. Doch schön der Reihe nach:
     Ihr müsst dieses Plugin allerdings noch anschließend im Optionen-Dialog des Programms aktivieren.
 
 6.  Picard Starten
-    Zum Starten ruft ihr mit [Alt]-[F2] die Befehlsaufforderung auf und gebt `picard` ein.
+    Zum Starten ruft ihr mit \[Alt]-\[F2] die Befehlsaufforderung auf und gebt `picard` ein.
 
     Natürlich lässt sich Picard auch ins Startmenu integrieren, sodenn dies nicht bereits automatisch erfolgt ist. Hierzu öffnen wir den Menu-Editor (hierzu auf das Startmenu-Icon rechtsklicken) und legen in einer Kategorie unserer Wahl ein "Neues Element" an. Nun suchen wir einen neuen Speicherplatz für die Datei "picard-32.png" aus dem entpackten Picard-Archiv, da wir den Picard-Ordner später löschen möchten. Wir bearbeiten das neue Element im Menu-Editor indem wir den Namen (z.B. Picard Tagger) eintragen, einen Kommentar setzen und nun auf das Bild klicken um ein Neues auszuwählen (ihr wisst schon welches).
 
@@ -98,4 +97,8 @@ Die Installation ist somit abgeschlossen und ihr solltet ein voll funktionsfähi
 Picard haben. Probierts ruhig aus. Funktioniert gut.
 Wie ihr das Programm bedient, findet ihr bestimmt im Internet. ;)
 
-[img]:  {{ site.url }}/images/picard_screenshot.jpg "Screenshot von Picard"
+[wiki0]: http://de.wikipedia.org/wiki/MusicBrainz_Picard "Dt. Wikipedia-Eintrag zu Picard"
+[picard]: http://musicbrainz.org/doc/Picard "Picard, the Next-Generation MusicBrainz Tagger"
+[suse]: http://software.opensuse.org/search?p=1&q=picard "Link zur One Click-Installation"
+[mb]: http://musicbrainz.org "Community Musik Tag-Datenbank"
+[fp]: http://musicbrainz.org/doc/HowPUIDsWork "How Fingerprint works"

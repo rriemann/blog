@@ -45,8 +45,8 @@ Linux OS[^2] with korundum4 and Ruby 1.9.x preinstalled.
 To give Kubeplayer a try, you just have to checkout the repository, and start
 the application.
 
-  git clone git://git.kde.org/kubeplayer
-  ruby kubeplayer/kubeplayer
+    git clone git://git.kde.org/kubeplayer
+    ruby kubeplayer/kubeplayer
 
 That's it. You can also install kubeplayer using CMake. Installation works like
 you would it expect it from a CMake based C++ application.

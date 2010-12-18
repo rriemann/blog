@@ -26,7 +26,7 @@ further setup[^1], becomes finally true.
 
 # Announcing Kubeplayer
 
-![Screenshot of Kubeplayer][img]{.right} I started a kind of clone of the well
+![Screenshot of Kubeplayer][img] I started a kind of clone of the well
 known Qt-based Youtube player [Minitube][minitube]. When starting the development,
 I had in mind to support Vimeo and maybe some other online video platforms, too.
 The app should integrate itself better into the KDE workspace, and lately I had

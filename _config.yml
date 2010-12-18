@@ -1,4 +1,4 @@
-pygments: true
+# pygments: true
 lsi:      true
 permalink: /blog/:year/:month/:day/:title.html
 url:      http://salout.github.com

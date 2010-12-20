@@ -1,0 +1,13 @@
+---
+layout: post
+title: Webcomic №8
+categories:
+- webcomic
+---
+[![People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.][img]{.webcomic style=width:100%;}][img]
+
+[![Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic][cc_pic]][cc]
+
+[img]:  {{ site.url }}/images/webcomic/the_way_up.png "People, who are careless on their way up, are likeley going to build barriers, they cannot overcome."
+[cc_pic]: {{ site.url }}/images/by-nc-sa.eu.png "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
+[cc]: http://creativecommons.org/licenses/by-nc-sa/2.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"

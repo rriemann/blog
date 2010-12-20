@@ -14,13 +14,13 @@ body {
 }
 
 
-img.right { 
+img.right {
   float: right;
 /*   margin: 15px 0px 15px 15px; */
   margin: 0px 0px 0px 15px;
 }
 
-img.left { 
+img.left {
   float: left;
 /*   margin: 15px 15px 15px 0px; */
   margin: 0px 15px 0px 0px;
@@ -67,9 +67,9 @@ a:visited {
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
   -moz-border-radius-topright: 1em;
-  -webkit-border-top-right-radius: 1em;  
-  border-top-left-radius: 1em;  
-  border-top-right-radius: 1em;  
+  -webkit-border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   padding: 1.5em;
   text-align: center;
 }
@@ -104,12 +104,11 @@ a:visited {
 }
 
 #menu ul li a {
-  padding: 0.1em;
   background-color: #035E99;
   color: #fff;
   font-size: 1.3em;
   padding: 0 0.1em 0 0.1em;
-  margin: 0 0.7em;
+  margin: 0 0.6em;
   line-height: 2.5em;
   font-weight: normal;
   text-decoration: none;

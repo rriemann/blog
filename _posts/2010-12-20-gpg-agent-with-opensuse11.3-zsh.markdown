@@ -8,7 +8,7 @@ categories:
 ---
 
 [![GnuPG Logo][img]{.right}][gpg]
-I'm a supporter for mail encryption since I started using free software.
+I'm a supporter of mail encryption since I started using free software.
 At least, I sign all my own mails, with the exception of mails to people,
 who don't know what an \*.asc file is and might not open my mail for this reason.
 

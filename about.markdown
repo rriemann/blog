@@ -24,10 +24,12 @@ jabber
 
 IRC (freenode)
 : saLOUt on [#suse](irc://irc.opensuse.org/suse),
-  [#kde](irc://irc.opensuse.org/kde),
   [#suse](irc://irc.opensuse.org/suse),
-  [#kde-ruby](irc://irc.opensuse.org/kde-ruby)
-  
+  [#kde](irc://irc.opensuse.org/kde),
+  [#kde-devel](irc://irc.opensuse.org/kde-devel),
+  [#kde-bindings](irc://irc.opensuse.org/kde-bindings),
+  [#ruby-lang](irc://irc.opensuse.org/ruby-lang)
+
 ICQ
 : \#303807280
 
@@ -39,7 +41,11 @@ GitHub
 
 : [saLOUt](http://github.com/saLOUt/)
 
+Facebook
+
+: [rriemann](http://www.facebook.com/rriemann)
+
 
 ## About This Site
 
-This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The source code used to create this library is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.
+This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The source code used to create this website is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.

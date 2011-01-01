@@ -6,7 +6,7 @@ categories:
 - kde
 ---
 
-![KMainWindow]({{ site.url }}/images/kmainwindow.png "KMainWindow"){.right}
+![KMainWindow]({{ site.url }}/images/kmainwindow.png "KMainWindow"){:.right}
 
 Starting using the Qt-Toolkit (or the extension with KDE classes) is a little difficult. Especially if you never used really the toolkit with C++. So you have to learn translating the C++ API reference into ruby.
 

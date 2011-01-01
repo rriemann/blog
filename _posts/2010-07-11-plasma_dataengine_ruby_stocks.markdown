@@ -20,7 +20,7 @@ easy. Let's prove it!
 
 # How To Use It
 
-![Simple Plasmoid made with Ruby][img]{.right} Before diving into the
+![Simple Plasmoid made with Ruby][img]{:.right} Before diving into the
 development process, you probably want to test the final result yourself.
 First you have to [download][file] the plasma package. Then you can install
 it easily with the plasma package manager.
@@ -43,7 +43,7 @@ You can remove the engine with this short command:
 # How To Create It
 
 I started with a look on [the plasma ruby examples][1] and copied the inital
-construct from the given time data engine example. There was also an attempt to 
+construct from the given time data engine example. There was also an attempt to
 create a stocks engine with C++. The code is available in the [playground][0].
 
 The most time took the clean implementation of the cvs data parsing.
@@ -68,7 +68,7 @@ aware of, when you want to use ruby for plasma dataengines:
   name the top module RubyStocks. Otherwise your engine will fail.
 - Plasma looks for a class called Main in that module, which have to inherit
   from PlasmaScripting::DataEngine
-- make sure, that you implement the member methods:   
+- make sure, that you implement the member methods:
   sourceRequestEvent and updateSourceEvent
 
 As both methods should do the same in my example, I used an method alias.
@@ -185,7 +185,7 @@ X-KDE-PluginInfo-EnabledByDefault=true
 
 # What Comes Next?
 
-[![Simple Plasmoid made with Ruby][2]{.left style=width:256px;height:178px;}][2]The
+[![Simple Plasmoid made with Ruby][2]{:.left style="width:256px;height:178px;"}][2]The
 engine should be quite usable by now. I plan to create a plasmoid which
 lets you search for a company name to get the stocks symbol and then shows
 some important numbers (like the weather widget, but without these nice graphics).

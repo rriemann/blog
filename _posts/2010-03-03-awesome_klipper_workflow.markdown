@@ -8,7 +8,7 @@ categories:
 
 # Copy your clipboard to the pastebin
 
-![Klipper Pastie.org Menu][menu]{.right}
+![Klipper Pastie.org Menu][menu]{:.right}
 When you are a power IRC user, you might know the problem. You cannot copy the
 whole source code, error message or log file etc. directly in the IRC channel.
 You need a pastebin. I like <http://pastie.org> really much. It has a clean
@@ -27,7 +27,7 @@ Do the following to copy the clipboard content to the pastebin by a simple
 - You can add another command `echo '%s' | pastie.rb -f ruby` to paste the text with
   ruby syntax highlighting
 
-![Klipper Pastie.org Settings][settings]{.right}
+![Klipper Pastie.org Settings][settings]{:.right}
 After that you should be able to send your clipboard to the pastebin with one
 selection (to copy text into clipboard), one hotkey (to trigger Klipper actions)
 and one click (to choose between different highlighters). You can paste the URL

@@ -2,9 +2,9 @@
 layout: master
 title: Blog Archive
 ---
-[Subscribe](/atom.xml){.float-right}
+[Subscribe](/atom.xml){:.float-right}
 
-<h3>Blog Archive</h3>
+### Blog Archive
 <table class='post-list'>
 {% for post in site.posts %}
   <tr>

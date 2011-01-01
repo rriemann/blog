@@ -20,7 +20,7 @@ is - in the case of using Ruby.
 
 # Simple Ruby Plasmoid
 
-![Simple Plasmoid made with Ruby][img]{.right}
+![Simple Plasmoid made with Ruby][img]{:.right}
 This example is a modified version from the one in the [KDE techbase wiki][0].
 
 The plasmoid sends the content of a *QLineEdit* to the clipboard when pressing the

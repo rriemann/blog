@@ -10,7 +10,7 @@ categories:
 
 # KonsolePart
 
-![GUI integrating KDE libkonsolepart][img]{.right}
+![GUI integrating KDE libkonsolepart][img]{:.right}
 To get a shell in your GUI, you don't have to reinvent the wheel - just use
 the KonsolePart provided by KDE KParts. If you use the [KDE][kde] environment
 you already know the libkonsolepart, because Dolphin, Konqueror, Kate, Yakuake,

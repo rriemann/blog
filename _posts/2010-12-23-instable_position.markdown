@@ -4,7 +4,7 @@ title: Webcomic №9
 categories:
 - webcomic
 ---
-[![The instable position isn't obvious for the outside observer. No progress possible.][img]{.webcomic style=width:100%;}][img]
+[![The instable position isn't obvious for the outside observer. No progress possible.][img]{:.webcomic style="max-width:500px"}][img]
 
 [SVG Source][src]<br/>
 [![Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic][cc_pic]][cc]

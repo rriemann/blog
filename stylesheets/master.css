@@ -410,3 +410,9 @@ Images are wrapped in divs classed "flickr_badge_image" with ids "flickr_badge_i
 .gsc-control {
   width: 100% !important;
 }
+
+
+.webcomic {
+  width: 100%;
+  max-width: 710px;
+}

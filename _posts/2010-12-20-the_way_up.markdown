@@ -4,7 +4,7 @@ title: Webcomic №8
 categories:
 - webcomic
 ---
-[![People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.][img]{.webcomic style=width:100%;}][img]
+[![People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.][img]{:.webcomic}][img]
 
 [SVG Source][src]<br/>
 [![Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic][cc_pic]][cc]

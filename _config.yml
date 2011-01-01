@@ -1,5 +1,6 @@
-# pygments: true
+pygments: true
 lsi:      true
 permalink: /blog/:year/:month/:day/:title.html
 url:      http://salout.github.com
-markdown: kramdown
+safe:     true
+# markdown: kramdown

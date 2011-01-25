@@ -3,7 +3,7 @@ title: About
 layout: master
 ---
 <div style="float:right; margin-left: 1em;">
-  <img width="256px" height="256px" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
+  <img width="214px" height="322px" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
   <hr />
   Robert Riemann, 2010
 </div>

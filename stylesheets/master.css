@@ -72,6 +72,7 @@ a:visited {
   border-top-right-radius: 1em;
   padding: 1.5em;
   text-align: center;
+  font-size: 0.95em; /* hack for serif font on hu pool */
 }
 
 #header * {
@@ -96,6 +97,7 @@ a:visited {
 #menu ul {
   list-style: none;
   margin: 0;
+  padding: 0;
   text-align: center;
 }
 

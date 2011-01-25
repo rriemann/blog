@@ -24,7 +24,7 @@ jabber
 
 IRC (freenode)
 : saLOUt on [#suse](irc://irc.opensuse.org/suse),
-  [#suse](irc://irc.opensuse.org/suse),
+  [#opensuse-de](irc://irc.opensuse.org/opensuse-de),
   [#kde](irc://irc.opensuse.org/kde),
   [#kde-devel](irc://irc.opensuse.org/kde-devel),
   [#kde-bindings](irc://irc.opensuse.org/kde-bindings),
@@ -45,6 +45,13 @@ Facebook
 
 : [rriemann](http://www.facebook.com/rriemann)
 
+Last.fm
+
+: [saLOUt](http://www.lastfm.de/user/saLOUt)
+
+Flickr
+
+: [saloutions](http://www.flickr.com/photos/27621704@N07/)
 
 ## About This Site
 

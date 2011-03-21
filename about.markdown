@@ -55,4 +55,13 @@ Flickr
 
 ## About This Site
 
-This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The source code used to create this website is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.
+This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The design was inspired by [Michael Bleigh](http://github.com/mbleigh/mbleigh.github.com). The source code used to create this website is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.
+
+## Note on Copyright
+
+If not otherwise noted, the content of this website is published under the terms of the
+[Creative Commons BY-NC-SA license][cc].   
+[![Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic][cc_pic]][cc]
+
+[cc_pic]: {{ site.url }}/images/by-nc-sa.eu.png "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
+[cc]: http://creativecommons.org/licenses/by-nc-sa/2.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"

@@ -418,3 +418,6 @@ Images are wrapped in divs classed "flickr_badge_image" with ids "flickr_badge_i
   width: 100%;
   max-width: 710px;
 }
+p.verse {
+  margin-bottom: 2em;
+}

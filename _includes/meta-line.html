@@ -1,4 +1,4 @@
 <div class='meta-line'>
-  <div class='cats'>filled under {% for cat in page.categories %}{% if forloop.index > 1 %}{% if forloop.index == forloop.length %} and {% else %}, {% endif %}{% endif %}{{ cat | capitalize }}{% endfor %}</div>
+  <div class='cats'>tagged with {% for cat in page.categories %}{% if forloop.index > 1 %}{% if forloop.index == forloop.length %} and {% else %}, {% endif %}{% endif %}{{ cat | capitalize }}{% endfor %}</div>
   <div class="clearfix"></div>
 </div>

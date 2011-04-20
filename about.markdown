@@ -3,9 +3,9 @@ title: About
 layout: master
 ---
 <div style="float:right; margin-left: 1em;">
-  <img width="214px" height="322px" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
+  <img width="214px" height="285px" alt="thats me" src="http://salout.github.com/images/me.jpg"><br />
   <hr />
-  Robert Riemann, 2010
+  Robert Riemann, 2011
 </div>
 
 ## About Me

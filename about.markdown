@@ -10,9 +10,15 @@ layout: master
 
 ## About Me
 
-I study physics in Berlin (Germany) at the Humboldt-University.
-In my free time I like to play with opensource, especially
-linux, kde, latex, root, ruby and other programs related to my studies.
+I study physics in Berlin (Germany) at the Humboldt University.
+I like to play with opensource, especially linux, kde, latex,
+root, ruby and other programs related to my studies.
+
+In my spare time I like to play guitar. Recently I discovered
+Tango Argentino for me. I like the most kinds of sports,
+i.e. volleyball, swimming, skating, jogging, badminton,
+skiing etc. Last I joined my university's a-capella choir.
+That turned out to be really awesome.
 
 ## Contact
 

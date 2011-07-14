@@ -30,7 +30,7 @@ First of all you have to import your certificate from CAcert. You can login to y
 Remeber: Imported is not the same as working/usable. ;)
 
 Add "disable-trusted-cert-crl-check" to the end of the file "~/.gnupg/gpgsm.conf" and
-"allow-mark-trusted" to the (new) file "pg-agent.conf".
+"allow-mark-trusted" to the (new) file "gpg-agent.conf".
 
 Now you need to restart your PC. After login you will be asked if you want to trust your single installed root certificates. Pay attention on "support@cacert.org" and answer with yes.
 

@@ -3,4 +3,5 @@ lsi:      true
 permalink: /blog/:year/:month/:day/:title.html
 url:      http://salout.github.com
 safe:     true
-# markdown: kramdown
+markdown: kramdown
+

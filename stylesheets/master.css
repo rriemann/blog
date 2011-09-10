@@ -193,7 +193,7 @@ div.post {
   border-left: 5px solid #C7D2D9;
 }
 
-.maruku_toc:before {
+.maruku_toc:before, #markdown-toc:before {
   content: "Content";
   font-weight: bold;
   font-size: 1.5em;
@@ -211,10 +211,24 @@ div.maruku_toc, div.blue_background {
   border: 2px solid #6BABD6;
 }
 .maruku_toc ul {
-  /*margin-top: 0;*/
+  list-style: none;
 }
 .maruku_toc ul li {
   margin-top: 0.1em;
+}
+ul#markdown-toc {
+  list-style: none;
+  display: block;
+  padding: 0.7em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  background-color: #CADCE8;
+  border: 2px solid #6BABD6;
+}
+ul#markdown-toc li {
+  margin-left: 1em;
 }
 
 pre, code {

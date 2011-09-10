@@ -109,8 +109,8 @@ a:visited {
   background-color: #035E99;
   color: #fff;
   font-size: 1.3em;
-  padding: 0 0.1em 0 0.1em;
-  margin: 0 0.5em;
+  padding: 0 0.02em;
+  margin: 0 0.2em;
   line-height: 2.5em;
   font-weight: normal;
   text-decoration: none;
@@ -259,6 +259,14 @@ table.post-list a {
 
 table.post-list th {
   text-align: left;
+}
+
+table.post-list td.date {
+  width:16%;
+}
+
+table.post-list td.comments {
+  width:20%;
 }
 
 table.post-list td, table.post-list th {

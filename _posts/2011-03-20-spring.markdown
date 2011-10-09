@@ -14,13 +14,13 @@ der Vollmond riesig in der Ferne.
 Vieles scheint nun klar zu sein,   
 Hoffnung keimt auf - wenn auch erst fein:   
 Morgen wird schon Frühling sein.   
-{.verse}
+{: .verse}
 
 Vergang’nes hinter sich zu lassen,   
 Mut zu neuem Wagnis fassen,   
 – sind die Gebote dieser Zeit.   
 Ich bin zurück, ich bin bereit!   
-{.verse}
+{: .verse}
 
 *der Unbekannten sowie all’ meinen guten wie auch neuen Freunden gewidmet*
-{.verse}
+{: .verse}

@@ -23,25 +23,22 @@ That turned out to be really awesome.
 ## Contact
 
 Mail
+
 : <saloution@googlemail.com>
 
 jabber
-: saLOUt@jabber.org
+
+: <saLOUt@jabber.org>
 
 IRC (freenode)
-: saLOUt on [#suse](irc://irc.opensuse.org/suse),
-  [#opensuse-de](irc://irc.opensuse.org/opensuse-de),
-  [#kde](irc://irc.opensuse.org/kde),
-  [#kde-devel](irc://irc.opensuse.org/kde-devel),
-  [#kde-bindings](irc://irc.opensuse.org/kde-bindings),
-  [#ruby-lang](irc://irc.opensuse.org/ruby-lang)
 
-ICQ
-: \#303807280
-
-Skype
-
-: lordofunknown
+: saLOUt on [#suse](irc://chat.freenode.org/suse),
+  [#opensuse-de](irc://chat.freenode.org/opensuse-de),
+  [#kde](irc://chat.freenode.org/kde),
+  [#kde-devel](irc://chat.freenode.org/kde-devel),
+  [#kde-bindings](irc://chat.freenode.org/kde-bindings),
+  [#active@](irc://chat.freenode.org/active),
+  [#ruby-lang](irc://chat.freenode.org/ruby-lang)
 
 GitHub
 
@@ -58,6 +55,10 @@ Last.fm
 Flickr
 
 : [saloutions](http://www.flickr.com/photos/27621704@N07/)
+
+CouchSurfing
+
+: [saLOUt](http://www.couchsurfing.org/people/salout)
 
 ## About This Site
 

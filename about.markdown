@@ -28,7 +28,7 @@ Mail
 
 jabber
 
-: <saLOUt@jabber.org>
+: <rriemann@jabber.ccc.de>
 
 IRC (freenode)
 

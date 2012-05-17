@@ -4,6 +4,7 @@ title: Does owncloud really requires a server-side backend?
 categories:
 - kde
 - gnome
+comments: true
 ---
 
 Hi planetkde, hi readers from planet gnome (so called aliens[^1]),

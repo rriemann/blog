@@ -4,11 +4,9 @@ title: Just moved to Jekyll
 categories:
 - meta
 - css
+comments: true
 ---
-* toc
-{:toc}
-
-# Static Website Generators
+## Static Website Generators
 
 After using the static website generator [webgen][wg] I started to appreciate the idea not
 to depend on special hosts with php, mysql and so on enabled. You can put all files on a CD
@@ -21,7 +19,7 @@ at home the provided upload rate is not good enough to host a page serious. I do
 websites. There is so much *static* webspace in the www. So I switched over to the ruby[^rb] driven [Jekyll][jk]
 and got in addtion the hosting for free on <http://github.com>.
 
-# Building The Blog
+## Building The Blog
 
 I started with a copy of <http://github.com/schacon/schacon.github.com>. At this point a big "Horay!" to schacon
 and open source, that made a quick start possible.
@@ -34,12 +32,15 @@ I wanted a template which allows to use nice CSS formatted `<code>` and `<pre>` 
 but on the other hand I didn't want to change the style of included code snippets from <http://pastie.org> or
 <http://refactormycode.com>.
 
+* toc
+{:toc}
+
 So I found out how to change only these html tags in the source code, which doesn't have an `class` attribute, because
 that is exactly the difference between these pastie-snippets and my own `pre`-elements.
 
 The solution is to use the [negation pseudo-class selector](http://www.w3.org/TR/css3-selectors/#negation).
 
-{% highlight css %}
+{% codeblock lang:css %}
 pre, code {
   font-family:Consolas,"Andale Mono","Courier New",Courier,mono !important;
   font-weight: 400;
@@ -59,7 +60,7 @@ pre:not([class]) {
   overflow: auto;
   padding: 0.5em;
 }
-{% endhighlight %}
+{% endcodeblock %}
 
 First I define some basic font styles for all kind of code. After that I define styles for the code, which isn't
 in a `pre`-element and at last follows the style for the pygments-generated in-built code.
@@ -72,12 +73,12 @@ be nice to integrate both pages.
 
 In the end I got it by defining a special header and footer in the .htaccess file for the Apache auto-generated directory index.
 
-{% highlight apache %}
+{% codeblock lang:apache .htaccess %}
 ReadmeName footer.html 
 HeaderName header.html
 IndexStyleSheet style.css
 IndexIgnore style.css footer.html header.html
-{% endhighlight %}
+{% endcodeblock %}
 
 More explanation are on the [official Apache Module page](http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html) given.
 

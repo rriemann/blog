@@ -1,29 +1,43 @@
 ---
-layout: master
+layout: default
+single: true
 ---
-<div class='post'>
-  <span class='date'>{{page.date | date_to_string}}</span>
-  <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
-  {% include meta-line.html %}
-  <div class='body'>{{ content }}</div>
-</div>
-<div class="related">
-  <h3>Related Posts</h3>
-  <table class="post-list">
-    {% for post in site.related_posts limit:3 %}
-      <tr>
-        <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
-        <td>{{ post.date | date_to_string }}</td>
-        <td><a href='{{post.url}}#disqus_thread'>Comments</a></td>
-      </tr>
-    {% endfor %}
-  </table>
-</div>
 
-<script type="text/javascript" charset="utf-8">
-  var disqus_url = "{{ site.url }}{{page.url}}";
-</script>
-<div id="disqus_thread"></div>
-<script type="text/javascript" src="http://disqus.com/forums/worthmentioning/embed.js"></script>
-<noscript><div><a href="http://worthmentioning.disqus.com/?url=ref">View the discussion thread.</a></div></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<div>
+<article class="hentry" role="article">
+  {% include article.html %}
+  <footer>
+    <p class="meta">
+      {% include post/author.html %}
+      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+      {% include post/categories.html %}
+    </p>
+    {% unless page.sharing == false %}
+      {% include post/sharing.html %}
+    {% endunless %}
+    <p class="meta">
+      {% if page.previous.url %}
+        <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </p>
+  </footer>
+</article>
+{% if site.disqus_short_name and page.comments == true %}
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+  </section>
+{% endif %}
+</div>
+{% unless page.sidebar == false %}
+<aside class="sidebar">
+  {% if site.post_asides.size %}
+    {% include_array post_asides %}
+  {% else %}
+    {% include_array default_asides %}
+  {% endif %}
+</aside>
+{% endunless %}

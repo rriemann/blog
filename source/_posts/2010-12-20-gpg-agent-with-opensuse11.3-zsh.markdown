@@ -5,6 +5,7 @@ categories:
 - linux
 - opensuse
 - gpg
+comments: true
 ---
 
 [![GnuPG Logo][img]{:.right}][gpg]

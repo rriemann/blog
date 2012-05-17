@@ -4,9 +4,10 @@ title: Awesome Klipper Workflow
 categories:
 - kde
 - ruby
+comments: true
 ---
 
-# Copy your clipboard to the pastebin
+## Copy your clipboard to the pastebin
 
 ![Klipper Pastie.org Menu][menu]{:.right}
 When you are a power IRC user, you might know the problem. You cannot copy the
@@ -41,7 +42,7 @@ something similiar. `:)`
 [settings]: {{ site.url }}/images/klipper_pastie_settings.png
 
 
-# pastie.rb
+## pastie.rb
 
 Copy this file to your `~/bin` and make it executable.
 
@@ -52,7 +53,7 @@ You can use the pastie.rb script via command line by pipe a file to it.
 To set the code highlighting use the switch `-f LANG`. To get all supported
 languages you want to try a `pastie.rb -h`.
 
-{% highlight ruby %}
+{% codeblock pastie.rb %}
 #!/usr/bin/env ruby
 # kate: remove-trailing-space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby; syntax ruby;
 # file: pastie.rb
@@ -188,4 +189,4 @@ if ($0 == __FILE__)
   app = Pastie::ConsoleOptions.new
   app.run(ARGV)
 end
-{% endhighlight %}
+{% endcodeblock %}

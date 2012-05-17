@@ -1,21 +1,40 @@
+---
+layout: nil
+---
+
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ page.title }}</title>
-  <link href="{{ site.url }}/{{ page.permalink }}" rel="self"/>
+
+{% case page.category %}
+{% when 'kde' %}
+  <title><![CDATA[{{ site.title }} | Category {{ page.category }}]]></title>
+  <link href="{{ site.url }}/{{ page.category }}.xml" rel="self"/>
+{% assign posts = site.categories.kde %}
+  <title><![CDATA[{{ site.title }} | Category {{ page.category }}]]></title>
+  <link href="{{ site.url }}/{{ page.category }}.xml" rel="self"/>
+{% when 'ruby' %}
+{% assign posts = site.categories.ruby %}
+{% else %}
+{% assign posts = site.posts %}
+  <title><![CDATA[{{ site.title }}]]></title>
+  <link href="{{ site.url }}/atom.xml" rel="self"/>
+{% endcase %}
+  <link href="{{ site.url }}/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.url | downcase }}/</id>
+  <id>{{ site.url }}/</id>
   <author>
-    <name>Robert "saLOUt" Riemann</name>
-    <email>saLOUtion@googlemail.com</email>
+    <name><![CDATA[{{ site.author | strip_html }}]]></name>
+    {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
   </author>
-  {% case page.cat %}{% when 'kde' %}{% assign posts = site.categories.kde %}{% when 'ruby' %}{% assign posts = site.categories.ruby %}{% else %}{% assign posts = site.posts %}{% endcase %}{% for post in posts %}
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  {% for post in posts limit: 20 %}
   <entry>
-    <title>{{ post.title }}</title>
+    <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>http://salout.github.com{{ post.id }}</id>
-    <content type="html">{{ post.content | xml_escape }}</content>
+    <id>{{ site.url }}{{ post.id }}</id>
+    <content type="html"><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content>
   </entry>
   {% endfor %}
-
 </feed>

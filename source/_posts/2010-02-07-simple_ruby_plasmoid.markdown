@@ -4,11 +4,10 @@ title: Simple Ruby Plasmoid
 categories:
 - kde
 - ruby
+comments: true
 ---
-* toc
-{:toc}
 
-# Hello Planet KDE, hello RubyCorner
+## Hello Planet KDE, hello RubyCorner
 
 After some blog posts on my old blog about KDE programming with Ruby
 I decided to bring the content a little bit more to the people. Here I am.
@@ -18,7 +17,7 @@ plasmoids with Ruby. I never had the wish to create my own plasmoid. I thought
 it would be difficult, but while getting a closer look, I've noticed how easy it
 is - in the case of using Ruby.
 
-# Simple Ruby Plasmoid
+## Simple Ruby Plasmoid
 
 ![Simple Plasmoid made with Ruby][img]{:.right}
 This example is a modified version from the one in the [KDE techbase wiki][0].
@@ -55,27 +54,27 @@ as you would write in C++.
 
 A short example in C++:
 
-{% highlight c %}
+{% codeblock lang:c %}
 setMinimumSize( 150, 150 )
 Plasma::LineEdit line_edit( parent )
-{% endhighlight %}
+{% endcodeblock %}
 
 The same using Ruby:
 
-{% highlight ruby %}
+{% codeblock lang:ruby %}
 set_minimum_size 150, 150
 # or
 setMinimumSize 150, 150
 # or
 self.minimum_size = 150, 150
 line_edit Plasma::LineEdit.new self
-{% endhighlight %}
+{% endcodeblock %}
 
 Member variables begins with an @ sign. There are different aliases for KDE and
 Qt methods. You can omit brackets in a lot of cases. You don't need any header
 files. You don't need to compile.
 
-{% highlight ruby %}
+{% codeblock lang:ruby %}
 require 'plasma_applet'
 
 module RubyTestApplet
@@ -120,11 +119,11 @@ module RubyTestApplet
 end
 
 # kate: remove_trailing_space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby;
-{% endhighlight %}
+{% endcodeblock %}
 
 The second file you need is the *metadata.desktop* containing all the meta data. `;)`
 
-{% highlight ini %}
+{% codeblock lang:ini metadata.desktop%}
 [Desktop Entry]
 Name=Simple Ruby applet
 Comment=This is a simple applet written in Ruby
@@ -144,7 +143,7 @@ X-KDE-PluginInfo-Category=Examples
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
-{% endhighlight %}
+{% endcodeblock %}
 
 What do you think? So easy, isn't it? If you have ever played a little
 bit with Ruby and Qt or KDE you should know enough to create your own plasmoid

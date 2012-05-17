@@ -4,6 +4,7 @@ title: CAcert SSL certificates in KMail KDE 4
 categories:
 - kde
 - cacert
+comments: true
 ---
 In preparation of the sixth ["Brandenburger Linux-Infotag"][blit] I passed the [CAcert][cacert] [Assurer Challange][ac], which was the last requirement I had to fullfill to be allowed to verify
 people.

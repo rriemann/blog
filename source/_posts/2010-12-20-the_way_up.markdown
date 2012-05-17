@@ -1,15 +1,9 @@
 ---
-layout: post
+layout: webcomic
 title: Webcomic №8
-categories:
-- webcomic
+png: '/images/webcomic/the_way_up.png'
+svg: '/images/webcomic/the_way_up.svg'
+subtitle: 'People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.'
+license: cc-by-nc-sa
+comments: true
 ---
-[![People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.][img]{:.webcomic}][img]
-
-[SVG Source][src]<br/>
-[![Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic][cc_pic]][cc]
-
-[img]:  {{ site.url }}/images/webcomic/the_way_up.png "People, who are careless on their way up, are likeley going to build barriers, they cannot overcome."
-[src]:  {{ site.url }}/images/webcomic/the_way_up.svg "SVG from Inkscape"
-[cc_pic]: {{ site.url }}/images/by-nc-sa.eu.png "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
-[cc]: http://creativecommons.org/licenses/by-nc-sa/2.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"

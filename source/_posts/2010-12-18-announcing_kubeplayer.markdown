@@ -4,11 +4,10 @@ title: Announcing Kubeplayer (youtube w/o flash)
 categories:
 - kde
 - ruby
+comments: true
 ---
-* toc
-{:toc}
 
-# Hello Planet KDE, hello RubyCorner
+## Hello Planet KDE, hello RubyCorner
 
 Earlier this year I started writing a KDE application using
 the Ruby programming language. Coming from the web development, I am no
@@ -24,9 +23,11 @@ further setup[^1], becomes finally true.
 [^1]: This isn't 100% true. You need to have korundum4 installed, but most distros
       seems to ship this package by default. On opensuse it is called "ruby-kde4".
 
-# Announcing Kubeplayer
+## Announcing Kubeplayer
 
-![Screenshot of Kubeplayer][img] I started a kind of clone of the well
+![Screenshot of Kubeplayer][img]
+
+I started a kind of clone of the well
 known Qt-based Youtube player [Minitube][minitube]. When starting the development,
 I had in mind to support Vimeo and maybe some other online video platforms, too.
 The app should integrate itself better into the KDE workspace, and lately I had
@@ -34,7 +35,7 @@ the idea of turning it into a mobile app, too. It was possible to get a much
 cleaner and shorter code, not only because of the nice KDE KIO classes,
 but also by using Ruby.
 
-# Let's Try It Out In Less Than 1 Minute!
+## Let's Try It Out In Less Than 1 Minute!
 
 Ok, to be fair, I have to admit, this is only possible using a recent
 Linux OS[^2] with korundum4 and Ruby 1.9.x preinstalled.
@@ -58,7 +59,7 @@ missing dependency.
 
     gem install json
 
-# Get Involved!
+## Get Involved!
 
 Not everything is done by now. Youtube works in <strike>the most</strike> a lot
 of cases. The GUI needs a lot of small improvements. I even thought about a

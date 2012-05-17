@@ -4,6 +4,7 @@ title: The perhaps smallest KDE application in the world
 categories:
 - ruby
 - kde
+comments: true
 ---
 
 For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the necessary parts.
@@ -15,8 +16,7 @@ With its 12 lines (17 lines minus 3 empty lines minus Shebang line and $KCode li
 Of course, every Qt app would be a few lines smaller, because you dont need the KAbout object.
 
 
-<div class="clearfix"></div>
-{% highlight ruby %}
+{% codeblock lang:ruby %}
 #!/usr/bin/env ruby
 
 $KCODE = 'u'
@@ -35,4 +35,4 @@ end
 w.show
 
 a.exec
-{% endhighlight %}
+{% endcodeblock %}

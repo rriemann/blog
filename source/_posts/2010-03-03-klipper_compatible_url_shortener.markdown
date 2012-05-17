@@ -4,9 +4,10 @@ title: Klipper-compatible URL-Shortener Script
 categories:
 - kde
 - ruby
+comments: true
 ---
 
-#The next Klipper action
+## The next Klipper action
 
 In my [last][last] blog entry I explained how to send the clipboard content via
 KDE Klipper to a pastebin service.
@@ -34,7 +35,7 @@ You can trigger actions manually by `<Ctrl>+<Alt>+<R>` (KDE default).
 [choq]: http://choqok.gnufolks.org/ "Open Source KDE Mikroblogging Client"
 
 
-# ur1.rb
+## ur1.rb
 
 Copy this file to your `~/bin` and make it executable.
 
@@ -47,7 +48,7 @@ Example
 The script will return the url in case of no errors and otherwise a short string
 indicating the error.
 
-{% highlight ruby %}
+{% codeblock ur1.rb %}
 #!/usr/bin/env ruby
 # kate: remove-trailing-space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby; syntax ruby;
 # ur1.rb
@@ -71,4 +72,4 @@ end
 abort "error (wrong response code)" unless response.code == '200'
 
 puts (body[/<p class="success">Your ur1 is: <a href="(.+)"/,1] or "error (no url returned)")
-{% endhighlight %}
+{% endcodeblock %}

@@ -5,9 +5,10 @@ categories:
 - poetry
 - art
 - german
+comments: true
 ---
 
-# Vorwort
+## Vorwort
 
 Als ich gefragt wurde, ob ich am Heiligen[^1] Abend 2010 den
 Weihnachtsmann vertreten würde, habe ich mir gleich überlegt,
@@ -31,7 +32,7 @@ echt an alles gedacht!
 [^1]: Für mich ist dieser Abend natürlich nicht heilig!
 [cc]: http://creativecommons.org/licenses/by-nc-sa/2.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
 
-# Weihnachtsmann-Gedicht
+## Weihnachtsmann-Gedicht
 
 Von Himmelspforte froh und munter,   
 fahr' ich mit dem Schlitten runter.

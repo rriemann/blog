@@ -4,11 +4,10 @@ title: Add a full-featured shell to your GUI (with Ruby)
 categories:
 - kde
 - ruby
+comments: true
 ---
-* toc
-{:toc}
 
-# KonsolePart
+## KonsolePart
 
 ![GUI integrating KDE libkonsolepart][img]{:.right}
 To get a shell in your GUI, you don't have to reinvent the wheel - just use
@@ -33,7 +32,7 @@ class. The class itself bases on a short code example from Arno. Kudos to him!
 For further explanation just take a look
 at the source code.
 
-# Usage
+## Usage
 
 You can change the working directory for the built-in shell
 by a nice dialog and can execute some command by the lineedit. To send your command
@@ -41,9 +40,9 @@ to the shell, you have to press enter.
 
 I know there are a lot of bugs. `;)` But it is just a quick and dirty demo.
 
-# main.rb
+## main.rb
 
-{% highlight ruby %}
+{% codeblock main.rb %}
 #!/usr/bin/env ruby
 
 $KCODE = 'u'
@@ -150,12 +149,12 @@ a = KDE::Application.new
 w = CustomWidget.new
 w.show
 a.exec
-{% endhighlight %}
+{% endcodeblock %}
 
 
-# ui.xml
+## ui.xml
 
-{% highlight xml %}
+{% codeblock ui.xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <gui name="konsole_in_ruby">
      version="1"
@@ -176,7 +175,7 @@ a.exec
     <Action name="file_quit" />
   </ToolBar>
 </gui>
-{% endhighlight %}
+{% endcodeblock %}
 
 
 [kde]: http://kde.org/

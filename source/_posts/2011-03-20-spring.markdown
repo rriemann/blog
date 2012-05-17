@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Frühling (Gedicht)
+title: 'Frühling (Gedicht)'
 categories:
 - poetry
 - art
 - german
+comments: true
 ---
 
 In der Nacht kehr’ ich zurück –   

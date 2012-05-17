@@ -4,24 +4,10 @@ title: Kubeplayer running on KDE Plasma Active powered ExoPC tablet
 categories:
 - kde
 - ruby
+comments: true
 ---
-<script type="text/javascript">
-$(document).ready(function() {
-  // Hide the "view" div.
-  $('div.view').hide();
-  // Watch for clicks on the "slide" link.
-  $('a.slide').click(function() {
-    // When clicked, toggle the "view" div.
-    $('div.view').slideToggle(400);
-    return false;
-  });
-});
-</script>
 
-* toc
-{:toc}
-
-# Hello Planet KDE, hello RubyCorner!
+Hello Planet KDE, hello RubyCorner!
 
 Much time has passed since i wrote my [previous blog post][announcement] about
 Kubeplayer. Things doesn't change so much, but nowadays Kubeplayer is quite
@@ -36,19 +22,19 @@ demonstration on how Kubeplayer performs using [Meego][meego] and
 [KDE Plasma Active][active].
 
 
-<iframe width="560" height="345" src="http://www.youtube.com/embed/sOOTMVH-bjo" frameborder="0" allowfullscreen="1"></iframe>
+{% youtube sOOTMVH-bjo %}
 
 If you don't like [watching the video using Youtube][youtube], you can still
-[uncollaps the webm video][collaps]{: .slide} or download the [webm file][video]
+[uncollaps the webm video][collaps]{:#collaps-video} or download the [webm file][video]
 directly.
 
-<div class="view">
+<div id="video-view">
   <video controls="controls" autobuffer="false" preload="none" width="736" height="416">
     <source src="http://people.physik.hu-berlin.de/~rriemann/kubeplayer_plasma_active.webm" type="video/webm"/>
   </video>
 </div>
 
-# How To
+## How To
 
 If you want to turn your ExoPC into a Youtube-Player, too, here is the way to go:
 
@@ -77,7 +63,7 @@ make # nothing happens
 sudo make install
 ~~~
 
-# Next Steps
+## Next Steps
 
 There are plenty different tasks yet to do:
 
@@ -106,3 +92,21 @@ So if you can help me, please get in contact!
 [activeinstall]: http://community.kde.org/Plasma/Active/Installation
 [collaps]: #
 [repo]: https://projects.kde.org/projects/playground/multimedia/kubeplayer/repository
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("jquery", "1.7.3"); //load version 1.3.2 of jQuery
+google.setOnLoadCallback(function() {
+  jQuery(function($) {
+    // run your jQuery code in here after DOM has loaded
+    // Hide the "view" div.
+    $('#video-view').hide();
+    // Watch for clicks on the "slide" link.
+    $('#collaps-video').click(function() {
+      // When clicked, toggle the "view" div.
+      $('#video-view').toggle();
+      return false;
+    });
+  });
+});
+</script>

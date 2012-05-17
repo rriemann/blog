@@ -4,6 +4,7 @@ title: Ruby Qt/KDE4 Template KMainWindow
 categories:
 - ruby
 - kde
+comments: true
 ---
 
 ![KMainWindow]({{ site.url }}/images/kmainwindow.png "KMainWindow"){:.right}
@@ -17,8 +18,7 @@ Some usefull links:
 
 But when you got it, the usage is pretty cool. In the following code listing you can find the code for a full-featured kmainwindow.
 
-<div class="clearfix"></div>
-{% highlight ruby %}
+{% codeblock kmainwindow.rb %}
 #!/usr/bin/env ruby
 # file: kmainwindow.rb
 $KCODE = 'u'
@@ -97,4 +97,4 @@ w = CustomWidget.new
 a.topWidget = w
 w.show
 a.exec
-{% endhighlight %}
+{% endcodeblock %}

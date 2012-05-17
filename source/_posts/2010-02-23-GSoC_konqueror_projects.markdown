@@ -3,6 +3,7 @@ layout: post
 title: Call for Konqueror related GSoC 2010 projects
 categories:
 - kde
+comments: true
 ---
 
 I really wonder why there are no Konqueror related idea for a GSoC 2010 project

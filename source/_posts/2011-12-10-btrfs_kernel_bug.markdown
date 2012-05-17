@@ -5,6 +5,7 @@ categories:
 - linux
 - btrfs
 - kernel
+comments: true
 ---
 
 # Prolog
@@ -70,7 +71,7 @@ belonging to these inodes, deleting them and copy them back from your backup.
 
 I wrote a small ruby script, which helps you finding the affected files
 
-{% highlight ruby %}
+{% codeblock lang:ruby %}
 #!/usr/bin/ruby
 
 # string with error messages
@@ -84,7 +85,7 @@ file_list = inode_list.map{|i| `find /mnt/test -inum #{i}`.split("\n")}
 # File.open("/tmp/inode-files.json", "w") {|f| f << JSON.pretty_generate(file_list)}
 
 puts file_list.flatten.uniq.sort.join("\n")
-{% endhighlight %}
+{% endcodeblock %}
 
 If you finally want to delete these files, you have to remount your partition in
 read-write mode.
@@ -99,7 +100,8 @@ At least for me, this walkthrough suggested by Chris resolved my problems.
     Dec  9 11:38:34 theta kernel: [ 3266.367385] kernel BUG at /home/abuild/rpmbuild/BUILD/kernel-desktop-3.1.0/linux-3.1/fs/btrfs/extent-tree.c:5467!
     Dec  9 11:38:34 theta kernel: [ 3266.368140] invalid opcode: 0000 [#1] PREEMPT SMP
     Dec  9 11:38:34 theta kernel: [ 3266.368510] CPU 1
-    Dec  9 11:38:34 theta kernel: [ 3266.368653] Modules linked in: nls_iso8859_1 nls_cp437 vfat fat fuse af_packet ip6t_LOG xt_tcpudp xt_pkttype ipt_LOG xt_limit rfcomm bnep ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_raw xt_NOTRACK ipt_REJECT iptable_raw iptable_filter ip6table_mangle nf_conntrack_netbios_ns nf_conntrack_broadcast nf_conntrack_ipv4 nf_defrag_ipv4 ip_tables xt_conntrack nf_conntrack ip6table_filter ip6_tables x_tables cpufreq_conservative cpufreq_userspace cpufreq_powersave acpi_cpufreq mperf microcode dm_mod mmc_block snd_hda_codec_hdmi snd_hda_codec_conexant arc4 uvcvideo videodev v4l2_compat_ioctl32 hdj_mod snd_rawmidi snd_seq_device ecb kvm_intel kvm btusb bluetooth sg joydev sdhci_pci sdhci iwlagn mmc_core mac80211 e1000e cfg80211 i2c_i801 pcspkr snd_hda_intel snd_hda_codec snd_hwdep snd_pcm iTCO_wdt iTCO_vendor_support xhci_hcd snd_timer snd_page_alloc mei(C) battery thinkpad_acpi rfkill tpm_tis tpm tpm_bios snd soundcore ac wmi autofs4 btrfs zlib_deflate thermal i915 drm_kms_helpe
+    Dec  9 11:38:34 theta kernel: [ 3266.368653] Modules linked in: nls_iso8859_1 nls_cp437 vfat fat fuse af_packet ip6t_LOG xt_tcpudp xt_pkttype ipt_LOG xt_limit rfcomm bnep ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_raw xt_NOTRACK ipt_REJECT iptable_raw iptable_filter ip6table_mangle nf_conntrack_netbios_ns nf_conntrack_broadcast nf_conntrack_ipv4 nf_defrag_ipv4 ip_tables xt_conntrack nf_conntrack ip6table_filter ip6_tables x_tables cpufreq_conservative cpufreq_userspace cpufreq_powersave acpi_cpufreq mperf microcode dm_mod mmc_block snd_hda_codec_hdmi snd_hda_codec_conexant arc4 uvcvideo videodev v4l2_compat_ioctl32 hdj_mod snd_rawmidi snd_seq_device ecb kvm_intel kvm btusb bluetooth sg joydev sdhci_pci sdhci iwlagn mmc_core mac80211 e1000e cfg80211 i2c_i801 pcspkr snd_hda_intel snd_hda_codec snd_hwdep snd_pcm iTCO_wdt iTCO_vendor_support xhci_hcd snd_timer snd_page_alloc mei(C) battery thinkpad_acpi rfkill tpm_tis tpm tpm_bios snd soundcore ac wmi autofs4 btrfs zlib_deflate thermal i915 drm_
+kms_helper
     Dec  9 11:38:34 theta kernel: r drm i2c_algo_bit processor button video thermal_sys
     Dec  9 11:38:34 theta kernel: [ 3266.376473]
     Dec  9 11:38:34 theta kernel: [ 3266.376585] Pid: 11081, comm: btrfs-endio-wri Tainted: G         C  3.1.0-1.2-desktop #1 LENOVO 4290W4H/4290W4H

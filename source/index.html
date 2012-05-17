@@ -1,26 +1,29 @@
 ---
-layout: master
-title: Home
+layout: default
 ---
 
-<div class='home_box' id='home_left'>
-  <h2 class='block'><a href='{{ site.url }}/atom.xml' class='float-right'><img src='{{ site.url }}/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='{{ site.url }}/blog/'>More</a>)</span></h2>
-
-  <div class='post'>
-    {% assign page = site.posts.first %}
-    <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
-    {% include meta-line.html %}
-    <div class='body'>{{site.posts.first.content}}</div>
-    <a href='{{site.posts.first.url}}#disqus_thread'>Comments</a>
+<div class="blog-index">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+  {% assign content = post.content %}
+    <article>
+      {% include article.html %}
+    </article>
+  {% endfor %}
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+    {% endif %}
+    <a href="/blog/archives">Blog Archives</a>
+    {% if paginator.previous_page %}
+    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+    {% endif %}
   </div>
 </div>
-
-<div class='home_box' id='home_right'>
-  {% include google_ajax_search.html %}
-  <br />
-  {% include latest_posts_widget.html %}
-  <br />
-  {% include github_repos_sidebar_widget.html %}
-  <br />
-  {% include flickr_widget.html %}
-</div>
+<aside class="sidebar">
+  {% if site.blog_index_asides.size %}
+    {% include_array blog_index_asides %}
+  {% else %}
+    {% include_array default_asides %}
+  {% endif %}
+</aside>

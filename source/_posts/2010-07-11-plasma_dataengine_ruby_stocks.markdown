@@ -4,11 +4,10 @@ title: Making Of ruby-stocks Plasma DataEngine
 categories:
 - kde
 - ruby
+comments: true
 ---
-* toc
-{:toc}
 
-# Hello Planet KDE, hello RubyCorner
+## Hello Planet KDE, hello RubyCorner
 
 Since I wrote my last Blog post much time has past. After my last exam last
 Friday I just started to do some hacking on KDE. As it should be something simple
@@ -18,7 +17,7 @@ dataengine for retrieving stocks information.
 I used ruby, because plasma hacking with ruby is freaking awesome and totally
 easy. Let's prove it!
 
-# How To Use It
+## How To Use It
 
 ![Simple Plasmoid made with Ruby][img]{:.right} Before diving into the
 development process, you probably want to test the final result yourself.
@@ -40,7 +39,7 @@ You can remove the engine with this short command:
 
     plasmapkg -t dataengine -r ruby-stocks
 
-# How To Create It
+## How To Create It
 
 I started with a look on [the plasma ruby examples][1] and copied the inital
 construct from the given time data engine example. There was also an attempt to
@@ -75,7 +74,7 @@ As both methods should do the same in my example, I used an method alias.
 If you ever did a plasma dataengine using C++ you have noticed, that it is a
 straight forward port from C++ to ruby. There is hardly something different.
 
-{% highlight ruby %}
+{% codeblock main.rb lang:ruby %}
 # kate: remove-trailing-space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby; syntax ruby; replace-tabs on; replace-tabs-save on; space-indent on;
 require 'plasma_applet'
 
@@ -155,12 +154,12 @@ module RubyStocks
   end
 
 end
-{% endhighlight %}
+{% endcodeblock %}
 
 
 The second file you need is the *metadata.desktop*.
 
-{% highlight ini %}
+{% codeblock metadata.desktop lang:ini %}
 [Desktop Entry]
 Name=Stocks Data Engine
 Comment=Stocks Data Engine powered by Yahoo! Finance (real time delayed by around 15 minutes
@@ -181,9 +180,9 @@ X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 
 # Icon=alarmclock
-{% endhighlight %}
+{% endcodeblock %}
 
-# What Comes Next?
+## What Comes Next?
 
 [![Simple Plasmoid made with Ruby][2]{:.left style="width:256px;height:178px;"}][2]The
 engine should be quite usable by now. I plan to create a plasmoid which
@@ -202,5 +201,5 @@ how do I get this engine into KDE trunk?
 [file]: {{ site.url }}/files/plasma-dataengine-ruby-stocks-v1.0.zip "Download Plasma package ruby-stocks v1.0"
 [0]:    http://websvn.kde.org/trunk/playground/base/plasma/dataengines/stocksengine/ "Stocks engine made with C++ from KDE playground"
 [1]:    http://websvn.kde.org/trunk/KDE/kdeexamples/plasma/ruby "Plasma Ruby examples in KDE kdeexamples"
-[2]:    http://de.ichart.yahoo.com/z?s=NOK&t=5d&q=l&l=off&z=m&a=v&p=s "Stocks Chart for Nokia from Yahoo! Finance"
+[2]:    http://chart.finance.yahoo.com/t?s=NOK&lang=en-US&region=US&width=300&height=180 "Stocks Chart for Nokia from Yahoo! Finance"
 [3]:    http://de.finance.yahoo.com/q/bc?s=NOK&t=5d&l=off&z=m&q=l&c= "Stocks Chart for Nokia from Yahoo! Finance"

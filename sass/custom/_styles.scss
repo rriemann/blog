@@ -44,6 +44,8 @@ body nav[role="navigation"] {
 }
 header hgroup h1 a {
     text-transform: lowercase;
+    font-style: italic;
+    font-weight: 700;
 }
 header hgroup h1, header hgroup h2 {
     display: inline;

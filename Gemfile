@@ -15,6 +15,7 @@ group :development do
   gem 'stringex'
   gem 'liquid', '2.2.2'
   gem 'rb-inotify'
+  gem 'gsl'
 end
 
 gem 'sinatra', '1.2.6'

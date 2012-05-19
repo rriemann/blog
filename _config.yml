@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://saLOUt.github.com
+url: http://blog.riemann.cc
 title: Worth Mentioning
 subtitle: nothing else
 author: Robert Riemann
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: saloution@googlemail.com
+email: robert@riemann.cc
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -35,6 +35,7 @@ plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
 markdown: kramdown
+lsi: true
 # sidebar: collapse
 pygments: true # default python pygments have been replaced by pygments.rb
 
@@ -52,7 +53,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 # blog_index_asides:
-# post_asides:
+post_asides: [asides/recent_posts.html, custom/asides/related.html]
 # page_asides:
 
 # ----------------------- #

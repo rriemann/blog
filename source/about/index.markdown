@@ -57,7 +57,9 @@ CouchSurfing
 
 ## About This Site
 
-This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The design was inspired by [Michael Bleigh](http://github.com/mbleigh/mbleigh.github.com). The source code used to create this website is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com) as well.
+This site is built using the [Jekyll](http://github.com/mojombo/jekyll)
+library and hosted on [GitHub](http://github.com/).
+The source code used to create this website is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com/tree/source) as well.
 
 ## Note on Copyright
 

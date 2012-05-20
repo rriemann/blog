@@ -7,13 +7,13 @@ layout: nil
 
 {% case page.category %}
 {% when 'kde' %}
-  <title><![CDATA[{{ site.title }} | Category {{ page.category }}]]></title>
-  <link href="{{ site.url }}/{{ page.category }}.xml" rel="self"/>
 {% assign posts = site.categories.kde %}
   <title><![CDATA[{{ site.title }} | Category {{ page.category }}]]></title>
   <link href="{{ site.url }}/{{ page.category }}.xml" rel="self"/>
 {% when 'ruby' %}
 {% assign posts = site.categories.ruby %}
+  <title><![CDATA[{{ site.title }} | Category {{ page.category }}]]></title>
+  <link href="{{ site.url }}/{{ page.category }}.xml" rel="self"/>
 {% else %}
 {% assign posts = site.posts %}
   <title><![CDATA[{{ site.title }}]]></title>

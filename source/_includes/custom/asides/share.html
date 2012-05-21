@@ -1,0 +1,32 @@
+<section>
+    <h1>Share</h1>
+    <!-- http://www.heise.de/extras/socialshareprivacy/ -->
+    <div id="socialshareprivacy"></div>
+    <script type="text/javascript" src="{{ root_url }}/javascripts/jquery-1.7.2.min.js"></script> 
+    <script type="text/javascript" src="{{ root_url }}/javascripts/jquery.socialshareprivacy.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        if($('#socialshareprivacy').length > 0){
+          $('#socialshareprivacy').socialSharePrivacy({
+            services : {
+              facebook : {
+                'language': 'en',
+                'dummy_img': '{{ root_url }}/images/dummy_facebook.png',
+                'status': 'off'
+              }, 
+              twitter : {
+                'language': 'en',
+                'dummy_img': '{{ root_url }}/images/dummy_twitter.png'
+              },
+              gplus : {
+                'language': 'en',
+                'dummy_img': '{{ root_url }}/images/dummy_gplus.png'
+              },
+              'css_path' : '{{ root_url }}/stylesheets/socialshareprivacy.css'
+            }
+          });
+        }
+      });
+    </script>
+    <br/>
+</section>

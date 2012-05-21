@@ -8,7 +8,7 @@ categories:
 comments: true
 ---
 
-# Prolog
+## Prolog
 
 When updating my only productive computer system to the latest [opensuse][opensuse]
 version 12.1, I decided to give the feature rich, shiny new filesystem
@@ -34,12 +34,12 @@ All apps accessing my picture btrfs subvolume were crashing.
 After disabling the whole btrfs system by commenting the appropriate lines in my
 `/etc/fstab` file, I had a stable system again – just without any pictures.
 
-# Data Rescue
+## Data Rescue
 
 Luckily Chris Mason (#cmason) from [#btrfs][irc] could help me to fix these
 problems without any loss of data!
 
-A simple `btrfsck` didn't help me, because of a crash of the repair tool itself:
+A# simple `btrfsck` didn't help me, because of a crash of the repair tool itself:
 
     warning, start mismatch 48695640064 48695652352
     block 48695652352 rec extent_item_refs 1, passed 1

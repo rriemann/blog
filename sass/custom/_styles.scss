@@ -1,0 +1,90 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+$twitter-status-link: lighten($sidebar-link-color-subdued, 15) !default;
+@import "twitter";
+article dt {
+    font-weight: bold;
+}
+article dd {
+    padding-left: 2em;
+}
+dd code {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 0.4em 0.4em 0.4em 0.4em;
+    color: #555555;
+    display: inline-block;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: -1px 0;
+    padding: 0 0.3em;
+}
+img.noborder {
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+}
+img.webcomic {
+/*     max-width: 730px; */
+    max-width: 100%;
+/*     width: 100%; */
+}
+.footnotes {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC") repeat-x scroll left top transparent;
+    padding: 1em;
+}
+.footnotes ol {
+    margin-left: 3em;
+}
+html {
+    background: none repeat scroll 0 0 #252525;
+}
+/*
+body > nav form {
+    padding-top: 0.15em;
+    width: 190px;
+}
+body nav[role="navigation"] {
+    padding-right: 0.5em;
+}
+*/
+header hgroup h1 a {
+    text-transform: lowercase;
+    font-style: italic;
+    font-weight: 700;
+}
+header hgroup h1, header hgroup h2 {
+    display: inline;
+}
+
+div#content > div, #archive #content > div {
+  padding-top: 2em;
+}
+
+div#content > div.blog-index {
+  background-color: inherit;
+  padding-top: 0;
+}
+
+div#content > div > article > header {
+  background: none;
+  padding-bottom: 0;
+}
+
+article.hentry, article {
+  padding-top: 0;
+}
+
+article .youtube-player {
+    @include shadow-box;
+}
+
+.gist .gist-file .gist-data .line-data {
+  width: 100%;
+}
+/*
+pre {
+  color: #f2f2f2;
+  background-color: #252525;
+}
+*/

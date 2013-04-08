@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://blog.riemann.cc
+title: Worth Mentioning
+subtitle: nothing else
+author: Robert Riemann
 simple_search: http://google.com/search
 description:
 
@@ -18,8 +18,9 @@ date_format: "ordinal"
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
 subscribe_email:
+category_feeds: true
 # RSS feeds can list your email address if you like
-email:
+email: robert@riemann.cc
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -27,19 +28,36 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-category_dir: blog/categories
-markdown: rdiscount
-pygments: false # default python pygments have been replaced by pygments.rb
+category_dir: categories
+include:
+  - .htaccess
+markdown: kramdown
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - strikethrough
+    - autolink
+    - superscript
+    - smart
 
-paginate: 10          # Posts per page on the blog index
-pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+pygments: false # Jekyll's default Python Pygments have been replaced by pygments.rb. Set to true to use Albino + Pythong Pygments
+
+paginate: 3          # Posts per page on the blog index
+pagination_dir:  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_in_feed: false # Truncate excerpted articles in the atom feed
+permalink_label: "Permalink"
+permalink_label_feed: "&#9875; Permalink"
+linklog_marker: "&rarr;"
+linklog_marker_position: after
+linklog_marker_position_feed: after
+standard_post_marker:
 
 titlecase: true       # Converts page and post titles to titlecase
 
@@ -49,23 +67,31 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
-# blog_index_asides:
-# post_asides:
-# page_asides:
+blog_index_asides: [asides/recent_posts.html, custom/asides/twitter.html, asides/github.html, custom/asides/buttons.html]
+post_asides: [custom/asides/middle-amerika.html, asides/recent_posts.html, custom/asides/related_posts.html]
+page_asides: [custom/asides/twitter.html]
 
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
 
+# Javascript social buttons often generate lots of http requests and may track your viewer's browsing history
+# Show respect for privacy and bandwidth with simple links for Twitter, Facebook and Google Plus.
+respectfully_social: true
+
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: saLOUt
+github_repo_count: 3
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_button: true
+twitter_user: salout_de
+twitter_tweet_count: 4
+twitter_show_replies: false
+twitter_follow_button: true
+twitter_show_follower_count: false
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false
@@ -73,8 +99,9 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
-googleplus_hidden: false
+google_plus_user:
+google_plus_hidden: false
+google_plus_image_size: 32
 
 # Pinboard
 pinboard_user:
@@ -85,11 +112,15 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: worthmentioning
+disqus_show_comment_count: true
+disqus_developer: 0
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-12737249-1
+
+# Gaug.es Analytics
+gauges_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false

@@ -68,7 +68,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 blog_index_asides: [asides/recent_posts.html, custom/asides/twitter.html, asides/github.html, custom/asides/buttons.html]
-post_asides: [custom/asides/middle-amerika.html, asides/recent_posts.html, custom/asides/related_posts.html]
+post_asides: [custom/asides/central-america.html, asides/recent_posts.html, custom/asides/related_posts.html]
 page_asides: [custom/asides/twitter.html]
 
 # ----------------------- #
@@ -89,7 +89,7 @@ github_skip_forks: true
 twitter_user: salout_de
 twitter_tweet_count: 4
 twitter_show_replies: false
-twitter_follow_button: true
+twitter_follow_button: false
 twitter_show_follower_count: false
 twitter_tweet_button: false
 

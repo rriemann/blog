@@ -75,16 +75,33 @@ article.hentry, article {
   padding-top: 0;
 }
 
-article .youtube-player {
+h1.entry-title {
+  font-size: 2.2em;
+}
+
+/*article .youtube-player {
     @include shadow-box;
+}*/
+
+article .flash-video {
+  display: inline-block;
 }
 
 .gist .gist-file .gist-data .line-data {
   width: 100%;
 }
-/*
-pre {
-  color: #f2f2f2;
-  background-color: #252525;
+
+.blog-index #markdown-toc {
+  display: none;
 }
-*/
+
+#markdown-toc:before {
+  content: "Übersicht";
+  font-weight: bold;
+}
+ul#markdown-toc {
+  list-style: none;
+  float: right;
+  @include shadow-box;
+  background-color: white;
+}

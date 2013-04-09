@@ -1,0 +1,27 @@
+---
+layout: post
+title: 'Frühling (Gedicht)'
+categories:
+- poetry
+- art
+- german
+comments: true
+---
+
+In der Nacht kehr’ ich zurück –   
+sinne nach vergang’nem Glück.   
+Die Nacht ist kalt – so viele Sterne;   
+der Vollmond riesig in der Ferne.   
+Vieles scheint nun klar zu sein,   
+Hoffnung keimt auf - wenn auch erst fein:   
+Morgen wird schon Frühling sein.   
+{: .verse}
+
+Vergang’nes hinter sich zu lassen,   
+Mut zu neuem Wagnis fassen,   
+– sind die Gebote dieser Zeit.   
+Ich bin zurück, ich bin bereit!   
+{: .verse}
+
+*der Unbekannten sowie all’ meinen guten wie auch neuen Freunden gewidmet*
+{: .verse}

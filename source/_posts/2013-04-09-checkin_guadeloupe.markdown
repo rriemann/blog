@@ -2,7 +2,7 @@
 # kate: hl markdown;
 layout: post
 title: "Check-In Guadeloupe"
-date: 2013-04-07 22:30
+date: 2013-04-09 06:30
 comments: true
 categories: [central-america, german]
 ---
@@ -22,7 +22,7 @@ schon, lag jedoch brach.
 
 Der größte Unterschied ist für mich vielleicht, dass ich diesmal alleine reise.
 Dafür bleibe ich aber doppel so lange. `;)` Nachdem die letzte Reise zumindest
-in großen Zügen vorher geplant wurde, habe ich diesmal nur zwei Flüge gebucht.
+in groben Zügen vorher geplant wurde, habe ich diesmal nur zwei Flüge gebucht.
 Kurzfristig hat mir doch jemand zugesagt mich vom Flughafen abholen zu können,
 so dass ich mich zumindest um die erste Übernachtung nicht weiter kümmern musste.
 

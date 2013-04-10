@@ -4,7 +4,7 @@ layout: post
 title: "Check-In Guadeloupe"
 date: 2013-04-09 06:30
 comments: true
-categories: [central-america, german]
+categories: [central-america, german, travelling]
 ---
 
 ![Guadeloupe][sky]{:.right}

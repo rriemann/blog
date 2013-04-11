@@ -7,7 +7,7 @@ comments: true
 categories: [central-america, german, travelling]
 ---
 
-![Guadeloupe][sky]{:.right}
+{% img right /images/central-america/blue-sky-palm_thumb.jpg Die Sonne steht senkrecht über mir. %}
 
 ### Herzlich Willkommen!
 
@@ -43,8 +43,7 @@ Euro hier weniger wert. Hierzu ein Vergleich: Der Hamburger von McDondals
 in der Stadt Basse-Terre kostet 1,75€; der Cheeseburger 2,60€. Das Kilo Bananen
 im Supermarkt Carrefour von der Plantage nebenan kostet hier 1,30€.
 
-![Strand in Sainte-Anne][beach]
-{: style="text-align:center"}
+{% img /images/central-america/beach-sainte-anne_thumb.jpg Strand in Sainte-Anne %}
 
 Tageszeiten und Wetter folgen hier einem anderen Rythmus. Es wird um 6 Uhr hell.
 Um 18 Uhr wird es dunkel. Die Dämmerung ist jeweils extrem kurz. Bis die Sonne im

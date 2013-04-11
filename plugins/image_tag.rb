@@ -39,7 +39,14 @@ module Jekyll
 
     def render(context)
       if @img
-        "<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>"
+        # "<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>"
+        klass = @img.delete('class')
+        klass = " class=\"#{klass}\"" unless klass.nil?
+        prefix = @img['src'] =~ %r{^\/} ? context.environments.first['site']['url'] : ''
+        fullsize_filename = @img['src'].gsub(/_thumb\./,'.')
+        # STDERR.puts File.file?(File.expand_path(File.dirname(__FILE__)+"/../source"+fullsize_filename)).inspect
+        fullsize_filename = File.file?(File.expand_path(File.dirname(__FILE__)+"/../source"+fullsize_filename)) ? fullsize_filename : @img['src']
+        "<figure#{klass}><a href=\"#{fullsize_filename}\" title=\"#{@img['title']}\"><img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}></a><figcaption>#{@img['title']}</figcaption></figure>"
       else
         "Error processing input, expected syntax: {% img [class name(s)] [http[s]:/]/path/to/image [width [height]] [title text | \"title text\" [\"alt text\"]] %}"
       end

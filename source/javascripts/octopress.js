@@ -201,6 +201,32 @@ $('document').ready(function() {
   getNav();
   addSidebarToggler();
   
+  /* Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked */
+  /* http://jsfiddle.net/bG4gR/ */
+  $(".fancybox,a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
+          closeBtn  : true,
+          arrows    : true,
+          nextClick : true,
+          helpers : {
+                  overlay : {
+                    locked : false
+                  },
+                  thumbs : {
+                          width  : 50,
+                          height : 50
+                  }
+          }
+          /*
+          ,
+          beforeLoad: function(){
+          $(".fancybox-overlay").css({"overflow-y":"hidden"});
+          },
+          afterClose: function(){
+          $("body").css({"overflow-y":"visible"});
+          }
+          */
+  });  
+  
   getFeed('#tweets'); // execute Twitter Hack
 });
 

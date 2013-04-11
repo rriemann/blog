@@ -19,15 +19,18 @@ dd code {
     margin: -1px 0;
     padding: 0 0.3em;
 }
-img.noborder {
+img {
+  background-color: white;
+  &.noborder {
     border: 0 none;
-    border-radius: 0 0 0 0;
+    border-radius: 0;
     box-shadow: none;
-}
-img.webcomic {
-/*     max-width: 730px; */
+  }
+  &.webcomic {
+    /* max-width: 730px; */
     max-width: 100%;
-/*     width: 100%; */
+    /* width: 100%; */
+  }
 }
 .footnotes {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC") repeat-x scroll left top transparent;
@@ -102,6 +105,60 @@ article .flash-video {
 ul#markdown-toc {
   list-style: none;
   float: right;
+  margin-left: 0.5em;
   @include shadow-box;
   background-color: white;
+}
+
+figure {
+  @include shadow-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.5em 0;
+  background-color: white;
+  figurecaption {
+    background-color: white;
+    font-size: 80%;
+  }
+  img {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+  }
+  &.right {
+    float: right;
+    margin-left: 0.5em;
+  }
+  &.left {
+    float: left;
+    margin-right: 0.5em;
+  }
+  &.center {
+     margin-left: auto;
+     margin-right: auto;
+  }
+}
+
+body div#fancybox-thumbs {
+  background: inherit;
+}
+
+/*
+.fancybox-wrap { position: fixed !important; }
+.fancybox-opened {
+-webkit-border-radius: 4px !important;
+-moz-border-radius: 4px !important;
+border-radius: 4px !important;
+}
+.fancybox-close, .fancybox-prev span, .fancybox-next span {
+background-color: transparent !important;
+border: 0 !important;
+}
+*/
+
+body {
+  overflow-y: visible;
+  margin: 0 auto !important; // fix for FancyBox
 }

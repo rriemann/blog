@@ -94,8 +94,10 @@ article .flash-video {
   width: 100%;
 }
 
-.blog-index #markdown-toc {
-  display: none;
+.blog-index {
+  #markdown-toc, sup[id*="fnref"] {
+    display: none;
+  }
 }
 
 #markdown-toc:before {

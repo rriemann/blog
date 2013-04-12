@@ -106,6 +106,7 @@ task :new_post, :title do |t, args|
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
+    post.puts "# kate: hl markdown;"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
@@ -141,6 +142,7 @@ task :new_page, :filename do |t, args|
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
       page.puts "---"
+      page.puts "# kate: hl markdown;"
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"

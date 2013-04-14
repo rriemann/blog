@@ -67,9 +67,9 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
-blog_index_asides: [asides/recent_posts.html, custom/asides/twitter.html, asides/github.html, custom/asides/buttons.html]
-post_asides: [custom/asides/central-america.html, asides/recent_posts.html, custom/asides/related_posts.html]
-page_asides: [custom/asides/twitter.html]
+blog_index_asides: [asides/recent_posts.html, custom/asides/twitter.html, custom/asides/recent_comments.html, custom/asides/buttons.html]
+post_asides: [custom/asides/central-america.html, asides/recent_posts.html, custom/asides/recent_comments.html ,custom/asides/related_posts.html]
+page_asides: [custom/asides/twitter.html, custom/asides/recent_comments.html, asides/github.html]
 
 # ----------------------- #
 #   3rd Party Settings    #

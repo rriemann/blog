@@ -22,9 +22,10 @@ dd code {
 img {
   background-color: white;
   &.noborder {
-    border: 0 none;
-    border-radius: 0;
-    box-shadow: none;
+    border: 0 none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: inherit;
   }
   &.webcomic {
     /* max-width: 730px; */
@@ -33,11 +34,13 @@ img {
   }
 }
 .footnotes {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC") repeat-x scroll left top transparent;
-    padding: 1em;
-}
-.footnotes ol {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC") repeat-x scroll left top transparent;
+  padding: 1em;
+  clear: both;
+  font-size: 80%;
+  ol {
     margin-left: 3em;
+  }
 }
 html {
     background: none repeat scroll 0 0 #252525;
@@ -159,6 +162,14 @@ background-color: transparent !important;
 border: 0 !important;
 }
 */
+
+a.dsq-widget-user, a.disq-widget-user:link {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin-left: 1.3em;
+}
 
 body {
   overflow-y: visible;

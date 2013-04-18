@@ -125,12 +125,13 @@ figure {
     background-color: white;
     font-size: 80%;
   }
-  img {
+  img, div.flash-video {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     border: 0;
     border-radius: 0;
+    margin: 0 auto 0;
   }
   &.right {
     float: right;

@@ -119,6 +119,9 @@ figure {
   @include shadow-box;
   display: inline-block;
   max-width: 100%;
+  &.code {
+    width: 100%;
+  }
   margin: 0.5em 0;
   background-color: white;
   figurecaption {

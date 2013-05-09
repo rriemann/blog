@@ -128,7 +128,7 @@ figure {
     background-color: white;
     font-size: 80%;
   }
-  img, div.flash-video {
+  img, div.flash-video, video {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -153,6 +153,18 @@ figure {
 body div#fancybox-thumbs {
   background: inherit;
 }
+
+/*
+video.flash-video {
+  &:-webkit-full-screen, &:-moz-full-screen, &:fullscreen {
+    border: none;
+  }
+}
+
+*|*:fullscreen, *|*:-moz-full-screen {
+  border: none;
+}
+*/
 
 /*
 .fancybox-wrap { position: fixed !important; }

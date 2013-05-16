@@ -12,6 +12,7 @@ source/stylesheets/screen.css
 vendor
 node_modules
 *~
+*.bak
 *.min.js
 source/stylesheets/
 

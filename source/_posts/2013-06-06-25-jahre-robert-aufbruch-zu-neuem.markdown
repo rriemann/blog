@@ -16,6 +16,8 @@ zurück nach Miami Beach. Gerade haben wir Meile 69 passiert. Heute ist mein
 Sicherlich werde ich mich noch lange an heute erinnern können, wenn auch nicht
 unbedingt der Feierlichkeiten wegen.
 
+<!-- more -->
+
 Diese fallen wohl dieses Jahr ins Wasser (Es regnet tatsächlich ständig. Das
 Tief hat auch nein Namen: Andrea). Bislang habe ich meinen Geburtstag im Stillen
 gefeiert, da es mir irgendwie zu doof war meinen Couchsurfing-Hosts davon zu

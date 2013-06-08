@@ -73,7 +73,7 @@ One problem I came across is that the links of the TOC are only relative using
 HTML anchors. So if only a part of your post is shown, because you made usage of
 `<!-- more -->` and the post is shown in your blog index page, it won't work.
 
-I decided that I don't wont to show the TOC in this case at all and added
+I decided that I don't want to show the TOC in this case at all and added
 additionally the following lines to my style description.
 
 {% codeblock lang:css %}

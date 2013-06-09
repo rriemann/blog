@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>self-made router-powered repository mirror - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="After migrating most desktop PCs at work, at home and of some friends to
+openSUSE with upstream KDE repo, it was always a
+time-consuming task to keep &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Self-made Router-powered Repository Mirror</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-23T01:32:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>After migrating most desktop PCs at work, at home and of some friends to
+<a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
+time-consuming task to keep all these systems up-to-date. I was most
+bothered by downloading the same files over and over again, which happened
+sometimes to be quite slow, especially via WLAN.</p>
+
+<p>Fortunatly I got a couple of month ago the Linux-based router <a href="http://en.wikipedia.org/wiki/FRITZ!Box">AVM Fritz!Box 7270</a>,
+which can be rooted with a modified firmware. The customizable firmware is
+provided by the <a href="http://freetz.org/">Freetz</a> project and allows you to combine different
+modular packages to add functionality.</p>
+
+<!-- more -->
+
+<p>After playing a little bit with Freetz, I even got a lighttpd webserver with
+ruby and caching capabilities running. Of course, the original firmware as well
+as Freetz allow the configuration of dynamic DNS services. <code>;)</code></p>
+
+<p>I ended up with a configuration including:</p>
+
+<ul>
+  <li>dropbear ssh server (allows remote login via ssh – otherwise only telnet is supported)</li>
+  <li>automount-scripts supporting ext3 and ext4 (latter is not supported by AVM firmware)</li>
+  <li>nfs including a CGI configuration web page</li>
+  <li>rsync</li>
+</ul>
+
+<p>I formatted an external hard drive to use ext4 and attached it to the router.
+The file <code>mirror-rsync.sh</code> needs to be copied to an arbitrary folder on the
+external drive.</p>
+
+<div><script src="https://gist.github.com/1729496.js?file=mirror-rsync.sh"></script>
+<noscript><pre><code>#!/bin/sh
+set -o errexit
+
+cd /var/media/ftp/uStor02/opensuse
+
+echo -e &quot;\nII: Start time: $(date)\nII: directory: $(pwd)&quot; 2&gt;&amp;1 | tee -a log.txt
+
+trap - INT
+
+# rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp-1.gwdg.de::pub/opensuse/update/12.1/ update/12.1 2&gt;&amp;1 | tee -a log.txt
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp.halifax.rwth-aachen.de::opensuse/update/12.1/ update/12.1 2&gt;&amp;1 | tee -a log.txt
+
+# rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp5.gwdg.de::pub/opensuse/repositories/KDE:/Release:/48/openSUSE_12.1/ repositories/KDE:/Release:/48/openSUSE_12.1 2&gt;&amp;1 | tee -a log.txt
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp.halifax.rwth-aachen.de::opensuse/repositories/KDE:/Release:/48/openSUSE_12.1/ repositories/KDE:/Release:/48/openSUSE_12.1 2&gt;&amp;1 | tee -a log.txt
+
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 packman.inode.at::packman/suse/12.1/Essentials/ repositories/packman/12.1/Essentials 2&gt;&amp;1 | tee -a log.txt
+</code></pre></noscript></div>
+
+<p>To lower the data transfer, I tuned my rsync commands to download only
+x86_64 packages as well as only German language packages.</p>
+
+<div><script src="https://gist.github.com/1729496.js?file=include.txt"></script>
+<noscript><pre><code>*l10n-de*x86_64*
+*l10n-de*noarch*
+*wine*
+
+*libqt4-debuginfo*x86_64*
+*libkdepimlibs4-debuginfo*x86_64*
+*libkdecore4-debuginfo*x86_64*
+*libkde4-debuginfo*x86_64*
+*kdepim4-debuginfo*x86_64*
+*libqt4-x11-debuginfo*x86_64*
+*amarok-debuginfo*x86_64*
+*kmail-debuginfo*x86_64*
+*libakonadi4-debuginfo*x86_64*</code></pre></noscript></div>
+
+<div><script src="https://gist.github.com/1729496.js?file=exclude.txt"></script>
+<noscript><pre><code>src
+*i686.rpm
+*i686.drpm
+*i586.rpm
+*i586.drpm
+*buildsymbols*
+ia64
+*debuginfo*
+*debugsource*
+*l10n*</code></pre></noscript></div>
+
+<p>To finish the router setup, the only thing left is to add a Cron job (supported by
+Freetz interface) which runs the script daily – preferably during the night.</p>
+
+<p>The original firmware provides SMB access to files on the hard drive. This can be
+quite slow. So I configured NFS for access these repositories. There’s a
+<a href="http://linuxundich.de/de/hardware/dateifreigaben-auf-der-fritzbox-via-nfs-und-freetz/">German blog post</a> with some benchmarks to compare SMB and NFS.</p>
+
+<p>Finally, the new repositories have to be activated. The priority is set to 90
+and this way overranks the original repos, which don’t have to be disabled.</p>
+
+<div><script src="https://gist.github.com/1729496.js?file=client.sh"></script>
+<noscript><pre><code>#!/bin/sh
+
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-update nfs://fritz.box:/var/media/ftp/uStor02/opensuse/update/12.1?mountoptions=vers=3 fritzbox-12.1-update
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-kde48 nfs://fritz.box:/var/media/ftp/uStor02/opensuse/repositories/KDE:/Release:/48/openSUSE_12.1?mountoptions=vers=3 fritzbox-12.1-kde48
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-packman nfs://fritz.box:/var/media/ftp/uStor02/opensuse/repositories/packman/12.1/Essentials?mountoptions=vers=3 fritzbox-12.1-packman
+
+zypper mr -p 90 fritzbox-12.1-update
+zypper mr -p 90 fritzbox-12.1-kde48
+zypper mr -p 90 fritzbox-12.1-packman</code></pre></noscript></div>
+
+<p>The most important thing is here to append <code>?mountoptions=vers=3</code> to all URLs.
+The Freetz NFS build doesn’t support NFS version 4 and zypper fails to auto-detect
+this.</p>
+
+<p>So the next time I want to bring the latest KDE release to a friend, I just have
+to unplug my hard-drive and have everything with me. At work, I don’t have to
+bring my own hard drive with me – they have their own one <code>:p</code> with an equal script
+which can be triggered from time to time.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-23T01:32:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/kde/'>kde</a>, <a class='category' href='/categories/linux/'>linux</a>, <a class='category' href='/categories/opensuse/'>opensuse</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/05/21/the-usual-kde-beginners-desktop/" title="Previous Post: The Usual KDE Beginners Desktop">&laquo; The Usual KDE Beginners Desktop</a>
+      
+      
+        <a class="basic-alignment right" href="/2012/08/02/starcraft-2-fixing-qwertz-hotkeys/" title="Next Post: Starcraft 2 - fixing QWERTZ hotkeys">Starcraft 2 - fixing QWERTZ hotkeys &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/';
+        var disqus_url = 'http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

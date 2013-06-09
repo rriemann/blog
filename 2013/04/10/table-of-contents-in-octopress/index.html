@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Table Of Contents in Octopress - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="Prologue Generating the Table Of Contents Using Kramdown Preparing your posts Styling Issues Prologue I’m still looking for an easy and proper &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Table of Contents in Octopress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T09:29:00-04:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><ul id="markdown-toc">
+  <li><a href="#prologue">Prologue</a></li>
+  <li><a href="#generating-the-table-of-contents">Generating the Table Of Contents</a>    <ul>
+      <li><a href="#using-kramdown">Using Kramdown</a></li>
+      <li><a href="#preparing-your-posts">Preparing your posts</a></li>
+    </ul>
+  </li>
+  <li><a href="#styling">Styling</a></li>
+  <li><a href="#issues">Issues</a></li>
+</ul>
+
+<h3 id="prologue">Prologue</h3>
+
+<p>I’m still looking for an easy and proper solution to implement pictures with
+subtitles and an original size pop-up for my blog. On the way I found some
+interesting ideas to equip <a href="http://octopress.org/">Octopress</a>, Hacker’s Blog Engine, with a table of
+contents.</p>
+
+<p>So I stumbled upon <a href="http://brizzled.clapper.org/blog/2012/02/04/generating-a-table-of-contents-in-octopress/">this article</a> and really wondered about the
+complexity of solutions other people found. So I just want to present the
+solution that I found.</p>
+
+<!-- more -->
+
+<h3 id="generating-the-table-of-contents">Generating the Table Of Contents</h3>
+
+<p>I’m going to add some further <abbr title="Table Of Contents">TOC</abbr> levels for demonstration purposes. <code>;)</code></p>
+
+<h4 id="using-kramdown">Using Kramdown</h4>
+
+<p>I use <a href="http://kramdown.rubyforge.org">kramdown</a> as Markdown converter in all my projects. The inventor claims,
+that it could be the fastest converter so far. Additionally, it comes with some
+nice extras. For instance, it can generate a <abbr title="Table Of Contents">TOC</abbr> for you<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<p>To use kramdown within Octopress, you have to activate it in the <code>_config.yml</code> file.</p>
+
+<pre><code>markdown: kramdown
+</code></pre>
+
+<h4 id="preparing-your-posts">Preparing your posts</h4>
+
+<p>The following code in your blog posts is replaced by the <abbr title="Table Of Contents">TOC</abbr> after kramdown parsing.</p>
+
+<pre><code>* list element with functor item
+{:toc}
+</code></pre>
+
+<h3 id="styling">Styling</h3>
+
+<p>I applied the following <a href="http://sass-lang.com/">SCSS</a> code to realize the styling. Octopress already
+knows how to generate valid CSS code out of it. The <code>@include shadow-box;</code>
+is resolved by <a href="http://compass-style.org/">Compass</a>.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Snippet for sass/custom/_styles.scss </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+</pre></td><td class="code"><pre><code class="css"><span class="line"><span class="nf">#markdown-toc</span><span class="nd">:before</span> <span class="p">{</span>
+</span><span class="line">  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;Table of Contents&quot;</span><span class="p">;</span>
+</span><span class="line">  <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line"><span class="nt">ul</span><span class="nf">#markdown-toc</span> <span class="p">{</span>
+</span><span class="line">  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class="line">  <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+</span><span class="line">  <span class="o">@</span><span class="n">include</span> <span class="n">shadow</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+</span><span class="line">  <span class="k">background-color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="issues">Issues</h3>
+
+<p>One problem I came across is that the links of the <abbr title="Table Of Contents">TOC</abbr> are only relative using
+HTML anchors. So if only a part of your post is shown, because you made usage of
+<code>&lt;!-- more --&gt;</code> and the post is shown in your blog index page, it won’t work.</p>
+
+<p>I decided that I don’t want to show the <abbr title="Table Of Contents">TOC</abbr> in this case at all and added
+additionally the following lines to my style description.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="css"><span class="line"><span class="nc">.blog-index</span> <span class="nf">#markdown-toc</span> <span class="p">{</span>
+</span><span class="line">  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="http://kramdown.rubyforge.org/converter/html.html#toc">http://kramdown.rubyforge.org/converter/html.html#toc</a><a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T09:29:00-04:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/css/'>css</a>, <a class='category' href='/categories/meta/'>meta</a>, <a class='category' href='/categories/tricks/'>tricks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/04/09/checkin_guadeloupe/" title="Previous Post: Check-In Guadeloupe">&laquo; Check-In Guadeloupe</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/04/11/verkehr-in-guadeloupe/" title="Next Post: Verkehr in Guadeloupe">Verkehr in Guadeloupe &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/';
+        var disqus_url = 'http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
+    <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
+    <updated>2013-05-01T22:59:00-04:00</updated>
+    <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
+    <content type="html"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
+  <li><a href="#install-os">Install OS</a></li>
+  <li><a href="#install-gitlab">Install Gitlab</a></li>
+  <li><a href="#install-dependencies">Install dependencies:</a>    <ul>
+      <li><a href="#prepare-system-for-gitlab">Prepare system for Gitlab</a></li>
+      <li><a href="#prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="private-git-repo-hosting">Private Git Repo Hosting</h3>
+
+<p><a href="http://gitlab.org/">Gitlab</a> brings the social coding <a href="http://www.github.com/">Github</a> experience to your own network. In
+contrast to the commercial product Github which only allows to host open source
+<a href="http://git-scm.com/">git</a> repository projects using the free plan, you can install the free/libre software Gitlab
+wherever you like and do what you want.
+Therefore you need to setup a RubyOnRails environment.
+Officially, Gitlab supports Debian/Ubuntu.
+Read on how to install it on <a href="http://www.opensuse.org/">OpenSUSE</a>.</p>
+
+<!-- more -->
+
+<p>The presented solutions features a btrfs
+filesystem RAID-1 <code>:)</code> and some custom patches. Instead of init.d startup scripts,
+we use systemd. I recommend to use nginx as a webserver.</p>
+
+<p>Please be aware that the development of Gitlab continues rapidly. This might break
+this how-to at some point. Please read everything before starting!</p>
+
+<h3 id="install-os">Install OS</h3>
+
+<ul>
+  <li>Download OpenSUSE 12.3 32bit, Network edition
+<a href="http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso">http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso</a></li>
+  <li>I chose 32bit, because Ruby Binary Extensions might have problems with lib64 path structure. We workaround this bug.</li>
+  <li>I chose networkinstall, because we need only very few packages and don’t need to download everything. only 200MB are downloaded during install</li>
+  <li>the image can easily copied to a usb pen drive using the gui tool “imagewriter” (executed as root)</li>
+  <li>Partition: There are 2 big hard drives. I created on both of them first a primary pratition of 1GB of type LINUX-RAID</li>
+  <li>I use the yast software raid setup during the install to connect both partitions to a software raid-1 partititon of ext4 to mount in /boot</li>
+  <li>I created on both hard drives a btrfs partition (50GB), but only mount the one on /dev/sda to /</li>
+  <li>I created on both hard drives a swap space of 2 GB and mount both to swap</li>
+</ul>
+
+<p>The system gets installed and the configuration follows.</p>
+
+<ul>
+  <li>I open ssh. I disable ipv6.</li>
+  <li>I disable dhcp and configure the hostname to “leise” and the site to our internet domain, the nameserver and the gateway is set to be the mail server.</li>
+  <li>The server gets the fixed ip: 192.xxx.xxx.184</li>
+  <li>The network check passes successfully and I apply immedately online updates.</li>
+  <li>I leave the user input dialog blank and only set a root password</li>
+</ul>
+
+<p>The installation is done. I test everything with a restart using <code>reboot</code>.
+Now the root filesystem has to be turned to a btrfs raid system.</p>
+
+<ul>
+  <li>I add a second device to the root file system: <code>btrfs device add /dev/sdb2 /</code></li>
+  <li>I convert the striped btrfs mode to the raid1 mode for filesystem data and metadata:
+<code>btrfs filesystem balance start -dconvert=raid1 -mconvert=raid1 /</code></li>
+</ul>
+
+<h3 id="install-gitlab">Install Gitlab</h3>
+
+<ul>
+  <li>Homepage: <a href="http://gitlab.org/">http://gitlab.org/</a></li>
+  <li>Source Code: <a href="https://github.com/gitlabhq/gitlabhq">https://github.com/gitlabhq/gitlabhq</a></li>
+</ul>
+
+<p>The following steps apply to version 5.0 and try to copy the step by step
+tutorial which is refered from the README:
+<a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md</a></p>
+
+<h2 id="install-dependencies">Install dependencies:</h2>
+
+<pre><code>zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_12.3/devel:languages:ruby:extensions.repo
+
+zypper in patterns-openSUSE-devel_basis ca-certificates-cacert nginx rubygem-rb-inotify rubygem-ffi redis mysql-community-server mysql-community-server-client rubygem-bundler ruby19 ruby19-devel libmysqlclient-devel zlib-devel libyaml-devel libgdbm4 libreadline6 libncurses5 libffi47-devel curl git-core postfix checkinstall libxml2-devel libxslt-devel libcurl-devel libicu-devel
+# accept deinstallation of patterns-openSUSE-minimal_base-conflicts
+
+python2 --version # make sure to have version &gt; 2.5 but &lt; 3.0
+
+ruby1.9 --version # make sure to have a compatible version (in my case 1.9.3)
+cat /usr/bin/bundle # make sure to have ruby version 1.9 in the shebang line (first line in file)
+
+systemctl daemon-reload # reparse config for systemd (necessary, because we installed mysql)
+systemctl start mysql.service  # start mysql
+systemctl enable mysql.service # make mysql autostart
+cp /etc/redis/default.conf{.example,}
+chown redis.redis /etc/redis/default.conf
+systemctl enable redis.service
+systemctl start redis.service
+</code></pre>
+
+<h4 id="prepare-system-for-gitlab">Prepare system for Gitlab</h4>
+
+<ul>
+  <li>create a user git: <code>useradd -ms /bin/bash git</code></li>
+</ul>
+
+<h4 id="prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</h4>
+
+<pre><code>su git # (change to the account of git)
+cd # (change to the home directory /home/git)
+git clone https://github.com/gitlabhq/gitlab-shell.git
+cd gitlab-shell
+cp config.yml.example config.yml
+vim config.yml # change domain to the domain of this computer
+cd
+ssh-keygen # to be sure, create ssh key (not mentioned in official docu) with empty passphrase
+</code></pre>
+
+<p>Follow the setup of the mysql data base: <a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql</a></p>
+
+<ul>
+  <li><code>mysql -u root</code></li>
+  <li>follow the guide for mysql commands</li>
+</ul>
+
+<p>We continue with the setup of the GitLab Rails application:</p>
+
+<pre><code>gem1.9 install charlock_holmes --version '0.6.9' # execute as root
+su git
+cd
+git clone https://github.com/gitlabhq/gitlabhq.git gitlab
+cd gitlab
+git checkout 5-0-stable # not possible yet, I use master instead
+vim config/gitlab.yml
+# ^- email_from: gitlab@atech.de, support_email: admin@atech.de, default_projects_limit: 100
+# disable username_changing_enabled
+chown -R git log/ tmp/
+chmod -R u+rwX log/ tmp/
+mkdir /home/git/gitlab-satellites
+mkdir tmp/pids/
+chmod -R u+rwX tmp/pids/
+cp config/unicorn.rb.example config/unicorn.rb
+cp config/database.yml.mysql config/database.yml
+vim config/database.yml # edit password and username
+bundle install --deployment --without development test postgres # takes a while
+bundle exec rake db:setup RAILS_ENV=production
+bundle exec rake db:seed_fu RAILS_ENV=production
+bundle exec rake gitlab:setup RAILS_ENV=production # chose yes
+bundle exec rake gitlab:shell:setup RAILS_ENV=production # chose yes
+git config --global user.name  "GitLab"
+git config --global user.email "gitlab@atech.de"
+</code></pre>
+
+<p>Install Check:</p>
+
+<pre><code>su git
+cd /home/git/gitlab
+bundle exec rake gitlab:check RAILS_ENV=production
+</code></pre>
+
+<p>Go to yast firewall and open port http (and https port): 80, (443)</p>
+
+<pre><code># update services
+su
+cd /usr/lib/systemd/system/
+wget https://gist.github.com/veprbl/5115638/raw/9d18a341217f109accb67f57e8ad420c9de442fd/gitlab.service # TODO wrong mysqld
+wget https://gist.github.com/veprbl/5115638/raw/be78658953cd5967a4d874f5b0a019667cf090af/gitlab-worker.service # TODO same
+# double-check content of these files!
+chmod 644 gitlab.service gitlab-worker.service
+# TODO edit /etc/nginx/vhost.d/*
+systemctl daemon-reload
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
+    <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
+    <updated>2013-01-05T14:21:00-05:00</updated>
+    <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
+    <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress (<a href="http://github.com/imathis/octopress/issues/847">Issue #847</a>).</p>
+
+<p>This issue was already fixed and got included in the development branch 2.1.
+I decided to upgrade my blog to the latest development version. Afterwards the
+Ruby version manager <a href="http://rvm.io/">rvm</a> asked to install a new ruby version.
+To meet the exact requirements of octopress I decided to give it a run, but when
+installing the required gems using <code>bundle install</code> I wasn’t able to
+install <a href="http://rb-gsl.rubyforge.org/">gsl</a>, the ruby binding to the GNU
+scientific library, which is used to speed-up the “related posts” calculation.
+I remembered to run into this problem once before. Unfortunately it isn’t
+resolved yet. <code>:(</code></p>
+
+<pre><code>vector_complex.c:1989:12: error: conflicting types for 'gsl_vector_complex_equal'
+/usr/include/gsl/gsl_vector_complex_double.h:167:5: note: previous declaration of 'gsl_vector_complex_equal' was here
+make: *** [vector_complex.o] Error 1
+</code></pre>
+
+<!-- more -->
+
+<h3 id="solution">Solution</h3>
+
+<p>To get this gem installed nevertheless, you have to patch the sources of the
+native extension. For this, you have to find the building directory <code>ext</code>, which
+should be mentioned in the error message.</p>
+
+<p>Put the patch <code>rb-gsl.patch</code> from below in this directory or download it using</p>
+
+<pre><code>wget 'https://gist.github.com/raw/2296214/c6b1c7150713da5d2640ddc799132611ac72cef4/rb-gsl.patch'
+</code></pre>
+
+<p>Then you have to apply the patch using <code>patch -p2 &lt; rb-gsl.patch</code> from within the
+<code>ext</code> directory. To build the extension finally, you have to run the command
+<code>make -j4</code>. If you proceed with bundle install again, the source code will be unzipped
+again leaving you with same unpatched code as before. To work around this issue,
+a hint is given in the help of the gem install commmand (<code>gem install --help</code>).</p>
+
+<pre><code>If you correct the compilation errors by editing the gem files you will need
+    to write the specification by hand.  For example:
+
+      $ gem install some_extension_gem
+      [build fails]
+      Gem files will remain installed in \
+      /path/to/gems/some_extension_gem-1.0 for inspection.
+      Results logged to /path/to/gems/some_extension_gem-1.0/gem_make.out
+      $ [cd /path/to/gems/some_extension_gem-1.0]
+      $ [edit files or what-have-you and run make]
+      $ gem spec ../../cache/some_extension_gem-1.0.gem --ruby &gt; \
+                ../../specifications/some_extension_gem-1.0.gemspec
+      $ gem list some_extension_gem
+</code></pre>
+
+<p>So I just did as I got told (still in <code>exe</code> directory):</p>
+
+<pre><code> gem spec ../../../cache/gsl-1.14.7.gem --ruby &gt; ../../../specifications/gsl-1.14.7.gemspec
+</code></pre>
+
+<p>Afterwards <code>bundle install</code> will accept this gem. That’s it!</p>
+
+<h3 id="patch-rb-gslpatch">Patch rb-gsl.patch</h3>
+
+<p><div><script src='https://gist.github.com/2296214.js?file=rb-gsl.patch'></script>
+<noscript><pre><code>diff --git a/ext/matrix_complex.c b/ext/matrix_complex.c
+index 8a77ac1..1b1d8af 100644
+--- a/ext/matrix_complex.c
++++ b/ext/matrix_complex.c
+@@ -1519,8 +1519,7 @@ static VALUE rb_gsl_matrix_complex_indgen_singleton(int argc, VALUE *argv, VALUE
+   return Data_Wrap_Struct(cgsl_matrix_complex, 0, gsl_matrix_complex_free, mnew);
+ }
+ 
+-
+-static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
++static int gsl_matrix_complex_equal_witg_eps(const gsl_matrix_complex *m1,
+   const gsl_matrix_complex *m2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -1537,6 +1536,7 @@ static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
+   return 1;
+ }
+ 
++
+ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+ {
+   gsl_matrix_complex *m1, *m2;
+@@ -1555,7 +1555,7 @@ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_matrix_complex, m1);
+   CHECK_MATRIX_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_matrix_complex, m2);
+-  ret = gsl_matrix_complex_equal(m1, m2, eps);
++  ret = gsl_matrix_complex_equal_witg_eps(m1, m2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }
+diff --git a/ext/vector_complex.c b/ext/vector_complex.c
+index f9a84f0..2711a36 100644
+--- a/ext/vector_complex.c
++++ b/ext/vector_complex.c
+@@ -1986,7 +1986,7 @@ static VALUE rb_gsl_vector_complex_zip(int argc, VALUE *argv, VALUE obj)
+   return ary;
+ }
+ 
+-static int gsl_vector_complex_equal(const gsl_vector_complex *v1,
++static int gsl_vector_complex_equal_with_eps(const gsl_vector_complex *v1,
+   const gsl_vector_complex *v2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -2019,7 +2019,7 @@ static VALUE rb_gsl_vector_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_vector_complex, v1);
+   CHECK_VECTOR_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_vector_complex, v2);
+-  ret = gsl_vector_complex_equal(v1, v2, eps);
++  ret = gsl_vector_complex_equal_with_eps(v1, v2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Kubeplayer running on KDE Plasma Active powered ExoPC tablet]]></title>
+    <link href="http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active/"/>
+    <updated>2011-09-11T00:00:00-04:00</updated>
+    <id>http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active</id>
+    <content type="html"><![CDATA[<p>Hello Planet KDE, hello RubyCorner!</p>
+
+<p>Much time has passed since i wrote my <a href="http://salout.github.com/blog/2010/12/18/announcing_kubeplayer.html" title="Announcement of Kubeplayer">previous blog post</a> about
+Kubeplayer. Things doesn’t change so much, but nowadays Kubeplayer is quite
+stable and doesn’t crash anymore. <code>;)</code></p>
+
+<p>After a lot of difficulties I got Kubeplayer packaged for opensuse. It’s ready
+to install with only <a href="http://software.opensuse.org/ymp/home:saLOUt:kubeplayer/openSUSE_11.4/kubeplayer.ymp?base=openSUSE%3A11.4&amp;query=kubeplayer">one click</a> in the case you are using openSuSE
+11.4—thanks to the open build service.</p>
+
+<p>Before delivering any further details, you may want to see the video
+demonstration on how Kubeplayer performs using <a href="http://meego.org">Meego</a> and
+<a href="http://community.kde.org/Plasma/Active">KDE Plasma Active</a>.</p>
+
+<p><iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/sOOTMVH-bjo " frameborder="0" allowfullscreen></iframe></p>
+
+<p>If you don’t like <a href="http://www.youtube.com/watch?v=sOOTMVH-bjo" title="Kubeplayer video on Youtube">watching the video using Youtube</a>, you can download
+the <a href="http://people.physik.hu-berlin.de/~rriemann/kubeplayer_plasma_active.webm" title="Kubeplayer video webm version">webm file</a> directly.</p>
+
+<h2 id="how-to">How To</h2>
+
+<p>If you want to turn your ExoPC into a Youtube-Player, too, here is the way to go:</p>
+
+<ul>
+  <li>Install the <a href="http://share.basyskom.com/contour/Deployment/latest-meego-plasma-active-testing.html">Meego image with Plasma Active</a></li>
+</ul>
+
+<p>That was the easy part. The rest is quite hard, due to the fact, that I didn’t
+found the ruby KDE language bindings. So maybe it is easier to use the <a href="http://community.kde.org/Plasma/Active/Installation">opensuse
+based Plasma Active Installation</a>.</p>
+
+<ul>
+  <li>Try to compile smokegen, smokeqt, smokekde, qtruby and korundum</li>
+</ul>
+
+<p>Because the KDE Plasma Active team doesn’t seem to use KDE vanilla and there
+might be some other reasons, too, it is quite hard to do that. I had to monkey
+patch (commenting) a lot of files.</p>
+
+<p>The installation of Kubeplayer is again quite simple, as you don’t have to build
+anything, but to meet the conventions, you can use <code>cmake</code> to copy the files to the
+right place. By now, the <a href="https://projects.kde.org/projects/playground/multimedia/kubeplayer/repository">Kubeplayer repo</a> is in playground.</p>
+
+<pre><code>git clone git://anongit.kde.org/kubeplayer
+cd kubeplayer
+git checkout -t -b tablet origin/tablet
+cmake -DCMAKE_INSTALL_PREFIX=/usr
+make # nothing happens
+sudo make install
+</code></pre>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>There are plenty different tasks yet to do:</p>
+
+<ul>
+  <li>Up to now there are no packages for any other distro than opensuse. It would
+be awesome if someone could help me to build packages for other distros (using
+the openbuild service), too.</li>
+  <li>Do you have ideas which other video platforms could be added? I checked vimeo,
+but it seems to be complicated. I didn’t found any other app doing something
+similar with youtube. Weird.</li>
+  <li>Probably the interface could be made more touchfriendly by using some QML. I
+have absolutely no experience with that. Maybe someone can propose an idea how to
+make the list view be more slide friendly (flickable).</li>
+  <li>To be able to deliver any ruby-KDE application to the not so experienced KDE
+hacker, it would be necessary to package the kdebindings for Meego.</li>
+</ul>
+
+<p>So if you can help me, please get in contact!</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Kubeplayer (youtube w/o flash)]]></title>
+    <link href="http://blog.riemann.cc/2010/12/18/announcing_kubeplayer/"/>
+    <updated>2010-12-18T00:00:00-05:00</updated>
+    <id>http://blog.riemann.cc/2010/12/18/announcing_kubeplayer</id>
+    <content type="html"><![CDATA[<h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>Earlier this year I started writing a KDE application using
+the Ruby programming language. Coming from the web development, I am no
+expert at all in C++. So I decided to give KDE development a try using
+the Ruby bindings for KDE 4 called <a href="http://techbase.kde.org/Development/Languages/Ruby" title="KDE Development with Ruby">korundum4</a>.</p>
+
+<p>It wasn’t as easy as expected. Unfortunatly the korundum4 project didn’t got
+very popular by now, so I found a lot of bugs on the way. Now, three months
+later, all the bugfixes are included in the last stable KDE. The idea, of
+just copying the project folder and starting the app without the need of any
+further setup<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, becomes finally true.</p>
+
+<h2 id="announcing-kubeplayer">Announcing Kubeplayer</h2>
+
+<p><img src="http://blog.riemann.cc/images/kubeplayer.png" alt="Screenshot of Kubeplayer" title="Screenshot of Kubeplayer" /></p>
+
+<p>I started a kind of clone of the well
+known Qt-based Youtube player <a href="http://flavio.tordini.org/minitube" title="Minitube project page">Minitube</a>. When starting the development,
+I had in mind to support Vimeo and maybe some other online video platforms, too.
+The app should integrate itself better into the KDE workspace, and lately I had
+the idea of turning it into a mobile app, too. It was possible to get a much
+cleaner and shorter code, not only because of the nice KDE KIO classes,
+but also by using Ruby.</p>
+
+<h2 id="lets-try-it-out-in-less-than-1-minute">Let’s Try It Out In Less Than 1 Minute!</h2>
+
+<p>Ok, to be fair, I have to admit, this is only possible using a recent
+Linux OS<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> with korundum4 and Ruby 1.9.x preinstalled.</p>
+
+<p>To give Kubeplayer a try, you just have to checkout the repository, and start
+the application.</p>
+
+<pre><code>git clone git://git.kde.org/kubeplayer
+ruby kubeplayer/kubeplayer
+</code></pre>
+
+<p>That’s it. You can also install kubeplayer using CMake. Installation works like
+you would it expect it from a CMake based C++ application.</p>
+
+<p>If you get an error related to <code>json</code>, you are probably using an Ruby
+version prior to 1.9.x. In this case you have to install rubygems via you distribution
+package manager. Then you can use Ruby’s own package manager to install the
+missing dependency.</p>
+
+<pre><code>gem install json
+</code></pre>
+
+<h2 id="get-involved">Get Involved!</h2>
+
+<p>Not everything is done by now. Youtube works in <strike>the most</strike> a lot
+of cases. The GUI needs a lot of small improvements. I even thought about a
+maemo/meego port, paid for an N900 on
+eBay, but unfortunately got duped <code>:(</code>. So the mobile development has to wait.</p>
+
+<p>After all, the project is still quite young, the code is very short, nice and clear.
+If you ever felt like trying to develop for/with KDE, the barrier is now quite low.</p>
+
+<ul>
+  <li>You don’t have to deal with a KDE development environment. Just clone the repo
+and you are done. Since yesterday, you can find the project in <a href="https://projects.kde.org/projects/playground/multimedia/kubeplayer" title="Official KDE Playground git repo">playground</a>.<br />
+<code>git clone git://git.kde.org/kubeplayer</code></li>
+  <li>You don’t need to know C++.</li>
+  <li>You don’t have to compile anything at all!</li>
+  <li>You can use the shiny new git infrastructure of KDE.</li>
+</ul>
+
+<p>Take a look at the code base. There are not many files at all. Summed up, there
+are less then 1000 lines of code (including rare comments). For an already
+functional multimedia application, this is really few.</p>
+
+<pre><code>kubeplayer
+├── CMakeLists.txt
+├── kubeplayer
+├── lib
+│   ├── CMakeLists.txt
+│   ├── kubeplayer.desktop
+│   ├── kubeplayer.rb
+│   ├── List.rb
+│   ├── MainWindow.rb
+│   ├── provider
+│   │   └── youtube
+│   │       └── Youtube.rb
+│   └── Video.rb
+├── main.rb
+└── README.rdoc
+</code></pre>
+
+<p>How does the future of Kubeplayer look like? I have already a lof of ideas,
+what could be done. Maybe you have also many, but different ones. What about:</p>
+
+<ul>
+  <li>allowing the use to login and comment on all supported video platforms</li>
+  <li>make flash needless on netbooks by providing an optimized app</li>
+  <li>create a scripted KPart to fetch youtube pages and open the video using kubeplayer</li>
+  <li>let the user download the videos (in a video library)</li>
+  <li>make it possible to share supported video platforms with the plasma media center team</li>
+</ul>
+
+<p>So what do you think, can Kubeplayer do for you? What can you do for Kubeplayer?</p>
+
+<p>Kind regards,<br />
+Robert</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This isn’t 100% true. You need to have korundum4 installed, but most distros
+  seems to ship this package by default. On opensuse it is called “ruby-kde4”.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>As KDE and Ruby is also available for many other OS, Kubeplayer is
+  actually cross platform.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Making Of ruby-stocks Plasma DataEngine]]></title>
+    <link href="http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks/"/>
+    <updated>2010-07-11T00:00:00-04:00</updated>
+    <id>http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks</id>
+    <content type="html"><![CDATA[<h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>Since I wrote my last Blog post much time has past. After my last exam last
+Friday I just started to do some hacking on KDE. As it should be something simple
+for the beginning and something useful, too, I decided to provide a new plasma
+dataengine for retrieving stocks information.</p>
+
+<p>I used ruby, because plasma hacking with ruby is freaking awesome and totally
+easy. Let’s prove it!</p>
+
+<h2 id="how-to-use-it">How To Use It</h2>
+
+<p><img src="http://blog.riemann.cc/images/plasmaengineviewer_ruby_stocks_v1.0.png" alt="Simple Plasmoid made with Ruby" title="Plasma DataEngine ruby-stocks made with Ruby" class="right" /> Before diving into the
+development process, you probably want to test the final result yourself.
+First you have to <a href="http://blog.riemann.cc/files/plasma-dataengine-ruby-stocks-v1.0.zip" title="Download Plasma package ruby-stocks v1.0">download</a> the plasma package. Then you can install
+it easily with the plasma package manager.</p>
+
+<pre><code>plasmapkg -t dataengine -i plasma-dataengine-ruby-stocks-v1.0.zip
+</code></pre>
+
+<p>You won’t need to be root for that. You should get a success response afterwards.</p>
+
+<p>As there is by now no plasmoid to display the provided data, you have to use
+the <code>plasmaengineexplorer</code> to test the engine. Call this program on your shell
+and look for ruby-stocks. You have to type in a stocks symbol like GOOG (Google)
+or NOK (Nokia) to get the information. Is is also possible to just call:</p>
+
+<pre><code>plasmaengineexplorer --engine ruby-stocks --source NOK
+</code></pre>
+
+<p>You can remove the engine with this short command:</p>
+
+<pre><code>plasmapkg -t dataengine -r ruby-stocks
+</code></pre>
+
+<h2 id="how-to-create-it">How To Create It</h2>
+
+<p>I started with a look on <a href="http://websvn.kde.org/trunk/KDE/kdeexamples/plasma/ruby" title="Plasma Ruby examples in KDE kdeexamples">the plasma ruby examples</a> and copied the inital
+construct from the given time data engine example. There was also an attempt to
+create a stocks engine with C++. The code is available in the <a href="http://websvn.kde.org/trunk/playground/base/plasma/dataengines/stocksengine/" title="Stocks engine made with C++ from KDE playground">playground</a>.</p>
+
+<p>The most time took the clean implementation of the cvs data parsing.</p>
+
+<p>If you want to start yourself with a ruby based dataengine, I recommend to start
+with the time engine example, too. Do not change the given file structure,
+which should be:</p>
+
+<pre><code>plasma-dataengine-ruby-stocks
+├── contents
+│   └── code
+│       ├── main.rb
+│       └── …
+└── metadata.desktop
+</code></pre>
+
+<p>The top directory gets packaged into a zip for distribution.</p>
+
+<p>Let’s take a look on the <em>main.rb</em>. There a some important things you have to be
+aware of, when you want to use ruby for plasma dataengines:</p>
+
+<ul>
+  <li>when you name your engine “ruby-stocks” (see metadata.desktop), you have to
+name the top module RubyStocks. Otherwise your engine will fail.</li>
+  <li>Plasma looks for a class called Main in that module, which have to inherit
+from PlasmaScripting::DataEngine</li>
+  <li>make sure, that you implement the member methods:
+sourceRequestEvent and updateSourceEvent</li>
+</ul>
+
+<p>As both methods should do the same in my example, I used an method alias.
+If you ever did a plasma dataengine using C++ you have noticed, that it is a
+straight forward port from C++ to ruby. There is hardly something different.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>main.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># kate: remove-trailing-space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby; syntax ruby; replace-tabs on; replace-tabs-save on; space-indent on;</span>
+</span><span class='line'><span class="nb">require</span> <span class="err">‘</span><span class="n">plasma_applet</span><span class="err">’</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1 id=&quot;the-dictonary-replaces-the-ruby-hash-as-we-need-an-ordered-hash-only-ruby-19-uses-ordered-one&quot;&gt;the dictonary replaces the ruby hash as we need an ordered hash. only ruby 1.9 uses ordered one.&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="c1"># when ruby1.9 is the default version, we can switch back to native ruby hash</span>
+</span><span class='line'><span class="nb">require</span> <span class="err">‘</span><span class="n">dictionary</span><span class="err">’</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;module RubyStocks</span>
+</span><span class='line'><span class="sr">  class Main &amp;lt; PlasmaScripting::DataEngine&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c1"># the url needs to be extended by the stock ID at the end of the string</span>
+</span><span class='line'><span class="c1"># format code: http://brusdeylins.info/projects/yahoo-finance-api/</span>
+</span><span class='line'><span class="no">DATA</span> <span class="o">=</span> <span class="no">Dictionary</span><span class="o">[</span>
+</span><span class='line'>  <span class="s2">&quot;j1&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;market capitalization&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;p2&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;percent change&quot;</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;s0&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;symbol&quot;</span><span class="p">,</span><span class="nb">String</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;d1&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;last trade date&quot;</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Date</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;t1&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;last trade time&quot;</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Time</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;c1&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;o0&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;h0&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;days high&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;g0&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;days low&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;v0&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;a2&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;average daily volume&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;l1&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;last trade&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;c4&quot;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">[</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span>
+</span><span class='line'><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;http://download.finance.yahoo.com/d/quotes.csv?f=</span><span class="si">#{</span><span class="no">DATA</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">join</span><span class="si">}</span><span class="s2">&amp;amp;e=.csv&amp;amp;s=&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">initialize</span> <span class="n">parent</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class='line'>  <span class="k">super</span> <span class="n">parent</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># don&#39;t update faster than once a minute</span>
+</span><span class='line'>  <span class="n">setMinimumPollingInterval</span> <span class="mi">60000</span>
+</span><span class='line'>  <span class="c1"># dafault update rate is 10 minutes</span>
+</span><span class='line'>  <span class="n">setPollingInterval</span> <span class="mi">600000</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">updateSourceEvent</span> <span class="n">source</span>
+</span><span class='line'>  <span class="n">request_url</span> <span class="o">=</span> <span class="no">SOURCE_URL</span> <span class="o">+</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Url</span><span class="o">::</span><span class="n">toPercentEncoding</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">strip</span>
+</span><span class='line'>  <span class="n">job</span> <span class="o">=</span> <span class="ss">KIO</span><span class="p">:</span><span class="ss">:storedGet</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Url</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">request_url</span><span class="p">),</span> <span class="ss">KIO</span><span class="p">:</span><span class="ss">:NoReload</span><span class="p">,</span> <span class="ss">KIO</span><span class="p">:</span><span class="ss">:HideProgressInfo</span>
+</span><span class='line'>  <span class="n">job</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="no">SIGNAL</span><span class="p">(</span> <span class="s1">&#39;result( KJob* )&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">aJob</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">parseCSVLine</span> <span class="n">source</span><span class="p">,</span> <span class="n">aJob</span><span class="o">.</span><span class="n">data</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="kp">false</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">parseCSVLine</span> <span class="n">source</span><span class="p">,</span> <span class="n">dataByteArray</span>
+</span><span class='line'>  <span class="vg">$stderr</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;ruby-stocks plasma dataengine: retrieved data: &quot;</span> <span class="o">+</span> <span class="n">dataByteArray</span><span class="o">.</span><span class="n">data</span>
+</span><span class='line'>  <span class="n">dataArray</span> <span class="o">=</span> <span class="n">dataByteArray</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">split</span> <span class="s2">&quot;,&quot;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">dataArray</span><span class="o">.</span><span class="n">size</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="no">DATA</span><span class="o">.</span><span class="n">size</span>
+</span><span class='line'>    <span class="no">DATA</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">aValue</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">data</span> <span class="o">=</span>  <span class="n">dataArray</span><span class="o">.</span><span class="n">shift</span>
+</span><span class='line'>      <span class="k">unless</span> <span class="n">data</span> <span class="o">=~</span> <span class="sr">%r{N/A}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="nb">Float</span>
+</span><span class='line'>            <span class="n">data</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">/B$/</span><span class="p">,</span> <span class="s2">&quot;E6&quot;</span>
+</span><span class='line'>            <span class="n">data</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">/M$/</span><span class="p">,</span> <span class="s2">&quot;E3&quot;</span>
+</span><span class='line'>            <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">to_f</span> <span class="k">unless</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">&quot;N/A&quot;</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="nb">String</span>
+</span><span class='line'>          <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>          <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">data</span> <span class="k">unless</span> <span class="n">data</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Time</span>
+</span><span class='line'>          <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Time</span><span class="o">.</span><span class="n">fromString</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;&quot;h:mmap&quot;&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Date</span>
+</span><span class='line'>          <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Date</span><span class="o">.</span><span class="n">fromString</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;&quot;M/d/yyyy&quot;&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">alias</span> <span class="n">sourceRequestEvent</span> <span class="n">updateSourceEvent</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The second file you need is the <em>metadata.desktop</em>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>metadata.desktop </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="k">[Desktop Entry]</span>
+</span><span class='line'><span class="na">Name</span><span class="o">=</span><span class="s">Stocks Data Engine</span>
+</span><span class='line'><span class="na">Comment</span><span class="o">=</span><span class="s">Stocks Data Engine powered by Yahoo! Finance (real time delayed by around 15 minutes&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;p&gt;Type</span><span class="o">=</span><span class="s">Service</span>
+</span><span class='line'><span class="na">ServiceTypes</span><span class="o">=</span><span class="s">Plasma/DataEngine</span>
+</span><span class='line'><span class="na">X-Plasma-API</span><span class="o">=</span><span class="s">ruby-script</span>
+</span><span class='line'><span class="na">X-Plasma-MainScript</span><span class="o">=</span><span class="s">code/main.rb&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;p&gt;X-KDE-PluginInfo-Author</span><span class="o">=</span><span class="s">Robert Riemann</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-Email</span><span class="o">=</span><span class="s">saloution@googlemail.com</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-Name</span><span class="o">=</span><span class="s">ruby-stocks</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-Version</span><span class="o">=</span><span class="s">1.0</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-Website</span><span class="o">=</span><span class="s">http://plasma.kde.org/</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-Category</span><span class="o">=</span><span class="s">Online Services</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-Depends</span><span class="o">=</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-License</span><span class="o">=</span><span class="s">GPL</span>
+</span><span class='line'><span class="na">X-KDE-PluginInfo-EnabledByDefault</span><span class="o">=</span><span class="s">true&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;h1 id</span><span class="o">=</span><span class="s">&quot;iconalarmclock&quot;&gt;Icon=alarmclock&lt;/h1&gt;</span>
+</span><span class='line'><span class="err">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2 id="what-comes-next">What Comes Next?</h2>
+
+<p><a href="http://chart.finance.yahoo.com/t?s=NOK&amp;lang=en-US&amp;region=US&amp;width=300&amp;height=180" title="Stocks Chart for Nokia from Yahoo! Finance"><img src="http://chart.finance.yahoo.com/t?s=NOK&amp;lang=en-US&amp;region=US&amp;width=300&amp;height=180" alt="Simple Plasmoid made with Ruby" title="Stocks Chart for Nokia from Yahoo! Finance" class="left" style="width:256px;height:178px;" /></a>The
+engine should be quite usable by now. I plan to create a plasmoid which
+lets you search for a company name to get the stocks symbol and then shows
+some important numbers (like the weather widget, but without these nice graphics).</p>
+
+<p>After that I want to create a second plasmoid which just shows a chart from
+Yahoo! Finance. The most work will probably be to create a settings dialog similar
+to the one you find <a href="http://de.finance.yahoo.com/q/bc?s=NOK&amp;t=5d&amp;l=off&amp;z=m&amp;q=l&amp;c=" title="Stocks Chart for Nokia from Yahoo! Finance">here</a> below the chart.</p>
+
+<p>What do you think? Would you use a stocks plasmoid? What do you expect it to display?
+Why didn’t you have already used ruby to create a dataengine? <code>;)</code> And after all,
+how do I get this engine into KDE trunk?</p>
+
+]]></content>
+  </entry>
+  
+</feed>

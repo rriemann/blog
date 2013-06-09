@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The perhaps smallest KDE application in the world - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2009/07/27/smallest_kde_app">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The Perhaps Smallest KDE Application in the World</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-27T00:00:00-04:00" pubdate data-updated="true">Jul 27<span>th</span>, 2009</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the necessary parts.</p>
+
+<p>Maybe you can take it also to do some testings or just as a little example.</p>
+
+<p>With its 12 lines (17 lines minus 3 empty lines minus Shebang line and $KCode line, that are not really required) of code it is perhaps the smalles KDE application you will find.</p>
+
+<p>Of course, every Qt app would be a few lines smaller, because you dont need the KAbout object.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class="line">
+</span><span class="line"><span class="vg">$KCODE</span> <span class="o">=</span> <span class="s1">&#39;u&#39;</span>
+</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;korundum4&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="n">about</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:AboutData</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;ktest&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span class="line">    <span class="no">KDE</span><span class="o">.</span><span class="n">ki18n</span><span class="p">(</span><span class="s2">&quot;KTest&quot;</span><span class="p">),</span> <span class="s2">&quot;0.1&quot;</span><span class="p">)</span>
+</span><span class="line"><span class="ss">KDE</span><span class="p">:</span><span class="ss">:CmdLineArgs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="no">ARGV</span><span class="p">,</span> <span class="n">about</span><span class="p">)</span>
+</span><span class="line"><span class="n">a</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">new</span>
+</span><span class="line"><span class="n">w</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:PushButton</span><span class="o">.</span><span class="n">new</span><span class="p">(</span> <span class="s2">&quot;Click me to quit&quot;</span> <span class="p">)</span> <span class="k">do</span>
+</span><span class="line">  <span class="n">connect</span><span class="p">(</span> <span class="no">SIGNAL</span> <span class="ss">:clicked</span> <span class="p">)</span> <span class="k">do</span>
+</span><span class="line">    <span class="nb">puts</span> <span class="s2">&quot;Do something else&quot;</span>
+</span><span class="line">    <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">quit</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line"><span class="n">w</span><span class="o">.</span><span class="n">show</span>
+</span><span class="line">
+</span><span class="line"><span class="n">a</span><span class="o">.</span><span class="n">exec</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-27T00:00:00-04:00" pubdate data-updated="true">Jul 27<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/kde/'>kde</a>, <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2009/07/20/template_kmainwindow/" title="Previous Post: Ruby Qt/KDE4 Template KMainWindow">&laquo; Ruby Qt/KDE4 Template KMainWindow</a>
+      
+      
+        <a class="basic-alignment right" href="/2009/11/19/cacert_in_kmail/" title="Next Post: CAcert SSL certificates in KMail KDE 4">CAcert SSL certificates in KMail KDE 4 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2009/07/27/smallest_kde_app/';
+        var disqus_url = 'http://blog.riemann.cc/2009/07/27/smallest_kde_app/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

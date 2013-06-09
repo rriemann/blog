@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/linux/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
+    <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
+    <updated>2013-05-01T22:59:00-04:00</updated>
+    <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
+    <content type="html"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
+  <li><a href="#install-os">Install OS</a></li>
+  <li><a href="#install-gitlab">Install Gitlab</a></li>
+  <li><a href="#install-dependencies">Install dependencies:</a>    <ul>
+      <li><a href="#prepare-system-for-gitlab">Prepare system for Gitlab</a></li>
+      <li><a href="#prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="private-git-repo-hosting">Private Git Repo Hosting</h3>
+
+<p><a href="http://gitlab.org/">Gitlab</a> brings the social coding <a href="http://www.github.com/">Github</a> experience to your own network. In
+contrast to the commercial product Github which only allows to host open source
+<a href="http://git-scm.com/">git</a> repository projects using the free plan, you can install the free/libre software Gitlab
+wherever you like and do what you want.
+Therefore you need to setup a RubyOnRails environment.
+Officially, Gitlab supports Debian/Ubuntu.
+Read on how to install it on <a href="http://www.opensuse.org/">OpenSUSE</a>.</p>
+
+<!-- more -->
+
+<p>The presented solutions features a btrfs
+filesystem RAID-1 <code>:)</code> and some custom patches. Instead of init.d startup scripts,
+we use systemd. I recommend to use nginx as a webserver.</p>
+
+<p>Please be aware that the development of Gitlab continues rapidly. This might break
+this how-to at some point. Please read everything before starting!</p>
+
+<h3 id="install-os">Install OS</h3>
+
+<ul>
+  <li>Download OpenSUSE 12.3 32bit, Network edition
+<a href="http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso">http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso</a></li>
+  <li>I chose 32bit, because Ruby Binary Extensions might have problems with lib64 path structure. We workaround this bug.</li>
+  <li>I chose networkinstall, because we need only very few packages and don’t need to download everything. only 200MB are downloaded during install</li>
+  <li>the image can easily copied to a usb pen drive using the gui tool “imagewriter” (executed as root)</li>
+  <li>Partition: There are 2 big hard drives. I created on both of them first a primary pratition of 1GB of type LINUX-RAID</li>
+  <li>I use the yast software raid setup during the install to connect both partitions to a software raid-1 partititon of ext4 to mount in /boot</li>
+  <li>I created on both hard drives a btrfs partition (50GB), but only mount the one on /dev/sda to /</li>
+  <li>I created on both hard drives a swap space of 2 GB and mount both to swap</li>
+</ul>
+
+<p>The system gets installed and the configuration follows.</p>
+
+<ul>
+  <li>I open ssh. I disable ipv6.</li>
+  <li>I disable dhcp and configure the hostname to “leise” and the site to our internet domain, the nameserver and the gateway is set to be the mail server.</li>
+  <li>The server gets the fixed ip: 192.xxx.xxx.184</li>
+  <li>The network check passes successfully and I apply immedately online updates.</li>
+  <li>I leave the user input dialog blank and only set a root password</li>
+</ul>
+
+<p>The installation is done. I test everything with a restart using <code>reboot</code>.
+Now the root filesystem has to be turned to a btrfs raid system.</p>
+
+<ul>
+  <li>I add a second device to the root file system: <code>btrfs device add /dev/sdb2 /</code></li>
+  <li>I convert the striped btrfs mode to the raid1 mode for filesystem data and metadata:
+<code>btrfs filesystem balance start -dconvert=raid1 -mconvert=raid1 /</code></li>
+</ul>
+
+<h3 id="install-gitlab">Install Gitlab</h3>
+
+<ul>
+  <li>Homepage: <a href="http://gitlab.org/">http://gitlab.org/</a></li>
+  <li>Source Code: <a href="https://github.com/gitlabhq/gitlabhq">https://github.com/gitlabhq/gitlabhq</a></li>
+</ul>
+
+<p>The following steps apply to version 5.0 and try to copy the step by step
+tutorial which is refered from the README:
+<a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md</a></p>
+
+<h2 id="install-dependencies">Install dependencies:</h2>
+
+<pre><code>zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_12.3/devel:languages:ruby:extensions.repo
+
+zypper in patterns-openSUSE-devel_basis ca-certificates-cacert nginx rubygem-rb-inotify rubygem-ffi redis mysql-community-server mysql-community-server-client rubygem-bundler ruby19 ruby19-devel libmysqlclient-devel zlib-devel libyaml-devel libgdbm4 libreadline6 libncurses5 libffi47-devel curl git-core postfix checkinstall libxml2-devel libxslt-devel libcurl-devel libicu-devel
+# accept deinstallation of patterns-openSUSE-minimal_base-conflicts
+
+python2 --version # make sure to have version &gt; 2.5 but &lt; 3.0
+
+ruby1.9 --version # make sure to have a compatible version (in my case 1.9.3)
+cat /usr/bin/bundle # make sure to have ruby version 1.9 in the shebang line (first line in file)
+
+systemctl daemon-reload # reparse config for systemd (necessary, because we installed mysql)
+systemctl start mysql.service  # start mysql
+systemctl enable mysql.service # make mysql autostart
+cp /etc/redis/default.conf{.example,}
+chown redis.redis /etc/redis/default.conf
+systemctl enable redis.service
+systemctl start redis.service
+</code></pre>
+
+<h4 id="prepare-system-for-gitlab">Prepare system for Gitlab</h4>
+
+<ul>
+  <li>create a user git: <code>useradd -ms /bin/bash git</code></li>
+</ul>
+
+<h4 id="prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</h4>
+
+<pre><code>su git # (change to the account of git)
+cd # (change to the home directory /home/git)
+git clone https://github.com/gitlabhq/gitlab-shell.git
+cd gitlab-shell
+cp config.yml.example config.yml
+vim config.yml # change domain to the domain of this computer
+cd
+ssh-keygen # to be sure, create ssh key (not mentioned in official docu) with empty passphrase
+</code></pre>
+
+<p>Follow the setup of the mysql data base: <a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql</a></p>
+
+<ul>
+  <li><code>mysql -u root</code></li>
+  <li>follow the guide for mysql commands</li>
+</ul>
+
+<p>We continue with the setup of the GitLab Rails application:</p>
+
+<pre><code>gem1.9 install charlock_holmes --version '0.6.9' # execute as root
+su git
+cd
+git clone https://github.com/gitlabhq/gitlabhq.git gitlab
+cd gitlab
+git checkout 5-0-stable # not possible yet, I use master instead
+vim config/gitlab.yml
+# ^- email_from: gitlab@atech.de, support_email: admin@atech.de, default_projects_limit: 100
+# disable username_changing_enabled
+chown -R git log/ tmp/
+chmod -R u+rwX log/ tmp/
+mkdir /home/git/gitlab-satellites
+mkdir tmp/pids/
+chmod -R u+rwX tmp/pids/
+cp config/unicorn.rb.example config/unicorn.rb
+cp config/database.yml.mysql config/database.yml
+vim config/database.yml # edit password and username
+bundle install --deployment --without development test postgres # takes a while
+bundle exec rake db:setup RAILS_ENV=production
+bundle exec rake db:seed_fu RAILS_ENV=production
+bundle exec rake gitlab:setup RAILS_ENV=production # chose yes
+bundle exec rake gitlab:shell:setup RAILS_ENV=production # chose yes
+git config --global user.name  "GitLab"
+git config --global user.email "gitlab@atech.de"
+</code></pre>
+
+<p>Install Check:</p>
+
+<pre><code>su git
+cd /home/git/gitlab
+bundle exec rake gitlab:check RAILS_ENV=production
+</code></pre>
+
+<p>Go to yast firewall and open port http (and https port): 80, (443)</p>
+
+<pre><code># update services
+su
+cd /usr/lib/systemd/system/
+wget https://gist.github.com/veprbl/5115638/raw/9d18a341217f109accb67f57e8ad420c9de442fd/gitlab.service # TODO wrong mysqld
+wget https://gist.github.com/veprbl/5115638/raw/be78658953cd5967a4d874f5b0a019667cf090af/gitlab-worker.service # TODO same
+# double-check content of these files!
+chmod 644 gitlab.service gitlab-worker.service
+# TODO edit /etc/nginx/vhost.d/*
+systemctl daemon-reload
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
+    <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
+    <updated>2013-04-23T08:38:00-04:00</updated>
+    <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
+    <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
+my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
+versioning system. This is pretty straight-forward, because LaTeX documents are
+only plain text.</p>
+
+<p>Beside this, I’m using as well some <a href="http://www.libreoffice.org/">LibreOffice</a> (compatible to OpenOffice)
+documents, whose changes are not obvious as it uses a binary format. For sure, git
+can handle binary files, but the log is not really helpfull.</p>
+
+<pre><code>Binary files "a/overview.ods" and "b/overview.ods" differ
+</code></pre>
+
+<p>Since git version 1.6.1 or later, you can specify dedicated diff filters per
+file extensions to track these files as well as plain text files.</p>
+
+<!-- more -->
+
+<p>Knowing that files <a href="http://en.wikipedia.org/wiki/OpenDocument">OpenDocument</a> files <code>*.ods</code>, <code>*.odt</code> or <code>*.odp</code> are only gziped folders of xml
+files, it is perfectly obvious to extract the files before comparision. This way,
+a plain text diff can be done. I’m using <a href="http://stosberg.net/odt2txt/">odt2txt</a>, which is available in the
+openSUSE software archive.</p>
+
+<p>Unfortunately, the whole file content is presented in one single, very long text
+line. As git is based on tracking changing lines, this is not very helpfull. So
+I decided to use additionally an XML file formatter (xmllint is already installed)
+to solve this problem.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>OpenDocument Git Filter – ~/bin/odf2prettytxt </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/usr/bin/env sh</span>
+</span><span class='line'><span class="c"># place this file to ~/bin/odf2prettytxt and have ~/bin in $PATH</span>
+</span><span class='line'><span class="nb">set</span> -o errexit
+</span><span class='line'>/usr/bin/odt2txt –raw “<span class="nv">$@</span>” | /usr/bin/xmllint –format -
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This filter must be announced to your git installation</p>
+
+<pre><code>git config --global diff.odf.textconv "odf2prettytxt"
+</code></pre>
+
+<p>Lastly you can enable this filter per project/folder by adding a line to your
+<code>.gitattributes</code> file. This is done for the <code>*.ods</code> files using this one liner.</p>
+
+<pre><code>echo '*.ods diff=odf' &gt;&gt; .gitattributes
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
+    <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
+    <updated>2013-01-05T14:21:00-05:00</updated>
+    <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
+    <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress (<a href="http://github.com/imathis/octopress/issues/847">Issue #847</a>).</p>
+
+<p>This issue was already fixed and got included in the development branch 2.1.
+I decided to upgrade my blog to the latest development version. Afterwards the
+Ruby version manager <a href="http://rvm.io/">rvm</a> asked to install a new ruby version.
+To meet the exact requirements of octopress I decided to give it a run, but when
+installing the required gems using <code>bundle install</code> I wasn’t able to
+install <a href="http://rb-gsl.rubyforge.org/">gsl</a>, the ruby binding to the GNU
+scientific library, which is used to speed-up the “related posts” calculation.
+I remembered to run into this problem once before. Unfortunately it isn’t
+resolved yet. <code>:(</code></p>
+
+<pre><code>vector_complex.c:1989:12: error: conflicting types for 'gsl_vector_complex_equal'
+/usr/include/gsl/gsl_vector_complex_double.h:167:5: note: previous declaration of 'gsl_vector_complex_equal' was here
+make: *** [vector_complex.o] Error 1
+</code></pre>
+
+<!-- more -->
+
+<h3 id="solution">Solution</h3>
+
+<p>To get this gem installed nevertheless, you have to patch the sources of the
+native extension. For this, you have to find the building directory <code>ext</code>, which
+should be mentioned in the error message.</p>
+
+<p>Put the patch <code>rb-gsl.patch</code> from below in this directory or download it using</p>
+
+<pre><code>wget 'https://gist.github.com/raw/2296214/c6b1c7150713da5d2640ddc799132611ac72cef4/rb-gsl.patch'
+</code></pre>
+
+<p>Then you have to apply the patch using <code>patch -p2 &lt; rb-gsl.patch</code> from within the
+<code>ext</code> directory. To build the extension finally, you have to run the command
+<code>make -j4</code>. If you proceed with bundle install again, the source code will be unzipped
+again leaving you with same unpatched code as before. To work around this issue,
+a hint is given in the help of the gem install commmand (<code>gem install --help</code>).</p>
+
+<pre><code>If you correct the compilation errors by editing the gem files you will need
+    to write the specification by hand.  For example:
+
+      $ gem install some_extension_gem
+      [build fails]
+      Gem files will remain installed in \
+      /path/to/gems/some_extension_gem-1.0 for inspection.
+      Results logged to /path/to/gems/some_extension_gem-1.0/gem_make.out
+      $ [cd /path/to/gems/some_extension_gem-1.0]
+      $ [edit files or what-have-you and run make]
+      $ gem spec ../../cache/some_extension_gem-1.0.gem --ruby &gt; \
+                ../../specifications/some_extension_gem-1.0.gemspec
+      $ gem list some_extension_gem
+</code></pre>
+
+<p>So I just did as I got told (still in <code>exe</code> directory):</p>
+
+<pre><code> gem spec ../../../cache/gsl-1.14.7.gem --ruby &gt; ../../../specifications/gsl-1.14.7.gemspec
+</code></pre>
+
+<p>Afterwards <code>bundle install</code> will accept this gem. That’s it!</p>
+
+<h3 id="patch-rb-gslpatch">Patch rb-gsl.patch</h3>
+
+<p><div><script src='https://gist.github.com/2296214.js?file=rb-gsl.patch'></script>
+<noscript><pre><code>diff --git a/ext/matrix_complex.c b/ext/matrix_complex.c
+index 8a77ac1..1b1d8af 100644
+--- a/ext/matrix_complex.c
++++ b/ext/matrix_complex.c
+@@ -1519,8 +1519,7 @@ static VALUE rb_gsl_matrix_complex_indgen_singleton(int argc, VALUE *argv, VALUE
+   return Data_Wrap_Struct(cgsl_matrix_complex, 0, gsl_matrix_complex_free, mnew);
+ }
+ 
+-
+-static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
++static int gsl_matrix_complex_equal_witg_eps(const gsl_matrix_complex *m1,
+   const gsl_matrix_complex *m2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -1537,6 +1536,7 @@ static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
+   return 1;
+ }
+ 
++
+ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+ {
+   gsl_matrix_complex *m1, *m2;
+@@ -1555,7 +1555,7 @@ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_matrix_complex, m1);
+   CHECK_MATRIX_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_matrix_complex, m2);
+-  ret = gsl_matrix_complex_equal(m1, m2, eps);
++  ret = gsl_matrix_complex_equal_witg_eps(m1, m2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }
+diff --git a/ext/vector_complex.c b/ext/vector_complex.c
+index f9a84f0..2711a36 100644
+--- a/ext/vector_complex.c
++++ b/ext/vector_complex.c
+@@ -1986,7 +1986,7 @@ static VALUE rb_gsl_vector_complex_zip(int argc, VALUE *argv, VALUE obj)
+   return ary;
+ }
+ 
+-static int gsl_vector_complex_equal(const gsl_vector_complex *v1,
++static int gsl_vector_complex_equal_with_eps(const gsl_vector_complex *v1,
+   const gsl_vector_complex *v2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -2019,7 +2019,7 @@ static VALUE rb_gsl_vector_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_vector_complex, v1);
+   CHECK_VECTOR_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_vector_complex, v2);
+-  ret = gsl_vector_complex_equal(v1, v2, eps);
++  ret = gsl_vector_complex_equal_with_eps(v1, v2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[self-made router-powered repository mirror]]></title>
+    <link href="http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/"/>
+    <updated>2012-07-23T01:32:00-04:00</updated>
+    <id>http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror</id>
+    <content type="html"><![CDATA[<p>After migrating most desktop PCs at work, at home and of some friends to
+<a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
+time-consuming task to keep all these systems up-to-date. I was most
+bothered by downloading the same files over and over again, which happened
+sometimes to be quite slow, especially via WLAN.</p>
+
+<p>Fortunatly I got a couple of month ago the Linux-based router <a href="http://en.wikipedia.org/wiki/FRITZ!Box">AVM Fritz!Box 7270</a>,
+which can be rooted with a modified firmware. The customizable firmware is
+provided by the <a href="http://freetz.org/">Freetz</a> project and allows you to combine different
+modular packages to add functionality.</p>
+
+<!-- more -->
+
+<p>After playing a little bit with Freetz, I even got a lighttpd webserver with
+ruby and caching capabilities running. Of course, the original firmware as well
+as Freetz allow the configuration of dynamic DNS services. <code>;)</code></p>
+
+<p>I ended up with a configuration including:</p>
+
+<ul>
+  <li>dropbear ssh server (allows remote login via ssh – otherwise only telnet is supported)</li>
+  <li>automount-scripts supporting ext3 and ext4 (latter is not supported by AVM firmware)</li>
+  <li>nfs including a CGI configuration web page</li>
+  <li>rsync</li>
+</ul>
+
+<p>I formatted an external hard drive to use ext4 and attached it to the router.
+The file <code>mirror-rsync.sh</code> needs to be copied to an arbitrary folder on the
+external drive.</p>
+
+<p><div><script src='https://gist.github.com/1729496.js?file=mirror-rsync.sh'></script>
+<noscript><pre><code>#!/bin/sh
+set -o errexit
+
+cd /var/media/ftp/uStor02/opensuse
+
+echo -e &quot;\nII: Start time: $(date)\nII: directory: $(pwd)&quot; 2&gt;&amp;1 | tee -a log.txt
+
+trap - INT
+
+# rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp-1.gwdg.de::pub/opensuse/update/12.1/ update/12.1 2&gt;&amp;1 | tee -a log.txt
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp.halifax.rwth-aachen.de::opensuse/update/12.1/ update/12.1 2&gt;&amp;1 | tee -a log.txt
+
+# rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp5.gwdg.de::pub/opensuse/repositories/KDE:/Release:/48/openSUSE_12.1/ repositories/KDE:/Release:/48/openSUSE_12.1 2&gt;&amp;1 | tee -a log.txt
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp.halifax.rwth-aachen.de::opensuse/repositories/KDE:/Release:/48/openSUSE_12.1/ repositories/KDE:/Release:/48/openSUSE_12.1 2&gt;&amp;1 | tee -a log.txt
+
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 packman.inode.at::packman/suse/12.1/Essentials/ repositories/packman/12.1/Essentials 2&gt;&amp;1 | tee -a log.txt
+</code></pre></noscript></div>
+</p>
+
+<p>To lower the data transfer, I tuned my rsync commands to download only
+x86_64 packages as well as only German language packages.</p>
+
+<p><div><script src='https://gist.github.com/1729496.js?file=include.txt'></script>
+<noscript><pre><code>*l10n-de*x86_64*
+*l10n-de*noarch*
+*wine*
+
+*libqt4-debuginfo*x86_64*
+*libkdepimlibs4-debuginfo*x86_64*
+*libkdecore4-debuginfo*x86_64*
+*libkde4-debuginfo*x86_64*
+*kdepim4-debuginfo*x86_64*
+*libqt4-x11-debuginfo*x86_64*
+*amarok-debuginfo*x86_64*
+*kmail-debuginfo*x86_64*
+*libakonadi4-debuginfo*x86_64*</code></pre></noscript></div>
+
+<div><script src='https://gist.github.com/1729496.js?file=exclude.txt'></script>
+<noscript><pre><code>src
+*i686.rpm
+*i686.drpm
+*i586.rpm
+*i586.drpm
+*buildsymbols*
+ia64
+*debuginfo*
+*debugsource*
+*l10n*</code></pre></noscript></div>
+</p>
+
+<p>To finish the router setup, the only thing left is to add a Cron job (supported by
+Freetz interface) which runs the script daily – preferably during the night.</p>
+
+<p>The original firmware provides SMB access to files on the hard drive. This can be
+quite slow. So I configured NFS for access these repositories. There’s a
+<a href="http://linuxundich.de/de/hardware/dateifreigaben-auf-der-fritzbox-via-nfs-und-freetz/">German blog post</a> with some benchmarks to compare SMB and NFS.</p>
+
+<p>Finally, the new repositories have to be activated. The priority is set to 90
+and this way overranks the original repos, which don’t have to be disabled.</p>
+
+<p><div><script src='https://gist.github.com/1729496.js?file=client.sh'></script>
+<noscript><pre><code>#!/bin/sh
+
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-update nfs://fritz.box:/var/media/ftp/uStor02/opensuse/update/12.1?mountoptions=vers=3 fritzbox-12.1-update
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-kde48 nfs://fritz.box:/var/media/ftp/uStor02/opensuse/repositories/KDE:/Release:/48/openSUSE_12.1?mountoptions=vers=3 fritzbox-12.1-kde48
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-packman nfs://fritz.box:/var/media/ftp/uStor02/opensuse/repositories/packman/12.1/Essentials?mountoptions=vers=3 fritzbox-12.1-packman
+
+zypper mr -p 90 fritzbox-12.1-update
+zypper mr -p 90 fritzbox-12.1-kde48
+zypper mr -p 90 fritzbox-12.1-packman</code></pre></noscript></div>
+</p>
+
+<p>The most important thing is here to append <code>?mountoptions=vers=3</code> to all URLs.
+The Freetz NFS build doesn’t support NFS version 4 and zypper fails to auto-detect
+this.</p>
+
+<p>So the next time I want to bring the latest KDE release to a friend, I just have
+to unplug my hard-drive and have everything with me. At work, I don’t have to
+bring my own hard drive with me – they have their own one <code>:p</code> with an equal script
+which can be triggered from time to time.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[btrfs Kernel Bug]]></title>
+    <link href="http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug/"/>
+    <updated>2011-12-10T00:00:00-05:00</updated>
+    <id>http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug</id>
+    <content type="html"><![CDATA[<h2 id="prolog">Prolog</h2>
+
+<p>When updating my only productive computer system to the latest <a href="http://www.opensuse.org/">opensuse</a>
+version 12.1, I decided to give the feature rich, shiny new filesystem
+<a href="http://btrfs.wiki.kernel.org/">btrfs</a> a try. It’s not yet so stable, but it is already delivered by
+all main distribution. Fedora actually wants to use it as default.</p>
+
+<p>Up to now I have to evaluate this disission to be more risky than lucky. After
+something like two month, I experienced two filesystem corruptions. The first
+one hit my root-filesystem. I had to setup my system from scratch, because every
+write attempt on the partition ended with a kernel failure, most probably caused
+by the btrfs driver. Mounting the partition in read-only mode while using a
+Live-CD was the only way to do a late backup.</p>
+
+<p>Yesterday I ran into btrfs problems again. I copied some photos to my hard disk.
+In the next moment, I got some weird kernel sys messages, that didn’t help me at
+all.</p>
+
+<pre><code>Message from syslogd@theta at Dec 9 17:45:00 ...
+[Freitag, 9. Dezember 2011] [17:45:10] &lt;saLOUt&gt; kernel:[ 454.807770] Code: e9 8c fe ff ff 66 0f 1f 44 00 00 b8 ea ff ff ff e9 cf fe ff ff 48 89 de 4c 89 f7 89 04 24 e8 80 ec ff ff 8b 04 24 e9 b9 fe ff ff &lt;0f&gt; 0b 0f 0b 0f 1f 40 00 41 57 49 89 f7 41 56 41 55 41 54 55 53 
+</code></pre>
+
+<p>All apps accessing my picture btrfs subvolume were crashing.</p>
+
+<p>After disabling the whole btrfs system by commenting the appropriate lines in my
+<code>/etc/fstab</code> file, I had a stable system again – just without any pictures.</p>
+
+<h2 id="data-rescue">Data Rescue</h2>
+
+<p>Luckily Chris Mason (#cmason) from <a href="irc://chat.freenode.org/btrfs">#btrfs</a> could help me to fix these
+problems without any loss of data!</p>
+
+<p>A# simple <code>btrfsck</code> didn’t help me, because of a crash of the repair tool itself:</p>
+
+<pre><code>warning, start mismatch 48695640064 48695652352
+block 48695652352 rec extent_item_refs 1, passed 1
+</code></pre>
+
+<p>No more output. That’s all. Chris told me to checkout some fresh code from his
+very own repo. When I did the checkout, the master was <code>fdb6c04023</code>.</p>
+
+<pre><code>git clone http://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git
+</code></pre>
+
+<p>After a reboot, I ran</p>
+
+<pre><code>make
+make btrfs-zero-log
+</code></pre>
+
+<p>which went without any errors. After that I used the custom build <code>btrfs-zero-log</code>
+tool to do some btrfs magic, that I don’t understand.</p>
+
+<pre><code>./btrfs-zero-log [device]
+</code></pre>
+
+<p>After another reboot, I was able to mount my picture partition in read-only mode.
+I did a late backup again. When reading these files, one gets usually a lot of
+errors in <code>/var/log/messages</code> like this:</p>
+
+<pre><code>[ 4055.661622] btrfs csum failed ino 358 off 227975168 csum 4151547339 private 259191981
+</code></pre>
+
+<p>csum is the abbreviation for checksum. ino means inode, which is a kind of
+identifier for every file. To fix these errors, you have to find these files
+belonging to these inodes, deleting them and copy them back from your backup.</p>
+
+<p>I wrote a small ruby script, which helps you finding the affected files</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#!/usr/bin/ruby&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;string-with-error-messages&quot;</span><span class="o">&gt;</span><span class="n">string</span> <span class="n">with</span> <span class="n">error</span> <span class="n">messages</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'><span class="sr">&lt;p&gt;error_messages = &lt;code&gt;dmesg | grep &quot;found for inode&quot;&lt;/</span><span class="n">code</span><span class="o">&gt;</span>
+</span><span class='line'><span class="c1"># list of integers</span>
+</span><span class='line'><span class="n">inode_list</span> <span class="o">=</span> <span class="n">error_messages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="err">“</span><span class="p">\</span><span class="n">n</span><span class="err">”</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/inode (\d+).*/</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span><span class="p">}</span>
+</span><span class='line'><span class="c1"># list of arrays of filenames</span>
+</span><span class='line'><span class="n">file_list</span> <span class="o">=</span> <span class="n">inode_list</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">find</span> <span class="sr">/mnt/</span><span class="nb">test</span> <span class="o">-</span><span class="n">inum</span> <span class="c1">#{i}&lt;/code&gt;.split(“\n”)}&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;require-json&quot;</span><span class="o">&gt;</span><span class="nb">require</span> <span class="err">‘</span><span class="n">json</span><span class="err">’</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'><span class="sr">&lt;p&gt;# File.open(“/</span><span class="n">tmp</span><span class="o">/</span><span class="n">inode</span><span class="o">-</span><span class="n">files</span><span class="o">.</span><span class="n">json</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="n">w</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span> <span class="err">« </span><span class="no">JSON</span><span class="o">.</span><span class="n">pretty_generate</span><span class="p">(</span><span class="n">file_list</span><span class="p">)}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;puts file_list.flatten.uniq.sort.join(“\n”)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you finally want to delete these files, you have to remount your partition in
+read-write mode.</p>
+
+<p>At least for me, this walkthrough suggested by Chris resolved my problems.</p>
+
+<h1 id="complete-error-log">Complete error log</h1>
+
+<pre><code>Dec  9 11:38:03 theta kernel: [ 3235.664148] btrfs: free space inode generation (0) did not match free space cache generation (6403)
+Dec  9 11:38:03 theta kernel: [ 3235.664152] btrfs: failed to load free space cache for block group 38818283520
+Dec  9 11:38:34 theta kernel: [ 3266.367012] ------------[ cut here ]------------
+Dec  9 11:38:34 theta kernel: [ 3266.367385] kernel BUG at /home/abuild/rpmbuild/BUILD/kernel-desktop-3.1.0/linux-3.1/fs/btrfs/extent-tree.c:5467!
+Dec  9 11:38:34 theta kernel: [ 3266.368140] invalid opcode: 0000 [#1] PREEMPT SMP
+Dec  9 11:38:34 theta kernel: [ 3266.368510] CPU 1
+Dec  9 11:38:34 theta kernel: [ 3266.368653] Modules linked in: nls_iso8859_1 nls_cp437 vfat fat fuse af_packet ip6t_LOG xt_tcpudp xt_pkttype ipt_LOG xt_limit rfcomm bnep ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_raw xt_NOTRACK ipt_REJECT iptable_raw iptable_filter ip6table_mangle nf_conntrack_netbios_ns nf_conntrack_broadcast nf_conntrack_ipv4 nf_defrag_ipv4 ip_tables xt_conntrack nf_conntrack ip6table_filter ip6_tables x_tables cpufreq_conservative cpufreq_userspace cpufreq_powersave acpi_cpufreq mperf microcode dm_mod mmc_block snd_hda_codec_hdmi snd_hda_codec_conexant arc4 uvcvideo videodev v4l2_compat_ioctl32 hdj_mod snd_rawmidi snd_seq_device ecb kvm_intel kvm btusb bluetooth sg joydev sdhci_pci sdhci iwlagn mmc_core mac80211 e1000e cfg80211 i2c_i801 pcspkr snd_hda_intel snd_hda_codec snd_hwdep snd_pcm iTCO_wdt iTCO_vendor_support xhci_hcd snd_timer snd_page_alloc mei(C) battery thinkpad_acpi rfkill tpm_tis tpm tpm_bios snd soundcore ac wmi autofs4 btrfs zlib_deflate thermal i915 drm_ kms_helper
+Dec  9 11:38:34 theta kernel: r drm i2c_algo_bit processor button video thermal_sys
+Dec  9 11:38:34 theta kernel: [ 3266.376473]
+Dec  9 11:38:34 theta kernel: [ 3266.376585] Pid: 11081, comm: btrfs-endio-wri Tainted: G         C  3.1.0-1.2-desktop #1 LENOVO 4290W4H/4290W4H
+Dec  9 11:38:34 theta kernel: [ 3266.377390] RIP: 0010:[&lt;ffffffffa01444bf&gt;]  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.378147] RSP: 0018:ffff8800cce2fb40  EFLAGS: 00010282
+Dec  9 11:38:34 theta kernel: [ 3266.378535] RAX: 00000000ffffffef RBX: ffff8800cd1d90a0 RCX: 0000160000000000
+Dec  9 11:38:34 theta kernel: [ 3266.379060] RDX: 0000000000000008 RSI: 0000000000000001 RDI: ffff8801ad7fb130
+Dec  9 11:38:34 theta kernel: [ 3266.379613] RBP: 00000000000000b2 R08: 0000000000000001 R09: 0000000000000001
+Dec  9 11:38:34 theta kernel: [ 3266.380164] R10: ffff8800c99928e8 R11: 000000000000004e R12: 0000000000000000
+Dec  9 11:38:34 theta kernel: [ 3266.380716] R13: ffff8800cce2fc0f R14: ffff8800c99928e8 R15: ffff88020f367400
+Dec  9 11:38:34 theta kernel: [ 3266.381267] FS:  0000000000000000(0000) GS:ffff88021e240000(0000) knlGS:0000000000000000
+Dec  9 11:38:34 theta kernel: [ 3266.381891] CS:  0010 DS: 0000 ES: 0000 CR0: 000000008005003b
+Dec  9 11:38:34 theta kernel: [ 3266.382334] CR2: 00007fbdfb6bc440 CR3: 0000000001c05000 CR4: 00000000000406e0
+Dec  9 11:38:34 theta kernel: [ 3266.382885] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+Dec  9 11:38:34 theta kernel: [ 3266.383436] DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000400
+Dec  9 11:38:34 theta kernel: [ 3266.383987] Process btrfs-endio-wri (pid: 11081, threadinfo ffff8800cce2e000, task ffff8800d447a580)
+Dec  9 11:38:34 theta kernel: [ 3266.384693] Stack:
+Dec  9 11:38:34 theta kernel: [ 3266.384844]  ffff88020f51d800 ffff880200000035 ffff8802057d4000 0000000100000001
+Dec  9 11:38:34 theta kernel: [ 3266.385445]  8000000000000c16 0000000000000000 0000000000000103 0000000000000166
+Dec  9 11:38:34 theta kernel: [ 3266.386045]  0000000000001000 0000003500000a4c ffff88010c730000 ffff8800c99928e8
+Dec  9 11:38:34 theta kernel: [ 3266.386645] Call Trace:
+Dec  9 11:38:34 theta kernel: [ 3266.386853]  [&lt;ffffffffa014505e&gt;] run_delayed_data_ref+0x10e/0x1c0 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.387401]  [&lt;ffffffffa0147978&gt;] run_clustered_refs+0xc8/0x220 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.387928]  [&lt;ffffffffa0147b95&gt;] btrfs_run_delayed_refs+0xc5/0x210 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.388482]  [&lt;ffffffffa0158590&gt;] __btrfs_end_transaction+0x90/0x340 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.389024]  [&lt;ffffffffa015f5d5&gt;] btrfs_finish_ordered_io+0x2a5/0x340 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.389604]  [&lt;ffffffffa0173310&gt;] end_bio_extent_writepage+0x120/0x170 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.390205]  [&lt;ffffffffa017fcb1&gt;] worker_loop+0xa1/0x2a0 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.390714]  [&lt;ffffffff81075c8e&gt;] kthread+0x7e/0x90
+Dec  9 11:38:34 theta kernel: [ 3266.391093]  [&lt;ffffffff815a5474&gt;] kernel_thread_helper+0x4/0x10
+Dec  9 11:38:34 theta kernel: [ 3266.391550] Code: 20 8b 94 24 a0 00 00 00 48 8b 7c 24 10 48 81 c6 86 00 00 00 e8 83 90 02 00 e9 6c ff ff ff 66 0f 1f 44 00 00 b8 f4 ff ff ff eb 90 &lt;0f&gt; 0b 49 8b 55 09 49 8b 75 00 48 c7 c7 20 6e 1a a0 31 c0 e8 0e
+Dec  9 11:38:34 theta kernel: [ 3266.393481] RIP  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.394093]  RSP &lt;ffff8800cce2fb40&gt;
+Dec  9 11:38:34 theta kernel: [ 3266.597905] ---[ end trace 3233c7c540de8b82 ]---
+Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited with preempt_count 1
+</code></pre>
+
+]]></content>
+  </entry>
+  
+</feed>

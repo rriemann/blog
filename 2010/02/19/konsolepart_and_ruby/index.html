@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Add a full-featured shell to your GUI (with Ruby) - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="KonsolePart To get a shell in your GUI, you don’t have to reinvent the wheel - just use
+the KonsolePart provided by KDE KParts. If you use the KDE &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2010/02/19/konsolepart_and_ruby">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Add a Full-featured Shell to Your GUI (With Ruby)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-19T00:00:00-05:00" pubdate data-updated="true">Feb 19<span>th</span>, 2010</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2 id="konsolepart">KonsolePart</h2>
+
+<p><img src="http://blog.riemann.cc/images/konsolepart_ruby_demo.png" alt="GUI integrating KDE libkonsolepart" title="GUI integrating KonsolePart" class="right" />
+To get a shell in your GUI, you don’t have to reinvent the wheel - just use
+the KonsolePart provided by KDE KParts. If you use the <a href="http://kde.org/">KDE</a> environment
+you already know the libkonsolepart, because Dolphin, Konqueror, Kate, Yakuake,
+etc. take usage of it.</p>
+
+<p>To get this small demo run, you need a KDE version already containing SVN
+commit 1085699 (ttanks no Arno, who made the Part accessable within ruby).
+The opensuse buildservice should provide a package <code>ruby-kde4</code> in Factory Repo,
+but I build I didn’t test it.</p>
+
+<p>Just copy both files in the same directory, make the main.rb executable and run it.</p>
+
+<p>The example contains a little bit more than neccessary, because it implements
+a fully customizable menus/toolbars via KXmlWindow and shows how to use
+actions and slots.</p>
+
+<p>To get only the KonsolePart widget, you only have to look at the KonsolePart
+class. The class itself bases on a short code example from Arno. Kudos to him!</p>
+
+<p>For further explanation just take a look
+at the source code.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>You can change the working directory for the built-in shell
+by a nice dialog and can execute some command by the lineedit. To send your command
+to the shell, you have to press enter.</p>
+
+<p>I know there are a lot of bugs. <code>;)</code> But it is just a quick and dirty demo.</p>
+
+<h2 id="mainrb">main.rb</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>main.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+<span class="line-number">72</span>
+<span class="line-number">73</span>
+<span class="line-number">74</span>
+<span class="line-number">75</span>
+<span class="line-number">76</span>
+<span class="line-number">77</span>
+<span class="line-number">78</span>
+<span class="line-number">79</span>
+<span class="line-number">80</span>
+<span class="line-number">81</span>
+<span class="line-number">82</span>
+<span class="line-number">83</span>
+<span class="line-number">84</span>
+<span class="line-number">85</span>
+<span class="line-number">86</span>
+<span class="line-number">87</span>
+<span class="line-number">88</span>
+<span class="line-number">89</span>
+<span class="line-number">90</span>
+<span class="line-number">91</span>
+<span class="line-number">92</span>
+<span class="line-number">93</span>
+<span class="line-number">94</span>
+<span class="line-number">95</span>
+<span class="line-number">96</span>
+<span class="line-number">97</span>
+<span class="line-number">98</span>
+<span class="line-number">99</span>
+<span class="line-number">100</span>
+<span class="line-number">101</span>
+<span class="line-number">102</span>
+<span class="line-number">103</span>
+<span class="line-number">104</span>
+<span class="line-number">105</span>
+<span class="line-number">106</span>
+</pre></td><td class="code"><pre><code class="rb"><span class="line"><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class="line">
+</span><span class="line"><span class="vg">$KCODE</span> <span class="o">=</span> <span class="s1">&#39;u&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;korundum4&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">class</span> <span class="nc">KonsolePart</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">initialize</span> <span class="n">parent</span>
+</span><span class="line">
+</span><span class="line">    <span class="n">factory</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:PluginLoader</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;libkonsolepart&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">factory</span>
+</span><span class="line">    <span class="vi">@part</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;KParts::ReadOnlyPart&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">[]</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="vi">@terminal</span> <span class="o">=</span> <span class="vi">@part</span><span class="o">.</span><span class="n">qobject_cast</span><span class="p">(</span><span class="ss">KDE</span><span class="p">:</span><span class="ss">:TerminalInterfaceV2</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">if</span> <span class="vi">@terminal</span><span class="o">.</span><span class="n">nil?</span>
+</span><span class="line">      <span class="vi">@terminal</span> <span class="o">=</span> <span class="vi">@part</span><span class="o">.</span><span class="n">qobject_cast</span><span class="p">(</span><span class="ss">KDE</span><span class="p">:</span><span class="ss">:TerminalInterface</span><span class="p">)</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">    <span class="n">pwd</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="kp">public</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">widget</span>
+</span><span class="line">    <span class="vi">@part</span><span class="o">.</span><span class="n">widget</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="c1"># http://api.kde.org/4.3-api/kdebase-apps-apidocs/konsole/html/Part_8h_source.html</span>
+</span><span class="line">  <span class="k">def</span> <span class="nf">pwd</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+</span><span class="line">    <span class="vi">@terminal</span><span class="o">.</span><span class="n">show_shell_in_dir</span> <span class="n">path</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">cmd</span> <span class="n">input</span>
+</span><span class="line">    <span class="vi">@terminal</span><span class="o">.</span><span class="n">send_input</span> <span class="n">input</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="k">class</span> <span class="nc">CustomWidget</span> <span class="o">&lt;</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:XmlGuiWindow</span>
+</span><span class="line">
+</span><span class="line">  <span class="n">slots</span> <span class="ss">:changedir</span><span class="p">,</span> <span class="ss">:docmd</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span> <span class="n">parent</span> <span class="o">=</span> <span class="kp">nil</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">super</span>
+</span><span class="line">
+</span><span class="line">    <span class="n">resize</span><span class="p">(</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">600</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1">##### Prepare Central Widget</span>
+</span><span class="line">    <span class="vi">@centralwidget</span> <span class="o">=</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Widget</span><span class="o">.</span><span class="n">new</span> <span class="nb">self</span>
+</span><span class="line">    <span class="n">setCentralWidget</span> <span class="vi">@centralwidget</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1">#### Build window layout</span>
+</span><span class="line">    <span class="vi">@centralWidgetVLayout</span> <span class="o">=</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:VBoxLayout</span><span class="o">.</span><span class="n">new</span> <span class="vi">@centralwidget</span>
+</span><span class="line">
+</span><span class="line">    <span class="vi">@kPBtnChangePwd</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:PushButton</span><span class="o">.</span><span class="n">new</span> <span class="vi">@centralwidget</span>
+</span><span class="line">    <span class="vi">@kPBtnChangePwd</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="ss">:clicked</span><span class="p">,</span> <span class="nb">self</span><span class="p">,</span> <span class="ss">:changedir</span><span class="p">)</span>
+</span><span class="line">    <span class="vi">@centralWidgetVLayout</span><span class="o">.</span><span class="n">addWidget</span> <span class="vi">@kPBtnChangePwd</span>
+</span><span class="line">    <span class="vi">@kLineEdt</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:LineEdit</span><span class="o">.</span><span class="n">new</span> <span class="vi">@centralwidget</span>
+</span><span class="line">    <span class="vi">@kLineEdt</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="ss">:returnPressed</span><span class="p">,</span> <span class="nb">self</span><span class="p">,</span> <span class="ss">:docmd</span> <span class="p">)</span>
+</span><span class="line">    <span class="vi">@centralWidgetVLayout</span><span class="o">.</span><span class="n">addWidget</span> <span class="vi">@kLineEdt</span>
+</span><span class="line">    <span class="vi">@centralWidgetVLayout</span><span class="o">.</span><span class="n">add_stretch</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1">##### Build Konsole Panel</span>
+</span><span class="line">    <span class="vi">@konsoleDockWidget</span> <span class="o">=</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:DockWidget</span><span class="o">.</span><span class="n">new</span> <span class="nb">self</span>
+</span><span class="line">    <span class="vi">@konsoleDockWidget</span><span class="o">.</span><span class="n">objectName</span> <span class="o">=</span> <span class="s2">&quot;konsoleDockWidget&quot;</span>
+</span><span class="line">    <span class="vi">@konsoleDockWidget</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:DockWidget</span><span class="o">::</span><span class="no">AllDockWidgetFeatures</span>
+</span><span class="line">    <span class="vi">@mykonsole</span> <span class="o">=</span> <span class="no">KonsolePart</span><span class="o">.</span><span class="n">new</span> <span class="vi">@konsoleDockWidget</span>
+</span><span class="line">    <span class="vi">@konsoleDockWidget</span><span class="o">.</span><span class="n">setWidget</span> <span class="vi">@mykonsole</span><span class="o">.</span><span class="n">widget</span>
+</span><span class="line">    <span class="n">addDockWidget</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:BottomDockWidgetArea</span><span class="p">,</span> <span class="vi">@konsoleDockWidget</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1">##### Prepare actions</span>
+</span><span class="line">    <span class="vi">@closeAction</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:StandardAction</span><span class="o">::</span><span class="n">quit</span><span class="p">(</span> <span class="nb">self</span><span class="p">,</span> <span class="no">SLOT</span><span class="p">(</span> <span class="ss">:close</span> <span class="p">),</span> <span class="n">actionCollection</span> <span class="p">)</span>
+</span><span class="line">    <span class="n">actionCollection</span><span class="o">.</span><span class="n">addAction</span> <span class="s2">&quot;toggle_konsole&quot;</span><span class="p">,</span> <span class="vi">@konsoleDockWidget</span><span class="o">.</span><span class="n">toggleViewAction</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1">##### Prepare GUI</span>
+</span><span class="line">    <span class="n">setupGUI</span><span class="p">(</span> <span class="no">Default</span><span class="p">,</span> <span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span> <span class="bp">__FILE__</span> <span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/ui.rc&quot;</span> <span class="p">)</span>
+</span><span class="line">    <span class="n">retranslate_ui</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">changedir</span>
+</span><span class="line">    <span class="n">folder</span> <span class="o">=</span> <span class="sx">%x{ kdialog --getexistingdirectory . }</span>
+</span><span class="line">    <span class="vi">@mykonsole</span><span class="o">.</span><span class="n">cmd</span> <span class="s2">&quot;cd </span><span class="si">#{</span><span class="n">folder</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">folder</span><span class="o">.</span><span class="n">nil?</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">docmd</span>
+</span><span class="line">    <span class="vi">@mykonsole</span><span class="o">.</span><span class="n">cmd</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vi">@kLineEdt</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span><span class="line">    <span class="vi">@kLineEdt</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">def</span> <span class="nf">retranslate_ui</span>
+</span><span class="line">    <span class="n">setWindowTitle</span> <span class="n">i18n</span> <span class="s2">&quot;KPlaylistTool&quot;</span>
+</span><span class="line">    <span class="vi">@konsoleDockWidget</span><span class="o">.</span><span class="n">setWindowTitle</span> <span class="n">i18n</span> <span class="s2">&quot;Konsole&quot;</span>
+</span><span class="line">    <span class="vi">@kPBtnChangePwd</span><span class="o">.</span><span class="n">setText</span> <span class="n">i18n</span> <span class="s2">&quot;Change Directory&quot;</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="n">about</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:AboutData</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;konsoleinruby&quot;</span><span class="p">,</span> <span class="s2">&quot;konqueror&quot;</span><span class="p">,</span> <span class="no">KDE</span><span class="o">.</span><span class="n">ki18n</span><span class="p">(</span><span class="s2">&quot;Konsole in Ruby&quot;</span><span class="p">),</span> <span class="s2">&quot;0.1&quot;</span><span class="p">,</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:ki18n</span><span class="p">(</span><span class="s2">&quot;A short description&quot;</span><span class="p">),</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:AboutData</span><span class="o">::</span><span class="no">License_GPL_V3</span><span class="p">,</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:ki18n</span><span class="p">(</span><span class="s2">&quot;© 2010 Robert Riemann&quot;</span><span class="p">),</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:ki18n</span><span class="p">(</span><span class="s2">&quot;See kde-apps.org for Updates&quot;</span><span class="p">),</span> <span class="s2">&quot;http://homepage.de&quot;</span><span class="p">,</span> <span class="s2">&quot;bugs@homepage.de&quot;</span> <span class="p">)</span>
+</span><span class="line"><span class="n">about</span><span class="o">.</span><span class="n">setProgramIconName</span>  <span class="s2">&quot;plasma&quot;</span>
+</span><span class="line"><span class="ss">KDE</span><span class="p">:</span><span class="ss">:CmdLineArgs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="no">ARGV</span><span class="p">,</span> <span class="n">about</span><span class="p">)</span>
+</span><span class="line"><span class="n">a</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">new</span>
+</span><span class="line"><span class="n">w</span> <span class="o">=</span> <span class="no">CustomWidget</span><span class="o">.</span><span class="n">new</span>
+</span><span class="line"><span class="n">w</span><span class="o">.</span><span class="n">show</span>
+</span><span class="line"><span class="n">a</span><span class="o">.</span><span class="n">exec</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h2 id="uixml">ui.xml</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>ui.xml </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+</pre></td><td class="code"><pre><code class="xml"><span class="line"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class="line"><span class="nt">&lt;gui</span> <span class="na">name=</span><span class="s">&quot;konsole_in_ruby&quot;</span><span class="nt">&gt;</span>
+</span><span class="line">     version=&quot;1&quot;
+</span><span class="line">     xmlns=&quot;http://www.kde.org/standards/kxmlgui/1.0&quot;
+</span><span class="line">     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+</span><span class="line">     xsi:schemaLocation=&quot;http://www.kde.org/standards/kxmlgui/1.0
+</span><span class="line">                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd&quot; &gt;
+</span><span class="line">  <span class="nt">&lt;MenuBar&gt;</span>
+</span><span class="line">    <span class="nt">&lt;Menu</span> <span class="na">name=</span><span class="s">&quot;file&quot;</span> <span class="nt">&gt;</span>
+</span><span class="line">    <span class="nt">&lt;/Menu&gt;</span>
+</span><span class="line">    <span class="nt">&lt;Menu</span> <span class="na">name=</span><span class="s">&quot;view&quot;</span> <span class="nt">&gt;</span>
+</span><span class="line">      <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">&quot;toggle_konsole&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="line">    <span class="nt">&lt;/Menu&gt;</span>
+</span><span class="line">  <span class="nt">&lt;/MenuBar&gt;</span>
+</span><span class="line">  <span class="nt">&lt;ToolBar</span> <span class="na">name=</span><span class="s">&quot;mainToolBar&quot;</span> <span class="nt">&gt;</span>
+</span><span class="line">    <span class="nt">&lt;text&gt;</span>Main Toolbar<span class="nt">&lt;/text&gt;</span>
+</span><span class="line">    <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">&quot;toggle_konsole&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="line">    <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">&quot;file_quit&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="line">  <span class="nt">&lt;/ToolBar&gt;</span>
+</span><span class="line"><span class="nt">&lt;/gui&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-19T00:00:00-05:00" pubdate data-updated="true">Feb 19<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/kde/'>kde</a>, <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2010/02/07/simple_ruby_plasmoid/" title="Previous Post: Simple Ruby Plasmoid">&laquo; Simple Ruby Plasmoid</a>
+      
+      
+        <a class="basic-alignment right" href="/2010/02/23/GSoC_konqueror_projects/" title="Next Post: Call for Konqueror related GSoC 2010 projects">Call for Konqueror related GSoC 2010 projects &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2010/02/19/konsolepart_and_ruby/';
+        var disqus_url = 'http://blog.riemann.cc/2010/02/19/konsolepart_and_ruby/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: starcraft | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/starcraft/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Starcraft 2 - fixing QWERTZ hotkeys]]></title>
+    <link href="http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys/"/>
+    <updated>2012-08-02T11:53:00-04:00</updated>
+    <id>http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys</id>
+    <content type="html"><![CDATA[<p>After upgrading <a href="http://eu.battle.net/sc2">Starcraft 2</a> with Patch 1.5.0, the German users might
+suffer from problems regarding the raster grid hot key layout.</p>
+
+<p>One significant difference between the German and US keyboard layout is the swap
+of characters <code>Z</code> and <code>Y</code>. The update to 1.5.0 leads to a not working <code>Y</code> hot key.</p>
+
+<p>According to <a href="http://www.teamliquid.net/forum/viewmessage.php?topic_id=357501">teamliquid.net</a> bug #23, there is a work-around. Just add the
+USA keyboard layout to the keyboard layouts options menu. It’s not necessary to
+activate this layout. Finally restart the game and the raster grid layout works
+again.</p>
+
+<p>This work-around was successfully tested with Windows 7, 64 bit.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

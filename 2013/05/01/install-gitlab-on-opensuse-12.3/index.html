@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Install Gitlab on OpenSUSE 12.3 - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="Private Git Repo Hosting Install OS Install Gitlab Install dependencies: Prepare system for Gitlab Prapare Gitlab (using account git) Private Git &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Install Gitlab on OpenSUSE 12.3</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-01T22:59:00-04:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><ul id="markdown-toc">
+  <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
+  <li><a href="#install-os">Install OS</a></li>
+  <li><a href="#install-gitlab">Install Gitlab</a></li>
+  <li><a href="#install-dependencies">Install dependencies:</a>    <ul>
+      <li><a href="#prepare-system-for-gitlab">Prepare system for Gitlab</a></li>
+      <li><a href="#prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="private-git-repo-hosting">Private Git Repo Hosting</h3>
+
+<p><a href="http://gitlab.org/">Gitlab</a> brings the social coding <a href="http://www.github.com/">Github</a> experience to your own network. In
+contrast to the commercial product Github which only allows to host open source
+<a href="http://git-scm.com/">git</a> repository projects using the free plan, you can install the free/libre software Gitlab
+wherever you like and do what you want.
+Therefore you need to setup a RubyOnRails environment.
+Officially, Gitlab supports Debian/Ubuntu.
+Read on how to install it on <a href="http://www.opensuse.org/">OpenSUSE</a>.</p>
+
+<!-- more -->
+
+<p>The presented solutions features a btrfs
+filesystem RAID-1 <code>:)</code> and some custom patches. Instead of init.d startup scripts,
+we use systemd. I recommend to use nginx as a webserver.</p>
+
+<p>Please be aware that the development of Gitlab continues rapidly. This might break
+this how-to at some point. Please read everything before starting!</p>
+
+<h3 id="install-os">Install OS</h3>
+
+<ul>
+  <li>Download OpenSUSE 12.3 32bit, Network edition
+<a href="http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso">http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso</a></li>
+  <li>I chose 32bit, because Ruby Binary Extensions might have problems with lib64 path structure. We workaround this bug.</li>
+  <li>I chose networkinstall, because we need only very few packages and don’t need to download everything. only 200MB are downloaded during install</li>
+  <li>the image can easily copied to a usb pen drive using the gui tool “imagewriter” (executed as root)</li>
+  <li>Partition: There are 2 big hard drives. I created on both of them first a primary pratition of 1GB of type LINUX-RAID</li>
+  <li>I use the yast software raid setup during the install to connect both partitions to a software raid-1 partititon of ext4 to mount in /boot</li>
+  <li>I created on both hard drives a btrfs partition (50GB), but only mount the one on /dev/sda to /</li>
+  <li>I created on both hard drives a swap space of 2 GB and mount both to swap</li>
+</ul>
+
+<p>The system gets installed and the configuration follows.</p>
+
+<ul>
+  <li>I open ssh. I disable ipv6.</li>
+  <li>I disable dhcp and configure the hostname to “leise” and the site to our internet domain, the nameserver and the gateway is set to be the mail server.</li>
+  <li>The server gets the fixed ip: 192.xxx.xxx.184</li>
+  <li>The network check passes successfully and I apply immedately online updates.</li>
+  <li>I leave the user input dialog blank and only set a root password</li>
+</ul>
+
+<p>The installation is done. I test everything with a restart using <code>reboot</code>.
+Now the root filesystem has to be turned to a btrfs raid system.</p>
+
+<ul>
+  <li>I add a second device to the root file system: <code>btrfs device add /dev/sdb2 /</code></li>
+  <li>I convert the striped btrfs mode to the raid1 mode for filesystem data and metadata:
+<code>btrfs filesystem balance start -dconvert=raid1 -mconvert=raid1 /</code></li>
+</ul>
+
+<h3 id="install-gitlab">Install Gitlab</h3>
+
+<ul>
+  <li>Homepage: <a href="http://gitlab.org/">http://gitlab.org/</a></li>
+  <li>Source Code: <a href="https://github.com/gitlabhq/gitlabhq">https://github.com/gitlabhq/gitlabhq</a></li>
+</ul>
+
+<p>The following steps apply to version 5.0 and try to copy the step by step
+tutorial which is refered from the README:
+<a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md</a></p>
+
+<h2 id="install-dependencies">Install dependencies:</h2>
+
+<pre><code>zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_12.3/devel:languages:ruby:extensions.repo
+
+zypper in patterns-openSUSE-devel_basis ca-certificates-cacert nginx rubygem-rb-inotify rubygem-ffi redis mysql-community-server mysql-community-server-client rubygem-bundler ruby19 ruby19-devel libmysqlclient-devel zlib-devel libyaml-devel libgdbm4 libreadline6 libncurses5 libffi47-devel curl git-core postfix checkinstall libxml2-devel libxslt-devel libcurl-devel libicu-devel
+# accept deinstallation of patterns-openSUSE-minimal_base-conflicts
+
+python2 --version # make sure to have version &gt; 2.5 but &lt; 3.0
+
+ruby1.9 --version # make sure to have a compatible version (in my case 1.9.3)
+cat /usr/bin/bundle # make sure to have ruby version 1.9 in the shebang line (first line in file)
+
+systemctl daemon-reload # reparse config for systemd (necessary, because we installed mysql)
+systemctl start mysql.service  # start mysql
+systemctl enable mysql.service # make mysql autostart
+cp /etc/redis/default.conf{.example,}
+chown redis.redis /etc/redis/default.conf
+systemctl enable redis.service
+systemctl start redis.service
+</code></pre>
+
+<h4 id="prepare-system-for-gitlab">Prepare system for Gitlab</h4>
+
+<ul>
+  <li>create a user git: <code>useradd -ms /bin/bash git</code></li>
+</ul>
+
+<h4 id="prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</h4>
+
+<pre><code>su git # (change to the account of git)
+cd # (change to the home directory /home/git)
+git clone https://github.com/gitlabhq/gitlab-shell.git
+cd gitlab-shell
+cp config.yml.example config.yml
+vim config.yml # change domain to the domain of this computer
+cd
+ssh-keygen # to be sure, create ssh key (not mentioned in official docu) with empty passphrase
+</code></pre>
+
+<p>Follow the setup of the mysql data base: <a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql</a></p>
+
+<ul>
+  <li><code>mysql -u root</code></li>
+  <li>follow the guide for mysql commands</li>
+</ul>
+
+<p>We continue with the setup of the GitLab Rails application:</p>
+
+<pre><code>gem1.9 install charlock_holmes --version '0.6.9' # execute as root
+su git
+cd
+git clone https://github.com/gitlabhq/gitlabhq.git gitlab
+cd gitlab
+git checkout 5-0-stable # not possible yet, I use master instead
+vim config/gitlab.yml
+# ^- email_from: gitlab@atech.de, support_email: admin@atech.de, default_projects_limit: 100
+# disable username_changing_enabled
+chown -R git log/ tmp/
+chmod -R u+rwX log/ tmp/
+mkdir /home/git/gitlab-satellites
+mkdir tmp/pids/
+chmod -R u+rwX tmp/pids/
+cp config/unicorn.rb.example config/unicorn.rb
+cp config/database.yml.mysql config/database.yml
+vim config/database.yml # edit password and username
+bundle install --deployment --without development test postgres # takes a while
+bundle exec rake db:setup RAILS_ENV=production
+bundle exec rake db:seed_fu RAILS_ENV=production
+bundle exec rake gitlab:setup RAILS_ENV=production # chose yes
+bundle exec rake gitlab:shell:setup RAILS_ENV=production # chose yes
+git config --global user.name  "GitLab"
+git config --global user.email "gitlab@atech.de"
+</code></pre>
+
+<p>Install Check:</p>
+
+<pre><code>su git
+cd /home/git/gitlab
+bundle exec rake gitlab:check RAILS_ENV=production
+</code></pre>
+
+<p>Go to yast firewall and open port http (and https port): 80, (443)</p>
+
+<pre><code># update services
+su
+cd /usr/lib/systemd/system/
+wget https://gist.github.com/veprbl/5115638/raw/9d18a341217f109accb67f57e8ad420c9de442fd/gitlab.service # TODO wrong mysqld
+wget https://gist.github.com/veprbl/5115638/raw/be78658953cd5967a4d874f5b0a019667cf090af/gitlab-worker.service # TODO same
+# double-check content of these files!
+chmod 644 gitlab.service gitlab-worker.service
+# TODO edit /etc/nginx/vhost.d/*
+systemctl daemon-reload
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-01T22:59:00-04:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/linux/'>linux</a>, <a class='category' href='/categories/opensuse/'>opensuse</a>, <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/04/29/waserfaelle-und-vulkan-in-basse-terre/" title="Previous Post: Wasserfälle und Vulkan in Basse-Terre">&laquo; Wasserfälle und Vulkan in Basse-Terre</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/05/08/was-sonst-noch-geschah/" title="Next Post: Was Sonst Noch Geschah">Was Sonst Noch Geschah &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/';
+        var disqus_url = 'http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

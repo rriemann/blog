@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Patching Ruby Gem GSL - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="The Github Gist code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress ( &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Patching Ruby Gem GSL</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-05T14:21:00-05:00" pubdate data-updated="true">Jan 5<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress (<a href="http://github.com/imathis/octopress/issues/847">Issue #847</a>).</p>
+
+<p>This issue was already fixed and got included in the development branch 2.1.
+I decided to upgrade my blog to the latest development version. Afterwards the
+Ruby version manager <a href="http://rvm.io/">rvm</a> asked to install a new ruby version.
+To meet the exact requirements of octopress I decided to give it a run, but when
+installing the required gems using <code>bundle install</code> I wasn’t able to
+install <a href="http://rb-gsl.rubyforge.org/">gsl</a>, the ruby binding to the GNU
+scientific library, which is used to speed-up the “related posts” calculation.
+I remembered to run into this problem once before. Unfortunately it isn’t
+resolved yet. <code>:(</code></p>
+
+<pre><code>vector_complex.c:1989:12: error: conflicting types for 'gsl_vector_complex_equal'
+/usr/include/gsl/gsl_vector_complex_double.h:167:5: note: previous declaration of 'gsl_vector_complex_equal' was here
+make: *** [vector_complex.o] Error 1
+</code></pre>
+
+<!-- more -->
+
+<h3 id="solution">Solution</h3>
+
+<p>To get this gem installed nevertheless, you have to patch the sources of the
+native extension. For this, you have to find the building directory <code>ext</code>, which
+should be mentioned in the error message.</p>
+
+<p>Put the patch <code>rb-gsl.patch</code> from below in this directory or download it using</p>
+
+<pre><code>wget 'https://gist.github.com/raw/2296214/c6b1c7150713da5d2640ddc799132611ac72cef4/rb-gsl.patch'
+</code></pre>
+
+<p>Then you have to apply the patch using <code>patch -p2 &lt; rb-gsl.patch</code> from within the
+<code>ext</code> directory. To build the extension finally, you have to run the command
+<code>make -j4</code>. If you proceed with bundle install again, the source code will be unzipped
+again leaving you with same unpatched code as before. To work around this issue,
+a hint is given in the help of the gem install commmand (<code>gem install --help</code>).</p>
+
+<pre><code>If you correct the compilation errors by editing the gem files you will need
+    to write the specification by hand.  For example:
+
+      $ gem install some_extension_gem
+      [build fails]
+      Gem files will remain installed in \
+      /path/to/gems/some_extension_gem-1.0 for inspection.
+      Results logged to /path/to/gems/some_extension_gem-1.0/gem_make.out
+      $ [cd /path/to/gems/some_extension_gem-1.0]
+      $ [edit files or what-have-you and run make]
+      $ gem spec ../../cache/some_extension_gem-1.0.gem --ruby &gt; \
+                ../../specifications/some_extension_gem-1.0.gemspec
+      $ gem list some_extension_gem
+</code></pre>
+
+<p>So I just did as I got told (still in <code>exe</code> directory):</p>
+
+<pre><code> gem spec ../../../cache/gsl-1.14.7.gem --ruby &gt; ../../../specifications/gsl-1.14.7.gemspec
+</code></pre>
+
+<p>Afterwards <code>bundle install</code> will accept this gem. That’s it!</p>
+
+<h3 id="patch-rb-gslpatch">Patch rb-gsl.patch</h3>
+
+<div><script src="https://gist.github.com/2296214.js?file=rb-gsl.patch"></script>
+<noscript><pre><code>diff --git a/ext/matrix_complex.c b/ext/matrix_complex.c
+index 8a77ac1..1b1d8af 100644
+--- a/ext/matrix_complex.c
++++ b/ext/matrix_complex.c
+@@ -1519,8 +1519,7 @@ static VALUE rb_gsl_matrix_complex_indgen_singleton(int argc, VALUE *argv, VALUE
+   return Data_Wrap_Struct(cgsl_matrix_complex, 0, gsl_matrix_complex_free, mnew);
+ }
+ 
+-
+-static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
++static int gsl_matrix_complex_equal_witg_eps(const gsl_matrix_complex *m1,
+   const gsl_matrix_complex *m2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -1537,6 +1536,7 @@ static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
+   return 1;
+ }
+ 
++
+ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+ {
+   gsl_matrix_complex *m1, *m2;
+@@ -1555,7 +1555,7 @@ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_matrix_complex, m1);
+   CHECK_MATRIX_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_matrix_complex, m2);
+-  ret = gsl_matrix_complex_equal(m1, m2, eps);
++  ret = gsl_matrix_complex_equal_witg_eps(m1, m2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }
+diff --git a/ext/vector_complex.c b/ext/vector_complex.c
+index f9a84f0..2711a36 100644
+--- a/ext/vector_complex.c
++++ b/ext/vector_complex.c
+@@ -1986,7 +1986,7 @@ static VALUE rb_gsl_vector_complex_zip(int argc, VALUE *argv, VALUE obj)
+   return ary;
+ }
+ 
+-static int gsl_vector_complex_equal(const gsl_vector_complex *v1,
++static int gsl_vector_complex_equal_with_eps(const gsl_vector_complex *v1,
+   const gsl_vector_complex *v2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -2019,7 +2019,7 @@ static VALUE rb_gsl_vector_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_vector_complex, v1);
+   CHECK_VECTOR_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_vector_complex, v2);
+-  ret = gsl_vector_complex_equal(v1, v2, eps);
++  ret = gsl_vector_complex_equal_with_eps(v1, v2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }</code></pre></noscript></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-05T14:21:00-05:00" pubdate data-updated="true">Jan 5<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/linux/'>linux</a>, <a class='category' href='/categories/meta/'>meta</a>, <a class='category' href='/categories/ruby/'>ruby</a>, <a class='category' href='/categories/tricks/'>tricks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/09/28/leichtigkeit/" title="Previous Post: Webcomic №15">&laquo; Webcomic №15</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/01/06/quantifying_someones_character/" title="Next Post: Webcomic №17">Webcomic №17 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/';
+        var disqus_url = 'http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

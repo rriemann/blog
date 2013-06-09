@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tricks | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/tricks/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
+    <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
+    <updated>2013-04-23T08:38:00-04:00</updated>
+    <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
+    <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
+my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
+versioning system. This is pretty straight-forward, because LaTeX documents are
+only plain text.</p>
+
+<p>Beside this, I’m using as well some <a href="http://www.libreoffice.org/">LibreOffice</a> (compatible to OpenOffice)
+documents, whose changes are not obvious as it uses a binary format. For sure, git
+can handle binary files, but the log is not really helpfull.</p>
+
+<pre><code>Binary files "a/overview.ods" and "b/overview.ods" differ
+</code></pre>
+
+<p>Since git version 1.6.1 or later, you can specify dedicated diff filters per
+file extensions to track these files as well as plain text files.</p>
+
+<!-- more -->
+
+<p>Knowing that files <a href="http://en.wikipedia.org/wiki/OpenDocument">OpenDocument</a> files <code>*.ods</code>, <code>*.odt</code> or <code>*.odp</code> are only gziped folders of xml
+files, it is perfectly obvious to extract the files before comparision. This way,
+a plain text diff can be done. I’m using <a href="http://stosberg.net/odt2txt/">odt2txt</a>, which is available in the
+openSUSE software archive.</p>
+
+<p>Unfortunately, the whole file content is presented in one single, very long text
+line. As git is based on tracking changing lines, this is not very helpfull. So
+I decided to use additionally an XML file formatter (xmllint is already installed)
+to solve this problem.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>OpenDocument Git Filter – ~/bin/odf2prettytxt </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/usr/bin/env sh</span>
+</span><span class='line'><span class="c"># place this file to ~/bin/odf2prettytxt and have ~/bin in $PATH</span>
+</span><span class='line'><span class="nb">set</span> -o errexit
+</span><span class='line'>/usr/bin/odt2txt –raw “<span class="nv">$@</span>” | /usr/bin/xmllint –format -
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This filter must be announced to your git installation</p>
+
+<pre><code>git config --global diff.odf.textconv "odf2prettytxt"
+</code></pre>
+
+<p>Lastly you can enable this filter per project/folder by adding a line to your
+<code>.gitattributes</code> file. This is done for the <code>*.ods</code> files using this one liner.</p>
+
+<pre><code>echo '*.ods diff=odf' &gt;&gt; .gitattributes
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
+    <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
+    <updated>2013-04-10T09:29:00-04:00</updated>
+    <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
+    <content type="html"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#prologue">Prologue</a></li>
+  <li><a href="#generating-the-table-of-contents">Generating the Table Of Contents</a>    <ul>
+      <li><a href="#using-kramdown">Using Kramdown</a></li>
+      <li><a href="#preparing-your-posts">Preparing your posts</a></li>
+    </ul>
+  </li>
+  <li><a href="#styling">Styling</a></li>
+  <li><a href="#issues">Issues</a></li>
+</ul>
+
+<h3 id="prologue">Prologue</h3>
+
+<p>I’m still looking for an easy and proper solution to implement pictures with
+subtitles and an original size pop-up for my blog. On the way I found some
+interesting ideas to equip <a href="http://octopress.org/">Octopress</a>, Hacker’s Blog Engine, with a table of
+contents.</p>
+
+<p>So I stumbled upon <a href="http://brizzled.clapper.org/blog/2012/02/04/generating-a-table-of-contents-in-octopress/">this article</a> and really wondered about the
+complexity of solutions other people found. So I just want to present the
+solution that I found.</p>
+
+<!-- more -->
+
+<h3 id="generating-the-table-of-contents">Generating the Table Of Contents</h3>
+
+<p>I’m going to add some further <abbr title="Table Of Contents">TOC</abbr> levels for demonstration purposes. <code>;)</code></p>
+
+<h4 id="using-kramdown">Using Kramdown</h4>
+
+<p>I use <a href="http://kramdown.rubyforge.org">kramdown</a> as Markdown converter in all my projects. The inventor claims,
+that it could be the fastest converter so far. Additionally, it comes with some
+nice extras. For instance, it can generate a <abbr title="Table Of Contents">TOC</abbr> for you<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<p>To use kramdown within Octopress, you have to activate it in the <code>_config.yml</code> file.</p>
+
+<pre><code>markdown: kramdown
+</code></pre>
+
+<h4 id="preparing-your-posts">Preparing your posts</h4>
+
+<p>The following code in your blog posts is replaced by the <abbr title="Table Of Contents">TOC</abbr> after kramdown parsing.</p>
+
+<pre><code>* list element with functor item
+{:toc}
+</code></pre>
+
+<h3 id="styling">Styling</h3>
+
+<p>I applied the following <a href="http://sass-lang.com/">SCSS</a> code to realize the styling. Octopress already
+knows how to generate valid CSS code out of it. The <code>@include shadow-box;</code>
+is resolved by <a href="http://compass-style.org/">Compass</a>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Snippet for sass/custom/_styles.scss </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#markdown-toc</span><span class="nd">:before</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">content</span><span class="o">:</span> <span class="err">“</span><span class="n">Table</span> <span class="n">of</span> <span class="n">Contents</span><span class="err">”</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nt">ul</span><span class="nf">#markdown-toc</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">@</span><span class="n">include</span> <span class="n">shadow</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3 id="issues">Issues</h3>
+
+<p>One problem I came across is that the links of the <abbr title="Table Of Contents">TOC</abbr> are only relative using
+HTML anchors. So if only a part of your post is shown, because you made usage of
+<code>&lt;!-- more --&gt;</code> and the post is shown in your blog index page, it won’t work.</p>
+
+<p>I decided that I don’t want to show the <abbr title="Table Of Contents">TOC</abbr> in this case at all and added
+additionally the following lines to my style description.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.blog-index</span> <span class="nf">#markdown-toc</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="http://kramdown.rubyforge.org/converter/html.html#toc">http://kramdown.rubyforge.org/converter/html.html#toc</a><a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
+    <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
+    <updated>2013-01-05T14:21:00-05:00</updated>
+    <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
+    <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress (<a href="http://github.com/imathis/octopress/issues/847">Issue #847</a>).</p>
+
+<p>This issue was already fixed and got included in the development branch 2.1.
+I decided to upgrade my blog to the latest development version. Afterwards the
+Ruby version manager <a href="http://rvm.io/">rvm</a> asked to install a new ruby version.
+To meet the exact requirements of octopress I decided to give it a run, but when
+installing the required gems using <code>bundle install</code> I wasn’t able to
+install <a href="http://rb-gsl.rubyforge.org/">gsl</a>, the ruby binding to the GNU
+scientific library, which is used to speed-up the “related posts” calculation.
+I remembered to run into this problem once before. Unfortunately it isn’t
+resolved yet. <code>:(</code></p>
+
+<pre><code>vector_complex.c:1989:12: error: conflicting types for 'gsl_vector_complex_equal'
+/usr/include/gsl/gsl_vector_complex_double.h:167:5: note: previous declaration of 'gsl_vector_complex_equal' was here
+make: *** [vector_complex.o] Error 1
+</code></pre>
+
+<!-- more -->
+
+<h3 id="solution">Solution</h3>
+
+<p>To get this gem installed nevertheless, you have to patch the sources of the
+native extension. For this, you have to find the building directory <code>ext</code>, which
+should be mentioned in the error message.</p>
+
+<p>Put the patch <code>rb-gsl.patch</code> from below in this directory or download it using</p>
+
+<pre><code>wget 'https://gist.github.com/raw/2296214/c6b1c7150713da5d2640ddc799132611ac72cef4/rb-gsl.patch'
+</code></pre>
+
+<p>Then you have to apply the patch using <code>patch -p2 &lt; rb-gsl.patch</code> from within the
+<code>ext</code> directory. To build the extension finally, you have to run the command
+<code>make -j4</code>. If you proceed with bundle install again, the source code will be unzipped
+again leaving you with same unpatched code as before. To work around this issue,
+a hint is given in the help of the gem install commmand (<code>gem install --help</code>).</p>
+
+<pre><code>If you correct the compilation errors by editing the gem files you will need
+    to write the specification by hand.  For example:
+
+      $ gem install some_extension_gem
+      [build fails]
+      Gem files will remain installed in \
+      /path/to/gems/some_extension_gem-1.0 for inspection.
+      Results logged to /path/to/gems/some_extension_gem-1.0/gem_make.out
+      $ [cd /path/to/gems/some_extension_gem-1.0]
+      $ [edit files or what-have-you and run make]
+      $ gem spec ../../cache/some_extension_gem-1.0.gem --ruby &gt; \
+                ../../specifications/some_extension_gem-1.0.gemspec
+      $ gem list some_extension_gem
+</code></pre>
+
+<p>So I just did as I got told (still in <code>exe</code> directory):</p>
+
+<pre><code> gem spec ../../../cache/gsl-1.14.7.gem --ruby &gt; ../../../specifications/gsl-1.14.7.gemspec
+</code></pre>
+
+<p>Afterwards <code>bundle install</code> will accept this gem. That’s it!</p>
+
+<h3 id="patch-rb-gslpatch">Patch rb-gsl.patch</h3>
+
+<p><div><script src='https://gist.github.com/2296214.js?file=rb-gsl.patch'></script>
+<noscript><pre><code>diff --git a/ext/matrix_complex.c b/ext/matrix_complex.c
+index 8a77ac1..1b1d8af 100644
+--- a/ext/matrix_complex.c
++++ b/ext/matrix_complex.c
+@@ -1519,8 +1519,7 @@ static VALUE rb_gsl_matrix_complex_indgen_singleton(int argc, VALUE *argv, VALUE
+   return Data_Wrap_Struct(cgsl_matrix_complex, 0, gsl_matrix_complex_free, mnew);
+ }
+ 
+-
+-static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
++static int gsl_matrix_complex_equal_witg_eps(const gsl_matrix_complex *m1,
+   const gsl_matrix_complex *m2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -1537,6 +1536,7 @@ static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
+   return 1;
+ }
+ 
++
+ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+ {
+   gsl_matrix_complex *m1, *m2;
+@@ -1555,7 +1555,7 @@ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_matrix_complex, m1);
+   CHECK_MATRIX_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_matrix_complex, m2);
+-  ret = gsl_matrix_complex_equal(m1, m2, eps);
++  ret = gsl_matrix_complex_equal_witg_eps(m1, m2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }
+diff --git a/ext/vector_complex.c b/ext/vector_complex.c
+index f9a84f0..2711a36 100644
+--- a/ext/vector_complex.c
++++ b/ext/vector_complex.c
+@@ -1986,7 +1986,7 @@ static VALUE rb_gsl_vector_complex_zip(int argc, VALUE *argv, VALUE obj)
+   return ary;
+ }
+ 
+-static int gsl_vector_complex_equal(const gsl_vector_complex *v1,
++static int gsl_vector_complex_equal_with_eps(const gsl_vector_complex *v1,
+   const gsl_vector_complex *v2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -2019,7 +2019,7 @@ static VALUE rb_gsl_vector_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_vector_complex, v1);
+   CHECK_VECTOR_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_vector_complex, v2);
+-  ret = gsl_vector_complex_equal(v1, v2, eps);
++  ret = gsl_vector_complex_equal_with_eps(v1, v2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Starcraft 2 - fixing QWERTZ hotkeys]]></title>
+    <link href="http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys/"/>
+    <updated>2012-08-02T11:53:00-04:00</updated>
+    <id>http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys</id>
+    <content type="html"><![CDATA[<p>After upgrading <a href="http://eu.battle.net/sc2">Starcraft 2</a> with Patch 1.5.0, the German users might
+suffer from problems regarding the raster grid hot key layout.</p>
+
+<p>One significant difference between the German and US keyboard layout is the swap
+of characters <code>Z</code> and <code>Y</code>. The update to 1.5.0 leads to a not working <code>Y</code> hot key.</p>
+
+<p>According to <a href="http://www.teamliquid.net/forum/viewmessage.php?topic_id=357501">teamliquid.net</a> bug #23, there is a work-around. Just add the
+USA keyboard layout to the keyboard layouts options menu. It’s not necessary to
+activate this layout. Finally restart the game and the raster grid layout works
+again.</p>
+
+<p>This work-around was successfully tested with Windows 7, 64 bit.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Downloading PDF Documents from Scribd]]></title>
+    <link href="http://blog.riemann.cc/2012/05/21/downloading-pdf-documents-from-scribd/"/>
+    <updated>2012-05-21T13:41:00-04:00</updated>
+    <id>http://blog.riemann.cc/2012/05/21/downloading-pdf-documents-from-scribd</id>
+    <content type="html"><![CDATA[<p>Are you also sometimes annoyed by only finding documents on <a href="http://scribd.com">http://scribd.com</a> and
+nowhere else? Furthermore this site is missing of a download or printing
+opportunity – at least there is no one for ordinary vitors.</p>
+
+<p>Fortunately there is a little trick which might help you to still download a
+pdf:
+For mobile visitors using a mobile browser (tested with Opera Mini), there is a
+download button. You just have to:</p>
+
+<ol>
+  <li>use Firefox</li>
+  <li>Tell scribd untruly, that you are using Opera Mini
+    <ul>
+      <li>open a new tab, enter <a href="about:config">about:config</a> in the address bar and go for it</li>
+      <li>accept the security hint</li>
+      <li>use the context menu to create a new string named <code>general.useragent.override</code></li>
+      <li>set the value of this string to <code>Opera/9.80 (J2ME/MIDP; Opera Mini/6.24288/25.729; U; en) Presto/2.5.25 Version/10.54</code></li>
+    </ul>
+  </li>
+  <li>visit the scribd page again and use the now appearing download button to reveive your pdf.</li>
+  <li>you should reset this string afterwards again to an empty value</li>
+</ol>
+
+<p>If you need this regularly, you can install the
+<a href="https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/">Firefox Agent Switcher Plugin</a>
+for some automatization.</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="http://vasuviroja.blogspot.in/2012/05/download-from-scribd-without-account_02.html">http://vasuviroja.blogspot.in/2012/05/download-from-scribd-without-account_02.html</a></li>
+  <li><a href="http://johnbokma.com/mexit/2004/04/24/changinguseragent.html">http://johnbokma.com/mexit/2004/04/24/changinguseragent.html</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

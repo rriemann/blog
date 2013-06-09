@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>btrfs Kernel Bug - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="Prolog When updating my only productive computer system to the latest opensuse
+version 12.1, I decided to give the feature rich, shiny new filesystem &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Btrfs Kernel Bug</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-10T00:00:00-05:00" pubdate data-updated="true">Dec 10<span>th</span>, 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2 id="prolog">Prolog</h2>
+
+<p>When updating my only productive computer system to the latest <a href="http://www.opensuse.org/">opensuse</a>
+version 12.1, I decided to give the feature rich, shiny new filesystem
+<a href="http://btrfs.wiki.kernel.org/">btrfs</a> a try. It’s not yet so stable, but it is already delivered by
+all main distribution. Fedora actually wants to use it as default.</p>
+
+<p>Up to now I have to evaluate this disission to be more risky than lucky. After
+something like two month, I experienced two filesystem corruptions. The first
+one hit my root-filesystem. I had to setup my system from scratch, because every
+write attempt on the partition ended with a kernel failure, most probably caused
+by the btrfs driver. Mounting the partition in read-only mode while using a
+Live-CD was the only way to do a late backup.</p>
+
+<p>Yesterday I ran into btrfs problems again. I copied some photos to my hard disk.
+In the next moment, I got some weird kernel sys messages, that didn’t help me at
+all.</p>
+
+<pre><code>Message from syslogd@theta at Dec 9 17:45:00 ...
+[Freitag, 9. Dezember 2011] [17:45:10] &lt;saLOUt&gt; kernel:[ 454.807770] Code: e9 8c fe ff ff 66 0f 1f 44 00 00 b8 ea ff ff ff e9 cf fe ff ff 48 89 de 4c 89 f7 89 04 24 e8 80 ec ff ff 8b 04 24 e9 b9 fe ff ff &lt;0f&gt; 0b 0f 0b 0f 1f 40 00 41 57 49 89 f7 41 56 41 55 41 54 55 53 
+</code></pre>
+
+<p>All apps accessing my picture btrfs subvolume were crashing.</p>
+
+<p>After disabling the whole btrfs system by commenting the appropriate lines in my
+<code>/etc/fstab</code> file, I had a stable system again – just without any pictures.</p>
+
+<h2 id="data-rescue">Data Rescue</h2>
+
+<p>Luckily Chris Mason (#cmason) from <a href="irc://chat.freenode.org/btrfs">#btrfs</a> could help me to fix these
+problems without any loss of data!</p>
+
+<p>A# simple <code>btrfsck</code> didn’t help me, because of a crash of the repair tool itself:</p>
+
+<pre><code>warning, start mismatch 48695640064 48695652352
+block 48695652352 rec extent_item_refs 1, passed 1
+</code></pre>
+
+<p>No more output. That’s all. Chris told me to checkout some fresh code from his
+very own repo. When I did the checkout, the master was <code>fdb6c04023</code>.</p>
+
+<pre><code>git clone http://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git
+</code></pre>
+
+<p>After a reboot, I ran</p>
+
+<pre><code>make
+make btrfs-zero-log
+</code></pre>
+
+<p>which went without any errors. After that I used the custom build <code>btrfs-zero-log</code>
+tool to do some btrfs magic, that I don’t understand.</p>
+
+<pre><code>./btrfs-zero-log [device]
+</code></pre>
+
+<p>After another reboot, I was able to mount my picture partition in read-only mode.
+I did a late backup again. When reading these files, one gets usually a lot of
+errors in <code>/var/log/messages</code> like this:</p>
+
+<pre><code>[ 4055.661622] btrfs csum failed ino 358 off 227975168 csum 4151547339 private 259191981
+</code></pre>
+
+<p>csum is the abbreviation for checksum. ino means inode, which is a kind of
+identifier for every file. To fix these errors, you have to find these files
+belonging to these inodes, deleting them and copy them back from your backup.</p>
+
+<p>I wrote a small ruby script, which helps you finding the affected files</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="c1">#!/usr/bin/ruby</span>
+</span><span class="line">
+</span><span class="line"><span class="c1"># string with error messages</span>
+</span><span class="line"><span class="n">error_messages</span> <span class="o">=</span> <span class="sb">`dmesg | grep &quot;found for inode&quot;`</span>
+</span><span class="line"><span class="c1"># list of integers</span>
+</span><span class="line"><span class="n">inode_list</span> <span class="o">=</span> <span class="n">error_messages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/inode (\d+).*/</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span><span class="p">}</span>
+</span><span class="line"><span class="c1"># list of arrays of filenames</span>
+</span><span class="line"><span class="n">file_list</span> <span class="o">=</span> <span class="n">inode_list</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="sb">`find /mnt/test -inum </span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="sb">`</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)}</span>
+</span><span class="line">
+</span><span class="line"><span class="c1"># require &#39;json&#39;</span>
+</span><span class="line"><span class="c1"># File.open(&quot;/tmp/inode-files.json&quot;, &quot;w&quot;) {|f| f &lt;&lt; JSON.pretty_generate(file_list)}</span>
+</span><span class="line">
+</span><span class="line"><span class="nb">puts</span> <span class="n">file_list</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">uniq</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>If you finally want to delete these files, you have to remount your partition in
+read-write mode.</p>
+
+<p>At least for me, this walkthrough suggested by Chris resolved my problems.</p>
+
+<h1 id="complete-error-log">Complete error log</h1>
+
+<pre><code>Dec  9 11:38:03 theta kernel: [ 3235.664148] btrfs: free space inode generation (0) did not match free space cache generation (6403)
+Dec  9 11:38:03 theta kernel: [ 3235.664152] btrfs: failed to load free space cache for block group 38818283520
+Dec  9 11:38:34 theta kernel: [ 3266.367012] ------------[ cut here ]------------
+Dec  9 11:38:34 theta kernel: [ 3266.367385] kernel BUG at /home/abuild/rpmbuild/BUILD/kernel-desktop-3.1.0/linux-3.1/fs/btrfs/extent-tree.c:5467!
+Dec  9 11:38:34 theta kernel: [ 3266.368140] invalid opcode: 0000 [#1] PREEMPT SMP
+Dec  9 11:38:34 theta kernel: [ 3266.368510] CPU 1
+Dec  9 11:38:34 theta kernel: [ 3266.368653] Modules linked in: nls_iso8859_1 nls_cp437 vfat fat fuse af_packet ip6t_LOG xt_tcpudp xt_pkttype ipt_LOG xt_limit rfcomm bnep ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_raw xt_NOTRACK ipt_REJECT iptable_raw iptable_filter ip6table_mangle nf_conntrack_netbios_ns nf_conntrack_broadcast nf_conntrack_ipv4 nf_defrag_ipv4 ip_tables xt_conntrack nf_conntrack ip6table_filter ip6_tables x_tables cpufreq_conservative cpufreq_userspace cpufreq_powersave acpi_cpufreq mperf microcode dm_mod mmc_block snd_hda_codec_hdmi snd_hda_codec_conexant arc4 uvcvideo videodev v4l2_compat_ioctl32 hdj_mod snd_rawmidi snd_seq_device ecb kvm_intel kvm btusb bluetooth sg joydev sdhci_pci sdhci iwlagn mmc_core mac80211 e1000e cfg80211 i2c_i801 pcspkr snd_hda_intel snd_hda_codec snd_hwdep snd_pcm iTCO_wdt iTCO_vendor_support xhci_hcd snd_timer snd_page_alloc mei(C) battery thinkpad_acpi rfkill tpm_tis tpm tpm_bios snd soundcore ac wmi autofs4 btrfs zlib_deflate thermal i915 drm_ kms_helper
+Dec  9 11:38:34 theta kernel: r drm i2c_algo_bit processor button video thermal_sys
+Dec  9 11:38:34 theta kernel: [ 3266.376473]
+Dec  9 11:38:34 theta kernel: [ 3266.376585] Pid: 11081, comm: btrfs-endio-wri Tainted: G         C  3.1.0-1.2-desktop #1 LENOVO 4290W4H/4290W4H
+Dec  9 11:38:34 theta kernel: [ 3266.377390] RIP: 0010:[&lt;ffffffffa01444bf&gt;]  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.378147] RSP: 0018:ffff8800cce2fb40  EFLAGS: 00010282
+Dec  9 11:38:34 theta kernel: [ 3266.378535] RAX: 00000000ffffffef RBX: ffff8800cd1d90a0 RCX: 0000160000000000
+Dec  9 11:38:34 theta kernel: [ 3266.379060] RDX: 0000000000000008 RSI: 0000000000000001 RDI: ffff8801ad7fb130
+Dec  9 11:38:34 theta kernel: [ 3266.379613] RBP: 00000000000000b2 R08: 0000000000000001 R09: 0000000000000001
+Dec  9 11:38:34 theta kernel: [ 3266.380164] R10: ffff8800c99928e8 R11: 000000000000004e R12: 0000000000000000
+Dec  9 11:38:34 theta kernel: [ 3266.380716] R13: ffff8800cce2fc0f R14: ffff8800c99928e8 R15: ffff88020f367400
+Dec  9 11:38:34 theta kernel: [ 3266.381267] FS:  0000000000000000(0000) GS:ffff88021e240000(0000) knlGS:0000000000000000
+Dec  9 11:38:34 theta kernel: [ 3266.381891] CS:  0010 DS: 0000 ES: 0000 CR0: 000000008005003b
+Dec  9 11:38:34 theta kernel: [ 3266.382334] CR2: 00007fbdfb6bc440 CR3: 0000000001c05000 CR4: 00000000000406e0
+Dec  9 11:38:34 theta kernel: [ 3266.382885] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+Dec  9 11:38:34 theta kernel: [ 3266.383436] DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000400
+Dec  9 11:38:34 theta kernel: [ 3266.383987] Process btrfs-endio-wri (pid: 11081, threadinfo ffff8800cce2e000, task ffff8800d447a580)
+Dec  9 11:38:34 theta kernel: [ 3266.384693] Stack:
+Dec  9 11:38:34 theta kernel: [ 3266.384844]  ffff88020f51d800 ffff880200000035 ffff8802057d4000 0000000100000001
+Dec  9 11:38:34 theta kernel: [ 3266.385445]  8000000000000c16 0000000000000000 0000000000000103 0000000000000166
+Dec  9 11:38:34 theta kernel: [ 3266.386045]  0000000000001000 0000003500000a4c ffff88010c730000 ffff8800c99928e8
+Dec  9 11:38:34 theta kernel: [ 3266.386645] Call Trace:
+Dec  9 11:38:34 theta kernel: [ 3266.386853]  [&lt;ffffffffa014505e&gt;] run_delayed_data_ref+0x10e/0x1c0 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.387401]  [&lt;ffffffffa0147978&gt;] run_clustered_refs+0xc8/0x220 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.387928]  [&lt;ffffffffa0147b95&gt;] btrfs_run_delayed_refs+0xc5/0x210 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.388482]  [&lt;ffffffffa0158590&gt;] __btrfs_end_transaction+0x90/0x340 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.389024]  [&lt;ffffffffa015f5d5&gt;] btrfs_finish_ordered_io+0x2a5/0x340 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.389604]  [&lt;ffffffffa0173310&gt;] end_bio_extent_writepage+0x120/0x170 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.390205]  [&lt;ffffffffa017fcb1&gt;] worker_loop+0xa1/0x2a0 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.390714]  [&lt;ffffffff81075c8e&gt;] kthread+0x7e/0x90
+Dec  9 11:38:34 theta kernel: [ 3266.391093]  [&lt;ffffffff815a5474&gt;] kernel_thread_helper+0x4/0x10
+Dec  9 11:38:34 theta kernel: [ 3266.391550] Code: 20 8b 94 24 a0 00 00 00 48 8b 7c 24 10 48 81 c6 86 00 00 00 e8 83 90 02 00 e9 6c ff ff ff 66 0f 1f 44 00 00 b8 f4 ff ff ff eb 90 &lt;0f&gt; 0b 49 8b 55 09 49 8b 75 00 48 c7 c7 20 6e 1a a0 31 c0 e8 0e
+Dec  9 11:38:34 theta kernel: [ 3266.393481] RIP  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
+Dec  9 11:38:34 theta kernel: [ 3266.394093]  RSP &lt;ffff8800cce2fb40&gt;
+Dec  9 11:38:34 theta kernel: [ 3266.597905] ---[ end trace 3233c7c540de8b82 ]---
+Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited with preempt_count 1
+</code></pre>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-10T00:00:00-05:00" pubdate data-updated="true">Dec 10<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/btrfs/'>btrfs</a>, <a class='category' href='/categories/kernel/'>kernel</a>, <a class='category' href='/categories/linux/'>linux</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/10/08/weihnachtsmann_gedicht/" title="Previous Post: Weihnachtsmann-Gedicht">&laquo; Weihnachtsmann-Gedicht</a>
+      
+      
+        <a class="basic-alignment right" href="/2011/12/13/herbst_gedicht/" title="Next Post: Herbst-Gedicht">Herbst-Gedicht &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug/';
+        var disqus_url = 'http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

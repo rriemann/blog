@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gpg | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/gpg/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using GPG-Agent with opensuse 11.3 and zsh]]></title>
+    <link href="http://blog.riemann.cc/2010/12/20/gpg-agent-with-opensuse11.3-zsh/"/>
+    <updated>2010-12-20T00:00:00-05:00</updated>
+    <id>http://blog.riemann.cc/2010/12/20/gpg-agent-with-opensuse11.3-zsh</id>
+    <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a>
+I’m a supporter of mail encryption since I started using free software.
+At least, I sign all my own mails, with the exception of mails to people,
+who don’t know what an *.asc file is and might not open my mail for this reason.</p>
+
+<p>By the way, my public gpg key fingerprint is:</p>
+
+<pre><code>F6A9 332D AA28 625E 59A8 F758 7BF6 0F4A 861B C3A3
+</code></pre>
+
+<p>I’m also involved in the <a href="http://www.cacert.org/" title="CAcert">CAcert</a> project. If
+you want to get “assurced”, don’t hesitate to contact me,
+if you are in Berlin.</p>
+
+<p>There is just one problem. If you want to sign all your
+mails, you have to type your hopefully long passphrase
+at least once[^1] for every single mail. If you get some
+encrypted mails from your friends, you have to type your
+passphrase for viewing mails, too. That’s not so nice.
+So were the gpg-agent invented, which task is to cache
+your passphrase for a given time, but it didn’t work for
+me - until today.</p>
+
+<p>I followed the tutorial from the <a href="http://tr.opensuse.org/SDB:Using_gpg-agent" title="SDB opensuse on gpg-agent">opensuse SDB</a> with
+no success. Please note, that you might need to change the
+<code>pinetry-qt</code> to <code>pinetry-qt4</code>.</p>
+
+<p><strong>The solution</strong>, which <strong>works for me</strong>, was to copy the mentioned
+line to <code>~/.zprofile</code> instead of <code>.xinitrc</code>, as I am using the
+awesome <a href="http://www.zsh.org/" title="Zsh">zsh</a>.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

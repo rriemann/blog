@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Announcing Kubeplayer (youtube w/o flash) - Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="Hello Planet KDE, hello RubyCorner Earlier this year I started writing a KDE application using
+the Ruby programming language. Coming from the web &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/2010/12/18/announcing_kubeplayer">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Announcing Kubeplayer (Youtube W/o Flash)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-18T00:00:00-05:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>Earlier this year I started writing a KDE application using
+the Ruby programming language. Coming from the web development, I am no
+expert at all in C++. So I decided to give KDE development a try using
+the Ruby bindings for KDE 4 called <a href="http://techbase.kde.org/Development/Languages/Ruby" title="KDE Development with Ruby">korundum4</a>.</p>
+
+<p>It wasn’t as easy as expected. Unfortunatly the korundum4 project didn’t got
+very popular by now, so I found a lot of bugs on the way. Now, three months
+later, all the bugfixes are included in the last stable KDE. The idea, of
+just copying the project folder and starting the app without the need of any
+further setup<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, becomes finally true.</p>
+
+<h2 id="announcing-kubeplayer">Announcing Kubeplayer</h2>
+
+<p><img src="http://blog.riemann.cc/images/kubeplayer.png" alt="Screenshot of Kubeplayer" title="Screenshot of Kubeplayer" /></p>
+
+<p>I started a kind of clone of the well
+known Qt-based Youtube player <a href="http://flavio.tordini.org/minitube" title="Minitube project page">Minitube</a>. When starting the development,
+I had in mind to support Vimeo and maybe some other online video platforms, too.
+The app should integrate itself better into the KDE workspace, and lately I had
+the idea of turning it into a mobile app, too. It was possible to get a much
+cleaner and shorter code, not only because of the nice KDE KIO classes,
+but also by using Ruby.</p>
+
+<h2 id="lets-try-it-out-in-less-than-1-minute">Let’s Try It Out In Less Than 1 Minute!</h2>
+
+<p>Ok, to be fair, I have to admit, this is only possible using a recent
+Linux OS<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> with korundum4 and Ruby 1.9.x preinstalled.</p>
+
+<p>To give Kubeplayer a try, you just have to checkout the repository, and start
+the application.</p>
+
+<pre><code>git clone git://git.kde.org/kubeplayer
+ruby kubeplayer/kubeplayer
+</code></pre>
+
+<p>That’s it. You can also install kubeplayer using CMake. Installation works like
+you would it expect it from a CMake based C++ application.</p>
+
+<p>If you get an error related to <code>json</code>, you are probably using an Ruby
+version prior to 1.9.x. In this case you have to install rubygems via you distribution
+package manager. Then you can use Ruby’s own package manager to install the
+missing dependency.</p>
+
+<pre><code>gem install json
+</code></pre>
+
+<h2 id="get-involved">Get Involved!</h2>
+
+<p>Not everything is done by now. Youtube works in <strike>the most</strike> a lot
+of cases. The GUI needs a lot of small improvements. I even thought about a
+maemo/meego port, paid for an N900 on
+eBay, but unfortunately got duped <code>:(</code>. So the mobile development has to wait.</p>
+
+<p>After all, the project is still quite young, the code is very short, nice and clear.
+If you ever felt like trying to develop for/with KDE, the barrier is now quite low.</p>
+
+<ul>
+  <li>You don’t have to deal with a KDE development environment. Just clone the repo
+and you are done. Since yesterday, you can find the project in <a href="https://projects.kde.org/projects/playground/multimedia/kubeplayer" title="Official KDE Playground git repo">playground</a>.<br />
+<code>git clone git://git.kde.org/kubeplayer</code></li>
+  <li>You don’t need to know C++.</li>
+  <li>You don’t have to compile anything at all!</li>
+  <li>You can use the shiny new git infrastructure of KDE.</li>
+</ul>
+
+<p>Take a look at the code base. There are not many files at all. Summed up, there
+are less then 1000 lines of code (including rare comments). For an already
+functional multimedia application, this is really few.</p>
+
+<pre><code>kubeplayer
+├── CMakeLists.txt
+├── kubeplayer
+├── lib
+│   ├── CMakeLists.txt
+│   ├── kubeplayer.desktop
+│   ├── kubeplayer.rb
+│   ├── List.rb
+│   ├── MainWindow.rb
+│   ├── provider
+│   │   └── youtube
+│   │       └── Youtube.rb
+│   └── Video.rb
+├── main.rb
+└── README.rdoc
+</code></pre>
+
+<p>How does the future of Kubeplayer look like? I have already a lof of ideas,
+what could be done. Maybe you have also many, but different ones. What about:</p>
+
+<ul>
+  <li>allowing the use to login and comment on all supported video platforms</li>
+  <li>make flash needless on netbooks by providing an optimized app</li>
+  <li>create a scripted KPart to fetch youtube pages and open the video using kubeplayer</li>
+  <li>let the user download the videos (in a video library)</li>
+  <li>make it possible to share supported video platforms with the plasma media center team</li>
+</ul>
+
+<p>So what do you think, can Kubeplayer do for you? What can you do for Kubeplayer?</p>
+
+<p>Kind regards,<br />
+Robert</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This isn’t 100% true. You need to have korundum4 installed, but most distros
+  seems to ship this package by default. On opensuse it is called “ruby-kde4”.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>As KDE and Ruby is also available for many other OS, Kubeplayer is
+  actually cross platform.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Riemann</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-18T00:00:00-05:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/kde/'>kde</a>, <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2010/07/11/plasma_dataengine_ruby_stocks/" title="Previous Post: Making Of ruby-stocks Plasma DataEngine">&laquo; Making Of ruby-stocks Plasma DataEngine</a>
+      
+      
+        <a class="basic-alignment right" href="/2010/12/20/gpg-agent-with-opensuse11.3-zsh/" title="Next Post: Using GPG-Agent with opensuse 11.3 and zsh">Using GPG-Agent with opensuse 11.3 and zsh &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+        </li>
+    
+    </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.riemann.cc/2010/12/18/announcing_kubeplayer/';
+        var disqus_url = 'http://blog.riemann.cc/2010/12/18/announcing_kubeplayer/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

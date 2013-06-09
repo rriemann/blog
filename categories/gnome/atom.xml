@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gnome | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/gnome/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Does owncloud really requires a server-side backend?]]></title>
+    <link href="http://blog.riemann.cc/2010/03/23/requires_owncloud_serverside_backend/"/>
+    <updated>2010-03-23T00:00:00-04:00</updated>
+    <id>http://blog.riemann.cc/2010/03/23/requires_owncloud_serverside_backend</id>
+    <content type="html"><![CDATA[<p>Hi planetkde, hi readers from planet gnome (so called aliens<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>),</p>
+
+<p>I’ve just stumbled upon a <a href="http://www.webupd8.org/2010/03/gnome-and-kde-might-collaborate-into.html" title="Gnome And KDE Might Collaborate Into Creating A FLOSS Alternative To Dropbox">blog post</a> dealing with a potential
+collaboration of KDE and gnome to initiate a replacement for dropbox, called
+<a href="http://owncloud.org" title="official ownCloud homepage/wiki">ownCloud</a>.</p>
+
+<p>There are already thoughts about possible GSoC projects giving attention to the
+gnome/KDE frontend clients and to the <strong>server backend</strong>.</p>
+
+<p>Nice idea, but in my humble opinion there is a problem, at least for me:
+I haven’t a hosted root server, but a lot of unix accounts with user webspace,
+where it is impossible to run any kind of background services/daemons.</p>
+
+<p>Think of:</p>
+
+<ul>
+  <li>university accounts</li>
+  <li>(scientific) institute accounts</li>
+  <li>accounts from your IT related work</li>
+</ul>
+
+<p>Think of people, who probably uses linux.</p>
+
+<p>In the case that ownCloud is meant to be <em>the</em> center of all data synchronisations,
+it would be sad that those people who <em>only</em> have webspace cannot take advantage of it.</p>
+
+<p>So I encourage the developer to design the ownCloud in a way that makes the 
+server-side backend software only optional, but not a requirement.</p>
+
+<p>This would be similar to git, which can use a server side backend (git://), but
+is also satisfied with a simple sftp connection (ssh://).
+(Please correct me if I am wrong.)</p>
+
+<p>After all you might want to read an <a href="http://www.gnu.org/philosophy/who-does-that-server-really-serve.html" title="How Software as a Service Takes Away Your Freedom">article</a> about the disadvantages of
+SaaS published by <a href="http://www.gnu.org">http://www.gnu.org</a>. Exaggerated message in one sentence: Don’t get dependant of other
+people server services. <code>;)</code></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Just a joke. Don’t take it serious.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
+  
+</feed>

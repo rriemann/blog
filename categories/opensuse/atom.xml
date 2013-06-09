@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: opensuse | Worth Mentioning]]></title>
+  <link href="http://blog.riemann.cc/categories/opensuse/atom.xml" rel="self"/>
+  <link href="http://blog.riemann.cc/"/>
+  <updated>2013-06-09T14:28:46-04:00</updated>
+  <id>http://blog.riemann.cc/</id>
+  <author>
+    <name><![CDATA[Robert Riemann]]></name>
+    <email><![CDATA[robert@riemann.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
+    <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
+    <updated>2013-05-01T22:59:00-04:00</updated>
+    <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
+    <content type="html"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
+  <li><a href="#install-os">Install OS</a></li>
+  <li><a href="#install-gitlab">Install Gitlab</a></li>
+  <li><a href="#install-dependencies">Install dependencies:</a>    <ul>
+      <li><a href="#prepare-system-for-gitlab">Prepare system for Gitlab</a></li>
+      <li><a href="#prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="private-git-repo-hosting">Private Git Repo Hosting</h3>
+
+<p><a href="http://gitlab.org/">Gitlab</a> brings the social coding <a href="http://www.github.com/">Github</a> experience to your own network. In
+contrast to the commercial product Github which only allows to host open source
+<a href="http://git-scm.com/">git</a> repository projects using the free plan, you can install the free/libre software Gitlab
+wherever you like and do what you want.
+Therefore you need to setup a RubyOnRails environment.
+Officially, Gitlab supports Debian/Ubuntu.
+Read on how to install it on <a href="http://www.opensuse.org/">OpenSUSE</a>.</p>
+
+<!-- more -->
+
+<p>The presented solutions features a btrfs
+filesystem RAID-1 <code>:)</code> and some custom patches. Instead of init.d startup scripts,
+we use systemd. I recommend to use nginx as a webserver.</p>
+
+<p>Please be aware that the development of Gitlab continues rapidly. This might break
+this how-to at some point. Please read everything before starting!</p>
+
+<h3 id="install-os">Install OS</h3>
+
+<ul>
+  <li>Download OpenSUSE 12.3 32bit, Network edition
+<a href="http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso">http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-NET-i586.iso</a></li>
+  <li>I chose 32bit, because Ruby Binary Extensions might have problems with lib64 path structure. We workaround this bug.</li>
+  <li>I chose networkinstall, because we need only very few packages and don’t need to download everything. only 200MB are downloaded during install</li>
+  <li>the image can easily copied to a usb pen drive using the gui tool “imagewriter” (executed as root)</li>
+  <li>Partition: There are 2 big hard drives. I created on both of them first a primary pratition of 1GB of type LINUX-RAID</li>
+  <li>I use the yast software raid setup during the install to connect both partitions to a software raid-1 partititon of ext4 to mount in /boot</li>
+  <li>I created on both hard drives a btrfs partition (50GB), but only mount the one on /dev/sda to /</li>
+  <li>I created on both hard drives a swap space of 2 GB and mount both to swap</li>
+</ul>
+
+<p>The system gets installed and the configuration follows.</p>
+
+<ul>
+  <li>I open ssh. I disable ipv6.</li>
+  <li>I disable dhcp and configure the hostname to “leise” and the site to our internet domain, the nameserver and the gateway is set to be the mail server.</li>
+  <li>The server gets the fixed ip: 192.xxx.xxx.184</li>
+  <li>The network check passes successfully and I apply immedately online updates.</li>
+  <li>I leave the user input dialog blank and only set a root password</li>
+</ul>
+
+<p>The installation is done. I test everything with a restart using <code>reboot</code>.
+Now the root filesystem has to be turned to a btrfs raid system.</p>
+
+<ul>
+  <li>I add a second device to the root file system: <code>btrfs device add /dev/sdb2 /</code></li>
+  <li>I convert the striped btrfs mode to the raid1 mode for filesystem data and metadata:
+<code>btrfs filesystem balance start -dconvert=raid1 -mconvert=raid1 /</code></li>
+</ul>
+
+<h3 id="install-gitlab">Install Gitlab</h3>
+
+<ul>
+  <li>Homepage: <a href="http://gitlab.org/">http://gitlab.org/</a></li>
+  <li>Source Code: <a href="https://github.com/gitlabhq/gitlabhq">https://github.com/gitlabhq/gitlabhq</a></li>
+</ul>
+
+<p>The following steps apply to version 5.0 and try to copy the step by step
+tutorial which is refered from the README:
+<a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md</a></p>
+
+<h2 id="install-dependencies">Install dependencies:</h2>
+
+<pre><code>zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_12.3/devel:languages:ruby:extensions.repo
+
+zypper in patterns-openSUSE-devel_basis ca-certificates-cacert nginx rubygem-rb-inotify rubygem-ffi redis mysql-community-server mysql-community-server-client rubygem-bundler ruby19 ruby19-devel libmysqlclient-devel zlib-devel libyaml-devel libgdbm4 libreadline6 libncurses5 libffi47-devel curl git-core postfix checkinstall libxml2-devel libxslt-devel libcurl-devel libicu-devel
+# accept deinstallation of patterns-openSUSE-minimal_base-conflicts
+
+python2 --version # make sure to have version &gt; 2.5 but &lt; 3.0
+
+ruby1.9 --version # make sure to have a compatible version (in my case 1.9.3)
+cat /usr/bin/bundle # make sure to have ruby version 1.9 in the shebang line (first line in file)
+
+systemctl daemon-reload # reparse config for systemd (necessary, because we installed mysql)
+systemctl start mysql.service  # start mysql
+systemctl enable mysql.service # make mysql autostart
+cp /etc/redis/default.conf{.example,}
+chown redis.redis /etc/redis/default.conf
+systemctl enable redis.service
+systemctl start redis.service
+</code></pre>
+
+<h4 id="prepare-system-for-gitlab">Prepare system for Gitlab</h4>
+
+<ul>
+  <li>create a user git: <code>useradd -ms /bin/bash git</code></li>
+</ul>
+
+<h4 id="prapare-gitlab-using-account-git">Prapare Gitlab (using account git)</h4>
+
+<pre><code>su git # (change to the account of git)
+cd # (change to the home directory /home/git)
+git clone https://github.com/gitlabhq/gitlab-shell.git
+cd gitlab-shell
+cp config.yml.example config.yml
+vim config.yml # change domain to the domain of this computer
+cd
+ssh-keygen # to be sure, create ssh key (not mentioned in official docu) with empty passphrase
+</code></pre>
+
+<p>Follow the setup of the mysql data base: <a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/databases.md#mysql</a></p>
+
+<ul>
+  <li><code>mysql -u root</code></li>
+  <li>follow the guide for mysql commands</li>
+</ul>
+
+<p>We continue with the setup of the GitLab Rails application:</p>
+
+<pre><code>gem1.9 install charlock_holmes --version '0.6.9' # execute as root
+su git
+cd
+git clone https://github.com/gitlabhq/gitlabhq.git gitlab
+cd gitlab
+git checkout 5-0-stable # not possible yet, I use master instead
+vim config/gitlab.yml
+# ^- email_from: gitlab@atech.de, support_email: admin@atech.de, default_projects_limit: 100
+# disable username_changing_enabled
+chown -R git log/ tmp/
+chmod -R u+rwX log/ tmp/
+mkdir /home/git/gitlab-satellites
+mkdir tmp/pids/
+chmod -R u+rwX tmp/pids/
+cp config/unicorn.rb.example config/unicorn.rb
+cp config/database.yml.mysql config/database.yml
+vim config/database.yml # edit password and username
+bundle install --deployment --without development test postgres # takes a while
+bundle exec rake db:setup RAILS_ENV=production
+bundle exec rake db:seed_fu RAILS_ENV=production
+bundle exec rake gitlab:setup RAILS_ENV=production # chose yes
+bundle exec rake gitlab:shell:setup RAILS_ENV=production # chose yes
+git config --global user.name  "GitLab"
+git config --global user.email "gitlab@atech.de"
+</code></pre>
+
+<p>Install Check:</p>
+
+<pre><code>su git
+cd /home/git/gitlab
+bundle exec rake gitlab:check RAILS_ENV=production
+</code></pre>
+
+<p>Go to yast firewall and open port http (and https port): 80, (443)</p>
+
+<pre><code># update services
+su
+cd /usr/lib/systemd/system/
+wget https://gist.github.com/veprbl/5115638/raw/9d18a341217f109accb67f57e8ad420c9de442fd/gitlab.service # TODO wrong mysqld
+wget https://gist.github.com/veprbl/5115638/raw/be78658953cd5967a4d874f5b0a019667cf090af/gitlab-worker.service # TODO same
+# double-check content of these files!
+chmod 644 gitlab.service gitlab-worker.service
+# TODO edit /etc/nginx/vhost.d/*
+systemctl daemon-reload
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[self-made router-powered repository mirror]]></title>
+    <link href="http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/"/>
+    <updated>2012-07-23T01:32:00-04:00</updated>
+    <id>http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror</id>
+    <content type="html"><![CDATA[<p>After migrating most desktop PCs at work, at home and of some friends to
+<a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
+time-consuming task to keep all these systems up-to-date. I was most
+bothered by downloading the same files over and over again, which happened
+sometimes to be quite slow, especially via WLAN.</p>
+
+<p>Fortunatly I got a couple of month ago the Linux-based router <a href="http://en.wikipedia.org/wiki/FRITZ!Box">AVM Fritz!Box 7270</a>,
+which can be rooted with a modified firmware. The customizable firmware is
+provided by the <a href="http://freetz.org/">Freetz</a> project and allows you to combine different
+modular packages to add functionality.</p>
+
+<!-- more -->
+
+<p>After playing a little bit with Freetz, I even got a lighttpd webserver with
+ruby and caching capabilities running. Of course, the original firmware as well
+as Freetz allow the configuration of dynamic DNS services. <code>;)</code></p>
+
+<p>I ended up with a configuration including:</p>
+
+<ul>
+  <li>dropbear ssh server (allows remote login via ssh – otherwise only telnet is supported)</li>
+  <li>automount-scripts supporting ext3 and ext4 (latter is not supported by AVM firmware)</li>
+  <li>nfs including a CGI configuration web page</li>
+  <li>rsync</li>
+</ul>
+
+<p>I formatted an external hard drive to use ext4 and attached it to the router.
+The file <code>mirror-rsync.sh</code> needs to be copied to an arbitrary folder on the
+external drive.</p>
+
+<p><div><script src='https://gist.github.com/1729496.js?file=mirror-rsync.sh'></script>
+<noscript><pre><code>#!/bin/sh
+set -o errexit
+
+cd /var/media/ftp/uStor02/opensuse
+
+echo -e &quot;\nII: Start time: $(date)\nII: directory: $(pwd)&quot; 2&gt;&amp;1 | tee -a log.txt
+
+trap - INT
+
+# rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp-1.gwdg.de::pub/opensuse/update/12.1/ update/12.1 2&gt;&amp;1 | tee -a log.txt
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp.halifax.rwth-aachen.de::opensuse/update/12.1/ update/12.1 2&gt;&amp;1 | tee -a log.txt
+
+# rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp5.gwdg.de::pub/opensuse/repositories/KDE:/Release:/48/openSUSE_12.1/ repositories/KDE:/Release:/48/openSUSE_12.1 2&gt;&amp;1 | tee -a log.txt
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 ftp.halifax.rwth-aachen.de::opensuse/repositories/KDE:/Release:/48/openSUSE_12.1/ repositories/KDE:/Release:/48/openSUSE_12.1 2&gt;&amp;1 | tee -a log.txt
+
+rsync -vaH --delete --delete-after --progress --partial --size-only --delay-updates --include-from=include.txt --exclude-from=exclude.txt --timeout=300 packman.inode.at::packman/suse/12.1/Essentials/ repositories/packman/12.1/Essentials 2&gt;&amp;1 | tee -a log.txt
+</code></pre></noscript></div>
+</p>
+
+<p>To lower the data transfer, I tuned my rsync commands to download only
+x86_64 packages as well as only German language packages.</p>
+
+<p><div><script src='https://gist.github.com/1729496.js?file=include.txt'></script>
+<noscript><pre><code>*l10n-de*x86_64*
+*l10n-de*noarch*
+*wine*
+
+*libqt4-debuginfo*x86_64*
+*libkdepimlibs4-debuginfo*x86_64*
+*libkdecore4-debuginfo*x86_64*
+*libkde4-debuginfo*x86_64*
+*kdepim4-debuginfo*x86_64*
+*libqt4-x11-debuginfo*x86_64*
+*amarok-debuginfo*x86_64*
+*kmail-debuginfo*x86_64*
+*libakonadi4-debuginfo*x86_64*</code></pre></noscript></div>
+
+<div><script src='https://gist.github.com/1729496.js?file=exclude.txt'></script>
+<noscript><pre><code>src
+*i686.rpm
+*i686.drpm
+*i586.rpm
+*i586.drpm
+*buildsymbols*
+ia64
+*debuginfo*
+*debugsource*
+*l10n*</code></pre></noscript></div>
+</p>
+
+<p>To finish the router setup, the only thing left is to add a Cron job (supported by
+Freetz interface) which runs the script daily – preferably during the night.</p>
+
+<p>The original firmware provides SMB access to files on the hard drive. This can be
+quite slow. So I configured NFS for access these repositories. There’s a
+<a href="http://linuxundich.de/de/hardware/dateifreigaben-auf-der-fritzbox-via-nfs-und-freetz/">German blog post</a> with some benchmarks to compare SMB and NFS.</p>
+
+<p>Finally, the new repositories have to be activated. The priority is set to 90
+and this way overranks the original repos, which don’t have to be disabled.</p>
+
+<p><div><script src='https://gist.github.com/1729496.js?file=client.sh'></script>
+<noscript><pre><code>#!/bin/sh
+
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-update nfs://fritz.box:/var/media/ftp/uStor02/opensuse/update/12.1?mountoptions=vers=3 fritzbox-12.1-update
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-kde48 nfs://fritz.box:/var/media/ftp/uStor02/opensuse/repositories/KDE:/Release:/48/openSUSE_12.1?mountoptions=vers=3 fritzbox-12.1-kde48
+zypper ar --check --no-keep-packages --no-gpgcheck --type rpm-md --name fritzbox-12.1-packman nfs://fritz.box:/var/media/ftp/uStor02/opensuse/repositories/packman/12.1/Essentials?mountoptions=vers=3 fritzbox-12.1-packman
+
+zypper mr -p 90 fritzbox-12.1-update
+zypper mr -p 90 fritzbox-12.1-kde48
+zypper mr -p 90 fritzbox-12.1-packman</code></pre></noscript></div>
+</p>
+
+<p>The most important thing is here to append <code>?mountoptions=vers=3</code> to all URLs.
+The Freetz NFS build doesn’t support NFS version 4 and zypper fails to auto-detect
+this.</p>
+
+<p>So the next time I want to bring the latest KDE release to a friend, I just have
+to unplug my hard-drive and have everything with me. At work, I don’t have to
+bring my own hard drive with me – they have their own one <code>:p</code> with an equal script
+which can be triggered from time to time.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using GPG-Agent with opensuse 11.3 and zsh]]></title>
+    <link href="http://blog.riemann.cc/2010/12/20/gpg-agent-with-opensuse11.3-zsh/"/>
+    <updated>2010-12-20T00:00:00-05:00</updated>
+    <id>http://blog.riemann.cc/2010/12/20/gpg-agent-with-opensuse11.3-zsh</id>
+    <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a>
+I’m a supporter of mail encryption since I started using free software.
+At least, I sign all my own mails, with the exception of mails to people,
+who don’t know what an *.asc file is and might not open my mail for this reason.</p>
+
+<p>By the way, my public gpg key fingerprint is:</p>
+
+<pre><code>F6A9 332D AA28 625E 59A8 F758 7BF6 0F4A 861B C3A3
+</code></pre>
+
+<p>I’m also involved in the <a href="http://www.cacert.org/" title="CAcert">CAcert</a> project. If
+you want to get “assurced”, don’t hesitate to contact me,
+if you are in Berlin.</p>
+
+<p>There is just one problem. If you want to sign all your
+mails, you have to type your hopefully long passphrase
+at least once[^1] for every single mail. If you get some
+encrypted mails from your friends, you have to type your
+passphrase for viewing mails, too. That’s not so nice.
+So were the gpg-agent invented, which task is to cache
+your passphrase for a given time, but it didn’t work for
+me - until today.</p>
+
+<p>I followed the tutorial from the <a href="http://tr.opensuse.org/SDB:Using_gpg-agent" title="SDB opensuse on gpg-agent">opensuse SDB</a> with
+no success. Please note, that you might need to change the
+<code>pinetry-qt</code> to <code>pinetry-qt4</code>.</p>
+
+<p><strong>The solution</strong>, which <strong>works for me</strong>, was to copy the mentioned
+line to <code>~/.zprofile</code> instead of <code>.xinitrc</code>, as I am using the
+awesome <a href="http://www.zsh.org/" title="Zsh">zsh</a>.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

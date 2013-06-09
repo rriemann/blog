@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Worth Mentioning</title>
+  <meta name="author" content="Robert Riemann">
+
+  
+  <meta name="description" content="I’m a supporter of mail encryption since I started using free software.
+At least, I sign all my own mails, with the exception of mails to people, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.riemann.cc/page/12">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12737249-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  
+  <h1><a href="/">Worth Mentioning</a></h1>
+  
+    <h2>nothing else</h2>
+  
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://blog.riemann.cc/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.riemann.cc" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
+<!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
+  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/12/20/gpg-agent-with-opensuse11.3-zsh/">Using GPG-Agent With Opensuse 11.3 and Zsh</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-20T00:00:00-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+        
+         | <a href="/2010/12/20/gpg-agent-with-opensuse11.3-zsh/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a>
+I’m a supporter of mail encryption since I started using free software.
+At least, I sign all my own mails, with the exception of mails to people,
+who don’t know what an *.asc file is and might not open my mail for this reason.</p>
+
+<p>By the way, my public gpg key fingerprint is:</p>
+
+<pre><code>F6A9 332D AA28 625E 59A8 F758 7BF6 0F4A 861B C3A3
+</code></pre>
+
+<p>I’m also involved in the <a href="http://www.cacert.org/" title="CAcert">CAcert</a> project. If
+you want to get “assurced”, don’t hesitate to contact me,
+if you are in Berlin.</p>
+
+<p>There is just one problem. If you want to sign all your
+mails, you have to type your hopefully long passphrase
+at least once[^1] for every single mail. If you get some
+encrypted mails from your friends, you have to type your
+passphrase for viewing mails, too. That’s not so nice.
+So were the gpg-agent invented, which task is to cache
+your passphrase for a given time, but it didn’t work for
+me - until today.</p>
+
+<p>I followed the tutorial from the <a href="http://tr.opensuse.org/SDB:Using_gpg-agent" title="SDB opensuse on gpg-agent">opensuse SDB</a> with
+no success. Please note, that you might need to change the
+<code>pinetry-qt</code> to <code>pinetry-qt4</code>.</p>
+
+<p><strong>The solution</strong>, which <strong>works for me</strong>, was to copy the mentioned
+line to <code>~/.zprofile</code> instead of <code>.xinitrc</code>, as I am using the
+awesome <a href="http://www.zsh.org/" title="Zsh">zsh</a>.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/12/18/announcing_kubeplayer/">Announcing Kubeplayer (Youtube W/o Flash)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-18T00:00:00-05:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
+        
+         | <a href="/2010/12/18/announcing_kubeplayer/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>Earlier this year I started writing a KDE application using
+the Ruby programming language. Coming from the web development, I am no
+expert at all in C++. So I decided to give KDE development a try using
+the Ruby bindings for KDE 4 called <a href="http://techbase.kde.org/Development/Languages/Ruby" title="KDE Development with Ruby">korundum4</a>.</p>
+
+<p>It wasn’t as easy as expected. Unfortunatly the korundum4 project didn’t got
+very popular by now, so I found a lot of bugs on the way. Now, three months
+later, all the bugfixes are included in the last stable KDE. The idea, of
+just copying the project folder and starting the app without the need of any
+further setup<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, becomes finally true.</p>
+
+<h2 id="announcing-kubeplayer">Announcing Kubeplayer</h2>
+
+<p><img src="http://blog.riemann.cc/images/kubeplayer.png" alt="Screenshot of Kubeplayer" title="Screenshot of Kubeplayer" /></p>
+
+<p>I started a kind of clone of the well
+known Qt-based Youtube player <a href="http://flavio.tordini.org/minitube" title="Minitube project page">Minitube</a>. When starting the development,
+I had in mind to support Vimeo and maybe some other online video platforms, too.
+The app should integrate itself better into the KDE workspace, and lately I had
+the idea of turning it into a mobile app, too. It was possible to get a much
+cleaner and shorter code, not only because of the nice KDE KIO classes,
+but also by using Ruby.</p>
+
+<h2 id="lets-try-it-out-in-less-than-1-minute">Let’s Try It Out In Less Than 1 Minute!</h2>
+
+<p>Ok, to be fair, I have to admit, this is only possible using a recent
+Linux OS<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> with korundum4 and Ruby 1.9.x preinstalled.</p>
+
+<p>To give Kubeplayer a try, you just have to checkout the repository, and start
+the application.</p>
+
+<pre><code>git clone git://git.kde.org/kubeplayer
+ruby kubeplayer/kubeplayer
+</code></pre>
+
+<p>That’s it. You can also install kubeplayer using CMake. Installation works like
+you would it expect it from a CMake based C++ application.</p>
+
+<p>If you get an error related to <code>json</code>, you are probably using an Ruby
+version prior to 1.9.x. In this case you have to install rubygems via you distribution
+package manager. Then you can use Ruby’s own package manager to install the
+missing dependency.</p>
+
+<pre><code>gem install json
+</code></pre>
+
+<h2 id="get-involved">Get Involved!</h2>
+
+<p>Not everything is done by now. Youtube works in <strike>the most</strike> a lot
+of cases. The GUI needs a lot of small improvements. I even thought about a
+maemo/meego port, paid for an N900 on
+eBay, but unfortunately got duped <code>:(</code>. So the mobile development has to wait.</p>
+
+<p>After all, the project is still quite young, the code is very short, nice and clear.
+If you ever felt like trying to develop for/with KDE, the barrier is now quite low.</p>
+
+<ul>
+  <li>You don’t have to deal with a KDE development environment. Just clone the repo
+and you are done. Since yesterday, you can find the project in <a href="https://projects.kde.org/projects/playground/multimedia/kubeplayer" title="Official KDE Playground git repo">playground</a>.<br />
+<code>git clone git://git.kde.org/kubeplayer</code></li>
+  <li>You don’t need to know C++.</li>
+  <li>You don’t have to compile anything at all!</li>
+  <li>You can use the shiny new git infrastructure of KDE.</li>
+</ul>
+
+<p>Take a look at the code base. There are not many files at all. Summed up, there
+are less then 1000 lines of code (including rare comments). For an already
+functional multimedia application, this is really few.</p>
+
+<pre><code>kubeplayer
+├── CMakeLists.txt
+├── kubeplayer
+├── lib
+│   ├── CMakeLists.txt
+│   ├── kubeplayer.desktop
+│   ├── kubeplayer.rb
+│   ├── List.rb
+│   ├── MainWindow.rb
+│   ├── provider
+│   │   └── youtube
+│   │       └── Youtube.rb
+│   └── Video.rb
+├── main.rb
+└── README.rdoc
+</code></pre>
+
+<p>How does the future of Kubeplayer look like? I have already a lof of ideas,
+what could be done. Maybe you have also many, but different ones. What about:</p>
+
+<ul>
+  <li>allowing the use to login and comment on all supported video platforms</li>
+  <li>make flash needless on netbooks by providing an optimized app</li>
+  <li>create a scripted KPart to fetch youtube pages and open the video using kubeplayer</li>
+  <li>let the user download the videos (in a video library)</li>
+  <li>make it possible to share supported video platforms with the plasma media center team</li>
+</ul>
+
+<p>So what do you think, can Kubeplayer do for you? What can you do for Kubeplayer?</p>
+
+<p>Kind regards,<br />
+Robert</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This isn’t 100% true. You need to have korundum4 installed, but most distros
+  seems to ship this package by default. On opensuse it is called “ruby-kde4”.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>As KDE and Ruby is also available for many other OS, Kubeplayer is
+  actually cross platform.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/07/11/plasma_dataengine_ruby_stocks/">Making of Ruby-stocks Plasma DataEngine</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-11T00:00:00-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2010</time>
+        
+         | <a href="/2010/07/11/plasma_dataengine_ruby_stocks/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>Since I wrote my last Blog post much time has past. After my last exam last
+Friday I just started to do some hacking on KDE. As it should be something simple
+for the beginning and something useful, too, I decided to provide a new plasma
+dataengine for retrieving stocks information.</p>
+
+<p>I used ruby, because plasma hacking with ruby is freaking awesome and totally
+easy. Let’s prove it!</p>
+
+<h2 id="how-to-use-it">How To Use It</h2>
+
+<p><img src="http://blog.riemann.cc/images/plasmaengineviewer_ruby_stocks_v1.0.png" alt="Simple Plasmoid made with Ruby" title="Plasma DataEngine ruby-stocks made with Ruby" class="right" /> Before diving into the
+development process, you probably want to test the final result yourself.
+First you have to <a href="http://blog.riemann.cc/files/plasma-dataengine-ruby-stocks-v1.0.zip" title="Download Plasma package ruby-stocks v1.0">download</a> the plasma package. Then you can install
+it easily with the plasma package manager.</p>
+
+<pre><code>plasmapkg -t dataengine -i plasma-dataengine-ruby-stocks-v1.0.zip
+</code></pre>
+
+<p>You won’t need to be root for that. You should get a success response afterwards.</p>
+
+<p>As there is by now no plasmoid to display the provided data, you have to use
+the <code>plasmaengineexplorer</code> to test the engine. Call this program on your shell
+and look for ruby-stocks. You have to type in a stocks symbol like GOOG (Google)
+or NOK (Nokia) to get the information. Is is also possible to just call:</p>
+
+<pre><code>plasmaengineexplorer --engine ruby-stocks --source NOK
+</code></pre>
+
+<p>You can remove the engine with this short command:</p>
+
+<pre><code>plasmapkg -t dataengine -r ruby-stocks
+</code></pre>
+
+<h2 id="how-to-create-it">How To Create It</h2>
+
+<p>I started with a look on <a href="http://websvn.kde.org/trunk/KDE/kdeexamples/plasma/ruby" title="Plasma Ruby examples in KDE kdeexamples">the plasma ruby examples</a> and copied the inital
+construct from the given time data engine example. There was also an attempt to
+create a stocks engine with C++. The code is available in the <a href="http://websvn.kde.org/trunk/playground/base/plasma/dataengines/stocksengine/" title="Stocks engine made with C++ from KDE playground">playground</a>.</p>
+
+<p>The most time took the clean implementation of the cvs data parsing.</p>
+
+<p>If you want to start yourself with a ruby based dataengine, I recommend to start
+with the time engine example, too. Do not change the given file structure,
+which should be:</p>
+
+<pre><code>plasma-dataengine-ruby-stocks
+├── contents
+│   └── code
+│       ├── main.rb
+│       └── …
+└── metadata.desktop
+</code></pre>
+
+<p>The top directory gets packaged into a zip for distribution.</p>
+
+<p>Let’s take a look on the <em>main.rb</em>. There a some important things you have to be
+aware of, when you want to use ruby for plasma dataengines:</p>
+
+<ul>
+  <li>when you name your engine “ruby-stocks” (see metadata.desktop), you have to
+name the top module RubyStocks. Otherwise your engine will fail.</li>
+  <li>Plasma looks for a class called Main in that module, which have to inherit
+from PlasmaScripting::DataEngine</li>
+  <li>make sure, that you implement the member methods:
+sourceRequestEvent and updateSourceEvent</li>
+</ul>
+
+<p>As both methods should do the same in my example, I used an method alias.
+If you ever did a plasma dataengine using C++ you have noticed, that it is a
+straight forward port from C++ to ruby. There is hardly something different.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>main.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+<span class="line-number">72</span>
+<span class="line-number">73</span>
+<span class="line-number">74</span>
+<span class="line-number">75</span>
+<span class="line-number">76</span>
+<span class="line-number">77</span>
+<span class="line-number">78</span>
+<span class="line-number">79</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="c1"># kate: remove-trailing-space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby; syntax ruby; replace-tabs on; replace-tabs-save on; space-indent on;</span>
+</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;plasma_applet&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="c1"># the dictonary replaces the ruby hash as we need an ordered hash. only ruby 1.9 uses ordered one.</span>
+</span><span class="line"><span class="c1"># when ruby1.9 is the default version, we can switch back to native ruby hash</span>
+</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;dictionary&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">module</span> <span class="nn">RubyStocks</span>
+</span><span class="line">  <span class="k">class</span> <span class="nc">Main</span> <span class="o">&lt;</span> <span class="ss">PlasmaScripting</span><span class="p">:</span><span class="ss">:DataEngine</span>
+</span><span class="line">
+</span><span class="line">    <span class="c1"># the url needs to be extended by the stock ID at the end of the string</span>
+</span><span class="line">    <span class="c1"># format code: http://brusdeylins.info/projects/yahoo-finance-api/</span>
+</span><span class="line">    <span class="no">DATA</span> <span class="o">=</span> <span class="no">Dictionary</span><span class="o">[</span>
+</span><span class="line">      <span class="s2">&quot;j1&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;market capitalization&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;p2&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;percent change&quot;</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;s0&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;symbol&quot;</span><span class="p">,</span><span class="nb">String</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;d1&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;last trade date&quot;</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Date</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;t1&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;last trade time&quot;</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Time</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;c1&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;o0&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;h0&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;days high&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;g0&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;days low&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;v0&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;a2&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;average daily volume&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;l1&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;last trade&quot;</span><span class="p">,</span> <span class="nb">Float</span><span class="o">]</span><span class="p">,</span>
+</span><span class="line">      <span class="s2">&quot;c4&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span>
+</span><span class="line">    <span class="o">]</span>
+</span><span class="line">
+</span><span class="line">    <span class="no">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;http://download.finance.yahoo.com/d/quotes.csv?f=</span><span class="si">#{</span><span class="no">DATA</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">join</span><span class="si">}</span><span class="s2">&amp;e=.csv&amp;s=&quot;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">initialize</span> <span class="n">parent</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class="line">      <span class="k">super</span> <span class="n">parent</span>
+</span><span class="line">
+</span><span class="line">      <span class="c1"># don&#39;t update faster than once a minute</span>
+</span><span class="line">      <span class="n">setMinimumPollingInterval</span> <span class="mi">60000</span>
+</span><span class="line">      <span class="c1"># dafault update rate is 10 minutes</span>
+</span><span class="line">      <span class="n">setPollingInterval</span> <span class="mi">600000</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">updateSourceEvent</span> <span class="n">source</span>
+</span><span class="line">      <span class="n">request_url</span> <span class="o">=</span> <span class="no">SOURCE_URL</span> <span class="o">+</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Url</span><span class="o">::</span><span class="n">toPercentEncoding</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">strip</span>
+</span><span class="line">      <span class="n">job</span> <span class="o">=</span> <span class="ss">KIO</span><span class="p">:</span><span class="ss">:storedGet</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Url</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">request_url</span><span class="p">),</span> <span class="ss">KIO</span><span class="p">:</span><span class="ss">:NoReload</span><span class="p">,</span> <span class="ss">KIO</span><span class="p">:</span><span class="ss">:HideProgressInfo</span>
+</span><span class="line">      <span class="n">job</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="no">SIGNAL</span><span class="p">(</span> <span class="s1">&#39;result( KJob* )&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">aJob</span><span class="o">|</span>
+</span><span class="line">        <span class="n">parseCSVLine</span> <span class="n">source</span><span class="p">,</span> <span class="n">aJob</span><span class="o">.</span><span class="n">data</span>
+</span><span class="line">      <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">      <span class="k">return</span> <span class="kp">false</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">parseCSVLine</span> <span class="n">source</span><span class="p">,</span> <span class="n">dataByteArray</span>
+</span><span class="line">      <span class="vg">$stderr</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;ruby-stocks plasma dataengine: retrieved data: &quot;</span> <span class="o">+</span> <span class="n">dataByteArray</span><span class="o">.</span><span class="n">data</span>
+</span><span class="line">      <span class="n">dataArray</span> <span class="o">=</span> <span class="n">dataByteArray</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">split</span> <span class="s2">&quot;,&quot;</span>
+</span><span class="line">      <span class="k">if</span> <span class="n">dataArray</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;=</span> <span class="no">DATA</span><span class="o">.</span><span class="n">size</span>
+</span><span class="line">        <span class="no">DATA</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">aValue</span><span class="o">|</span>
+</span><span class="line">          <span class="n">data</span> <span class="o">=</span>  <span class="n">dataArray</span><span class="o">.</span><span class="n">shift</span>
+</span><span class="line">          <span class="k">unless</span> <span class="n">data</span> <span class="o">=~</span> <span class="sr">%r{N/A}</span>
+</span><span class="line">            <span class="k">if</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="nb">Float</span>
+</span><span class="line">                <span class="n">data</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">/B$/</span><span class="p">,</span> <span class="s2">&quot;E6&quot;</span>
+</span><span class="line">                <span class="n">data</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">/M$/</span><span class="p">,</span> <span class="s2">&quot;E3&quot;</span>
+</span><span class="line">                <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">to_f</span> <span class="k">unless</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">&quot;N/A&quot;</span>
+</span><span class="line">            <span class="k">elsif</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="nb">String</span>
+</span><span class="line">              <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">2</span><span class="o">]</span>
+</span><span class="line">              <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">data</span> <span class="k">unless</span> <span class="n">data</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class="line">            <span class="k">elsif</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Time</span>
+</span><span class="line">              <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Time</span><span class="o">.</span><span class="n">fromString</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;&quot;h:mmap&quot;&#39;</span><span class="p">)</span>
+</span><span class="line">            <span class="k">elsif</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Date</span>
+</span><span class="line">              <span class="n">setData</span> <span class="n">source</span><span class="p">,</span> <span class="n">aValue</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Date</span><span class="o">.</span><span class="n">fromString</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;&quot;M/d/yyyy&quot;&#39;</span><span class="p">)</span>
+</span><span class="line">            <span class="k">end</span>
+</span><span class="line">          <span class="k">end</span>
+</span><span class="line">        <span class="k">end</span>
+</span><span class="line">      <span class="k">end</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">alias</span> <span class="n">sourceRequestEvent</span> <span class="n">updateSourceEvent</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The second file you need is the <em>metadata.desktop</em>.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>metadata.desktop </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+</pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="k">[Desktop Entry]</span>
+</span><span class="line"><span class="na">Name</span><span class="o">=</span><span class="s">Stocks Data Engine</span>
+</span><span class="line"><span class="na">Comment</span><span class="o">=</span><span class="s">Stocks Data Engine powered by Yahoo! Finance (real time delayed by around 15 minutes</span>
+</span><span class="line">
+</span><span class="line"><span class="na">Type</span><span class="o">=</span><span class="s">Service</span>
+</span><span class="line"><span class="na">ServiceTypes</span><span class="o">=</span><span class="s">Plasma/DataEngine</span>
+</span><span class="line"><span class="na">X-Plasma-API</span><span class="o">=</span><span class="s">ruby-script</span>
+</span><span class="line"><span class="na">X-Plasma-MainScript</span><span class="o">=</span><span class="s">code/main.rb</span>
+</span><span class="line">
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Author</span><span class="o">=</span><span class="s">Robert Riemann</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Email</span><span class="o">=</span><span class="s">saloution@googlemail.com</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Name</span><span class="o">=</span><span class="s">ruby-stocks</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Version</span><span class="o">=</span><span class="s">1.0</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Website</span><span class="o">=</span><span class="s">http://plasma.kde.org/</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Category</span><span class="o">=</span><span class="s">Online Services</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Depends</span><span class="o">=</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-License</span><span class="o">=</span><span class="s">GPL</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-EnabledByDefault</span><span class="o">=</span><span class="s">true</span>
+</span><span class="line">
+</span><span class="line"><span class="c1"># Icon=alarmclock</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h2 id="what-comes-next">What Comes Next?</h2>
+
+<p><a href="http://chart.finance.yahoo.com/t?s=NOK&amp;lang=en-US&amp;region=US&amp;width=300&amp;height=180" title="Stocks Chart for Nokia from Yahoo! Finance"><img src="http://chart.finance.yahoo.com/t?s=NOK&amp;lang=en-US&amp;region=US&amp;width=300&amp;height=180" alt="Simple Plasmoid made with Ruby" title="Stocks Chart for Nokia from Yahoo! Finance" class="left" style="width:256px;height:178px;" /></a>The
+engine should be quite usable by now. I plan to create a plasmoid which
+lets you search for a company name to get the stocks symbol and then shows
+some important numbers (like the weather widget, but without these nice graphics).</p>
+
+<p>After that I want to create a second plasmoid which just shows a chart from
+Yahoo! Finance. The most work will probably be to create a settings dialog similar
+to the one you find <a href="http://de.finance.yahoo.com/q/bc?s=NOK&amp;t=5d&amp;l=off&amp;z=m&amp;q=l&amp;c=" title="Stocks Chart for Nokia from Yahoo! Finance">here</a> below the chart.</p>
+
+<p>What do you think? Would you use a stocks plasmoid? What do you expect it to display?
+Why didn’t you have already used ruby to create a dataengine? <code>;)</code> And after all,
+how do I get this engine into KDE trunk?</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/13/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/11/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="salout_de" data-count="4" data-replies="false">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+    <p>Follow <a href="//twitter.com/salout_de">@salout_de</a></p>
+  
+   
+</section>
+
+
+<section>
+  <h1>Recent Comments</h1>
+  <div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="http://disqus.com/forums/worthmentioning/recent_comments_widget.js?hide_avatars=1&amp;excerpt_length=100"></script></div>
+</section><section>
+  <h1>Affiliated With</h1>
+  <a href="http://www.kde.org" title="go to KDE"><img src="/images/kde-button.png" class="noborder" alt="KDE"/></a>
+  <a href="http://www.opensuse.org" title="go to openSUSE"><img src="/images/opensuse-button.png" class="noborder" alt="openSUSE"/></a>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Robert Riemann |
+  <span class="credit">
+    Powered by <a href="http://octopress.org">Octopress</a> |
+    Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+  </span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'worthmentioning';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

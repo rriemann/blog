@@ -9,7 +9,7 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="Starting using the Qt-Toolkit (or the extension with KDE classes) is a little difficult. Especially if you never used really the toolkit with C++. &hellip;">
+  <meta name="description" content="For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +93,88 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/07/27/smallest_kde_app/">The Perhaps Smallest KDE Application in the World</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-27T00:00:00-04:00" pubdate data-updated="true">Jul 27<span>th</span>, 2009</time>
+        
+         | <a href="/2009/07/27/smallest_kde_app/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the necessary parts.</p>
+
+<p>Maybe you can take it also to do some testings or just as a little example.</p>
+
+<p>With its 12 lines (17 lines minus 3 empty lines minus Shebang line and $KCode line, that are not really required) of code it is perhaps the smalles KDE application you will find.</p>
+
+<p>Of course, every Qt app would be a few lines smaller, because you dont need the KAbout object.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class="line">
+</span><span class="line"><span class="vg">$KCODE</span> <span class="o">=</span> <span class="s1">&#39;u&#39;</span>
+</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;korundum4&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="n">about</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:AboutData</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;ktest&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span class="line">    <span class="no">KDE</span><span class="o">.</span><span class="n">ki18n</span><span class="p">(</span><span class="s2">&quot;KTest&quot;</span><span class="p">),</span> <span class="s2">&quot;0.1&quot;</span><span class="p">)</span>
+</span><span class="line"><span class="ss">KDE</span><span class="p">:</span><span class="ss">:CmdLineArgs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="no">ARGV</span><span class="p">,</span> <span class="n">about</span><span class="p">)</span>
+</span><span class="line"><span class="n">a</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">new</span>
+</span><span class="line"><span class="n">w</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:PushButton</span><span class="o">.</span><span class="n">new</span><span class="p">(</span> <span class="s2">&quot;Click me to quit&quot;</span> <span class="p">)</span> <span class="k">do</span>
+</span><span class="line">  <span class="n">connect</span><span class="p">(</span> <span class="no">SIGNAL</span> <span class="ss">:clicked</span> <span class="p">)</span> <span class="k">do</span>
+</span><span class="line">    <span class="nb">puts</span> <span class="s2">&quot;Do something else&quot;</span>
+</span><span class="line">    <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">quit</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line"><span class="n">w</span><span class="o">.</span><span class="n">show</span>
+</span><span class="line">
+</span><span class="line"><span class="n">a</span><span class="o">.</span><span class="n">exec</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -315,6 +397,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/06/09/tango_chor_konzerte_guadeloupe/">Tango, Chor und Konzerte in Guadeloupe</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
       </li>
     
@@ -328,10 +414,6 @@
     
       <li class="post">
         <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/05/09/i-am-going-to-miami/">I Am Going To Miami</a>
       </li>
     
   </ul>
@@ -368,7 +450,7 @@
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 14:28
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 22:43
   </span>
 </p>
 

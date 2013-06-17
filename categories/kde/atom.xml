@@ -4,7 +4,7 @@
   <title><![CDATA[Category: kde | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/kde/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-06-09T22:43:40-04:00</updated>
+  <updated>2013-06-17T18:06:49-05:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[self-made router-powered repository mirror]]></title>
     <link href="http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/"/>
-    <updated>2012-07-23T01:32:00-04:00</updated>
+    <updated>2012-07-23T01:32:00-05:00</updated>
     <id>http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror</id>
     <content type="html"><![CDATA[<p>After migrating most desktop PCs at work, at home and of some friends to
 <a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
@@ -136,7 +136,7 @@ which can be triggered from time to time.</p>
   <entry>
     <title type="html"><![CDATA[The Usual KDE Beginners Desktop]]></title>
     <link href="http://blog.riemann.cc/2012/05/21/the-usual-kde-beginners-desktop/"/>
-    <updated>2012-05-21T23:46:00-04:00</updated>
+    <updated>2012-05-21T23:46:00-05:00</updated>
     <id>http://blog.riemann.cc/2012/05/21/the-usual-kde-beginners-desktop</id>
     <content type="html"><![CDATA[<p><a href="/images/messed-up-kde-desktop.jpg" title="It seems to be hard for new users to control all features of the Plasma Desktop"><img src="/images/messed-up-kde-desktop.jpg" alt="img" title="It seems to be hard for new users to control all features of the Plasma Desktop" /></a></p>
 
@@ -172,7 +172,7 @@ I asked my son’s friend and got his permission.</p>
   <entry>
     <title type="html"><![CDATA[Kubeplayer running on KDE Plasma Active powered ExoPC tablet]]></title>
     <link href="http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active/"/>
-    <updated>2011-09-11T00:00:00-04:00</updated>
+    <updated>2011-09-11T00:00:00-05:00</updated>
     <id>http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active</id>
     <content type="html"><![CDATA[<p>Hello Planet KDE, hello RubyCorner!</p>
 
@@ -375,7 +375,7 @@ Robert</p>
   <entry>
     <title type="html"><![CDATA[Making Of ruby-stocks Plasma DataEngine]]></title>
     <link href="http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks/"/>
-    <updated>2010-07-11T00:00:00-04:00</updated>
+    <updated>2010-07-11T00:00:00-05:00</updated>
     <id>http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks</id>
     <content type="html"><![CDATA[<h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
 

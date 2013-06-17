@@ -9,8 +9,8 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="Hello Planet KDE, hello RubyCorner Since I wrote my last Blog post much time has past. After my last exam last
-Friday I just started to do some &hellip;">
+  <meta name="description" content="Hello Planet KDE, hello RubyCorner Earlier this year I started writing a KDE application using
+the Ruby programming language. Coming from the web &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,6 +100,159 @@ Friday I just started to do some &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/2010/12/18/announcing_kubeplayer/">Announcing Kubeplayer (Youtube W/o Flash)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-18T00:00:00-05:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
+        
+         | <a href="/2010/12/18/announcing_kubeplayer/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>Earlier this year I started writing a KDE application using
+the Ruby programming language. Coming from the web development, I am no
+expert at all in C++. So I decided to give KDE development a try using
+the Ruby bindings for KDE 4 called <a href="http://techbase.kde.org/Development/Languages/Ruby" title="KDE Development with Ruby">korundum4</a>.</p>
+
+<p>It wasn’t as easy as expected. Unfortunatly the korundum4 project didn’t got
+very popular by now, so I found a lot of bugs on the way. Now, three months
+later, all the bugfixes are included in the last stable KDE. The idea, of
+just copying the project folder and starting the app without the need of any
+further setup<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, becomes finally true.</p>
+
+<h2 id="announcing-kubeplayer">Announcing Kubeplayer</h2>
+
+<p><img src="http://blog.riemann.cc/images/kubeplayer.png" alt="Screenshot of Kubeplayer" title="Screenshot of Kubeplayer" /></p>
+
+<p>I started a kind of clone of the well
+known Qt-based Youtube player <a href="http://flavio.tordini.org/minitube" title="Minitube project page">Minitube</a>. When starting the development,
+I had in mind to support Vimeo and maybe some other online video platforms, too.
+The app should integrate itself better into the KDE workspace, and lately I had
+the idea of turning it into a mobile app, too. It was possible to get a much
+cleaner and shorter code, not only because of the nice KDE KIO classes,
+but also by using Ruby.</p>
+
+<h2 id="lets-try-it-out-in-less-than-1-minute">Let’s Try It Out In Less Than 1 Minute!</h2>
+
+<p>Ok, to be fair, I have to admit, this is only possible using a recent
+Linux OS<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> with korundum4 and Ruby 1.9.x preinstalled.</p>
+
+<p>To give Kubeplayer a try, you just have to checkout the repository, and start
+the application.</p>
+
+<pre><code>git clone git://git.kde.org/kubeplayer
+ruby kubeplayer/kubeplayer
+</code></pre>
+
+<p>That’s it. You can also install kubeplayer using CMake. Installation works like
+you would it expect it from a CMake based C++ application.</p>
+
+<p>If you get an error related to <code>json</code>, you are probably using an Ruby
+version prior to 1.9.x. In this case you have to install rubygems via you distribution
+package manager. Then you can use Ruby’s own package manager to install the
+missing dependency.</p>
+
+<pre><code>gem install json
+</code></pre>
+
+<h2 id="get-involved">Get Involved!</h2>
+
+<p>Not everything is done by now. Youtube works in <strike>the most</strike> a lot
+of cases. The GUI needs a lot of small improvements. I even thought about a
+maemo/meego port, paid for an N900 on
+eBay, but unfortunately got duped <code>:(</code>. So the mobile development has to wait.</p>
+
+<p>After all, the project is still quite young, the code is very short, nice and clear.
+If you ever felt like trying to develop for/with KDE, the barrier is now quite low.</p>
+
+<ul>
+  <li>You don’t have to deal with a KDE development environment. Just clone the repo
+and you are done. Since yesterday, you can find the project in <a href="https://projects.kde.org/projects/playground/multimedia/kubeplayer" title="Official KDE Playground git repo">playground</a>.<br />
+<code>git clone git://git.kde.org/kubeplayer</code></li>
+  <li>You don’t need to know C++.</li>
+  <li>You don’t have to compile anything at all!</li>
+  <li>You can use the shiny new git infrastructure of KDE.</li>
+</ul>
+
+<p>Take a look at the code base. There are not many files at all. Summed up, there
+are less then 1000 lines of code (including rare comments). For an already
+functional multimedia application, this is really few.</p>
+
+<pre><code>kubeplayer
+├── CMakeLists.txt
+├── kubeplayer
+├── lib
+│   ├── CMakeLists.txt
+│   ├── kubeplayer.desktop
+│   ├── kubeplayer.rb
+│   ├── List.rb
+│   ├── MainWindow.rb
+│   ├── provider
+│   │   └── youtube
+│   │       └── Youtube.rb
+│   └── Video.rb
+├── main.rb
+└── README.rdoc
+</code></pre>
+
+<p>How does the future of Kubeplayer look like? I have already a lof of ideas,
+what could be done. Maybe you have also many, but different ones. What about:</p>
+
+<ul>
+  <li>allowing the use to login and comment on all supported video platforms</li>
+  <li>make flash needless on netbooks by providing an optimized app</li>
+  <li>create a scripted KPart to fetch youtube pages and open the video using kubeplayer</li>
+  <li>let the user download the videos (in a video library)</li>
+  <li>make it possible to share supported video platforms with the plasma media center team</li>
+</ul>
+
+<p>So what do you think, can Kubeplayer do for you? What can you do for Kubeplayer?</p>
+
+<p>Kind regards,<br />
+Robert</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This isn’t 100% true. You need to have korundum4 installed, but most distros
+  seems to ship this package by default. On opensuse it is called “ruby-kde4”.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>As KDE and Ruby is also available for many other OS, Kubeplayer is
+  actually cross platform.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/2010/07/11/plasma_dataengine_ruby_stocks/">Making of Ruby-stocks Plasma DataEngine</a></h1>
     
     
@@ -116,7 +269,7 @@ Friday I just started to do some &hellip;">
   
 
 
-<time datetime="2010-07-11T00:00:00-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2010</time>
+<time datetime="2010-07-11T00:00:00-05:00" pubdate data-updated="true">Jul 11<span>th</span>, 2010</time>
         
          | <a href="/2010/07/11/plasma_dataengine_ruby_stocks/#disqus_thread">Comments</a>
         
@@ -447,7 +600,7 @@ how do I get this engine into KDE trunk?</p>
   
 
 
-<time datetime="2010-03-23T00:00:00-04:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2010</time>
+<time datetime="2010-03-23T00:00:00-05:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2010</time>
         
          | <a href="/2010/03/23/requires_owncloud_serverside_backend/#disqus_thread">Comments</a>
         
@@ -507,129 +660,6 @@ people server services. <code>;)</code></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/03/03/klipper_compatible_url_shortener/">Klipper-compatible URL-Shortener Script</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-03T00:00:00-05:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2010</time>
-        
-         | <a href="/2010/03/03/klipper_compatible_url_shortener/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="the-next-klipper-action">The next Klipper action</h2>
-
-<p>In my <a href="http://blog.riemann.cc/blog/2010/03/03/awesome_klipper_workflow.html" title="How to configure Klipper to work with pastie.rb script">last</a> blog entry I explained how to send the clipboard content via
-KDE Klipper to a pastebin service.</p>
-
-<p>Now I wrote a quick-and-dirty script to transform a URI in the clipboard to a
-shortenend version using <a href="http://ur1.ca">http://ur1.ca</a> (U R One; it is GPL).</p>
-
-<p>I never figured out how to get automatic URL shortening with <a href="http://identi.ca">http://identi.ca</a>
-and <a href="http://choqok.gnufolks.org/" title="Open Source KDE Mikroblogging Client">Choqok</a>. That’s a kind of universal work-around for me.</p>
-
-<p>Copy the file ur1.rb to a folder which is in your <code>$PATH</code> and add a Klipper
-action as I explained in the last post. To setup your Klipper action you will
-need the following:</p>
-
-<dl>
-  <dt>RegExp for matching URLs</dt>
-  <dd><code>(^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$)</code></dd>
-  <dt>Command for Klipper action</dt>
-  <dd><code>ur1.rb %s</code></dd>
-</dl>
-
-<p>You can trigger actions manually by <code>&lt;Ctrl&gt;+&lt;Alt&gt;+&lt;R&gt;</code> (KDE default).</p>
-
-<h2 id="ur1rb">ur1.rb</h2>
-
-<p>Copy this file to your <code>~/bin</code> and make it executable.</p>
-
-<dl>
-  <dt>Usage</dt>
-  <dd><code>ur1.rb URL</code></dd>
-  <dt>Example</dt>
-  <dd><code>ur1.rb http://linux.com</code></dd>
-</dl>
-
-<p>The script will return the url in case of no errors and otherwise a short string
-indicating the error.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>ur1.rb </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-</pre></td><td class="code"><pre><code class="rb"><span class="line"><span class="c1">#!/usr/bin/env ruby</span>
-</span><span class="line"><span class="c1"># kate: remove-trailing-space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby; syntax ruby;</span>
-</span><span class="line"><span class="c1"># ur1.rb</span>
-</span><span class="line">
-</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
-</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;cgi&#39;</span>
-</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;uri&#39;</span>
-</span><span class="line">
-</span><span class="line"><span class="no">URL</span> <span class="o">=</span> <span class="no">URI</span><span class="o">.</span><span class="n">parse</span> <span class="s2">&quot;http://ur1.ca/&quot;</span>
-</span><span class="line"><span class="k">raise</span> <span class="k">if</span> <span class="no">ARGV</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span>
-</span><span class="line"><span class="n">longurl</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
-</span><span class="line">
-</span><span class="line"><span class="n">http</span> <span class="o">=</span> <span class="ss">Net</span><span class="p">:</span><span class="ss">:HTTP</span><span class="o">.</span><span class="n">new</span> <span class="no">URL</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="no">URL</span><span class="o">.</span><span class="n">port</span>
-</span><span class="line">
-</span><span class="line"><span class="n">query_string</span> <span class="o">=</span> <span class="s2">&quot;longurl=</span><span class="si">#{</span><span class="no">CGI</span><span class="o">.</span><span class="n">escape</span> <span class="n">longurl</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class="line">
-</span><span class="line"><span class="n">response</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">start</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
-</span><span class="line">  <span class="n">http</span><span class="o">.</span><span class="n">post</span> <span class="no">URL</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">query_string</span>
-</span><span class="line"><span class="k">end</span>
-</span><span class="line">
-</span><span class="line"><span class="nb">abort</span> <span class="s2">&quot;error (wrong response code)&quot;</span> <span class="k">unless</span> <span class="n">response</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="s1">&#39;200&#39;</span>
-</span><span class="line">
-</span><span class="line"><span class="nb">puts</span> <span class="p">(</span><span class="n">body</span><span class="o">[</span><span class="sr">/&lt;p class=&quot;success&quot;&gt;Your ur1 is: &lt;a href=&quot;(.+)&quot;/</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="ow">or</span> <span class="s2">&quot;error (no url returned)&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/14/">&larr; Older</a>
@@ -647,6 +677,10 @@ indicating the error.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/06/16/2-wochen-in-miami/">2 Wochen in Miami</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/06/09/tango_chor_konzerte_guadeloupe/">Tango, Chor und Konzerte in Guadeloupe</a>
       </li>
     
@@ -660,10 +694,6 @@ indicating the error.</p>
     
       <li class="post">
         <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/05/15/das-karibische-meer/">Das Karibische Meer</a>
       </li>
     
   </ul>
@@ -700,7 +730,7 @@ indicating the error.</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.06.13 at 22:43
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 17.06.13 at 18:06
   </span>
 </p>
 

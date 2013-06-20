@@ -30,8 +30,9 @@ Vom 31. März bis zum 30. Juli bin ich in Mittelamerika unterwegs.
 
 ## Aktueller Standort
 
-<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Miami+Beach,+Florida,+USA&amp;aq=0&amp;oq=miami+beach&amp;sll=16.804541,-60.644531&amp;sspn=24.398516,40.957031&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Miami+Beach,+Miami-Dade+County,+Florida,+Vereinigte+Staaten&amp;z=10&amp;ll=25.790654,-80.130046&amp;output=embed"></iframe>
+<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Boquete,+Chiriqu%C3%AD,+Panama&amp;aq=0&amp;oq=Boquete&amp;sll=25.790654,-80.130046&amp;sspn=0.722107,1.279907&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Bajo+Boquete,+Chiriqu%C3%AD,+Panama&amp;z=7&amp;iwloc=A&amp;output=embed"></iframe>
+
 
 [Größere Kartenansicht][map]
 
-[map]: https://maps.google.de/maps?f=q&amp;source=embed&amp;hl=de&amp;geocode=&amp;q=Miami+Beach,+Florida,+USA&amp;aq=0&amp;oq=miami+beach&amp;sll=16.804541,-60.644531&amp;sspn=24.398516,40.957031&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Miami+Beach,+Miami-Dade+County,+Florida,+Vereinigte+Staaten&amp;z=10&amp;ll=25.790654,-80.130046
+[map]: https://maps.google.de/maps?f=q&amp;source=embed&amp;hl=de&amp;geocode=&amp;q=Boquete,+Chiriqu%C3%AD,+Panama&amp;aq=0&amp;oq=Boquete&amp;sll=25.790654,-80.130046&amp;sspn=0.722107,1.279907&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Bajo+Boquete,+Chiriqu%C3%AD,+Panama&amp;z=7&amp;iwloc=A

@@ -9,8 +9,8 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="The next Klipper action In my last blog entry I explained how to send the clipboard content via
-KDE Klipper to a pastebin service. Now I wrote a &hellip;">
+  <meta name="description" content="Hi planetkde, hi readers from planet gnome (so called aliens1), I’ve just stumbled upon a blog post dealing with a potential
+collaboration of KDE and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +94,87 @@ KDE Klipper to a pastebin service. Now I wrote a &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/03/23/requires_owncloud_serverside_backend/">Does Owncloud Really Requires a Server-side Backend?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-23T00:00:00-05:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2010</time>
+        
+         | <a href="/2010/03/23/requires_owncloud_serverside_backend/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi planetkde, hi readers from planet gnome (so called aliens<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>),</p>
+
+<p>I’ve just stumbled upon a <a href="http://www.webupd8.org/2010/03/gnome-and-kde-might-collaborate-into.html" title="Gnome And KDE Might Collaborate Into Creating A FLOSS Alternative To Dropbox">blog post</a> dealing with a potential
+collaboration of KDE and gnome to initiate a replacement for dropbox, called
+<a href="http://owncloud.org" title="official ownCloud homepage/wiki">ownCloud</a>.</p>
+
+<p>There are already thoughts about possible GSoC projects giving attention to the
+gnome/KDE frontend clients and to the <strong>server backend</strong>.</p>
+
+<p>Nice idea, but in my humble opinion there is a problem, at least for me:
+I haven’t a hosted root server, but a lot of unix accounts with user webspace,
+where it is impossible to run any kind of background services/daemons.</p>
+
+<p>Think of:</p>
+
+<ul>
+  <li>university accounts</li>
+  <li>(scientific) institute accounts</li>
+  <li>accounts from your IT related work</li>
+</ul>
+
+<p>Think of people, who probably uses linux.</p>
+
+<p>In the case that ownCloud is meant to be <em>the</em> center of all data synchronisations,
+it would be sad that those people who <em>only</em> have webspace cannot take advantage of it.</p>
+
+<p>So I encourage the developer to design the ownCloud in a way that makes the 
+server-side backend software only optional, but not a requirement.</p>
+
+<p>This would be similar to git, which can use a server side backend (git://), but
+is also satisfied with a simple sftp connection (ssh://).
+(Please correct me if I am wrong.)</p>
+
+<p>After all you might want to read an <a href="http://www.gnu.org/philosophy/who-does-that-server-really-serve.html" title="How Software as a Service Takes Away Your Freedom">article</a> about the disadvantages of
+SaaS published by <a href="http://www.gnu.org">http://www.gnu.org</a>. Exaggerated message in one sentence: Don’t get dependant of other
+people server services. <code>;)</code></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Just a joke. Don’t take it serious.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -571,61 +652,6 @@ languages you want to try a <code>pastie.rb -h</code>.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/02/23/GSoC_konqueror_projects/">Call for Konqueror Related GSoC 2010 Projects</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-02-23T00:00:00-05:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2010</time>
-        
-         | <a href="/2010/02/23/GSoC_konqueror_projects/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I really wonder why there are no Konqueror related idea for a GSoC 2010 project
-in the <a href="http://community.kde.org/GSoC/2010/Ideas">KDE Community Wiki</a>.</p>
-
-<p>The last opensuse version ships Firefox as default browser, there are some other
-attempts of a kde based browser (rekonq, etc.), but I think that nothing can
-replace Konqueror in the next time concerning  consumption of resources.
-Konqueror is so fast using pdf viewer KPart Okular while Firefox almost hangs up
-with <em>proprietary</em> plugin adobe reader. Which other browser can split its view
-and show pdf viewer and webpages at the same time? KatePart is also very handy.</p>
-
-<p>I mean it’s wrong to think that other Qt based browsers can replace Konqueror in
-the next time. Even the inexperienced user wants to use KPart Okular.</p>
-
-<p>However, I use Firefox, because it doesn’t use kthml has awesome bookmark tagging
-and can be synced with Mozilla Weave. It would be nice to see these features
-prospectively integrated in Konqueror, too.</p>
-
-<p>What do you think? Can we bring Konqueror to the next level?</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/15/">&larr; Older</a>
@@ -643,6 +669,10 @@ prospectively integrated in Konqueror, too.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/06/16/2-wochen-in-miami/">2 Wochen in Miami</a>
       </li>
     
@@ -658,17 +688,13 @@ prospectively integrated in Konqueror, too.</p>
         <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
       </li>
     
-      <li class="post">
-        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
-      </li>
-    
   </ul>
 </section>
 
 <section>
   <h1>Latest Tweets</h1>
    
-  <a class="twitter-timeline"  href="https://twitter.com/salout_de"  data-widget-id="321125269626814464">Tweets von @salout_de</a>
+  <a class="twitter-timeline" height="300" href="https://twitter.com/salout_de"  data-widget-id="321125269626814464">Tweets von @salout_de</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </section>
 
@@ -692,7 +718,7 @@ prospectively integrated in Konqueror, too.</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 19.06.13 at 22:18
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 20.06.13 at 02:06
   </span>
 </p>
 

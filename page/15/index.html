@@ -9,8 +9,8 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="KonsolePart To get a shell in your GUI, you don’t have to reinvent the wheel - just use
-the KonsolePart provided by KDE KParts. If you use the KDE &hellip;">
+  <meta name="description" content="I really wonder why there are no Konqueror related idea for a GSoC 2010 project
+in the KDE Community Wiki. The last opensuse version ships Firefox as &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +94,61 @@ the KonsolePart provided by KDE KParts. If you use the KDE &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/02/23/GSoC_konqueror_projects/">Call for Konqueror Related GSoC 2010 Projects</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-23T00:00:00-05:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2010</time>
+        
+         | <a href="/2010/02/23/GSoC_konqueror_projects/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I really wonder why there are no Konqueror related idea for a GSoC 2010 project
+in the <a href="http://community.kde.org/GSoC/2010/Ideas">KDE Community Wiki</a>.</p>
+
+<p>The last opensuse version ships Firefox as default browser, there are some other
+attempts of a kde based browser (rekonq, etc.), but I think that nothing can
+replace Konqueror in the next time concerning  consumption of resources.
+Konqueror is so fast using pdf viewer KPart Okular while Firefox almost hangs up
+with <em>proprietary</em> plugin adobe reader. Which other browser can split its view
+and show pdf viewer and webpages at the same time? KatePart is also very handy.</p>
+
+<p>I mean it’s wrong to think that other Qt based browsers can replace Konqueror in
+the next time. Even the inexperienced user wants to use KPart Okular.</p>
+
+<p>However, I use Firefox, because it doesn’t use kthml has awesome bookmark tagging
+and can be synced with Mozilla Weave. It would be nice to see these features
+prospectively integrated in Konqueror, too.</p>
+
+<p>What do you think? Can we bring Konqueror to the next level?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -675,172 +730,6 @@ within a quarter of an hour!</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/01/31/just_moved_to_jekyll/">Just Moved to Jekyll</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-31T00:00:00-05:00" pubdate data-updated="true">Jan 31<span>st</span>, 2010</time>
-        
-         | <a href="/2010/01/31/just_moved_to_jekyll/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="static-website-generators">Static Website Generators</h2>
-
-<p>After using the static website generator <a href="http://webgen.rubyforge.org/">webgen</a> I started to appreciate the idea not
-to depend on special hosts with php, mysql and so on enabled. You can put all files on a CD
-and it will works nevertheless. Like in the good old days, when there was only the notepad and
-the Netscape Navigator.</p>
-
-<p>My last blog was powered by <a href="http://www.movabletype.org/">Movable Type</a>. A really good, full-featured engine, but editing in
-the ajax backend was damn slow, because I hosted Movable Type myself via a dynamic dns service. And
-at home the provided upload rate is not good enough to host a page serious. I don’t want to pay for
-websites. There is so much <em>static</em> webspace in the www. So I switched over to the ruby<sup id="fnref:rb"><a href="#fn:rb" rel="footnote">1</a></sup> driven <a href="http://jekyllrb.com/">Jekyll</a>
-and got in addtion the hosting for free on <a href="http://github.com">http://github.com</a>.</p>
-
-<h2 id="building-the-blog">Building The Blog</h2>
-
-<p>I started with a copy of <a href="http://github.com/schacon/schacon.github.com">http://github.com/schacon/schacon.github.com</a>. At this point a big “Horay!” to schacon
-and open source, that made a quick start possible.</p>
-
-<p>While editing the files I found some usefull tricks you, you maybe googled for.</p>
-
-<h2 id="css-selector-for-elements-without-class-attribute">CSS selector for elements without <code>class</code> attribute</h2>
-
-<p>I wanted a template which allows to use nice CSS formatted <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code> tags for source code,
-but on the other hand I didn’t want to change the style of included code snippets from <a href="http://pastie.org">http://pastie.org</a> or
-<a href="http://refactormycode.com">http://refactormycode.com</a>.</p>
-
-<ul id="markdown-toc">
-  <li><a href="#static-website-generators">Static Website Generators</a></li>
-  <li><a href="#building-the-blog">Building The Blog</a></li>
-  <li><a href="#css-selector-for-elements-without-class-attribute">CSS selector for elements without <code>class</code> attribute</a></li>
-  <li><a href="#integrating-other-static-pages">Integrating other static pages</a></li>
-  <li><a href="#generating-pygments-css-files">Generating pygments CSS files</a></li>
-</ul>
-
-<p>So I found out how to change only these html tags in the source code, which doesn’t have an <code>class</code> attribute, because
-that is exactly the difference between these pastie-snippets and my own <code>pre</code>-elements.</p>
-
-<p>The solution is to use the <a href="http://www.w3.org/TR/css3-selectors/#negation">negation pseudo-class selector</a>.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-</pre></td><td class="code"><pre><code class="css"><span class="line"><span class="nt">pre</span><span class="o">,</span> <span class="nt">code</span> <span class="p">{</span>
-</span><span class="line">  <span class="k">font-family</span><span class="o">:</span><span class="n">Consolas</span><span class="o">,</span><span class="s2">&quot;Andale Mono&quot;</span><span class="o">,</span><span class="s2">&quot;Courier New&quot;</span><span class="o">,</span><span class="n">Courier</span><span class="o">,</span><span class="n">mono</span> <span class="cp">!important</span><span class="p">;</span>
-</span><span class="line">  <span class="k">font-weight</span><span class="o">:</span> <span class="m">400</span><span class="p">;</span>
-</span><span class="line">  <span class="k">font-size</span><span class="o">:</span><span class="m">0.9em</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="o">*</span><span class="nd">:not</span><span class="o">(</span><span class="nt">PRE</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">code</span> <span class="p">{</span>
-</span><span class="line">  <span class="k">background-color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
-</span><span class="line">  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nt">pre</span><span class="nd">:not</span><span class="o">([</span><span class="nt">class</span><span class="o">])</span> <span class="p">{</span>
-</span><span class="line">  <span class="k">background-color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
-</span><span class="line">  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#000</span><span class="p">;</span>
-</span><span class="line">  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-</span><span class="line">  <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span> <span class="m">0</span><span class="p">;</span>
-</span><span class="line">  <span class="k">overflow</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-</span><span class="line">  <span class="k">padding</span><span class="o">:</span> <span class="m">0.5em</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>First I define some basic font styles for all kind of code. After that I define styles for the code, which isn’t
-in a <code>pre</code>-element and at last follows the style for the pygments-generated in-built code.</p>
-
-<h2 id="integrating-other-static-pages">Integrating other static pages</h2>
-
-<p>As BSc physics student I got a userpage on the IT system of the physics institute, where I store some files.
-Furthermore I have an account at <a href="http://desy.de">DESY</a>, from where I also get a userpage. So I thought it would
-be nice to integrate both pages.</p>
-
-<p>In the end I got it by defining a special header and footer in the .htaccess file for the Apache auto-generated directory index.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>.htaccess </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class="apache"><span class="line"><span class="nb">ReadmeName</span> footer.html
-</span><span class="line"><span class="nb">HeaderName</span> header.html
-</span><span class="line"><span class="nb">IndexStyleSheet</span> style.css
-</span><span class="line"><span class="nb">IndexIgnore</span> style.css footer.html header.html
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>More explanation are on the <a href="http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html">official Apache Module page</a> given.</p>
-
-<p>You might also want to look in my <a href="http://github.com/saLOUt/salout.github.com">blog sources</a>, where you can find <a href="http://github.com/saLOUt/salout.github.com/tree/master/other_pages_integration/">these
-files</a> in the “other_page_integration” folder.</p>
-
-<h2 id="generating-pygments-css-files">Generating pygments CSS files</h2>
-
-<p>I didn’t found it immediately in the internet, so I want to increase the pages containting the hint by 1.</p>
-
-<p>If you want to create the CSS file, maybe with the look and feel of <a href="http://pastie.org">http://pastie.org</a>, try this in your <abbr title="command line, or console. On Linux i.e. bash.">cmd</abbr> to
-generate a complete “highlight.css”.</p>
-
-<pre><code>pygmentize -f html -a .highlight -S pastie &gt; highlight.css
-</code></pre>
-
-<p>To get an overview over possible you have to execute this command:</p>
-
-<pre><code>pygmentize -L styles
-</code></pre>
-
-<p>Syntax highlighting is done via <a href="http://pygments.org/">pygments</a>, which bases on python. Is that really necessary?</p>
-<div class="footnotes">
-  <ol>
-    <li id="fn:rb">
-      <p><a href="http://www.ruby-lang.org">Ruby</a> is the best language I ever saw. So the new system had to be based on it.<a href="#fnref:rb" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/16/">&larr; Older</a>
@@ -858,6 +747,10 @@ generate a complete “highlight.css”.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/06/16/2-wochen-in-miami/">2 Wochen in Miami</a>
       </li>
     
@@ -873,17 +766,13 @@ generate a complete “highlight.css”.</p>
         <a href="/2013/06/04/das-karibische-meer-unterwasser/">Das Karibische Meer (Forts.): Unterwasser</a>
       </li>
     
-      <li class="post">
-        <a href="/2013/05/26/festival-terre-de-blues/">Festival Terre De Blues</a>
-      </li>
-    
   </ul>
 </section>
 
 <section>
   <h1>Latest Tweets</h1>
    
-  <a class="twitter-timeline"  href="https://twitter.com/salout_de"  data-widget-id="321125269626814464">Tweets von @salout_de</a>
+  <a class="twitter-timeline" height="300" href="https://twitter.com/salout_de"  data-widget-id="321125269626814464">Tweets von @salout_de</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </section>
 
@@ -907,7 +796,7 @@ generate a complete “highlight.css”.</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 19.06.13 at 22:18
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 20.06.13 at 02:06
   </span>
 </p>
 

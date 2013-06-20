@@ -25,6 +25,26 @@ jabber
 
 : <rriemann@jabber.ccc.de>
 
+Facebook
+
+: [rriemann](https://www.facebook.com/rriemann)
+
+Twitter
+
+: [@salout_de](https://twitter.com/salout_de)
+
+CouchSurfing
+
+: [saLOUt](http://www.couchsurfing.org/people/salout)
+
+Flickr
+
+: [saloutions](http://www.flickr.com/photos/27621704@N07/)
+
+Last.fm
+
+: [saLOUt](http://www.lastfm.de/user/saLOUt)
+
 IRC (freenode)
 
 : saLOUt on [#suse](irc://chat.freenode.org/suse),
@@ -38,22 +58,6 @@ IRC (freenode)
 GitHub
 
 : [saLOUt](http://github.com/saLOUt/)
-
-Facebook
-
-: [rriemann](http://www.facebook.com/rriemann)
-
-Last.fm
-
-: [saLOUt](http://www.lastfm.de/user/saLOUt)
-
-Flickr
-
-: [saloutions](http://www.flickr.com/photos/27621704@N07/)
-
-CouchSurfing
-
-: [saLOUt](http://www.couchsurfing.org/people/salout)
 
 ## About This Site
 

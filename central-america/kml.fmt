@@ -1,0 +1,34 @@
+#------------------------------------------------------------------------------
+# File:         kml.fmt
+#
+# Description:  Example ExifTool print format file for generating a
+#               Google Earth KML file from a collection of geotagged images
+#
+# Usage:        exiftool -p kml.fmt FILE [...] > out.kml
+#
+# Revisions:    2010/02/05 - P. Harvey created
+#
+# Notes:     1) All input files must contain GPSLatitude and GPSLongitude.
+#            2) The -fileOrder option may be used to control the order of the
+#               generated placemarks.
+#------------------------------------------------------------------------------
+#[HEAD]<?xml version="1.0" encoding="UTF-8"?>
+#[HEAD]<kml xmlns="http://www.opengis.net/kml/2.2">
+#[HEAD] <Document>
+#[HEAD]  <Style id="CustomLine"> 
+#[HEAD]   <LineStyle>  
+#[HEAD]    <color>ff0000ff</color>
+#[HEAD]    <width>2</width>
+#[HEAD]   </LineStyle> 
+#[HEAD]  </Style>
+#[HEAD]  <Placemark>
+#[HEAD]    <name>Tour 2013</name>
+#[HEAD]    <styleUrl>#CustomLine</styleUrl>
+#[HEAD]    <LineString>
+#[HEAD]    <coordinates>
+#[BODY]     $gpslongitude#,$gpslatitude#,0 
+#[TAIL]    </coordinates>
+#[TAIL]    </LineString>
+#[TAIL]  </Placemark>
+#[TAIL] </Document>
+#[TAIL]</kml>

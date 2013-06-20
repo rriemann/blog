@@ -28,11 +28,10 @@ Vom 31. März bis zum 30. Juli bin ich in Mittelamerika unterwegs.
 [Alle Mittelamerika-Blog Posts]({{ root_url }}/categories/central-america/)   
 [RSS Feed der Mittelamerika-Posts]({{ root_url }}/categories/central-america/atom.xml)
 
-## Aktueller Standort
+## Aktuelle Route in Lateinamerika
 
-<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Boquete,+Chiriqu%C3%AD,+Panama&amp;aq=0&amp;oq=Boquete&amp;sll=25.790654,-80.130046&amp;sspn=0.722107,1.279907&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Bajo+Boquete,+Chiriqu%C3%AD,+Panama&amp;z=7&amp;iwloc=A&amp;output=embed"></iframe>
-
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=http:%2F%2Fblog.riemann.cc%2Fcentral-america%2Fmap.kml&amp;ie=UTF8&amp;t=m&amp;z=5&amp;output=embed"></iframe>
 
 [Größere Kartenansicht][map]
 
-[map]: https://maps.google.de/maps?f=q&amp;source=embed&amp;hl=de&amp;geocode=&amp;q=Boquete,+Chiriqu%C3%AD,+Panama&amp;aq=0&amp;oq=Boquete&amp;sll=25.790654,-80.130046&amp;sspn=0.722107,1.279907&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Bajo+Boquete,+Chiriqu%C3%AD,+Panama&amp;z=7&amp;iwloc=A
+[map]: https://maps.google.com/maps?q=http:%2F%2Fblog.riemann.cc%2Fcentral-america%2Fmap.kml

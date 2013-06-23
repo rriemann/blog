@@ -110,16 +110,24 @@ einmal zu Gemüte führen. Auf Youtube gibt es auch einige Aufnahmen.
 <figcaption>Groundation – Babylon Rule Dem. Auf <a href="http://youtu.be/EmgFjFRdvnk">Youtube</a> sehen.</figcaption>
 </figure>
 
+<div style="clear:both" />
+
 ### Panamakanal
+
+{% img right /images/central-america/lock-panama_thumb.jpg Hamburger Expertise am Werk. <br> Kurz vor der Miraflores-Schleuse. %}
 
 Am nächsten Tag besichtigen wir den [Panamakanal]. Die Schiffe passen tatsächlich
 nur sehr knapp durch die Schleusen. Im Besucherzentrum der Schleuse „Miraflores“
 wird uns dann schließlich noch ein Film in 3D präsentiert, in dem der Stolz
 (und die finanzielle Sicherung) des Landes noch einmal ins rechte Licht gerückt
 wird. Schließlich ist der Panamakanal das größte ingenieurtechnische Bauwerk
-weltweit!
+weltweit! Da ist man in Panama sehr stolz drauf.
 
-{% img /images/central-america/panama-canal.jpg %}
+Interessanter weise dürfen die Schiffskapitäne ihr Schiff nicht selbst durch den
+Kanal steuern, sondern müssen die Kontrolle an ausgebildete Spezialisten aus Panama
+abgeben (das sichert Arbeitsplätze `;)` ).
+
+{% img /images/central-america/panama-canal.jpg Viel Platz ist zu beiden Seiten der Fähre nicht mehr. Viele Schiffe werden so konstruiert, dass sie noch durch den Kanal passen. %}
 
 ### Tango in Panama City
 
@@ -173,7 +181,7 @@ nicht – anstatt mich gründlich in meinem Guide zu belesen, schreibe ich liebe
 diesen, schon wieder viel zu langen Artikel. Dafür ist dieser nun das erste mal
 up-to-date.
 
-Was bleibt noch zu sagen? Ich möchte mich noch einmal bei V. aus H. bedanken. Du
+Was bleibt noch zu sagen? Ich möchte mich noch einmal bei V. bedanken. Du
 hast ja alle Ausflüge recherchiert und angeleiert und warst auch sonst stets
 aufgeschlossen. Schön, dass es noch Leute wie dich gibt. Wenn wir uns das nächste
 mal trennen, dann achte ich auch darauf, dass ich dir ebenso alles Gute wünsche,

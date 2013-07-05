@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/linux/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-06-22T22:24:45-05:00</updated>
+  <updated>2013-07-04T20:00:52-06:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
     <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
-    <updated>2013-05-01T22:59:00-05:00</updated>
+    <updated>2013-05-01T22:59:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
@@ -191,7 +191,7 @@ systemctl daemon-reload
   <entry>
     <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
     <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
-    <updated>2013-04-23T08:38:00-05:00</updated>
+    <updated>2013-04-23T08:38:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
     <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
@@ -248,7 +248,7 @@ to solve this problem.</p>
   <entry>
     <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
     <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
-    <updated>2013-01-05T14:21:00-05:00</updated>
+    <updated>2013-01-05T14:21:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
     <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
 some updates, which breaks the layout of the embedding tags used by this blogging
@@ -373,7 +373,7 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[self-made router-powered repository mirror]]></title>
     <link href="http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/"/>
-    <updated>2012-07-23T01:32:00-05:00</updated>
+    <updated>2012-07-23T01:32:00-06:00</updated>
     <id>http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror</id>
     <content type="html"><![CDATA[<p>After migrating most desktop PCs at work, at home and of some friends to
 <a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
@@ -493,7 +493,7 @@ which can be triggered from time to time.</p>
   <entry>
     <title type="html"><![CDATA[btrfs Kernel Bug]]></title>
     <link href="http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug/"/>
-    <updated>2011-12-10T00:00:00-05:00</updated>
+    <updated>2011-12-10T00:00:00-06:00</updated>
     <id>http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug</id>
     <content type="html"><![CDATA[<h2 id="prolog">Prolog</h2>
 

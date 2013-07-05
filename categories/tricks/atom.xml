@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tricks | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/tricks/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-06-22T22:24:45-05:00</updated>
+  <updated>2013-07-04T20:00:52-06:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
     <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
-    <updated>2013-04-23T08:38:00-05:00</updated>
+    <updated>2013-04-23T08:38:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
     <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
@@ -73,7 +73,7 @@ to solve this problem.</p>
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-05:00</updated>
+    <updated>2013-04-10T09:29:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -181,7 +181,7 @@ additionally the following lines to my style description.</p>
   <entry>
     <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
     <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
-    <updated>2013-01-05T14:21:00-05:00</updated>
+    <updated>2013-01-05T14:21:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
     <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
 some updates, which breaks the layout of the embedding tags used by this blogging
@@ -306,7 +306,7 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[Starcraft 2 - fixing QWERTZ hotkeys]]></title>
     <link href="http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys/"/>
-    <updated>2012-08-02T11:53:00-05:00</updated>
+    <updated>2012-08-02T11:53:00-06:00</updated>
     <id>http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys</id>
     <content type="html"><![CDATA[<p>After upgrading <a href="http://eu.battle.net/sc2">Starcraft 2</a> with Patch 1.5.0, the German users might
 suffer from problems regarding the raster grid hot key layout.</p>
@@ -327,7 +327,7 @@ again.</p>
   <entry>
     <title type="html"><![CDATA[Downloading PDF Documents from Scribd]]></title>
     <link href="http://blog.riemann.cc/2012/05/21/downloading-pdf-documents-from-scribd/"/>
-    <updated>2012-05-21T13:41:00-05:00</updated>
+    <updated>2012-05-21T13:41:00-06:00</updated>
     <id>http://blog.riemann.cc/2012/05/21/downloading-pdf-documents-from-scribd</id>
     <content type="html"><![CDATA[<p>Are you also sometimes annoyed by only finding documents on <a href="http://scribd.com">http://scribd.com</a> and
 nowhere else? Furthermore this site is missing of a download or printing

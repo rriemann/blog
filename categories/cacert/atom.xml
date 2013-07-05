@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cacert | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/cacert/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-06-22T22:24:45-05:00</updated>
+  <updated>2013-07-04T20:00:52-06:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[CAcert SSL certificates in KMail KDE 4]]></title>
     <link href="http://blog.riemann.cc/2009/11/19/cacert_in_kmail/"/>
-    <updated>2009-11-19T00:00:00-05:00</updated>
+    <updated>2009-11-19T00:00:00-06:00</updated>
     <id>http://blog.riemann.cc/2009/11/19/cacert_in_kmail</id>
     <content type="html"><![CDATA[<p>In preparation of the sixth <a href="http://www.blit.org/2009/" title="Website of a local Linux Day">“Brandenburger Linux-Infotag”</a> I passed the <a href="http://www.cacert.org/">CAcert</a> <a href="http://wiki.cacert.org/AssurerChallenge">Assurer Challange</a>, which was the last requirement I had to fullfill to be allowed to verify
 people.</p>

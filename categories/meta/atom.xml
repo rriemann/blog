@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meta | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/meta/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-06-22T22:24:45-05:00</updated>
+  <updated>2013-07-04T20:00:52-06:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[25 Jahre Robert: Aufbruch zu Neuem]]></title>
     <link href="http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/"/>
-    <updated>2013-06-06T19:29:00-05:00</updated>
+    <updated>2013-06-06T19:29:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem</id>
     <content type="html"><![CDATA[<p><figure class="right"><a href="/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA"><img src="/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA" ></a><figcaption>Südspitze der USA</figcaption></figure></p>
 
@@ -105,7 +105,7 @@ zumindest hier in Miami Beach, schließlich noch nicht vorbei.</p>
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-05:00</updated>
+    <updated>2013-04-10T09:29:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -213,7 +213,7 @@ additionally the following lines to my style description.</p>
   <entry>
     <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
     <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
-    <updated>2013-01-05T14:21:00-05:00</updated>
+    <updated>2013-01-05T14:21:00-06:00</updated>
     <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
     <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
 some updates, which breaks the layout of the embedding tags used by this blogging
@@ -338,7 +338,7 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[Just moved to Jekyll]]></title>
     <link href="http://blog.riemann.cc/2010/01/31/just_moved_to_jekyll/"/>
-    <updated>2010-01-31T00:00:00-05:00</updated>
+    <updated>2010-01-31T00:00:00-06:00</updated>
     <id>http://blog.riemann.cc/2010/01/31/just_moved_to_jekyll</id>
     <content type="html"><![CDATA[<h2 id="static-website-generators">Static Website Generators</h2>
 

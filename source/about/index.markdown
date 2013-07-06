@@ -19,7 +19,8 @@ That turned out to be really awesome.
 
 Mail
 
-: <robert@riemann.cc>
+: <robert@riemann.cc> <br>
+  pgp fingerprint[^1]: `F6A9 332D AA28 625E 59A8  F758 7BF6 0F4A 861B C3A3`
 
 jabber
 
@@ -73,3 +74,4 @@ If not otherwise noted, the content of this website is published under the terms
 
 [cc_pic]: {{ site.url }}/images/by-nc-sa.eu.png "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
 [cc]: http://creativecommons.org/licenses/by-nc-sa/2.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
+[^1]: Pretty Good Privacy: <http://en.wikipedia.org/wiki/Pretty_Good_Privacy> 

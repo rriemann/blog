@@ -4,7 +4,7 @@
   <title><![CDATA[Category: german | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/german/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-04T20:00:52-06:00</updated>
+  <updated>2013-07-06T23:10:06-06:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zur Allgemeinen Lage der Sicherheit]]></title>
+    <link href="http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit/"/>
+    <updated>2013-07-06T21:07:00-06:00</updated>
+    <id>http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit</id>
+    <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a> Nachdem einmal mehr aufgezeigt wurde (<a href="http://de.wikipedia.org/wiki/PRISM_%28%C3%9Cberwachungsprogramm%29" title="Prism (Überwachungsprogramm) auf Wikipedia">Prism</a>, <a href="http://de.wikipedia.org/wiki/Tempora" title="Tempora auf Wikipedia">Tempora</a>), wie
+transparent man doch im Internet ist, sind Themen wie Datensparsamkeit, Datenschutz
+und Kryptographie wieder prominent in den Medien vertreten.</p>
+
+<p>Eine kurze Link-Sammlung zu Verschlüsselungstechniken für jedermann.</p>
+
+<!-- more -->
+
+<p>Worum es bei der Bespitzelung geht und wie man sich dagegen wehren kann,
+beschreibt <em>Ludwig Greven</em> in seinem Artikel
+<a href="http://www.zeit.de/digital/datenschutz/2013-06/ueberwachung-snowden-datensparsamkeit">Datensparsamkeit: Wer nicht belauscht werden will, sollte nicht überall reden</a>.
+Ich zitiere:</p>
+
+<blockquote>
+  <p>Was technisch möglich ist, wird von staatlichen Kontrolleuren auch gemacht.</p>
+</blockquote>
+
+<blockquote>
+  <p>Verschlüsselungsprogramme oder andere Verfahren, um seine Spuren im Internet zu verwischen, können zwar etwas helfen. Doch wer so etwas nutzt, <a href="http://www.zeit.de/digital/datenschutz/2013-06/nsa-speichert-verschluesselte-mails">macht die Überwacher erst recht scharf und sich verdächtig</a> – verschlüsselte Kommunikation wird von ihnen grundsätzlich gespeichert, denn vielleicht kann man sie ja später knacken.</p>
+</blockquote>
+
+<p>Das sind erst einmal Tatsachen, die wir hinnehmen müssen. Selbst wenn es nicht
+unserer Regierungen wären, die hier die Daten abschnorcheln, so muss man davon
+ausgehen, dass es vielleicht jemand anderes probiert.</p>
+
+<p>Noch am selben Tag kontert <em>David Hugendick</em> mit 
+<a href="http://www.zeit.de/kultur/2013-06/replik-datensparsamkeit-prism">Datenschutz: Wir lassen uns nicht verschlüsseln</a>.
+Er formuliert unter anderem:</p>
+
+<blockquote>
+  <p>Wir könnten unsererseits aufrüsten, verschlüsseln, die Möglichkeiten wären da. Doch wohin führte uns diese Logik? Sollen wir uns damit abfinden, dass wir überwacht werden, weil wir ja kryptografisch aufgemöbelte Mails schicken können? Sollen wir fürderhin wieder so reden und schreiben, wie es Schriftsteller zu Sowjetzeiten tun mussten, in Codes und Uneigentlichkeiten, hier und da mal ein subtiler Gruß an den Geheimdienst?</p>
+</blockquote>
+
+<p>Ich finde es ja stets löblich, wenn ein Medium einen Sachverhalt von zwei verschiedenen
+Blickwinkeln betrachtet. In diesem Fall muss ich dem Herrn Hugendick ganz klar
+widersprechen. Ja – wir müssen verschlüsseln.</p>
+
+<p>Die vielleicht nicht anwenderfreundlichste, aber zumindest konsequenteste Lösung
+nach der Datensparsamkeit kann nur sein einfach jegliche Kommunikation zu
+verschlüsseln – und sei sie auch noch so belanglos. So würden die Kapazitäten der
+Auswertungszentren überlastet werden und eine Entschlüsselung im speziellen
+Einzelfall sehr unwahrscheinlich.</p>
+
+<p>Ich kann also nur empfehlen sich die notwendigen kostenlosen Programme zu installieren.
+An aktuellen Anleitungen dürfte es momentan im Netz nicht fehlen:</p>
+
+<ul>
+  <li>Immer darauf achten mit <code>https</code> anstatt <code>http</code> zu surfen, wenn möglich. Facebook macht das ganz richtig. Das hilft natürlich wenig, wenn Facebook im Anschluss die Daten freiwillig offenlegt.</li>
+  <li>Mail-Verschlüsselung
+    <ul>
+      <li>Artikel technischer Natur: <a href="http://www.thunderbird-mail.de/wiki/Enigmail_OpenPGP">http://www.thunderbird-mail.de/wiki/Enigmail_OpenPGP</a></li>
+      <li>Youtube-Demonstration Schritt-für-Schritt: <a href="http://www.youtube.com/watch?v=drWdLiU3oIA">http://www.youtube.com/watch?v=drWdLiU3oIA</a></li>
+    </ul>
+  </li>
+  <li>Verschlüsseltes Chatten (auch mit Facebook-Freunden)
+    <ul>
+      <li>für Mac OS: <a href="http://www.adium.im/">Adium</a></li>
+      <li>Linux-Nuter wissen sich selber zu helfen. <code>;)</code> (Kopete oder Pidgin)</li>
+      <li>für Windows: hm, schwierig. Lieber zu Linux oder Mac wechseln. <a href="http://de.wikipedia.org/wiki/Off-the-Record_Messaging#Verf.C3.BCgbarkeit">Wikipedia</a> weiß mehr.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Das wäre dann schon erstmal ein guter Anfang.</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Costa Rica, Nicaragua, Honduras]]></title>
@@ -660,95 +733,6 @@ werden, so dass man sich als Musiker auf einige Störungen einstellen muss.</p>
 dass es schon ein paar coole karibische Jam-Sessions gibt, die in ihrer Art und Weise
 den Konzerten in Berlin in nichts nachstehen. Allerdings habe ich diese Perlen innerhalb
 der zwei Monate nicht auswendig machen können. <code>:/</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[25 Jahre Robert: Aufbruch zu Neuem]]></title>
-    <link href="http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/"/>
-    <updated>2013-06-06T19:29:00-06:00</updated>
-    <id>http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem</id>
-    <content type="html"><![CDATA[<p><figure class="right"><a href="/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA"><img src="/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA" ></a><figcaption>Südspitze der USA</figcaption></figure></p>
-
-<p>Ich sitze im Bus und bin auf der Route 1 von Meile 0 (Key West) unterwegs
-zurück nach Miami Beach. Gerade haben wir Meile 69 passiert. Heute ist mein
-25. Geburtstag.</p>
-
-<p>Sicherlich werde ich mich noch lange an heute erinnern können, wenn auch nicht
-unbedingt der Feierlichkeiten wegen.</p>
-
-<!-- more -->
-
-<p>Diese fallen wohl dieses Jahr ins Wasser (Es regnet tatsächlich ständig. Das
-Tief hat auch nein Namen: Andrea). Bislang habe ich meinen Geburtstag im Stillen
-gefeiert, da es mir irgendwie zu doof war meinen Couchsurfing-Hosts davon zu
-erzählen. Ich habe die vergangene Nacht auf deren Segelboot außerhalb des Hafens
-verbracht. Die Gastgeber waren allerdings mehr mit sich und ihrem Kumpel beschäftigt,
-der ebenfalls heute Geburtstag feiert. Wir alle waren am Abend ziemlich müde und
-haben eine stürmische Nacht mit wenig Schlaf erwartet – das hat die Stimmung etwas
-gesengt.</p>
-
-<p><figure class="left"><a href="/images/central-america/pancakes.jpg" title="Meine Pancakes mit heißem Ahornsirup"><img src="/images/central-america/pancakes.jpg" title="Meine Pancakes mit heißem Ahornsirup" ></a><figcaption>Meine Pancakes mit heißem Ahornsirup</figcaption></figure></p>
-
-<p>Die Wettervorhersage hat sich zum Glück als falsch herausgestellt und es hat sich
-am Morgen sogar das erste mal seit meiner Einreise in die USA kurz die Sonne gezeigt.
-Ich habe mich (wie so häufig) selbst ins Restaurant eingeladen und Pancakes
-mit Ahornsirup und Butter zum Frühstück ausprobiert – echt amerikanisch. Ich ziehe dann aber
-doch die heimischen Quarkkeulchen oder die französischen Crêpes vor. Da wären wir
-auch gleich schon beim Thema.</p>
-
-<p>Im Restaurant gibt es WLAN. Ich lese ein paar erste Mails. Darunter finde ich die
-Mail des Professors aus Marseille meines favorisierten Doktorarbeit-Themas:</p>
-
-<blockquote>
-  <p>We have the great pleasure to inform you that you will get a PhD scholarship,
-although the final and official decision will be taken on June 24th.</p>
-</blockquote>
-
-<p>Bis hierhin war es schon ein langer, umständlicher Weg. Schön, dass es nun endlich
-Fahrt aufnimmt.
-Die Entscheidung liegt nun bei Gremien hierarchisch oberhalb der Graduate School,
-so wie ich das verstanden habe. Wir sind alle zuversichtlich und warten ab. Zum
-Glück wird mir hier die Zeit nicht lang.</p>
-
-<p>Das angepeilte Thema liest sich folgendermaßen:</p>
-
-<blockquote>
-  <p>Interaction fluide-structure: <br />
-modélisation d’objets flexibles</p>
-</blockquote>
-
-<blockquote>
-  <p>Fluid Structure Interaction:<br />
-enumerical modeling of flexible objects in viscous flow</p>
-</blockquote>
-
-<blockquote>
-  <p>Numerische Modelierung der Interaktion zwischen flexiblen Objekten und Gasen/Flüssigkeiten</p>
-</blockquote>
-
-<p>Als Beispiele sind Insekten in Luft oder Fische im Wasser angeführt. Das ist doch
-einmal wirklich Physik zum Anfassen/Begreifen!</p>
-
-<p>Darüberhinaus habe ich endlich die Scans meines Masterstudiumzeugnisses zugeschickt
-bekommen. Da bis zuletzt noch ein Gutachten fehlte, habe ich auf diesen Moment
-bis heute warten müssen. Insgesamt wurde das Masterstudium wie mein Bachelorstudium
-benotet und damit besser, als ich es theoretisch für möglich gehalten hätte.
-Scheinbar ermöglicht der erfolgreiche Abschluss eines Masterstudiums einem nicht
-das diffiziele Punktesystem zu durchschauen. Wie auch immer: Ich habe es jetzt
-auch ganz offiziell geschafft.</p>
-
-<p>Wenn auch beides absehbar war, habe ich mich dennoch sehr gefreut. Die Crêpes
-zum Frühstück rücken in Reichweite. Irgendwie doch etwas feierlich heute.</p>
-
-<p>Zum Geburtstag habe ich mir den E-Book-Reader Kindle Paperwhite bei Amazon USA
-bestellt. Beim Kauf in den USA spare ich etwas. Der ist zum Lesen auf Reisen
-bestimmt superpraktisch und vielleicht auch im späteren Studium.</p>
-
-<p>Wenn mich der Bus-Shuttle nachher direkt vor dem Miami Beach International
-Hostel auskippt, werde ich erstmal meine weiteren Mails lesen und dann
-vielleicht noch das erste mal in den USA tanzen gehen. Mein Geburtstag ist,
-zumindest hier in Miami Beach, schließlich noch nicht vorbei.</p>
 ]]></content>
   </entry>
   

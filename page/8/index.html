@@ -9,7 +9,9 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content=" Leichtigkeit des Seins oder leichtsinnig sein SVG Source ">
+  <meta name="description" content="The Github Gist code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +95,66 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2013/01/05/patching-ruby-gsl/">Patching Ruby Gem GSL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-05T14:21:00-06:00" pubdate data-updated="true">Jan 5<span>th</span>, 2013</time>
+        
+         | <a href="/2013/01/05/patching-ruby-gsl/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
+some updates, which breaks the layout of the embedding tags used by this blogging
+engine octopress (<a href="http://github.com/imathis/octopress/issues/847">Issue #847</a>).</p>
+
+<p>This issue was already fixed and got included in the development branch 2.1.
+I decided to upgrade my blog to the latest development version. Afterwards the
+Ruby version manager <a href="http://rvm.io/">rvm</a> asked to install a new ruby version.
+To meet the exact requirements of octopress I decided to give it a run, but when
+installing the required gems using <code>bundle install</code> I wasn’t able to
+install <a href="http://rb-gsl.rubyforge.org/">gsl</a>, the ruby binding to the GNU
+scientific library, which is used to speed-up the “related posts” calculation.
+I remembered to run into this problem once before. Unfortunately it isn’t
+resolved yet. <code>:(</code></p>
+
+<pre><code>vector_complex.c:1989:12: error: conflicting types for 'gsl_vector_complex_equal'
+/usr/include/gsl/gsl_vector_complex_double.h:167:5: note: previous declaration of 'gsl_vector_complex_equal' was here
+make: *** [vector_complex.o] Error 1
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2013/01/05/patching-ruby-gsl/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -195,58 +257,6 @@ again.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2012/07/23/selfmade-repository-mirror/">Self-made Router-powered Repository Mirror</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-23T01:32:00-06:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2012</time>
-        
-         | <a href="/2012/07/23/selfmade-repository-mirror/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After migrating most desktop PCs at work, at home and of some friends to
-<a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
-time-consuming task to keep all these systems up-to-date. I was most
-bothered by downloading the same files over and over again, which happened
-sometimes to be quite slow, especially via WLAN.</p>
-
-<p>Fortunatly I got a couple of month ago the Linux-based router <a href="http://en.wikipedia.org/wiki/FRITZ!Box">AVM Fritz!Box 7270</a>,
-which can be rooted with a modified firmware. The customizable firmware is
-provided by the <a href="http://freetz.org/">Freetz</a> project and allows you to combine different
-modular packages to add functionality.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/2012/07/23/selfmade-repository-mirror/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/9/">&larr; Older</a>
@@ -264,6 +274,10 @@ modular packages to add functionality.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/07/06/zur-allgemeinen-lage-der-sicherheit/">Zur Allgemeinen Lage der Sicherheit</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/07/04/costa-rica-nicaragua-honduras/">Costa Rica, Nicaragua, Honduras</a>
       </li>
     
@@ -277,10 +291,6 @@ modular packages to add functionality.</p>
     
       <li class="post">
         <a href="/2013/06/09/tango_chor_konzerte_guadeloupe/">Tango, Chor und Konzerte in Guadeloupe</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/">25 Jahre Robert: Aufbruch zu Neuem</a>
       </li>
     
   </ul>
@@ -313,7 +323,7 @@ modular packages to add functionality.</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 04.07.13 at 20:00
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 06.07.13 at 23:10
   </span>
 </p>
 

@@ -40,3 +40,17 @@ Maybe it is sufficient to close the KDE Certifcates Manager Kleopatra and stop t
 After that it should be possible to add your certifcates in your KMail Profile.
 
 If it is also working for you, give me a sign. Maybe we want to add this how-to to the kde or cacert wiki.
+
+#### Update from Reinhard (german), Jan 2012:
+
+Diese letzte Zeile ist leider etwas irreführend.
+Ich hatte bereits eine Datei trustlist.txt angelegt, die Datei gpg-agent.conf 
+editiert und es ging dennoch nicht.
+Vielleicht lag es daran, dass ich die Anweisung "allow-mark-trusted" an den 
+Anfang geschrieben habe; ich habe es jetz zusätzlich an das Ende gestellt.
+Vielleicht lag es auch daran, dass ich gpgsm.conf bisher nicht um "disable-
+trusted-cert-crl-check" erweitert hatte. Das herauszufinden habe ich keine 
+Lust mehr.
+Jedenfalls nach diesen Änderungen, Shutdown von kleopatra, Kmail und einem 
+SIGHUP an den laufenden gpg-agent und anschliessenden Neustart von Kmail 
+funktionierte es einwandfrei.

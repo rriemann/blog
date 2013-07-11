@@ -154,6 +154,11 @@ body div#fancybox-thumbs {
   background: inherit;
 }
 
+body a[rel^="gallery"] img {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+}
+
 /*
 video.flash-video {
   &:-webkit-full-screen, &:-moz-full-screen, &:fullscreen {

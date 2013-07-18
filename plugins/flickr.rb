@@ -236,6 +236,13 @@ class FlickrPhotoHtml
     if @gallery_id
       anchorAttrs['rel'] = @gallery_id;
     end
+
+#     unless @desc.empty?
+#       STDERR.puts @desc
+#       anchorAttrs['title'] = @desc
+#       imgAttrs['title'] = @desc
+#     end
+
     captionAttrs = {
       'id' => dataTitleId
     }

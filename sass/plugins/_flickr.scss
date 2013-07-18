@@ -99,15 +99,16 @@ figure a img, figure a video, figure a .flash-video {
 
 /* customization for fancybox */
 /* fonts  and layout */
-.fancybox-title, .fancybox-title h1, .fancybox-title .description {
-  font-family: $sans !important;
-  text-align: center;
-}
 
-.fancybox-title {
-  max-height: 6em;
-  overflow-y: auto;
-}
+// .fancybox-title, .fancybox-title h1, .fancybox-title .description {
+//   font-family: $sans !important;
+//   text-align: center;
+// }
+
+// .fancybox-title {
+//  max-height: 6em;
+//   overflow-y: auto;
+// }
 
 .flickr-thumbnail h1 {
   font-weight: normal;
@@ -125,26 +126,27 @@ figure a img, figure a video, figure a .flash-video {
 
 
 /* always show navigation */
-.fancybox-nav {
-  width: 60px;       
-}
 
-.fancybox-nav span {
-  visibility: visible;
-  opacity: 0.20;
-}
-
-.fancybox-nav:hover span {
-  opacity: 1;
-}
-
-.fancybox-next {
-  right: -100px;
-}
-
-.fancybox-prev {
-  left: -100px;
-}
+// .fancybox-nav {
+//   width: 60px;       
+// }
+// 
+// .fancybox-nav span {
+//   visibility: visible;
+//   opacity: 0.20;
+// }
+// 
+// .fancybox-nav:hover span {
+//   opacity: 1;
+// }
+// 
+// .fancybox-next {
+//   right: -100px;
+// }
+// 
+// .fancybox-prev {
+//   left: -100px;
+// }
 
 
 

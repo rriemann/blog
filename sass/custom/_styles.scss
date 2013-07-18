@@ -198,3 +198,8 @@ body {
 }
 
 @import "../plugins/_flickr.scss";
+
+
+.flickr-thumbnail .description {
+  display: inherit;
+}

@@ -123,10 +123,8 @@ class FlickrPhotoHtml
     case @size
     when 'o'
       @zoom_size = 'o'
-    when 'z', 'b'
-      @zoom_size = 'b'
     else
-      @zoom_size = 'z'
+      @zoom_size = 'b'
     end
 
     if params['title'].nil? or params['title'].empty?
@@ -218,8 +216,8 @@ class FlickrPhotoHtml
       unless @height.nil?
         imgCssAttrs['height'] = @height.to_s + 'px';
       end
-    else 
-      figureCssAttrs['display'] = 'inline-block'
+#     else 
+#       figureCssAttrs['display'] = 'inline-block'
     end
 
     imgAttrs["style"] = self.cssAttrsToStyle(imgCssAttrs)

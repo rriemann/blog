@@ -216,7 +216,7 @@ class FlickrPhotoHtml
       unless @height.nil?
         imgCssAttrs['height'] = @height.to_s + 'px';
       end
-#     else 
+#     else # hack from Robert
 #       figureCssAttrs['display'] = 'inline-block'
     end
 
@@ -235,11 +235,10 @@ class FlickrPhotoHtml
       anchorAttrs['rel'] = @gallery_id;
     end
 
-#     unless @desc.empty?
-#       STDERR.puts @desc
-#       anchorAttrs['title'] = @desc
-#       imgAttrs['title'] = @desc
-#     end
+    unless @desc.empty?
+      anchorAttrs['title'] = @desc
+      imgAttrs['title'] = @desc
+    end
 
     captionAttrs = {
       'id' => dataTitleId
@@ -251,13 +250,13 @@ class FlickrPhotoHtml
         self.icon(x)
       }
       x.figcaption(captionAttrs) { |x|
-        x.h1{ |x|
-          x.a('class' => 'flickr-link', 'href' => @page_url) { |x| x << @title }
-          if @username
-            x << " by "
+        x.a('class' => 'flickr-link', 'href' => @page_url) { |x| x << @title }
+        if @username
+          x << " by "
+          x.span({'class' => 'flickr-author'}) { |x|
             x << @username
-          end
-        }
+          }
+        end
         x.div({'class' => 'description'}) { |x| 
           x << @desc
         } 

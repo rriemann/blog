@@ -7,7 +7,7 @@ comments: true
 categories: [central-america, german, travelling]
 ---
 
-{% img right /images/central-america/antigua-mcdoof_thumb.jpg Antigua Guatemala. Innenhof. <br> &copy; 2007 brswanson (flickr). %}
+{% flickr_image 2613566235 n right "Antigua Guatemala. Innenhof." %}
 
 Wir befinden uns[^1] im Innenhof eines in der 4a Calle poniente befindlichen
 Kolonialbaus in Antigua Guatemala. Das hohe Eingangsportal ist aufwendig restauriert.
@@ -27,7 +27,7 @@ ihren Eifons spielen. Ist die Welt nicht friedlich?
 
 <!-- more -->
 
-{% img /images/central-america/antigua-city.jpg Antigua Guatemala. (CC BY-NC-ND 2.0) 2009 beautiful-taiwan (flickr). %}
+{% flickr_image 3630898681 b center "Antigua Guatemala." %}
 
 Tatsächlich hat Antigua in Guatemala einen Sonderstatus. Ohne selbst andere Städte
 bislang gesehen zu haben, fällt es mir doch nicht schwer das zu glauben. Die ehemalige

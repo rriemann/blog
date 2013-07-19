@@ -76,7 +76,7 @@ So if you can help me, please get in contact!
 
 [youtube]: http://www.youtube.com/watch?v=sOOTMVH-bjo "Kubeplayer video on Youtube"
 [video]: http://people.physik.hu-berlin.de/~rriemann/kubeplayer_plasma_active.webm "Kubeplayer video webm version"
-[announcement]: http://salout.github.com/blog/2010/12/18/announcing_kubeplayer.html "Announcement of Kubeplayer"
+[announcement]: http://blog.riemann.cc/2010/12/18/announcing_kubeplayer/ "Announcement of Kubeplayer"
 [oneclick]: http://software.opensuse.org/ymp/home:saLOUt:kubeplayer/openSUSE_11.4/kubeplayer.ymp?base=openSUSE%3A11.4&query=kubeplayer
 [meego]: http://meego.org
 [meegoimg]: http://share.basyskom.com/contour/Deployment/latest-meego-plasma-active-testing.html

@@ -58,13 +58,13 @@ IRC (freenode)
 
 GitHub
 
-: [saLOUt](http://github.com/saLOUt/)
+: [saLOUt](http://github.com/rriemann)
 
 ## About This Site
 
 This site is built using the [Jekyll](http://github.com/mojombo/jekyll)
 library and hosted on [GitHub](http://github.com/).
-The source code used to create this website is [publicly available on GitHub](http://github.com/saLOUt/saLOUt.github.com/tree/source) as well.
+The source code used to create this website is [publicly available on GitHub](https://github.com/rriemann/rriemann.github.io/tree/source) as well.
 
 ## Note on Copyright
 

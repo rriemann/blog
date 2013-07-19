@@ -82,8 +82,7 @@ IndexIgnore style.css footer.html header.html
 
 More explanation are on the [official Apache Module page](http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html) given.
 
-You might also want to look in my [blog sources](http://github.com/saLOUt/salout.github.com), where you can find [these
-files](http://github.com/saLOUt/salout.github.com/tree/master/other_pages_integration/) in the "other_page_integration" folder.
+You might also want to look in my [blog sources](https://github.com/rriemann/rriemann.github.io/tree/source).
 
 
 ## Generating pygments CSS files

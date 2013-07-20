@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/css/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-11T00:13:02-06:00</updated>
+  <updated>2013-07-20T12:49:20-05:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-06:00</updated>
+    <updated>2013-04-10T09:29:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -229,8 +229,7 @@ be nice to integrate both pages.</p>
 
 <p>More explanation are on the <a href="http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html">official Apache Module page</a> given.</p>
 
-<p>You might also want to look in my <a href="http://github.com/saLOUt/salout.github.com">blog sources</a>, where you can find <a href="http://github.com/saLOUt/salout.github.com/tree/master/other_pages_integration/">these
-files</a> in the “other_page_integration” folder.</p>
+<p>You might also want to look in my <a href="https://github.com/rriemann/rriemann.github.io/tree/source">blog sources</a>.</p>
 
 <h2 id="generating-pygments-css-files">Generating pygments CSS files</h2>
 

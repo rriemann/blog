@@ -9,8 +9,8 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="Are you also sometimes annoyed by only finding documents on http://scribd.com and
-nowhere else? Furthermore this site is missing of a download or &hellip;">
+  <meta name="description" content="Every now and then I’m visting my best friend’s mom (generation &gt; 50a) to update
+her old Pentium 4 system with the last opensuse software. Each &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,7 +81,7 @@ nowhere else? Furthermore this site is missing of a download or &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/archives">Archives</a></li>
-  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://github.com/rriemann">Code</a></li>
   <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
 <!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
   <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
@@ -94,6 +94,71 @@ nowhere else? Furthermore this site is missing of a download or &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/05/21/the-usual-kde-beginners-desktop/">The Usual KDE Beginners Desktop</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-21T23:46:00-05:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+        
+         | <a href="/2012/05/21/the-usual-kde-beginners-desktop/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="/images/messed-up-kde-desktop.jpg" title="It seems to be hard for new users to control all features of the Plasma Desktop"><img src="/images/messed-up-kde-desktop.jpg" alt="img" title="It seems to be hard for new users to control all features of the Plasma Desktop" /></a></p>
+
+<p>Every now and then I’m visting my best friend’s mom (generation &gt; 50a) to update
+her old Pentium 4 system with the last <a href="http://www.opensuse.org">opensuse</a> software. Each time,
+I have to restore her Desktop to provide the basic features like managing opened
+windows, add the clock again, etc. Each time, I pay carefully attention to lock
+the screen afterwards. Sometimes I get doubts, that they are just fooling me, but my
+friend declined this, of course.</p>
+
+<p>This time they disarranged the screen in a very extreme way<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. Take it for amusement
+or for considering a clearer warning of unlocking the screen. I vote for:</p>
+
+<blockquote>
+  <p>You might end with a coruppted system! <br />
+Please copy this into the form field below: <br />
+I asked my son’s friend and got his permission.</p>
+</blockquote>
+
+<p><code>;)</code></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Did you recognize these empty plasma panels on each edge of the screen
+  which prevents all application to get maximized properly?<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -116,7 +181,7 @@ nowhere else? Furthermore this site is missing of a download or &hellip;">
   
 
 
-<time datetime="2012-05-21T13:41:00-06:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+<time datetime="2012-05-21T13:41:00-05:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
         
          | <a href="/2012/05/21/downloading-pdf-documents-from-scribd/#disqus_thread">Comments</a>
         
@@ -224,191 +289,6 @@ Sie hat sich auf mich eingestellt.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2011/12/10/btrfs_kernel_bug/">Btrfs Kernel Bug</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-10T00:00:00-06:00" pubdate data-updated="true">Dec 10<span>th</span>, 2011</time>
-        
-         | <a href="/2011/12/10/btrfs_kernel_bug/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="prolog">Prolog</h2>
-
-<p>When updating my only productive computer system to the latest <a href="http://www.opensuse.org/">opensuse</a>
-version 12.1, I decided to give the feature rich, shiny new filesystem
-<a href="http://btrfs.wiki.kernel.org/">btrfs</a> a try. It’s not yet so stable, but it is already delivered by
-all main distribution. Fedora actually wants to use it as default.</p>
-
-<p>Up to now I have to evaluate this disission to be more risky than lucky. After
-something like two month, I experienced two filesystem corruptions. The first
-one hit my root-filesystem. I had to setup my system from scratch, because every
-write attempt on the partition ended with a kernel failure, most probably caused
-by the btrfs driver. Mounting the partition in read-only mode while using a
-Live-CD was the only way to do a late backup.</p>
-
-<p>Yesterday I ran into btrfs problems again. I copied some photos to my hard disk.
-In the next moment, I got some weird kernel sys messages, that didn’t help me at
-all.</p>
-
-<pre><code>Message from syslogd@theta at Dec 9 17:45:00 ...
-[Freitag, 9. Dezember 2011] [17:45:10] &lt;saLOUt&gt; kernel:[ 454.807770] Code: e9 8c fe ff ff 66 0f 1f 44 00 00 b8 ea ff ff ff e9 cf fe ff ff 48 89 de 4c 89 f7 89 04 24 e8 80 ec ff ff 8b 04 24 e9 b9 fe ff ff &lt;0f&gt; 0b 0f 0b 0f 1f 40 00 41 57 49 89 f7 41 56 41 55 41 54 55 53 
-</code></pre>
-
-<p>All apps accessing my picture btrfs subvolume were crashing.</p>
-
-<p>After disabling the whole btrfs system by commenting the appropriate lines in my
-<code>/etc/fstab</code> file, I had a stable system again – just without any pictures.</p>
-
-<h2 id="data-rescue">Data Rescue</h2>
-
-<p>Luckily Chris Mason (#cmason) from <a href="irc://chat.freenode.org/btrfs">#btrfs</a> could help me to fix these
-problems without any loss of data!</p>
-
-<p>A# simple <code>btrfsck</code> didn’t help me, because of a crash of the repair tool itself:</p>
-
-<pre><code>warning, start mismatch 48695640064 48695652352
-block 48695652352 rec extent_item_refs 1, passed 1
-</code></pre>
-
-<p>No more output. That’s all. Chris told me to checkout some fresh code from his
-very own repo. When I did the checkout, the master was <code>fdb6c04023</code>.</p>
-
-<pre><code>git clone http://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git
-</code></pre>
-
-<p>After a reboot, I ran</p>
-
-<pre><code>make
-make btrfs-zero-log
-</code></pre>
-
-<p>which went without any errors. After that I used the custom build <code>btrfs-zero-log</code>
-tool to do some btrfs magic, that I don’t understand.</p>
-
-<pre><code>./btrfs-zero-log [device]
-</code></pre>
-
-<p>After another reboot, I was able to mount my picture partition in read-only mode.
-I did a late backup again. When reading these files, one gets usually a lot of
-errors in <code>/var/log/messages</code> like this:</p>
-
-<pre><code>[ 4055.661622] btrfs csum failed ino 358 off 227975168 csum 4151547339 private 259191981
-</code></pre>
-
-<p>csum is the abbreviation for checksum. ino means inode, which is a kind of
-identifier for every file. To fix these errors, you have to find these files
-belonging to these inodes, deleting them and copy them back from your backup.</p>
-
-<p>I wrote a small ruby script, which helps you finding the affected files</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="c1">#!/usr/bin/ruby</span>
-</span><span class="line">
-</span><span class="line"><span class="c1"># string with error messages</span>
-</span><span class="line"><span class="n">error_messages</span> <span class="o">=</span> <span class="sb">`dmesg | grep &quot;found for inode&quot;`</span>
-</span><span class="line"><span class="c1"># list of integers</span>
-</span><span class="line"><span class="n">inode_list</span> <span class="o">=</span> <span class="n">error_messages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/inode (\d+).*/</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span><span class="p">}</span>
-</span><span class="line"><span class="c1"># list of arrays of filenames</span>
-</span><span class="line"><span class="n">file_list</span> <span class="o">=</span> <span class="n">inode_list</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="sb">`find /mnt/test -inum </span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="sb">`</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)}</span>
-</span><span class="line">
-</span><span class="line"><span class="c1"># require &#39;json&#39;</span>
-</span><span class="line"><span class="c1"># File.open(&quot;/tmp/inode-files.json&quot;, &quot;w&quot;) {|f| f &lt;&lt; JSON.pretty_generate(file_list)}</span>
-</span><span class="line">
-</span><span class="line"><span class="nb">puts</span> <span class="n">file_list</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">uniq</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>If you finally want to delete these files, you have to remount your partition in
-read-write mode.</p>
-
-<p>At least for me, this walkthrough suggested by Chris resolved my problems.</p>
-
-<h1 id="complete-error-log">Complete error log</h1>
-
-<pre><code>Dec  9 11:38:03 theta kernel: [ 3235.664148] btrfs: free space inode generation (0) did not match free space cache generation (6403)
-Dec  9 11:38:03 theta kernel: [ 3235.664152] btrfs: failed to load free space cache for block group 38818283520
-Dec  9 11:38:34 theta kernel: [ 3266.367012] ------------[ cut here ]------------
-Dec  9 11:38:34 theta kernel: [ 3266.367385] kernel BUG at /home/abuild/rpmbuild/BUILD/kernel-desktop-3.1.0/linux-3.1/fs/btrfs/extent-tree.c:5467!
-Dec  9 11:38:34 theta kernel: [ 3266.368140] invalid opcode: 0000 [#1] PREEMPT SMP
-Dec  9 11:38:34 theta kernel: [ 3266.368510] CPU 1
-Dec  9 11:38:34 theta kernel: [ 3266.368653] Modules linked in: nls_iso8859_1 nls_cp437 vfat fat fuse af_packet ip6t_LOG xt_tcpudp xt_pkttype ipt_LOG xt_limit rfcomm bnep ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_raw xt_NOTRACK ipt_REJECT iptable_raw iptable_filter ip6table_mangle nf_conntrack_netbios_ns nf_conntrack_broadcast nf_conntrack_ipv4 nf_defrag_ipv4 ip_tables xt_conntrack nf_conntrack ip6table_filter ip6_tables x_tables cpufreq_conservative cpufreq_userspace cpufreq_powersave acpi_cpufreq mperf microcode dm_mod mmc_block snd_hda_codec_hdmi snd_hda_codec_conexant arc4 uvcvideo videodev v4l2_compat_ioctl32 hdj_mod snd_rawmidi snd_seq_device ecb kvm_intel kvm btusb bluetooth sg joydev sdhci_pci sdhci iwlagn mmc_core mac80211 e1000e cfg80211 i2c_i801 pcspkr snd_hda_intel snd_hda_codec snd_hwdep snd_pcm iTCO_wdt iTCO_vendor_support xhci_hcd snd_timer snd_page_alloc mei(C) battery thinkpad_acpi rfkill tpm_tis tpm tpm_bios snd soundcore ac wmi autofs4 btrfs zlib_deflate thermal i915 drm_ kms_helper
-Dec  9 11:38:34 theta kernel: r drm i2c_algo_bit processor button video thermal_sys
-Dec  9 11:38:34 theta kernel: [ 3266.376473]
-Dec  9 11:38:34 theta kernel: [ 3266.376585] Pid: 11081, comm: btrfs-endio-wri Tainted: G         C  3.1.0-1.2-desktop #1 LENOVO 4290W4H/4290W4H
-Dec  9 11:38:34 theta kernel: [ 3266.377390] RIP: 0010:[&lt;ffffffffa01444bf&gt;]  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.378147] RSP: 0018:ffff8800cce2fb40  EFLAGS: 00010282
-Dec  9 11:38:34 theta kernel: [ 3266.378535] RAX: 00000000ffffffef RBX: ffff8800cd1d90a0 RCX: 0000160000000000
-Dec  9 11:38:34 theta kernel: [ 3266.379060] RDX: 0000000000000008 RSI: 0000000000000001 RDI: ffff8801ad7fb130
-Dec  9 11:38:34 theta kernel: [ 3266.379613] RBP: 00000000000000b2 R08: 0000000000000001 R09: 0000000000000001
-Dec  9 11:38:34 theta kernel: [ 3266.380164] R10: ffff8800c99928e8 R11: 000000000000004e R12: 0000000000000000
-Dec  9 11:38:34 theta kernel: [ 3266.380716] R13: ffff8800cce2fc0f R14: ffff8800c99928e8 R15: ffff88020f367400
-Dec  9 11:38:34 theta kernel: [ 3266.381267] FS:  0000000000000000(0000) GS:ffff88021e240000(0000) knlGS:0000000000000000
-Dec  9 11:38:34 theta kernel: [ 3266.381891] CS:  0010 DS: 0000 ES: 0000 CR0: 000000008005003b
-Dec  9 11:38:34 theta kernel: [ 3266.382334] CR2: 00007fbdfb6bc440 CR3: 0000000001c05000 CR4: 00000000000406e0
-Dec  9 11:38:34 theta kernel: [ 3266.382885] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
-Dec  9 11:38:34 theta kernel: [ 3266.383436] DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000400
-Dec  9 11:38:34 theta kernel: [ 3266.383987] Process btrfs-endio-wri (pid: 11081, threadinfo ffff8800cce2e000, task ffff8800d447a580)
-Dec  9 11:38:34 theta kernel: [ 3266.384693] Stack:
-Dec  9 11:38:34 theta kernel: [ 3266.384844]  ffff88020f51d800 ffff880200000035 ffff8802057d4000 0000000100000001
-Dec  9 11:38:34 theta kernel: [ 3266.385445]  8000000000000c16 0000000000000000 0000000000000103 0000000000000166
-Dec  9 11:38:34 theta kernel: [ 3266.386045]  0000000000001000 0000003500000a4c ffff88010c730000 ffff8800c99928e8
-Dec  9 11:38:34 theta kernel: [ 3266.386645] Call Trace:
-Dec  9 11:38:34 theta kernel: [ 3266.386853]  [&lt;ffffffffa014505e&gt;] run_delayed_data_ref+0x10e/0x1c0 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.387401]  [&lt;ffffffffa0147978&gt;] run_clustered_refs+0xc8/0x220 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.387928]  [&lt;ffffffffa0147b95&gt;] btrfs_run_delayed_refs+0xc5/0x210 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.388482]  [&lt;ffffffffa0158590&gt;] __btrfs_end_transaction+0x90/0x340 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.389024]  [&lt;ffffffffa015f5d5&gt;] btrfs_finish_ordered_io+0x2a5/0x340 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.389604]  [&lt;ffffffffa0173310&gt;] end_bio_extent_writepage+0x120/0x170 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.390205]  [&lt;ffffffffa017fcb1&gt;] worker_loop+0xa1/0x2a0 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.390714]  [&lt;ffffffff81075c8e&gt;] kthread+0x7e/0x90
-Dec  9 11:38:34 theta kernel: [ 3266.391093]  [&lt;ffffffff815a5474&gt;] kernel_thread_helper+0x4/0x10
-Dec  9 11:38:34 theta kernel: [ 3266.391550] Code: 20 8b 94 24 a0 00 00 00 48 8b 7c 24 10 48 81 c6 86 00 00 00 e8 83 90 02 00 e9 6c ff ff ff 66 0f 1f 44 00 00 b8 f4 ff ff ff eb 90 &lt;0f&gt; 0b 49 8b 55 09 49 8b 75 00 48 c7 c7 20 6e 1a a0 31 c0 e8 0e
-Dec  9 11:38:34 theta kernel: [ 3266.393481] RIP  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.394093]  RSP &lt;ffff8800cce2fb40&gt;
-Dec  9 11:38:34 theta kernel: [ 3266.597905] ---[ end trace 3233c7c540de8b82 ]---
-Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited with preempt_count 1
-</code></pre>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/11/">&larr; Older</a>
@@ -426,6 +306,10 @@ Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/">Ein Toller Tag in Chiapas, Mexiko</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/07/10/antigua-guatemala/">Antigua Guatemala</a>
       </li>
     
@@ -439,10 +323,6 @@ Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited
     
       <li class="post">
         <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/06/16/2-wochen-in-miami/">2 Wochen in Miami</a>
       </li>
     
   </ul>
@@ -475,7 +355,7 @@ Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 11.07.13 at 00:13
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 20.07.13 at 12:49
   </span>
 </p>
 

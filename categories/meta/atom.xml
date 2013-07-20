@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meta | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/meta/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-11T00:13:02-06:00</updated>
+  <updated>2013-07-20T12:49:20-05:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Zur Allgemeinen Lage der Sicherheit]]></title>
     <link href="http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit/"/>
-    <updated>2013-07-06T21:07:00-06:00</updated>
+    <updated>2013-07-06T21:07:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit</id>
     <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a> Nachdem einmal mehr aufgezeigt wurde (<a href="http://de.wikipedia.org/wiki/PRISM_%28%C3%9Cberwachungsprogramm%29" title="Prism (Überwachungsprogramm) auf Wikipedia">Prism</a>, <a href="http://de.wikipedia.org/wiki/Tempora" title="Tempora auf Wikipedia">Tempora</a>), wie
 transparent man doch im Internet ist, sind Themen wie Datensparsamkeit, Datenschutz
@@ -89,7 +89,7 @@ An aktuellen Anleitungen dürfte es momentan im Netz nicht fehlen:</p>
   <entry>
     <title type="html"><![CDATA[25 Jahre Robert: Aufbruch zu Neuem]]></title>
     <link href="http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/"/>
-    <updated>2013-06-06T19:29:00-06:00</updated>
+    <updated>2013-06-06T19:29:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem</id>
     <content type="html"><![CDATA[<p><figure class="right"><a href="/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA"><img src="/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA" ></a><figcaption>Südspitze der USA</figcaption></figure></p>
 
@@ -178,7 +178,7 @@ zumindest hier in Miami Beach, schließlich noch nicht vorbei.</p>
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-06:00</updated>
+    <updated>2013-04-10T09:29:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -516,8 +516,7 @@ be nice to integrate both pages.</p>
 
 <p>More explanation are on the <a href="http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html">official Apache Module page</a> given.</p>
 
-<p>You might also want to look in my <a href="http://github.com/saLOUt/salout.github.com">blog sources</a>, where you can find <a href="http://github.com/saLOUt/salout.github.com/tree/master/other_pages_integration/">these
-files</a> in the “other_page_integration” folder.</p>
+<p>You might also want to look in my <a href="https://github.com/rriemann/rriemann.github.io/tree/source">blog sources</a>.</p>
 
 <h2 id="generating-pygments-css-files">Generating pygments CSS files</h2>
 

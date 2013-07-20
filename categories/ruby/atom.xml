@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/ruby/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-11T00:13:02-06:00</updated>
+  <updated>2013-07-20T12:49:20-05:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
     <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
-    <updated>2013-05-01T22:59:00-06:00</updated>
+    <updated>2013-05-01T22:59:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
@@ -316,11 +316,11 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[Kubeplayer running on KDE Plasma Active powered ExoPC tablet]]></title>
     <link href="http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active/"/>
-    <updated>2011-09-11T00:00:00-06:00</updated>
+    <updated>2011-09-11T00:00:00-05:00</updated>
     <id>http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active</id>
     <content type="html"><![CDATA[<p>Hello Planet KDE, hello RubyCorner!</p>
 
-<p>Much time has passed since i wrote my <a href="http://salout.github.com/blog/2010/12/18/announcing_kubeplayer.html" title="Announcement of Kubeplayer">previous blog post</a> about
+<p>Much time has passed since i wrote my <a href="http://blog.riemann.cc/2010/12/18/announcing_kubeplayer/" title="Announcement of Kubeplayer">previous blog post</a> about
 Kubeplayer. Things doesn’t change so much, but nowadays Kubeplayer is quite
 stable and doesn’t crash anymore. <code>;)</code></p>
 
@@ -519,7 +519,7 @@ Robert</p>
   <entry>
     <title type="html"><![CDATA[Making Of ruby-stocks Plasma DataEngine]]></title>
     <link href="http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks/"/>
-    <updated>2010-07-11T00:00:00-06:00</updated>
+    <updated>2010-07-11T00:00:00-05:00</updated>
     <id>http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks</id>
     <content type="html"><![CDATA[<h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
 

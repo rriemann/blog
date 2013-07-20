@@ -9,8 +9,8 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="Static Website Generators After using the static website generator webgen I started to appreciate the idea not
-to depend on special hosts with php, &hellip;">
+  <meta name="description" content="Hello Planet KDE, hello RubyCorner After some blog posts on my old blog about KDE programming with Ruby
+I decided to bring the content a little bit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,7 +81,7 @@ to depend on special hosts with php, &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/archives">Archives</a></li>
-  <li><a href="http://github.com/saLOUt">Code</a></li>
+  <li><a href="http://github.com/rriemann">Code</a></li>
   <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
 <!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
   <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
@@ -94,6 +94,254 @@ to depend on special hosts with php, &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/02/07/simple_ruby_plasmoid/">Simple Ruby Plasmoid</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-07T00:00:00-06:00" pubdate data-updated="true">Feb 7<span>th</span>, 2010</time>
+        
+         | <a href="/2010/02/07/simple_ruby_plasmoid/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
+
+<p>After some blog posts on my old blog about KDE programming with Ruby
+I decided to bring the content a little bit more to the people. Here I am.</p>
+
+<p>Two days before yesterday I got a mail concerning a problem related to creating
+plasmoids with Ruby. I never had the wish to create my own plasmoid. I thought
+it would be difficult, but while getting a closer look, I’ve noticed how easy it
+is - in the case of using Ruby.</p>
+
+<h2 id="simple-ruby-plasmoid">Simple Ruby Plasmoid</h2>
+
+<p><img src="http://blog.riemann.cc/images/simple_ruby_plasmoid_clipboard.png" alt="Simple Plasmoid made with Ruby" title="Simple Plasmoid made with Ruby" class="right" />
+This example is a modified version from the one in the <a href="http://techbase.kde.org/Development/Tutorials/Plasma/Ruby/SimplePasteApplet" title="Tutorial on KDE Techbase Wiki">KDE techbase wiki</a>.</p>
+
+<p>The plasmoid sends the content of a <em>QLineEdit</em> to the clipboard when pressing the
+<em>QPushButton</em> or pressing the enter key and clears the <em>QLineEdit</em> afterwards.</p>
+
+<h2 id="test-it">Test It</h2>
+
+<p>If you want to try it yourself, you just have to extract
+<a href="http://blog.riemann.cc/files/simple_ruby_plasmoid_clipboard.tar.gz">simple_ruby_plasmoid_clipboard.tar.gz</a>, change the directory to
+<em>ruby-test-applet</em> and start the plasmoid in a special viewer with
+<code>plasmoidviewer</code>.</p>
+
+<p>You have to install the Ruby KDE bindings package (on opensuse it is called
+ruby-kde4), but on a lot of KDE4 systems this should be installed already.</p>
+
+<h2 id="understand-it">Understand It</h2>
+
+<p>First you need the right directory tree for your plasmoid. It should be look
+like this:</p>
+
+<pre><code>ruby-test-applet/
+|-- contents
+|   `-- code
+|       `-- main.rb
+`-- metadata.desktop
+</code></pre>
+
+<p>You need at least two files. The first one is <em>main.rb</em>, that contains your
+program code.</p>
+
+<p>When accessing KDE libs from Ruby you write nearly the same code
+as you would write in C++.</p>
+
+<p>A short example in C++:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="c"><span class="line"><span class="n">setMinimumSize</span><span class="p">(</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span> <span class="p">)</span>
+</span><span class="line"><span class="n">Plasma</span><span class="o">::</span><span class="n">LineEdit</span> <span class="n">line_edit</span><span class="p">(</span> <span class="n">parent</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The same using Ruby:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="n">set_minimum_size</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span>
+</span><span class="line"><span class="c1"># or</span>
+</span><span class="line"><span class="n">setMinimumSize</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span>
+</span><span class="line"><span class="c1"># or</span>
+</span><span class="line"><span class="nb">self</span><span class="o">.</span><span class="n">minimum_size</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span>
+</span><span class="line"><span class="n">line_edit</span> <span class="ss">Plasma</span><span class="p">:</span><span class="ss">:LineEdit</span><span class="o">.</span><span class="n">new</span> <span class="nb">self</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Member variables begins with an @ sign. There are different aliases for KDE and
+Qt methods. You can omit brackets in a lot of cases. You don’t need any header
+files. You don’t need to compile.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="nb">require</span> <span class="s1">&#39;plasma_applet&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">module</span> <span class="nn">RubyTestApplet</span>
+</span><span class="line">  <span class="k">class</span> <span class="nc">Main</span> <span class="o">&lt;</span> <span class="ss">PlasmaScripting</span><span class="p">:</span><span class="ss">:Applet</span>
+</span><span class="line">
+</span><span class="line">    <span class="n">slots</span> <span class="ss">:addText</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">init</span>
+</span><span class="line">      <span class="n">set_minimum_size</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span>
+</span><span class="line">
+</span><span class="line">      <span class="vi">@layout</span> <span class="o">=</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:GraphicsLinearLayout</span><span class="o">.</span><span class="n">new</span> <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Vertical</span><span class="p">,</span> <span class="nb">self</span>
+</span><span class="line">      <span class="nb">self</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="vi">@layout</span>
+</span><span class="line">
+</span><span class="line">      <span class="vi">@label</span> <span class="o">=</span> <span class="ss">Plasma</span><span class="p">:</span><span class="ss">:Label</span><span class="o">.</span><span class="n">new</span> <span class="nb">self</span>
+</span><span class="line">      <span class="vi">@label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;This plasmoid will copy the text you enter below to the clipboard.&#39;</span>
+</span><span class="line">      <span class="vi">@layout</span><span class="o">.</span><span class="n">add_item</span> <span class="vi">@label</span>
+</span><span class="line">
+</span><span class="line">      <span class="vi">@line_edit</span> <span class="o">=</span> <span class="ss">Plasma</span><span class="p">:</span><span class="ss">:LineEdit</span><span class="o">.</span><span class="n">new</span> <span class="nb">self</span>
+</span><span class="line">
+</span><span class="line">      <span class="k">begin</span>
+</span><span class="line">        <span class="vi">@line_edit</span><span class="o">.</span><span class="n">clear_button_shown</span> <span class="o">=</span> <span class="kp">true</span> <span class="c1"># not supported in early plasma versions</span>
+</span><span class="line">      <span class="k">rescue</span>
+</span><span class="line">        <span class="kp">nil</span> <span class="c1"># but that doesn&#39;t matter</span>
+</span><span class="line">      <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">      <span class="vi">@layout</span><span class="o">.</span><span class="n">add_item</span> <span class="vi">@line_edit</span>
+</span><span class="line">
+</span><span class="line">      <span class="vi">@button</span> <span class="o">=</span> <span class="ss">Plasma</span><span class="p">:</span><span class="ss">:PushButton</span><span class="o">.</span><span class="n">new</span> <span class="nb">self</span>
+</span><span class="line">      <span class="vi">@button</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Copy to clipboard&#39;</span>
+</span><span class="line">      <span class="vi">@layout</span><span class="o">.</span><span class="n">add_item</span> <span class="vi">@button</span>
+</span><span class="line">
+</span><span class="line">      <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Object</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="vi">@button</span><span class="p">,</span> <span class="no">SIGNAL</span><span class="p">(</span><span class="ss">:clicked</span><span class="p">),</span> <span class="nb">self</span><span class="p">,</span> <span class="no">SLOT</span><span class="p">(</span><span class="ss">:addText</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="line">      <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Object</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="vi">@line_edit</span><span class="p">,</span> <span class="no">SIGNAL</span><span class="p">(</span><span class="ss">:returnPressed</span><span class="p">),</span> <span class="nb">self</span><span class="p">,</span> <span class="no">SLOT</span><span class="p">(</span><span class="ss">:addText</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">addText</span>
+</span><span class="line">      <span class="ss">Qt</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">clipboard</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="vi">@line_edit</span><span class="o">.</span><span class="n">text</span>
+</span><span class="line">      <span class="vi">@line_edit</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="c1"># kate: remove_trailing_space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The second file you need is the <em>metadata.desktop</em> containing all the meta data. <code>;)</code></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>metadata.desktop</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+</pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="k">[Desktop Entry]</span>
+</span><span class="line"><span class="na">Name</span><span class="o">=</span><span class="s">Simple Ruby applet</span>
+</span><span class="line"><span class="na">Comment</span><span class="o">=</span><span class="s">This is a simple applet written in Ruby</span>
+</span><span class="line"><span class="na">Icon</span><span class="o">=</span><span class="s">chronometer</span>
+</span><span class="line"><span class="na">Type</span><span class="o">=</span><span class="s">Service</span>
+</span><span class="line"><span class="na">ServiceTypes</span><span class="o">=</span><span class="s">Plasma/Applet</span>
+</span><span class="line">
+</span><span class="line"><span class="na">X-Plasma-API</span><span class="o">=</span><span class="s">ruby-script</span>
+</span><span class="line"><span class="na">X-Plasma-MainScript</span><span class="o">=</span><span class="s">code/main.rb</span>
+</span><span class="line">
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Author</span><span class="o">=</span><span class="s">Me</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Email</span><span class="o">=</span><span class="s">me@example.com</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Name</span><span class="o">=</span><span class="s">ruby-test</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Version</span><span class="o">=</span><span class="s">0.1</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Website</span><span class="o">=</span><span class="s">http://plasma.kde.org/</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Category</span><span class="o">=</span><span class="s">Examples</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-Depends</span><span class="o">=</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-License</span><span class="o">=</span><span class="s">GPL</span>
+</span><span class="line"><span class="na">X-KDE-PluginInfo-EnabledByDefault</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>What do you think? So easy, isn’t it? If you have ever played a little
+bit with Ruby and Qt or KDE you should know enough to create your own plasmoid
+within a quarter of an hour!</p>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -228,8 +476,7 @@ be nice to integrate both pages.</p>
 
 <p>More explanation are on the <a href="http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html">official Apache Module page</a> given.</p>
 
-<p>You might also want to look in my <a href="http://github.com/saLOUt/salout.github.com">blog sources</a>, where you can find <a href="http://github.com/saLOUt/salout.github.com/tree/master/other_pages_integration/">these
-files</a> in the “other_page_integration” folder.</p>
+<p>You might also want to look in my <a href="https://github.com/rriemann/rriemann.github.io/tree/source">blog sources</a>.</p>
 
 <h2 id="generating-pygments-css-files">Generating pygments CSS files</h2>
 
@@ -342,88 +589,6 @@ funktionierte es einwandfrei.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/07/27/smallest_kde_app/">The Perhaps Smallest KDE Application in the World</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-07-27T00:00:00-06:00" pubdate data-updated="true">Jul 27<span>th</span>, 2009</time>
-        
-         | <a href="/2009/07/27/smallest_kde_app/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For testing some parts of the korundum bindings, that allow the usage of KDE in Ruby, i wrote a small and lightweight application with only the necessary parts.</p>
-
-<p>Maybe you can take it also to do some testings or just as a little example.</p>
-
-<p>With its 12 lines (17 lines minus 3 empty lines minus Shebang line and $KCode line, that are not really required) of code it is perhaps the smalles KDE application you will find.</p>
-
-<p>Of course, every Qt app would be a few lines smaller, because you dont need the KAbout object.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="c1">#!/usr/bin/env ruby</span>
-</span><span class="line">
-</span><span class="line"><span class="vg">$KCODE</span> <span class="o">=</span> <span class="s1">&#39;u&#39;</span>
-</span><span class="line"><span class="nb">require</span> <span class="s1">&#39;korundum4&#39;</span>
-</span><span class="line">
-</span><span class="line"><span class="n">about</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:AboutData</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;ktest&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span class="line">    <span class="no">KDE</span><span class="o">.</span><span class="n">ki18n</span><span class="p">(</span><span class="s2">&quot;KTest&quot;</span><span class="p">),</span> <span class="s2">&quot;0.1&quot;</span><span class="p">)</span>
-</span><span class="line"><span class="ss">KDE</span><span class="p">:</span><span class="ss">:CmdLineArgs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="no">ARGV</span><span class="p">,</span> <span class="n">about</span><span class="p">)</span>
-</span><span class="line"><span class="n">a</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">new</span>
-</span><span class="line"><span class="n">w</span> <span class="o">=</span> <span class="ss">KDE</span><span class="p">:</span><span class="ss">:PushButton</span><span class="o">.</span><span class="n">new</span><span class="p">(</span> <span class="s2">&quot;Click me to quit&quot;</span> <span class="p">)</span> <span class="k">do</span>
-</span><span class="line">  <span class="n">connect</span><span class="p">(</span> <span class="no">SIGNAL</span> <span class="ss">:clicked</span> <span class="p">)</span> <span class="k">do</span>
-</span><span class="line">    <span class="nb">puts</span> <span class="s2">&quot;Do something else&quot;</span>
-</span><span class="line">    <span class="ss">KDE</span><span class="p">:</span><span class="ss">:Application</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">quit</span>
-</span><span class="line">  <span class="k">end</span>
-</span><span class="line"><span class="k">end</span>
-</span><span class="line"><span class="n">w</span><span class="o">.</span><span class="n">show</span>
-</span><span class="line">
-</span><span class="line"><span class="n">a</span><span class="o">.</span><span class="n">exec</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/18/">&larr; Older</a>
@@ -441,6 +606,10 @@ funktionierte es einwandfrei.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/">Ein Toller Tag in Chiapas, Mexiko</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/07/10/antigua-guatemala/">Antigua Guatemala</a>
       </li>
     
@@ -454,10 +623,6 @@ funktionierte es einwandfrei.</p>
     
       <li class="post">
         <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/06/16/2-wochen-in-miami/">2 Wochen in Miami</a>
       </li>
     
   </ul>
@@ -490,7 +655,7 @@ funktionierte es einwandfrei.</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 11.07.13 at 00:13
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 20.07.13 at 12:49
   </span>
 </p>
 

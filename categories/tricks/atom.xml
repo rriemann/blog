@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tricks | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/tricks/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-11T00:13:02-06:00</updated>
+  <updated>2013-07-20T12:49:20-05:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Zur Allgemeinen Lage der Sicherheit]]></title>
     <link href="http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit/"/>
-    <updated>2013-07-06T21:07:00-06:00</updated>
+    <updated>2013-07-06T21:07:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit</id>
     <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a> Nachdem einmal mehr aufgezeigt wurde (<a href="http://de.wikipedia.org/wiki/PRISM_%28%C3%9Cberwachungsprogramm%29" title="Prism (Überwachungsprogramm) auf Wikipedia">Prism</a>, <a href="http://de.wikipedia.org/wiki/Tempora" title="Tempora auf Wikipedia">Tempora</a>), wie
 transparent man doch im Internet ist, sind Themen wie Datensparsamkeit, Datenschutz
@@ -89,7 +89,7 @@ An aktuellen Anleitungen dürfte es momentan im Netz nicht fehlen:</p>
   <entry>
     <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
     <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
-    <updated>2013-04-23T08:38:00-06:00</updated>
+    <updated>2013-04-23T08:38:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
     <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
@@ -146,7 +146,7 @@ to solve this problem.</p>
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-06:00</updated>
+    <updated>2013-04-10T09:29:00-05:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -379,7 +379,7 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[Starcraft 2 - fixing QWERTZ hotkeys]]></title>
     <link href="http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys/"/>
-    <updated>2012-08-02T11:53:00-06:00</updated>
+    <updated>2012-08-02T11:53:00-05:00</updated>
     <id>http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys</id>
     <content type="html"><![CDATA[<p>After upgrading <a href="http://eu.battle.net/sc2">Starcraft 2</a> with Patch 1.5.0, the German users might
 suffer from problems regarding the raster grid hot key layout.</p>

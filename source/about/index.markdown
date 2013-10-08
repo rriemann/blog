@@ -30,6 +30,10 @@ Facebook
 
 : [rriemann](https://www.facebook.com/rriemann)
 
+Google
+
+: [+Robert Riemann](https://plus.google.com/u/0/115845750285693544008/?rel=author)
+
 Twitter
 
 : [@salout_de](https://twitter.com/salout_de)

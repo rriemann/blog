@@ -4,7 +4,7 @@
   <title><![CDATA[Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-20T12:49:20-05:00</updated>
+  <updated>2013-10-09T01:12:28+02:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -14,9 +14,80 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Automatically Login to wifi.free.fr Wifi]]></title>
+    <link href="http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/"/>
+    <updated>2013-10-09T00:46:00+02:00</updated>
+    <id>http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi</id>
+    <content type="html"><![CDATA[<p>The not so expansive French mobile phone operator <a href="http://www.free.fr">free.fr</a> offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you can find at many places in French cities.</p>
+
+<p>I’m one of these lucky guys who can actually receive this hotspot in the own flat.
+So why should I pay extra for cable internet?</p>
+
+<p>To still have some selling points for ADSL customers free.fr doesn’t make it very
+convenient to use this free wifi. The network comes without any security modes like 
+WPA/WPA2/WAP, but requires you to authenticate yourself an a gateway page every time
+you reconnect to the network. There is only one other option which incorporates SIM card
+authentication which is not an option for most computers due to the lack of a SIM card.</p>
+
+<p>So why not using <code>curl</code> to send automatically an POST request with your login data
+as soon as you got connected to the so-called “FreeWifi” network?</p>
+
+<p>Using openSuSE 12.3 or any other Linux distribution based on NetworkManager you
+just place the following file <code>freewifi-up</code> in <code>/etc/NetworkManager/dispatcher.d</code>.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>/etc/NetworkManager/dispatcher.d/freewifi-up </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#! /bin/sh</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line"><span class="c"># auto login freewifi from free.fr</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line">. /etc/rc.status
+</span><span class="line">
+</span><span class="line"><span class="k">case</span> <span class="s2">&quot;$2&quot;</span> in
+</span><span class="line">    up<span class="o">)</span>
+</span><span class="line">        <span class="k">if </span>iwgetid | grep -qs :<span class="se">\&quot;</span>FreeWifi<span class="se">\&quot;</span>; <span class="k">then</span>
+</span><span class="line"><span class="k">                </span>curl -s -X POST -d <span class="s1">&#39;login=000000000&amp;password=mypassword&amp;submit=Valider&#39;</span> https://wifi.free.fr/Auth
+</span><span class="line">        <span class="k">fi</span>
+</span><span class="line">        ;;
+</span><span class="line">    *<span class="o">)</span>
+</span><span class="line">        <span class="nb">exit </span>0
+</span><span class="line">        ;;
+</span><span class="line"><span class="k">esac</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The actual name of the file is not very important. But pay attention to set the
+appropiate file rights <code>chmod 755 freewifi-up</code>. Of course, you have to replace
+the login number and the password by your own.</p>
+
+<p>The script will be run by networkmanager automatically when the connection status
+get changed. Only if a connection was setup the wifi SSID will be checked to be
+<code>FreeWifi</code>. Only In this case an authentication request will be send to the gateway webpage.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Ein Toller Tag in Chiapas, Mexiko]]></title>
     <link href="http://blog.riemann.cc/2013/07/19/ein-toller-tag-in-chiapas-mexiko/"/>
-    <updated>2013-07-19T18:35:00-05:00</updated>
+    <updated>2013-07-19T18:35:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/07/19/ein-toller-tag-in-chiapas-mexiko</id>
     <content type="html"><![CDATA[<figure class="flickr-thumbnail right" style="width: 240px;"><a href="http://farm2.staticflickr.com/1245/1186527727_6d9c9a5509_o.jpg" class="fancybox" data-title-id="flickr-photo-1186527727" data-media="photo" title="The flag of Mexico"><img src="http://farm2.staticflickr.com/1245/1186527727_0354e3b474_m.jpg" title="The flag of Mexico" style="width: 240px; height: 199px;" /></a><figcaption id="flickr-photo-1186527727"><a class="flickr-link" href="http://www.flickr.com/photos/62963919@N00/1186527727">Mexican Flag over Ensenada</a> by <span class="flickr-author">Michael McDonough</span><div class="description">The flag of Mexico</div></figcaption></figure>
 
@@ -155,7 +226,7 @@ So haben wir schließlich das schlechte Wetter hinter uns gelassen. <code>:)</co
   <entry>
     <title type="html"><![CDATA[Antigua Guatemala]]></title>
     <link href="http://blog.riemann.cc/2013/07/10/antigua-guatemala/"/>
-    <updated>2013-07-10T23:37:00-05:00</updated>
+    <updated>2013-07-10T23:37:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/07/10/antigua-guatemala</id>
     <content type="html"><![CDATA[<figure class="flickr-thumbnail right" style="width: 320px;"><a href="http://farm4.staticflickr.com/3087/2613566235_c5ed6b614b_b.jpg" class="fancybox" data-title-id="flickr-photo-2613566235" data-media="photo" title="Antigua Guatemala. Innenhof."><img src="http://farm4.staticflickr.com/3087/2613566235_c5ed6b614b_n.jpg" title="Antigua Guatemala. Innenhof." style="width: 320px; height: 240px;" /></a><figcaption id="flickr-photo-2613566235"><a class="flickr-link" href="http://www.flickr.com/photos/11500806@N07/2613566235">Ronald McDonald&#8217;s Garden - El jardín de Ronaldo ~ La Antigua, Guatemala</a> by <span class="flickr-author">N3074Echo</span><div class="description">Antigua Guatemala. Innenhof.</div></figcaption></figure>
 
@@ -228,7 +299,7 @@ Ein echter „Geschäftsmann“ eben.</p>
   <entry>
     <title type="html"><![CDATA[Zur Allgemeinen Lage der Sicherheit]]></title>
     <link href="http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit/"/>
-    <updated>2013-07-06T21:07:00-05:00</updated>
+    <updated>2013-07-06T21:07:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit</id>
     <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a> Nachdem einmal mehr aufgezeigt wurde (<a href="http://de.wikipedia.org/wiki/PRISM_%28%C3%9Cberwachungsprogramm%29" title="Prism (Überwachungsprogramm) auf Wikipedia">Prism</a>, <a href="http://de.wikipedia.org/wiki/Tempora" title="Tempora auf Wikipedia">Tempora</a>), wie
 transparent man doch im Internet ist, sind Themen wie Datensparsamkeit, Datenschutz
@@ -301,7 +372,7 @@ An aktuellen Anleitungen dürfte es momentan im Netz nicht fehlen:</p>
   <entry>
     <title type="html"><![CDATA[Costa Rica, Nicaragua, Honduras]]></title>
     <link href="http://blog.riemann.cc/2013/07/04/costa-rica-nicaragua-honduras/"/>
-    <updated>2013-07-04T18:48:00-05:00</updated>
+    <updated>2013-07-04T18:48:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/07/04/costa-rica-nicaragua-honduras</id>
     <content type="html"><![CDATA[<p>Ich hänge mit dem Bloggen einmal wieder einige Länder hinterher. Ich habe in nicht
 viel mehr als einer Woche Costa-Rica, Nicaragua und Honduras „abgearbeitet“.
@@ -423,7 +494,7 @@ Geht da auch hin, wenn ihr in der Gegend seid! <code>;)</code></p>
   <entry>
     <title type="html"><![CDATA[Oh, Wie Cool Ist Panama]]></title>
     <link href="http://blog.riemann.cc/2013/06/19/oh-wie-cool-ist-panama/"/>
-    <updated>2013-06-19T23:14:00-05:00</updated>
+    <updated>2013-06-19T23:14:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/06/19/oh-wie-cool-ist-panama</id>
     <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/panama-city-skyline.jpg" title="Blick aus dem Hostel auf Panama City."><img src="http://blog.riemann.cc/images/central-america/panama-city-skyline_thumb.jpg" title="Blick aus dem Hostel auf Panama City." /></a><figcaption>Blick aus dem Hostel auf Panama City.</figcaption></figure>
 <p>Am 13. Juni bin ich in Panama angekommen. Seit dem ist das Reisen wieder
@@ -630,7 +701,7 @@ damit sagen möchte. All’ das passt sehr gut.</p>
   <entry>
     <title type="html"><![CDATA[2 Wochen in Miami]]></title>
     <link href="http://blog.riemann.cc/2013/06/16/2-wochen-in-miami/"/>
-    <updated>2013-06-16T12:18:00-05:00</updated>
+    <updated>2013-06-16T12:18:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/06/16/2-wochen-in-miami</id>
     <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/skyline-car-miami.jpg" title="Unterwegs nach Miami Downtown."><img src="http://blog.riemann.cc/images/central-america/skyline-car-miami.jpg" title="Unterwegs nach Miami Downtown." /></a><figcaption>Unterwegs nach Miami Downtown.</figcaption></figure>
 
@@ -796,7 +867,7 @@ Abschluss meines USA-Ausflugs. <code>:p</code></p>
   <entry>
     <title type="html"><![CDATA[Tango, Chor und Konzerte in Guadeloupe]]></title>
     <link href="http://blog.riemann.cc/2013/06/09/tango_chor_konzerte_guadeloupe/"/>
-    <updated>2013-06-09T14:41:00-05:00</updated>
+    <updated>2013-06-09T14:41:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/06/09/tango_chor_konzerte_guadeloupe</id>
     <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/salsa-show.jpg" title="Show-Einlage im Salsa-Club in Les Abymes."><img src="http://blog.riemann.cc/images/central-america/salsa-show.jpg" title="Show-Einlage im Salsa-Club in Les Abymes." /></a><figcaption>Show-Einlage im Salsa-Club in Les Abymes.</figcaption></figure>
 
@@ -951,7 +1022,7 @@ der zwei Monate nicht auswendig machen können. <code>:/</code></p>
   <entry>
     <title type="html"><![CDATA[25 Jahre Robert: Aufbruch zu Neuem]]></title>
     <link href="http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem/"/>
-    <updated>2013-06-06T19:29:00-05:00</updated>
+    <updated>2013-06-06T19:29:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/06/06/25-jahre-robert-aufbruch-zu-neuem</id>
     <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA"><img src="http://blog.riemann.cc/images/central-america/southernmost-point-key-west.jpg" title="Südspitze der USA" /></a><figcaption>Südspitze der USA</figcaption></figure>
 
@@ -1040,7 +1111,7 @@ zumindest hier in Miami Beach, schließlich noch nicht vorbei.</p>
   <entry>
     <title type="html"><![CDATA[Das Karibische Meer (Forts.): Unterwasser]]></title>
     <link href="http://blog.riemann.cc/2013/06/04/das-karibische-meer-unterwasser/"/>
-    <updated>2013-06-04T21:53:00-05:00</updated>
+    <updated>2013-06-04T21:53:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/06/04/das-karibische-meer-unterwasser</id>
     <content type="html"><![CDATA[<div class="bogus-wrapper"><notextile><figure class="right">
   <a title="Korallenriff." href="http://blog.riemann.cc/images/central-america/seabed-flickr-bibblojonas.jpg"><img title="Gleich neben Guadeloupe.  CC by-nc-nd" src="http://blog.riemann.cc/images/central-america/seabed-flickr-bibblojonas.jpg" /></a>
@@ -1130,7 +1201,7 @@ Schicksal – ich werde mir wohl schnell wieder eine Brille kaufen müssen.</p>
   <entry>
     <title type="html"><![CDATA[Festival Terre De Blues]]></title>
     <link href="http://blog.riemann.cc/2013/05/26/festival-terre-de-blues/"/>
-    <updated>2013-05-26T20:58:00-05:00</updated>
+    <updated>2013-05-26T20:58:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/26/festival-terre-de-blues</id>
     <content type="html"><![CDATA[<p>Ich hatte ja in meinem <a href="http://blog.riemann.cc/2013/05/15/das-karibische-meer/" title="Das Karibische Meer">letzten Post</a> angedeutet wieder über das Meer schreiben
 zu wollen. Um etwas Zeit zu schinden, möchte ich euch stattdessen ein paar
@@ -1153,7 +1224,7 @@ Verhältnisse ist ein wahres Schnäppchen. Also nichts wie hin:</p>
   <entry>
     <title type="html"><![CDATA[Das Karibische Meer]]></title>
     <link href="http://blog.riemann.cc/2013/05/15/das-karibische-meer/"/>
-    <updated>2013-05-15T22:36:00-05:00</updated>
+    <updated>2013-05-15T22:36:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/15/das-karibische-meer</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prolog">Prolog</a></li>
@@ -1294,7 +1365,7 @@ lieber selber, bevor sie sich von alleine schließen… oder so. Gute Nacht!</p>
   <entry>
     <title type="html"><![CDATA[I Am Going To Miami]]></title>
     <link href="http://blog.riemann.cc/2013/05/09/i-am-going-to-miami/"/>
-    <updated>2013-05-09T09:12:00-05:00</updated>
+    <updated>2013-05-09T09:12:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/09/i-am-going-to-miami</id>
     <content type="html"><![CDATA[<p>Ganz vergessen zu erwähnen: Am 1. Juni fliege ich nach Miami. Nach rund zwei
 Wochen geht es am 13. Juni wieder zurück in den Süden nach <a href="http://de.wikipedia.org/wiki/Panama" title="Panama auf Wikipedia">Panama</a> City.</p>
@@ -1318,7 +1389,7 @@ lasst es mich wissen!</p>
   <entry>
     <title type="html"><![CDATA[Was Sonst Noch Geschah]]></title>
     <link href="http://blog.riemann.cc/2013/05/08/was-sonst-noch-geschah/"/>
-    <updated>2013-05-08T14:40:00-05:00</updated>
+    <updated>2013-05-08T14:40:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/08/was-sonst-noch-geschah</id>
     <content type="html"><![CDATA[<h3 id="zu-hei-zum-schreiben">Zu Heiß Zum Schreiben</h3>
 
@@ -1457,7 +1528,7 @@ Die Chancen stehen aber gut, dass auch das bald einfacher wird.</p>
   <entry>
     <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
     <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
-    <updated>2013-05-01T22:59:00-05:00</updated>
+    <updated>2013-05-01T22:59:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
@@ -1632,7 +1703,7 @@ systemctl daemon-reload
   <entry>
     <title type="html"><![CDATA[Wasserfälle und Vulkan in Basse-Terre]]></title>
     <link href="http://blog.riemann.cc/2013/04/29/waserfaelle-und-vulkan-in-basse-terre/"/>
-    <updated>2013-04-29T20:02:00-05:00</updated>
+    <updated>2013-04-29T20:02:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/29/waserfaelle-und-vulkan-in-basse-terre</id>
     <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/waterfall-stairways.jpg" title="Basse-Terre: Tropischer Wald."><img src="http://blog.riemann.cc/images/central-america/waterfall-stairways_thumb.jpg" title="Basse-Terre: Tropischer Wald." /></a><figcaption>Basse-Terre: Tropischer Wald.</figcaption></figure>
 
@@ -1715,7 +1786,7 @@ Und auch nur, weil ich das letzte Stück dann doch noch per Anhalter gefahren bi
   <entry>
     <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
     <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
-    <updated>2013-04-23T08:38:00-05:00</updated>
+    <updated>2013-04-23T08:38:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
     <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
@@ -1772,7 +1843,7 @@ to solve this problem.</p>
   <entry>
     <title type="html"><![CDATA[StreetView Basse-Terre]]></title>
     <link href="http://blog.riemann.cc/2013/04/17/streetview-basse-terre/"/>
-    <updated>2013-04-17T23:45:00-05:00</updated>
+    <updated>2013-04-17T23:45:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/17/streetview-basse-terre</id>
     <content type="html"><![CDATA[<p>Bislang habe ich ja eher Photos von Stränden gezeigt. Um einen besseren
 Eindruck vom Landesinneren zu vermitteln, habe ich ein Stück Busfahrt auf der
@@ -1790,7 +1861,7 @@ etwas öde vorkommt, dann habt ihr vielleicht schon eine gute Vorstellung.</p>
   <entry>
     <title type="html"><![CDATA[Chatroulette]]></title>
     <link href="http://blog.riemann.cc/2013/04/17/chatroulette/"/>
-    <updated>2013-04-17T23:30:00-05:00</updated>
+    <updated>2013-04-17T23:30:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/17/chatroulette</id>
     <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/chatroulette.jpg" title="Chatroulette mit uns selbst"><img src="http://blog.riemann.cc/images/central-america/chatroulette.jpg" title="Chatroulette mit uns selbst" /></a><figcaption>Chatroulette mit uns selbst</figcaption></figure>
 
@@ -1840,7 +1911,7 @@ dort bestimmt. <code>:)</code></p>
   <entry>
     <title type="html"><![CDATA[Speisen in Gwada №1]]></title>
     <link href="http://blog.riemann.cc/2013/04/14/speisen-und-trinken-in-gwada-1/"/>
-    <updated>2013-04-14T19:46:00-05:00</updated>
+    <updated>2013-04-14T19:46:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/14/speisen-und-trinken-in-gwada-1</id>
     <content type="html"><![CDATA[<p>Wenn man in ein weit entferntes Land reist, dann gibt/gilt es stets viel bislang
 Unbekanntes zu entdecken. Die landestypische Küche gehört dabei zu den ersten
@@ -1922,90 +1993,6 @@ sprechen sollen.</p>
     </li>
     <li id="fn:3">
       <p>Nicht zu verwechseln mit den Gemüse-Bananen, die zuvor gekocht werden müssen! In meinen Augen ist der Unterschied äußerlich nicht festzustellen.<a href="#fnref:3" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Verkehr in Guadeloupe]]></title>
-    <link href="http://blog.riemann.cc/2013/04/11/verkehr-in-guadeloupe/"/>
-    <updated>2013-04-11T20:30:00-05:00</updated>
-    <id>http://blog.riemann.cc/2013/04/11/verkehr-in-guadeloupe</id>
-    <content type="html"><![CDATA[<figure class="right"><a href="http://blog.riemann.cc/images/central-america/local-bus.jpg" title="Selterner Anblick: Lokaler Bus"><img src="http://blog.riemann.cc/images/central-america/local-bus_thumb.jpg" title="Selterner Anblick: Lokaler Bus" /></a><figcaption>Selterner Anblick: Lokaler Bus</figcaption></figure>
-
-<p>Die Verkehrssituation in Guadeloupe ist ziemlich ernüchternd – zumindest war ich
-zuvor anderes gewohnt<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. Schon nach meiner Ankunft wäre es für mich teuer geworden,
-wenn ich nicht am Flughafen abgeholt worden wäre. Denn: In Guadeloupe gibt nur
-ein dünnes Verkehrsnetz. Abends fahren die Busse nicht – dafür sind dann aber die
-Taxis (noch) teurer. Es gibt ein paar wenige Buslinien, die hauptsächlich die Routen
-der Küste entlang bedienen und von der EU kofinanziert werden. Busse fahren nur zwischen
-6h und 18h.</p>
-
-<!-- more -->
-
-<figure class="right"><a href="http://blog.riemann.cc/images/central-america/no-schedule.jpg" title="Ganz ehrlich: &lt;br&gt; Kein Plan"><img src="http://blog.riemann.cc/images/central-america/no-schedule_thumb.jpg" title="Ganz ehrlich: &lt;br&gt; Kein Plan" /></a><figcaption>Ganz ehrlich: <br /> Kein Plan</figcaption></figure>
-<p>Einen Fahrplan gibt es nicht, obwohl sämtliche Haltestellen dafür Platz böten.
-Manchmal kommt direkt ein Bus – manchmal muss man auch 30 Minuten warten. Der Tarif ist
-etwas intransparent und nirgends verbrieft. Ich zahle stets 1€.</p>
-
-<p>Sonntags und Feiertags fahren die Busse nicht. Außer den Taxis gibt es auf dieser Insel
-auch keine Alternativen. Sollte ich also mal irgendwo festsitzen, hat sich der
-Herbergsvater bereiterklärt jemanden loszuschicken. Da die Insel ja nicht so groß ist und
-man innerhalb von 2h auch jede Ecke erreichen kann, ist das tatsächlich eine praktikable
-Notlösung.</p>
-
-<p>Lustigerweise werden die unbenutzten Haltestellen Sonntags teils anderweitig genutzt.
-Die Haltestelle in Basse-Terre beherbergt so zum Beispiel einen kleinen Grill-Stand.
-Das ist nur vernünftig. Schließlich kann es jeden Augenblick wie aus Eimern gießen.</p>
-
-<figure class="left"><a href="http://blog.riemann.cc/images/central-america/grill-stop.jpg" title="Sonntags: Grill-Stelle statt Halte-Stelle"><img src="http://blog.riemann.cc/images/central-america/grill-stop_thumb.jpg" title="Sonntags: Grill-Stelle statt Halte-Stelle" /></a><figcaption>Sonntags: Grill-Stelle statt Halte-Stelle</figcaption></figure>
-
-<div style="clear:both"></div>
-
-<h3 id="per-anhalter-durch-strikedie-galaxisstrike-guadeloupe">Per Anhalter durch <strike>die Galaxis</strike> Guadeloupe</h3>
-
-<p>Tatsächlich gibt es noch eine paar weitere Alternativen: Da wäre zum einen das Fahrrad
-oder aber <em>l’auto-stop</em>, wie hier das Reisen per Anhalter genannt wird. Fahrrad fahren
-soll hier ziemlich gefährlich sein. Es gibt keine Radwege, keine Straßenbeleuchtung
-und manchmal auch keine andere Straße als die Autobahn. Einem Gerücht nach befänden sich
-die gefährlichsten Straßen Frankreichs in Guadeloupe. Vielleicht liegt es aber auch
-einfach nur an den Fahrern. Dabei hatte ich schon letzte Woche jemanden gefunden, der
-mir sein Rennrad für 2 Monate kostenlos geliehen hätte. Allerdings war der Reifen
-geplatzt und kein Ersatz auf die Schnelle aufzutreiben, so dass nichts daraus geworden
-ist. Vielleicht ist es auch besser so.</p>
-
-<p>Also probiere ich möglichst häufig per Anhalter zu fahren. Ich finde, dass ist hier
-durchaus eine ernst zu nehmende Alternative. Natürlich muss man auf eine Gelegenheit
-warten – aber das ist hier ja bei den Bussen nicht anders! Sehr günstig sind Kreuzungen,
-vor den die Autos halten müssen. Quasi jeder fährt mit offenem Fenster, so dass ich
-sie persönlich ansprechen kann:</p>
-
-<blockquote>
-  <p>Voudriez-vous m’excuser? Allez-vous en direction de Basse-Terre?</p>
-</blockquote>
-
-<p>Spätestens der 10. Fahrer hat Mitleid und nimmt mich mit. Ich bin schon mit
-Belgiern, Métropolitains (also Franzosen aus dem Mutterland) und farbigen Guadeloupanern
-mit farbig abgestimmten Capi und viel Bling-Bling (leider gibt es kein Foto) gereist.</p>
-
-<p>Entlang der Straße jemanden zum Anhalten zu bewegen ist dagegen schon schwieriger.
-Die Strecke von Mare Gailard nach Basse-Terre (die Stadt, nicht die Halbinsel)
-ist etwa 75km lang und ich habe 3,5 Stunden gebraucht. Unterwegs habe ich viele
-nette französische Konservationen geführt und wurde schließlich bis vor die Haustür
-gefahren. Es ist hier das erste mal, dass ich probiere per Anhalter zu fahren. Ich bin
-bislang recht begeistern, auch wenn alle Leute, denen ich davon erzähle, dem (noch)
-skeptisch gegenüberstehen.</p>
-
-<p>Sobald es nach 18h dunkel wird, sind natürlich weniger Autos unterwegs. Es ist
-also leider keine Alternative um Abends auszugehen und danach wieder
-heimzukehren. <code>:(</code> Daran scheitert es momentan.</p>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Off-Topic: <a href="http://www.spiegel.de/kultur/zwiebelfisch/zwiebelfisch-abc-gewoehnt-gewohnt-a-314582.html">Zwiebelfisch</a> zu gewohnt/gewöhnt.<a href="#fnref:1" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>

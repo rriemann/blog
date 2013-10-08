@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/ruby/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-20T12:49:20-05:00</updated>
+  <updated>2013-10-09T01:12:28+02:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
     <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
-    <updated>2013-05-01T22:59:00-05:00</updated>
+    <updated>2013-05-01T22:59:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
@@ -191,7 +191,7 @@ systemctl daemon-reload
   <entry>
     <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
     <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
-    <updated>2013-01-05T14:21:00-06:00</updated>
+    <updated>2013-01-05T14:21:00+01:00</updated>
     <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
     <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
 some updates, which breaks the layout of the embedding tags used by this blogging
@@ -316,7 +316,7 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[Kubeplayer running on KDE Plasma Active powered ExoPC tablet]]></title>
     <link href="http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active/"/>
-    <updated>2011-09-11T00:00:00-05:00</updated>
+    <updated>2011-09-11T00:00:00+02:00</updated>
     <id>http://blog.riemann.cc/2011/09/11/kubeplayer_kde_plasma_active</id>
     <content type="html"><![CDATA[<p>Hello Planet KDE, hello RubyCorner!</p>
 
@@ -395,7 +395,7 @@ hacker, it would be necessary to package the kdebindings for Meego.</li>
   <entry>
     <title type="html"><![CDATA[Announcing Kubeplayer (youtube w/o flash)]]></title>
     <link href="http://blog.riemann.cc/2010/12/18/announcing_kubeplayer/"/>
-    <updated>2010-12-18T00:00:00-06:00</updated>
+    <updated>2010-12-18T00:00:00+01:00</updated>
     <id>http://blog.riemann.cc/2010/12/18/announcing_kubeplayer</id>
     <content type="html"><![CDATA[<h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
 
@@ -519,7 +519,7 @@ Robert</p>
   <entry>
     <title type="html"><![CDATA[Making Of ruby-stocks Plasma DataEngine]]></title>
     <link href="http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks/"/>
-    <updated>2010-07-11T00:00:00-05:00</updated>
+    <updated>2010-07-11T00:00:00+02:00</updated>
     <id>http://blog.riemann.cc/2010/07/11/plasma_dataengine_ruby_stocks</id>
     <content type="html"><![CDATA[<h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
 

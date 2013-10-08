@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/linux/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-20T12:49:20-05:00</updated>
+  <updated>2013-10-09T01:12:28+02:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -14,9 +14,80 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Automatically Login to wifi.free.fr Wifi]]></title>
+    <link href="http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/"/>
+    <updated>2013-10-09T00:46:00+02:00</updated>
+    <id>http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi</id>
+    <content type="html"><![CDATA[<p>The not so expansive French mobile phone operator <a href="http://www.free.fr">free.fr</a> offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you can find at many places in French cities.</p>
+
+<p>I’m one of these lucky guys who can actually receive this hotspot in the own flat.
+So why should I pay extra for cable internet?</p>
+
+<p>To still have some selling points for ADSL customers free.fr doesn’t make it very
+convenient to use this free wifi. The network comes without any security modes like 
+WPA/WPA2/WAP, but requires you to authenticate yourself an a gateway page every time
+you reconnect to the network. There is only one other option which incorporates SIM card
+authentication which is not an option for most computers due to the lack of a SIM card.</p>
+
+<p>So why not using <code>curl</code> to send automatically an POST request with your login data
+as soon as you got connected to the so-called “FreeWifi” network?</p>
+
+<p>Using openSuSE 12.3 or any other Linux distribution based on NetworkManager you
+just place the following file <code>freewifi-up</code> in <code>/etc/NetworkManager/dispatcher.d</code>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>/etc/NetworkManager/dispatcher.d/freewifi-up </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#! /bin/sh</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># auto login freewifi from free.fr</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'>. /etc/rc.status&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;case “<span class="nv">$2</span>” in
+</span><span class='line'>    up<span class="o">)</span>
+</span><span class='line'>        <span class="k">if </span>iwgetid | grep -qs :<span class="s2">&quot;FreeWifi&quot;</span>; <span class="k">then</span>
+</span><span class='line'><span class="k">                </span>curl -s -X POST -d ‘login<span class="o">=</span>000000000&amp;amp;password<span class="o">=</span>mypassword&amp;amp;submit<span class="o">=</span>Valider’ https://wifi.free.fr/Auth
+</span><span class='line'>        <span class="k">fi</span>
+</span><span class='line'>        ;;
+</span><span class='line'>    *<span class="o">)</span>
+</span><span class='line'>        <span class="nb">exit </span>0
+</span><span class='line'>        ;;
+</span><span class='line'><span class="k">esac</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The actual name of the file is not very important. But pay attention to set the
+appropiate file rights <code>chmod 755 freewifi-up</code>. Of course, you have to replace
+the login number and the password by your own.</p>
+
+<p>The script will be run by networkmanager automatically when the connection status
+get changed. Only if a connection was setup the wifi SSID will be checked to be
+<code>FreeWifi</code>. Only In this case an authentication request will be send to the gateway webpage.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Install Gitlab on OpenSUSE 12.3]]></title>
     <link href="http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3/"/>
-    <updated>2013-05-01T22:59:00-05:00</updated>
+    <updated>2013-05-01T22:59:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/05/01/install-gitlab-on-opensuse-12.3</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#private-git-repo-hosting">Private Git Repo Hosting</a></li>
@@ -191,7 +262,7 @@ systemctl daemon-reload
   <entry>
     <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
     <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
-    <updated>2013-04-23T08:38:00-05:00</updated>
+    <updated>2013-04-23T08:38:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
     <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
@@ -248,7 +319,7 @@ to solve this problem.</p>
   <entry>
     <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
     <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
-    <updated>2013-01-05T14:21:00-06:00</updated>
+    <updated>2013-01-05T14:21:00+01:00</updated>
     <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
     <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
 some updates, which breaks the layout of the embedding tags used by this blogging
@@ -373,7 +444,7 @@ index f9a84f0..2711a36 100644
   <entry>
     <title type="html"><![CDATA[self-made router-powered repository mirror]]></title>
     <link href="http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror/"/>
-    <updated>2012-07-23T01:32:00-05:00</updated>
+    <updated>2012-07-23T01:32:00+02:00</updated>
     <id>http://blog.riemann.cc/2012/07/23/selfmade-repository-mirror</id>
     <content type="html"><![CDATA[<p>After migrating most desktop PCs at work, at home and of some friends to
 <a href="http://www.opensuse.org/">openSUSE</a> with <a href="http://en.opensuse.org/KDE_repositories#Upstream_release_aka._KR48_.28KDE_SC_4.8.29">upstream KDE repo</a>, it was always a
@@ -486,162 +557,6 @@ this.</p>
 to unplug my hard-drive and have everything with me. At work, I don’t have to
 bring my own hard drive with me – they have their own one <code>:p</code> with an equal script
 which can be triggered from time to time.</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[btrfs Kernel Bug]]></title>
-    <link href="http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug/"/>
-    <updated>2011-12-10T00:00:00-06:00</updated>
-    <id>http://blog.riemann.cc/2011/12/10/btrfs_kernel_bug</id>
-    <content type="html"><![CDATA[<h2 id="prolog">Prolog</h2>
-
-<p>When updating my only productive computer system to the latest <a href="http://www.opensuse.org/">opensuse</a>
-version 12.1, I decided to give the feature rich, shiny new filesystem
-<a href="http://btrfs.wiki.kernel.org/">btrfs</a> a try. It’s not yet so stable, but it is already delivered by
-all main distribution. Fedora actually wants to use it as default.</p>
-
-<p>Up to now I have to evaluate this disission to be more risky than lucky. After
-something like two month, I experienced two filesystem corruptions. The first
-one hit my root-filesystem. I had to setup my system from scratch, because every
-write attempt on the partition ended with a kernel failure, most probably caused
-by the btrfs driver. Mounting the partition in read-only mode while using a
-Live-CD was the only way to do a late backup.</p>
-
-<p>Yesterday I ran into btrfs problems again. I copied some photos to my hard disk.
-In the next moment, I got some weird kernel sys messages, that didn’t help me at
-all.</p>
-
-<pre><code>Message from syslogd@theta at Dec 9 17:45:00 ...
-[Freitag, 9. Dezember 2011] [17:45:10] &lt;saLOUt&gt; kernel:[ 454.807770] Code: e9 8c fe ff ff 66 0f 1f 44 00 00 b8 ea ff ff ff e9 cf fe ff ff 48 89 de 4c 89 f7 89 04 24 e8 80 ec ff ff 8b 04 24 e9 b9 fe ff ff &lt;0f&gt; 0b 0f 0b 0f 1f 40 00 41 57 49 89 f7 41 56 41 55 41 54 55 53 
-</code></pre>
-
-<p>All apps accessing my picture btrfs subvolume were crashing.</p>
-
-<p>After disabling the whole btrfs system by commenting the appropriate lines in my
-<code>/etc/fstab</code> file, I had a stable system again – just without any pictures.</p>
-
-<h2 id="data-rescue">Data Rescue</h2>
-
-<p>Luckily Chris Mason (#cmason) from <a href="irc://chat.freenode.org/btrfs">#btrfs</a> could help me to fix these
-problems without any loss of data!</p>
-
-<p>A# simple <code>btrfsck</code> didn’t help me, because of a crash of the repair tool itself:</p>
-
-<pre><code>warning, start mismatch 48695640064 48695652352
-block 48695652352 rec extent_item_refs 1, passed 1
-</code></pre>
-
-<p>No more output. That’s all. Chris told me to checkout some fresh code from his
-very own repo. When I did the checkout, the master was <code>fdb6c04023</code>.</p>
-
-<pre><code>git clone http://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git
-</code></pre>
-
-<p>After a reboot, I ran</p>
-
-<pre><code>make
-make btrfs-zero-log
-</code></pre>
-
-<p>which went without any errors. After that I used the custom build <code>btrfs-zero-log</code>
-tool to do some btrfs magic, that I don’t understand.</p>
-
-<pre><code>./btrfs-zero-log [device]
-</code></pre>
-
-<p>After another reboot, I was able to mount my picture partition in read-only mode.
-I did a late backup again. When reading these files, one gets usually a lot of
-errors in <code>/var/log/messages</code> like this:</p>
-
-<pre><code>[ 4055.661622] btrfs csum failed ino 358 off 227975168 csum 4151547339 private 259191981
-</code></pre>
-
-<p>csum is the abbreviation for checksum. ino means inode, which is a kind of
-identifier for every file. To fix these errors, you have to find these files
-belonging to these inodes, deleting them and copy them back from your backup.</p>
-
-<p>I wrote a small ruby script, which helps you finding the affected files</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#!/usr/bin/ruby&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;string-with-error-messages&quot;</span><span class="o">&gt;</span><span class="n">string</span> <span class="n">with</span> <span class="n">error</span> <span class="n">messages</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'><span class="sr">&lt;p&gt;error_messages = &lt;code&gt;dmesg | grep &quot;found for inode&quot;&lt;/</span><span class="n">code</span><span class="o">&gt;</span>
-</span><span class='line'><span class="c1"># list of integers</span>
-</span><span class='line'><span class="n">inode_list</span> <span class="o">=</span> <span class="n">error_messages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="err">“</span><span class="p">\</span><span class="n">n</span><span class="err">”</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/inode (\d+).*/</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span><span class="p">}</span>
-</span><span class='line'><span class="c1"># list of arrays of filenames</span>
-</span><span class='line'><span class="n">file_list</span> <span class="o">=</span> <span class="n">inode_list</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">find</span> <span class="sr">/mnt/</span><span class="nb">test</span> <span class="o">-</span><span class="n">inum</span> <span class="c1">#{i}&lt;/code&gt;.split(“\n”)}&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;require-json&quot;</span><span class="o">&gt;</span><span class="nb">require</span> <span class="err">‘</span><span class="n">json</span><span class="err">’</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'><span class="sr">&lt;p&gt;# File.open(“/</span><span class="n">tmp</span><span class="o">/</span><span class="n">inode</span><span class="o">-</span><span class="n">files</span><span class="o">.</span><span class="n">json</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="n">w</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span> <span class="err">« </span><span class="no">JSON</span><span class="o">.</span><span class="n">pretty_generate</span><span class="p">(</span><span class="n">file_list</span><span class="p">)}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;puts file_list.flatten.uniq.sort.join(“\n”)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>If you finally want to delete these files, you have to remount your partition in
-read-write mode.</p>
-
-<p>At least for me, this walkthrough suggested by Chris resolved my problems.</p>
-
-<h1 id="complete-error-log">Complete error log</h1>
-
-<pre><code>Dec  9 11:38:03 theta kernel: [ 3235.664148] btrfs: free space inode generation (0) did not match free space cache generation (6403)
-Dec  9 11:38:03 theta kernel: [ 3235.664152] btrfs: failed to load free space cache for block group 38818283520
-Dec  9 11:38:34 theta kernel: [ 3266.367012] ------------[ cut here ]------------
-Dec  9 11:38:34 theta kernel: [ 3266.367385] kernel BUG at /home/abuild/rpmbuild/BUILD/kernel-desktop-3.1.0/linux-3.1/fs/btrfs/extent-tree.c:5467!
-Dec  9 11:38:34 theta kernel: [ 3266.368140] invalid opcode: 0000 [#1] PREEMPT SMP
-Dec  9 11:38:34 theta kernel: [ 3266.368510] CPU 1
-Dec  9 11:38:34 theta kernel: [ 3266.368653] Modules linked in: nls_iso8859_1 nls_cp437 vfat fat fuse af_packet ip6t_LOG xt_tcpudp xt_pkttype ipt_LOG xt_limit rfcomm bnep ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_raw xt_NOTRACK ipt_REJECT iptable_raw iptable_filter ip6table_mangle nf_conntrack_netbios_ns nf_conntrack_broadcast nf_conntrack_ipv4 nf_defrag_ipv4 ip_tables xt_conntrack nf_conntrack ip6table_filter ip6_tables x_tables cpufreq_conservative cpufreq_userspace cpufreq_powersave acpi_cpufreq mperf microcode dm_mod mmc_block snd_hda_codec_hdmi snd_hda_codec_conexant arc4 uvcvideo videodev v4l2_compat_ioctl32 hdj_mod snd_rawmidi snd_seq_device ecb kvm_intel kvm btusb bluetooth sg joydev sdhci_pci sdhci iwlagn mmc_core mac80211 e1000e cfg80211 i2c_i801 pcspkr snd_hda_intel snd_hda_codec snd_hwdep snd_pcm iTCO_wdt iTCO_vendor_support xhci_hcd snd_timer snd_page_alloc mei(C) battery thinkpad_acpi rfkill tpm_tis tpm tpm_bios snd soundcore ac wmi autofs4 btrfs zlib_deflate thermal i915 drm_ kms_helper
-Dec  9 11:38:34 theta kernel: r drm i2c_algo_bit processor button video thermal_sys
-Dec  9 11:38:34 theta kernel: [ 3266.376473]
-Dec  9 11:38:34 theta kernel: [ 3266.376585] Pid: 11081, comm: btrfs-endio-wri Tainted: G         C  3.1.0-1.2-desktop #1 LENOVO 4290W4H/4290W4H
-Dec  9 11:38:34 theta kernel: [ 3266.377390] RIP: 0010:[&lt;ffffffffa01444bf&gt;]  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.378147] RSP: 0018:ffff8800cce2fb40  EFLAGS: 00010282
-Dec  9 11:38:34 theta kernel: [ 3266.378535] RAX: 00000000ffffffef RBX: ffff8800cd1d90a0 RCX: 0000160000000000
-Dec  9 11:38:34 theta kernel: [ 3266.379060] RDX: 0000000000000008 RSI: 0000000000000001 RDI: ffff8801ad7fb130
-Dec  9 11:38:34 theta kernel: [ 3266.379613] RBP: 00000000000000b2 R08: 0000000000000001 R09: 0000000000000001
-Dec  9 11:38:34 theta kernel: [ 3266.380164] R10: ffff8800c99928e8 R11: 000000000000004e R12: 0000000000000000
-Dec  9 11:38:34 theta kernel: [ 3266.380716] R13: ffff8800cce2fc0f R14: ffff8800c99928e8 R15: ffff88020f367400
-Dec  9 11:38:34 theta kernel: [ 3266.381267] FS:  0000000000000000(0000) GS:ffff88021e240000(0000) knlGS:0000000000000000
-Dec  9 11:38:34 theta kernel: [ 3266.381891] CS:  0010 DS: 0000 ES: 0000 CR0: 000000008005003b
-Dec  9 11:38:34 theta kernel: [ 3266.382334] CR2: 00007fbdfb6bc440 CR3: 0000000001c05000 CR4: 00000000000406e0
-Dec  9 11:38:34 theta kernel: [ 3266.382885] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
-Dec  9 11:38:34 theta kernel: [ 3266.383436] DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000400
-Dec  9 11:38:34 theta kernel: [ 3266.383987] Process btrfs-endio-wri (pid: 11081, threadinfo ffff8800cce2e000, task ffff8800d447a580)
-Dec  9 11:38:34 theta kernel: [ 3266.384693] Stack:
-Dec  9 11:38:34 theta kernel: [ 3266.384844]  ffff88020f51d800 ffff880200000035 ffff8802057d4000 0000000100000001
-Dec  9 11:38:34 theta kernel: [ 3266.385445]  8000000000000c16 0000000000000000 0000000000000103 0000000000000166
-Dec  9 11:38:34 theta kernel: [ 3266.386045]  0000000000001000 0000003500000a4c ffff88010c730000 ffff8800c99928e8
-Dec  9 11:38:34 theta kernel: [ 3266.386645] Call Trace:
-Dec  9 11:38:34 theta kernel: [ 3266.386853]  [&lt;ffffffffa014505e&gt;] run_delayed_data_ref+0x10e/0x1c0 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.387401]  [&lt;ffffffffa0147978&gt;] run_clustered_refs+0xc8/0x220 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.387928]  [&lt;ffffffffa0147b95&gt;] btrfs_run_delayed_refs+0xc5/0x210 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.388482]  [&lt;ffffffffa0158590&gt;] __btrfs_end_transaction+0x90/0x340 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.389024]  [&lt;ffffffffa015f5d5&gt;] btrfs_finish_ordered_io+0x2a5/0x340 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.389604]  [&lt;ffffffffa0173310&gt;] end_bio_extent_writepage+0x120/0x170 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.390205]  [&lt;ffffffffa017fcb1&gt;] worker_loop+0xa1/0x2a0 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.390714]  [&lt;ffffffff81075c8e&gt;] kthread+0x7e/0x90
-Dec  9 11:38:34 theta kernel: [ 3266.391093]  [&lt;ffffffff815a5474&gt;] kernel_thread_helper+0x4/0x10
-Dec  9 11:38:34 theta kernel: [ 3266.391550] Code: 20 8b 94 24 a0 00 00 00 48 8b 7c 24 10 48 81 c6 86 00 00 00 e8 83 90 02 00 e9 6c ff ff ff 66 0f 1f 44 00 00 b8 f4 ff ff ff eb 90 &lt;0f&gt; 0b 49 8b 55 09 49 8b 75 00 48 c7 c7 20 6e 1a a0 31 c0 e8 0e
-Dec  9 11:38:34 theta kernel: [ 3266.393481] RIP  [&lt;ffffffffa01444bf&gt;] alloc_reserved_file_extent+0x24f/0x270 [btrfs]
-Dec  9 11:38:34 theta kernel: [ 3266.394093]  RSP &lt;ffff8800cce2fb40&gt;
-Dec  9 11:38:34 theta kernel: [ 3266.597905] ---[ end trace 3233c7c540de8b82 ]---
-Dec  9 11:38:34 theta kernel: [ 3266.597908] note: btrfs-endio-wri[11081] exited with preempt_count 1
-</code></pre>
 
 ]]></content>
   </entry>

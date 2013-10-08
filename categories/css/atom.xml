@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/css/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-20T12:49:20-05:00</updated>
+  <updated>2013-10-09T01:12:28+02:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-05:00</updated>
+    <updated>2013-04-10T09:29:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -124,7 +124,7 @@ additionally the following lines to my style description.</p>
   <entry>
     <title type="html"><![CDATA[Just moved to Jekyll]]></title>
     <link href="http://blog.riemann.cc/2010/01/31/just_moved_to_jekyll/"/>
-    <updated>2010-01-31T00:00:00-06:00</updated>
+    <updated>2010-01-31T00:00:00+01:00</updated>
     <id>http://blog.riemann.cc/2010/01/31/just_moved_to_jekyll</id>
     <content type="html"><![CDATA[<h2 id="static-website-generators">Static Website Generators</h2>
 

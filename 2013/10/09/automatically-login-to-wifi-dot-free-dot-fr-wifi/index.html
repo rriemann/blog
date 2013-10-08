@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Webcomic №8 - Worth Mentioning</title>
+  <title>Automatically Login to wifi.free.fr Wifi - Worth Mentioning</title>
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content=" People, who are careless on their way up, are likeley going to build barriers, they cannot overcome. SVG Source ">
+  <meta name="description" content="The not so expansive French mobile phone operator free.fr offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.riemann.cc/2010/12/20/the_way_up">
+  <link rel="canonical" href="http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="http://blog.riemann.cc/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml">
@@ -96,7 +98,7 @@
   
   <header>
     
-      <h1 class="entry-title">Webcomic №8</h1>
+      <h1 class="entry-title">Automatically Login to wifi.free.fr Wifi</h1>
     
     
       <p class="meta">
@@ -112,7 +114,7 @@
   
 
 
-<time datetime="2010-12-20T00:00:00+01:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+<time datetime="2013-10-09T00:46:00+02:00" pubdate data-updated="true">Oct 9<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -121,22 +123,69 @@
   </header>
 
 
-<div class="entry-content"><p>
-  <img class="webcomic" src="/images/webcomic/the_way_up.png" alt="People, who are careless on their way up, are likeley going to build barriers, they cannot overcome." title="People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.">
-  <br>
-  People, who are careless on their way up, are likeley going to build barriers, they cannot overcome.
-  
-  <br>
-  <a href="/images/webcomic/the_way_up.svg" title="SVG from Inkscape">SVG Source</a>
-  
+<div class="entry-content"><p>The not so expansive French mobile phone operator <a href="http://www.free.fr">free.fr</a> offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you can find at many places in French cities.</p>
 
-  
-  <br>
-  <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"><img class="noborder" src="/images/by-nc-sa.eu.png" title="Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"></a>
-  
-</p>
+<p>I’m one of these lucky guys who can actually receive this hotspot in the own flat.
+So why should I pay extra for cable internet?</p>
 
+<p>To still have some selling points for ADSL customers free.fr doesn’t make it very
+convenient to use this free wifi. The network comes without any security modes like 
+WPA/WPA2/WAP, but requires you to authenticate yourself an a gateway page every time
+you reconnect to the network. There is only one other option which incorporates SIM card
+authentication which is not an option for most computers due to the lack of a SIM card.</p>
 
+<p>So why not using <code>curl</code> to send automatically an POST request with your login data
+as soon as you got connected to the so-called “FreeWifi” network?</p>
+
+<p>Using openSuSE 12.3 or any other Linux distribution based on NetworkManager you
+just place the following file <code>freewifi-up</code> in <code>/etc/NetworkManager/dispatcher.d</code>.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>/etc/NetworkManager/dispatcher.d/freewifi-up </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#! /bin/sh</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line"><span class="c"># auto login freewifi from free.fr</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line">. /etc/rc.status
+</span><span class="line">
+</span><span class="line"><span class="k">case</span> <span class="s2">&quot;$2&quot;</span> in
+</span><span class="line">    up<span class="o">)</span>
+</span><span class="line">        <span class="k">if </span>iwgetid | grep -qs :<span class="se">\&quot;</span>FreeWifi<span class="se">\&quot;</span>; <span class="k">then</span>
+</span><span class="line"><span class="k">                </span>curl -s -X POST -d <span class="s1">&#39;login=000000000&amp;password=mypassword&amp;submit=Valider&#39;</span> https://wifi.free.fr/Auth
+</span><span class="line">        <span class="k">fi</span>
+</span><span class="line">        ;;
+</span><span class="line">    *<span class="o">)</span>
+</span><span class="line">        <span class="nb">exit </span>0
+</span><span class="line">        ;;
+</span><span class="line"><span class="k">esac</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The actual name of the file is not very important. But pay attention to set the
+appropiate file rights <code>chmod 755 freewifi-up</code>. Of course, you have to replace
+the login number and the password by your own.</p>
+
+<p>The script will be run by networkmanager automatically when the connection status
+get changed. Only if a connection was setup the wifi SSID will be checked to be
+<code>FreeWifi</code>. Only In this case an authentication request will be send to the gateway webpage.</p>
 </div>
 
 
@@ -159,12 +208,12 @@
   
 
 
-<time datetime="2010-12-20T00:00:00+01:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+<time datetime="2013-10-09T00:46:00+02:00" pubdate data-updated="true">Oct 9<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/categories/webcomic/'>webcomic</a>
+    <a class='category' href='/categories/linux/'>linux</a>, <a class='category' href='/categories/tricks/'>tricks</a>
   
 </span>
 
@@ -180,10 +229,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2010/12/20/gpg-agent-with-opensuse11.3-zsh/" title="Previous Post: Using GPG-Agent with opensuse 11.3 and zsh">&laquo; Using GPG-Agent with opensuse 11.3 and zsh</a>
+        <a class="basic-alignment left" href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/" title="Previous Post: Ein Toller Tag in Chiapas, Mexiko">&laquo; Ein Toller Tag in Chiapas, Mexiko</a>
       
-      
-        <a class="basic-alignment right" href="/2010/12/23/instable_position/" title="Next Post: Webcomic №9">Webcomic №9 &raquo;</a>
       
     </p>
   </footer>
@@ -234,10 +281,6 @@
     <ul class="posts">
     
         <li class="related">
-        <a href="/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/">Automatically Login to wifi.free.fr Wifi</a>
-        </li>
-    
-        <li class="related">
         <a href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/">Ein Toller Tag in Chiapas, Mexiko</a>
         </li>
     
@@ -251,6 +294,10 @@
     
         <li class="related">
         <a href="/2013/07/04/costa-rica-nicaragua-honduras/">Costa Rica, Nicaragua, Honduras</a>
+        </li>
+    
+        <li class="related">
+        <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
         </li>
     
     </ul>
@@ -279,8 +326,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.riemann.cc/2010/12/20/the_way_up/';
-        var disqus_url = 'http://blog.riemann.cc/2010/12/20/the_way_up/';
+        var disqus_identifier = 'http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/';
+        var disqus_url = 'http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/';
         var disqus_script = 'embed.js';
       
     (function () {

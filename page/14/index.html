@@ -81,11 +81,11 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/archives">Archives</a></li>
-  <li><a href="http://github.com/rriemann">Code</a></li>
+  <li><a href="https://github.com/rriemann">Code</a></li>
   <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
 <!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
-  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
-  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="https://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="https://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
   <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
   <li><a href="/about/">About</a></li>
 </ul>
@@ -94,6 +94,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/12/23/instable_position/">Webcomic №9</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-23T00:00:00+01:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2010</time>
+        
+         | <a href="/2010/12/23/instable_position/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -116,7 +154,7 @@
   
 
 
-<time datetime="2010-12-20T00:00:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+<time datetime="2010-12-20T00:00:00+01:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
         
          | <a href="/2010/12/20/the_way_up/#disqus_thread">Comments</a>
         
@@ -154,7 +192,7 @@
   
 
 
-<time datetime="2010-12-20T00:00:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+<time datetime="2010-12-20T00:00:00+01:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
         
          | <a href="/2010/12/20/gpg-agent-with-opensuse11.3-zsh/#disqus_thread">Comments</a>
         
@@ -201,159 +239,6 @@ awesome <a href="http://www.zsh.org/" title="Zsh">zsh</a>.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/12/18/announcing_kubeplayer/">Announcing Kubeplayer (Youtube W/o Flash)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-18T00:00:00-06:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
-        
-         | <a href="/2010/12/18/announcing_kubeplayer/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="hello-planet-kde-hello-rubycorner">Hello Planet KDE, hello RubyCorner</h2>
-
-<p>Earlier this year I started writing a KDE application using
-the Ruby programming language. Coming from the web development, I am no
-expert at all in C++. So I decided to give KDE development a try using
-the Ruby bindings for KDE 4 called <a href="http://techbase.kde.org/Development/Languages/Ruby" title="KDE Development with Ruby">korundum4</a>.</p>
-
-<p>It wasn’t as easy as expected. Unfortunatly the korundum4 project didn’t got
-very popular by now, so I found a lot of bugs on the way. Now, three months
-later, all the bugfixes are included in the last stable KDE. The idea, of
-just copying the project folder and starting the app without the need of any
-further setup<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, becomes finally true.</p>
-
-<h2 id="announcing-kubeplayer">Announcing Kubeplayer</h2>
-
-<p><img src="http://blog.riemann.cc/images/kubeplayer.png" alt="Screenshot of Kubeplayer" title="Screenshot of Kubeplayer" /></p>
-
-<p>I started a kind of clone of the well
-known Qt-based Youtube player <a href="http://flavio.tordini.org/minitube" title="Minitube project page">Minitube</a>. When starting the development,
-I had in mind to support Vimeo and maybe some other online video platforms, too.
-The app should integrate itself better into the KDE workspace, and lately I had
-the idea of turning it into a mobile app, too. It was possible to get a much
-cleaner and shorter code, not only because of the nice KDE KIO classes,
-but also by using Ruby.</p>
-
-<h2 id="lets-try-it-out-in-less-than-1-minute">Let’s Try It Out In Less Than 1 Minute!</h2>
-
-<p>Ok, to be fair, I have to admit, this is only possible using a recent
-Linux OS<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> with korundum4 and Ruby 1.9.x preinstalled.</p>
-
-<p>To give Kubeplayer a try, you just have to checkout the repository, and start
-the application.</p>
-
-<pre><code>git clone git://git.kde.org/kubeplayer
-ruby kubeplayer/kubeplayer
-</code></pre>
-
-<p>That’s it. You can also install kubeplayer using CMake. Installation works like
-you would it expect it from a CMake based C++ application.</p>
-
-<p>If you get an error related to <code>json</code>, you are probably using an Ruby
-version prior to 1.9.x. In this case you have to install rubygems via you distribution
-package manager. Then you can use Ruby’s own package manager to install the
-missing dependency.</p>
-
-<pre><code>gem install json
-</code></pre>
-
-<h2 id="get-involved">Get Involved!</h2>
-
-<p>Not everything is done by now. Youtube works in <strike>the most</strike> a lot
-of cases. The GUI needs a lot of small improvements. I even thought about a
-maemo/meego port, paid for an N900 on
-eBay, but unfortunately got duped <code>:(</code>. So the mobile development has to wait.</p>
-
-<p>After all, the project is still quite young, the code is very short, nice and clear.
-If you ever felt like trying to develop for/with KDE, the barrier is now quite low.</p>
-
-<ul>
-  <li>You don’t have to deal with a KDE development environment. Just clone the repo
-and you are done. Since yesterday, you can find the project in <a href="https://projects.kde.org/projects/playground/multimedia/kubeplayer" title="Official KDE Playground git repo">playground</a>.<br />
-<code>git clone git://git.kde.org/kubeplayer</code></li>
-  <li>You don’t need to know C++.</li>
-  <li>You don’t have to compile anything at all!</li>
-  <li>You can use the shiny new git infrastructure of KDE.</li>
-</ul>
-
-<p>Take a look at the code base. There are not many files at all. Summed up, there
-are less then 1000 lines of code (including rare comments). For an already
-functional multimedia application, this is really few.</p>
-
-<pre><code>kubeplayer
-├── CMakeLists.txt
-├── kubeplayer
-├── lib
-│   ├── CMakeLists.txt
-│   ├── kubeplayer.desktop
-│   ├── kubeplayer.rb
-│   ├── List.rb
-│   ├── MainWindow.rb
-│   ├── provider
-│   │   └── youtube
-│   │       └── Youtube.rb
-│   └── Video.rb
-├── main.rb
-└── README.rdoc
-</code></pre>
-
-<p>How does the future of Kubeplayer look like? I have already a lof of ideas,
-what could be done. Maybe you have also many, but different ones. What about:</p>
-
-<ul>
-  <li>allowing the use to login and comment on all supported video platforms</li>
-  <li>make flash needless on netbooks by providing an optimized app</li>
-  <li>create a scripted KPart to fetch youtube pages and open the video using kubeplayer</li>
-  <li>let the user download the videos (in a video library)</li>
-  <li>make it possible to share supported video platforms with the plasma media center team</li>
-</ul>
-
-<p>So what do you think, can Kubeplayer do for you? What can you do for Kubeplayer?</p>
-
-<p>Kind regards,<br />
-Robert</p>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>This isn’t 100% true. You need to have korundum4 installed, but most distros
-  seems to ship this package by default. On opensuse it is called “ruby-kde4”.<a href="#fnref:1" rel="reference">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>As KDE and Ruby is also available for many other OS, Kubeplayer is
-  actually cross platform.<a href="#fnref:2" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/15/">&larr; Older</a>
@@ -371,6 +256,10 @@ Robert</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/">Automatically Login to wifi.free.fr Wifi</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/">Ein Toller Tag in Chiapas, Mexiko</a>
       </li>
     
@@ -384,10 +273,6 @@ Robert</p>
     
       <li class="post">
         <a href="/2013/07/04/costa-rica-nicaragua-honduras/">Costa Rica, Nicaragua, Honduras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
       </li>
     
   </ul>
@@ -420,7 +305,7 @@ Robert</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 20.07.13 at 12:49
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.10.13 at 01:12
   </span>
 </p>
 

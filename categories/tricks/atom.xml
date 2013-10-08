@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tricks | Worth Mentioning]]></title>
   <link href="http://blog.riemann.cc/categories/tricks/atom.xml" rel="self"/>
   <link href="http://blog.riemann.cc/"/>
-  <updated>2013-07-20T12:49:20-05:00</updated>
+  <updated>2013-10-09T01:12:28+02:00</updated>
   <id>http://blog.riemann.cc/</id>
   <author>
     <name><![CDATA[Robert Riemann]]></name>
@@ -14,9 +14,80 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Automatically Login to wifi.free.fr Wifi]]></title>
+    <link href="http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/"/>
+    <updated>2013-10-09T00:46:00+02:00</updated>
+    <id>http://blog.riemann.cc/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi</id>
+    <content type="html"><![CDATA[<p>The not so expansive French mobile phone operator <a href="http://www.free.fr">free.fr</a> offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you can find at many places in French cities.</p>
+
+<p>I’m one of these lucky guys who can actually receive this hotspot in the own flat.
+So why should I pay extra for cable internet?</p>
+
+<p>To still have some selling points for ADSL customers free.fr doesn’t make it very
+convenient to use this free wifi. The network comes without any security modes like 
+WPA/WPA2/WAP, but requires you to authenticate yourself an a gateway page every time
+you reconnect to the network. There is only one other option which incorporates SIM card
+authentication which is not an option for most computers due to the lack of a SIM card.</p>
+
+<p>So why not using <code>curl</code> to send automatically an POST request with your login data
+as soon as you got connected to the so-called “FreeWifi” network?</p>
+
+<p>Using openSuSE 12.3 or any other Linux distribution based on NetworkManager you
+just place the following file <code>freewifi-up</code> in <code>/etc/NetworkManager/dispatcher.d</code>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>/etc/NetworkManager/dispatcher.d/freewifi-up </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#! /bin/sh</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># auto login freewifi from free.fr</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'>. /etc/rc.status&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;case “<span class="nv">$2</span>” in
+</span><span class='line'>    up<span class="o">)</span>
+</span><span class='line'>        <span class="k">if </span>iwgetid | grep -qs :<span class="s2">&quot;FreeWifi&quot;</span>; <span class="k">then</span>
+</span><span class='line'><span class="k">                </span>curl -s -X POST -d ‘login<span class="o">=</span>000000000&amp;amp;password<span class="o">=</span>mypassword&amp;amp;submit<span class="o">=</span>Valider’ https://wifi.free.fr/Auth
+</span><span class='line'>        <span class="k">fi</span>
+</span><span class='line'>        ;;
+</span><span class='line'>    *<span class="o">)</span>
+</span><span class='line'>        <span class="nb">exit </span>0
+</span><span class='line'>        ;;
+</span><span class='line'><span class="k">esac</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The actual name of the file is not very important. But pay attention to set the
+appropiate file rights <code>chmod 755 freewifi-up</code>. Of course, you have to replace
+the login number and the password by your own.</p>
+
+<p>The script will be run by networkmanager automatically when the connection status
+get changed. Only if a connection was setup the wifi SSID will be checked to be
+<code>FreeWifi</code>. Only In this case an authentication request will be send to the gateway webpage.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Zur Allgemeinen Lage der Sicherheit]]></title>
     <link href="http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit/"/>
-    <updated>2013-07-06T21:07:00-05:00</updated>
+    <updated>2013-07-06T21:07:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/07/06/zur-allgemeinen-lage-der-sicherheit</id>
     <content type="html"><![CDATA[<p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a> Nachdem einmal mehr aufgezeigt wurde (<a href="http://de.wikipedia.org/wiki/PRISM_%28%C3%9Cberwachungsprogramm%29" title="Prism (Überwachungsprogramm) auf Wikipedia">Prism</a>, <a href="http://de.wikipedia.org/wiki/Tempora" title="Tempora auf Wikipedia">Tempora</a>), wie
 transparent man doch im Internet ist, sind Themen wie Datensparsamkeit, Datenschutz
@@ -89,7 +160,7 @@ An aktuellen Anleitungen dürfte es momentan im Netz nicht fehlen:</p>
   <entry>
     <title type="html"><![CDATA[Versioning of OpenOffice/LibreOffice documents using git]]></title>
     <link href="http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git/"/>
-    <updated>2013-04-23T08:38:00-05:00</updated>
+    <updated>2013-04-23T08:38:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/23/versioning-of-openoffice-libreoffice-documents-using-git</id>
     <content type="html"><![CDATA[<p>At the moment I’m preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the <a href="http://git-scm.com">git</a>
@@ -146,7 +217,7 @@ to solve this problem.</p>
   <entry>
     <title type="html"><![CDATA[Table Of Contents in Octopress]]></title>
     <link href="http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/"/>
-    <updated>2013-04-10T09:29:00-05:00</updated>
+    <updated>2013-04-10T09:29:00+02:00</updated>
     <id>http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress</id>
     <content type="html"><![CDATA[<ul id="markdown-toc">
   <li><a href="#prologue">Prologue</a></li>
@@ -254,7 +325,7 @@ additionally the following lines to my style description.</p>
   <entry>
     <title type="html"><![CDATA[Patching Ruby Gem GSL]]></title>
     <link href="http://blog.riemann.cc/2013/01/05/patching-ruby-gsl/"/>
-    <updated>2013-01-05T14:21:00-06:00</updated>
+    <updated>2013-01-05T14:21:00+01:00</updated>
     <id>http://blog.riemann.cc/2013/01/05/patching-ruby-gsl</id>
     <content type="html"><![CDATA[<p>The <a href="http://gist.github.com/">Github Gist</a> code pasting service received
 some updates, which breaks the layout of the embedding tags used by this blogging
@@ -373,27 +444,6 @@ index f9a84f0..2711a36 100644
    else return Qfalse;
  }</code></pre></noscript></div>
 </p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Starcraft 2 - fixing QWERTZ hotkeys]]></title>
-    <link href="http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys/"/>
-    <updated>2012-08-02T11:53:00-05:00</updated>
-    <id>http://blog.riemann.cc/2012/08/02/starcraft-2-fixing-qwertz-hotkeys</id>
-    <content type="html"><![CDATA[<p>After upgrading <a href="http://eu.battle.net/sc2">Starcraft 2</a> with Patch 1.5.0, the German users might
-suffer from problems regarding the raster grid hot key layout.</p>
-
-<p>One significant difference between the German and US keyboard layout is the swap
-of characters <code>Z</code> and <code>Y</code>. The update to 1.5.0 leads to a not working <code>Y</code> hot key.</p>
-
-<p>According to <a href="http://www.teamliquid.net/forum/viewmessage.php?topic_id=357501">teamliquid.net</a> bug #23, there is a work-around. Just add the
-USA keyboard layout to the keyboard layouts options menu. It’s not necessary to
-activate this layout. Finally restart the game and the raster grid layout works
-again.</p>
-
-<p>This work-around was successfully tested with Windows 7, 64 bit.</p>
-
 ]]></content>
   </entry>
   

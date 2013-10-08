@@ -9,7 +9,9 @@
   <meta name="author" content="Robert Riemann">
 
   
-  <meta name="description" content="Mexican Flag over Ensenada by Michael McDonoughThe flag of Mexico Prolog Wir1 erwachen im Hostel „Los Camellos“ in San Christóbal de Las Casas, &hellip;">
+  <meta name="description" content="The not so expansive French mobile phone operator free.fr offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,11 +82,11 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/archives">Archives</a></li>
-  <li><a href="http://github.com/rriemann">Code</a></li>
+  <li><a href="https://github.com/rriemann">Code</a></li>
   <li><a href="http://www.flickr.com/photos/27621704@N07/">Photos</a></li>
 <!--   <li><a href="http://www.lastfm.de/user/saLOUt">Music</a></li> -->
-  <li><a href="http://www.facebook.com/rriemann">Facebook</a></li>
-  <li><a href="http://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
+  <li><a href="https://www.facebook.com/rriemann">Facebook</a></li>
+  <li><a href="https://www.couchsurfing.org/people/salout">Couchsurfing</a></li>
   <li><a href="http://people.physik.hu-berlin.de/~rriemann/">Files</a></li>
   <li><a href="/about/">About</a></li>
 </ul>
@@ -93,6 +95,106 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/">Automatically Login to wifi.free.fr Wifi</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-09T00:46:00+02:00" pubdate data-updated="true">Oct 9<span>th</span>, 2013</time>
+        
+         | <a href="/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The not so expansive French mobile phone operator <a href="http://www.free.fr">free.fr</a> offers
+some nice extras for their clients. People can use the free.fr hotspots, which
+you can find at many places in French cities.</p>
+
+<p>I’m one of these lucky guys who can actually receive this hotspot in the own flat.
+So why should I pay extra for cable internet?</p>
+
+<p>To still have some selling points for ADSL customers free.fr doesn’t make it very
+convenient to use this free wifi. The network comes without any security modes like 
+WPA/WPA2/WAP, but requires you to authenticate yourself an a gateway page every time
+you reconnect to the network. There is only one other option which incorporates SIM card
+authentication which is not an option for most computers due to the lack of a SIM card.</p>
+
+<p>So why not using <code>curl</code> to send automatically an POST request with your login data
+as soon as you got connected to the so-called “FreeWifi” network?</p>
+
+<p>Using openSuSE 12.3 or any other Linux distribution based on NetworkManager you
+just place the following file <code>freewifi-up</code> in <code>/etc/NetworkManager/dispatcher.d</code>.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>/etc/NetworkManager/dispatcher.d/freewifi-up </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#! /bin/sh</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line"><span class="c"># auto login freewifi from free.fr</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line"><span class="c">#</span>
+</span><span class="line">. /etc/rc.status
+</span><span class="line">
+</span><span class="line"><span class="k">case</span> <span class="s2">&quot;$2&quot;</span> in
+</span><span class="line">    up<span class="o">)</span>
+</span><span class="line">        <span class="k">if </span>iwgetid | grep -qs :<span class="se">\&quot;</span>FreeWifi<span class="se">\&quot;</span>; <span class="k">then</span>
+</span><span class="line"><span class="k">                </span>curl -s -X POST -d <span class="s1">&#39;login=000000000&amp;password=mypassword&amp;submit=Valider&#39;</span> https://wifi.free.fr/Auth
+</span><span class="line">        <span class="k">fi</span>
+</span><span class="line">        ;;
+</span><span class="line">    *<span class="o">)</span>
+</span><span class="line">        <span class="nb">exit </span>0
+</span><span class="line">        ;;
+</span><span class="line"><span class="k">esac</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The actual name of the file is not very important. But pay attention to set the
+appropiate file rights <code>chmod 755 freewifi-up</code>. Of course, you have to replace
+the login number and the password by your own.</p>
+
+<p>The script will be run by networkmanager automatically when the connection status
+get changed. Only if a connection was setup the wifi SSID will be checked to be
+<code>FreeWifi</code>. Only In this case an authentication request will be send to the gateway webpage.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -115,7 +217,7 @@
   
 
 
-<time datetime="2013-07-19T18:35:00-05:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-07-19T18:35:00+02:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
         
          | <a href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/#disqus_thread">Comments</a>
         
@@ -174,7 +276,7 @@ Aussicht auf Besserung.</p>
   
 
 
-<time datetime="2013-07-10T23:37:00-05:00" pubdate data-updated="true">Jul 10<span>th</span>, 2013</time>
+<time datetime="2013-07-10T23:37:00+02:00" pubdate data-updated="true">Jul 10<span>th</span>, 2013</time>
         
          | <a href="/2013/07/10/antigua-guatemala/#disqus_thread">Comments</a>
         
@@ -212,53 +314,6 @@ ihren Eifons spielen. Ist die Welt nicht friedlich?</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2013/07/06/zur-allgemeinen-lage-der-sicherheit/">Zur Allgemeinen Lage Der Sicherheit</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-06T21:07:00-05:00" pubdate data-updated="true">Jul 6<span>th</span>, 2013</time>
-        
-         | <a href="/2013/07/06/zur-allgemeinen-lage-der-sicherheit/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.gnupg.org/" title="Gnu GPG"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png" alt="GnuPG Logo" class="right" /></a> Nachdem einmal mehr aufgezeigt wurde (<a href="http://de.wikipedia.org/wiki/PRISM_%28%C3%9Cberwachungsprogramm%29" title="Prism (Überwachungsprogramm) auf Wikipedia">Prism</a>, <a href="http://de.wikipedia.org/wiki/Tempora" title="Tempora auf Wikipedia">Tempora</a>), wie
-transparent man doch im Internet ist, sind Themen wie Datensparsamkeit, Datenschutz
-und Kryptographie wieder prominent in den Medien vertreten.</p>
-
-<p>Eine kurze Link-Sammlung zu Verschlüsselungstechniken für jedermann.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/2013/07/06/zur-allgemeinen-lage-der-sicherheit/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/2/">&larr; Older</a>
@@ -274,6 +329,10 @@ und Kryptographie wieder prominent in den Medien vertreten.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/10/09/automatically-login-to-wifi-dot-free-dot-fr-wifi/">Automatically Login to wifi.free.fr Wifi</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/07/19/ein-toller-tag-in-chiapas-mexiko/">Ein Toller Tag in Chiapas, Mexiko</a>
       </li>
     
@@ -287,10 +346,6 @@ und Kryptographie wieder prominent in den Medien vertreten.</p>
     
       <li class="post">
         <a href="/2013/07/04/costa-rica-nicaragua-honduras/">Costa Rica, Nicaragua, Honduras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/06/19/oh-wie-cool-ist-panama/">Oh, Wie Cool Ist Panama</a>
       </li>
     
   </ul>
@@ -323,7 +378,7 @@ und Kryptographie wieder prominent in den Medien vertreten.</p>
   <span class="credit">
     Powered by <a href="http://octopress.org">Octopress</a> |
     Hosted by <a href='http://github.com/saLOUt/saLOUt.github.com/'>GitHub</a> |
-    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 20.07.13 at 12:49
+    Generated by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> on 09.10.13 at 01:12
   </span>
 </p>
 

@@ -37,7 +37,7 @@ just place the following file `freewifi-up` in `/etc/NetworkManager/dispatcher.d
 case "$2" in
     up)
         if iwgetid | grep -qs :\"FreeWifi\"; then
-                curl -s -X POST -d 'login=000000000&password=mypassword&submit=Valider' https://wifi.free.fr/Auth
+                curl -s --retry 10 --retry-max-time 0 -X POST -d 'login=000000000&password=mypassword&submit=Valider' https://wifi.free.fr/Auth > /dev/null
         fi
         ;;
     *)

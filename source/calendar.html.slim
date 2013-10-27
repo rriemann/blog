@@ -1,0 +1,30 @@
+---
+pageable: false
+per_page: 12
+---
+- content_for(:sidebar)
+  == partial "aside/recent-posts"
+  == partial "aside/recent-comments"
+
+
+section.archive
+  h1
+    ' Posts from
+    - case page_type
+    - when 'day'
+      = Date.new(year, month, day).strftime('%e %B %Y')
+    - when 'month'
+      = Date.new(year, month).strftime('%B %Y')
+    - when 'year'
+      = year
+      
+  == partial "article-listing", locals: {articles: page_articles}
+  
+  - if paginate && num_pages > 1
+    p
+      | Page #{page_number} of #{num_pages}
+    - if prev_page
+      p= link_to 'Previous page', prev_page
+  - if paginate
+    - if next_page
+      p= link_to 'Next page', next_page

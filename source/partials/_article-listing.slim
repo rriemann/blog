@@ -1,0 +1,13 @@
+- articles.group_by {|a| a.date.year }.each do |year, articles|
+  - articles.group_by {|a| a.date.month }.each do |month, articles|
+    h3= Time.new(year,month).strftime('%B %Y')
+    ul.list-posts
+      - articles.each do |article|
+        li
+          time datetime="#{article.date.strftime('%Y-%m-%d')}"
+            = article.date.strftime('%d %b %Y')
+          =<> link_to article.title, article
+          .tags
+            - article.tags.each do |tag|
+              span.glyphicon.glyphicon-tag>
+              = link_to tag, "/tags/#{tag}.html"

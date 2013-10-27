@@ -1,0 +1,12 @@
+aside.col-md-12.col-sm-6
+  section
+    header: h4 Site Search
+    div
+      form method="get" action="http://www.google.com/search"
+        .input-group
+          input type="hidden" name="ie" value="utf-8"
+          input type="hidden" name="sitesearch" value=(data.site.host)
+          input.form-control type="text" placeholder="Search" name="q"
+          span.input-group-btn
+            button.btn.btn-default type="button"
+              span.glyphicon.glyphicon-search

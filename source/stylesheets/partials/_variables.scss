@@ -1,0 +1,23 @@
+/* @import url(http://fonts.googleapis.com/css?family=Vollkorn:400,700); */
+/* @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono); */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300|Source+Code+Pro:400,700);
+
+$brand-secondary:   #ebe8db;
+$brand-primary:     #cb4d51;
+$body-bg:           $brand-primary;
+// $navbar-default-bg:                $body-bg;
+$font-family-sans-serif: 'Source Sans Pro', 'Droid Sans', sans-serif;
+$font-family-serif: 'Droid Serif', serif;
+// $font-family-base: $font-family-serif;
+// $font-family-monospace: 'Source Code Pro', 'Droid Sans Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+/* $font-size-base: 16px; */
+$headings-font-weight: 700;
+$border-radius-base: 0;
+$navbar-default-bg: #fff;
+$navbar-default-brand-color: #000; // $brand-primary;
+// $hr-border: darker($brand-secondary, 20%);
+$thumbnail-bg: #fff;
+// $navbar-default-link-hover-color: #fff;
+
+// $headings-font-family: $font-family-sans-serif;

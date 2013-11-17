@@ -74,12 +74,12 @@ pre.highlight {
   border-radius: 0 0 $border-radius-base $border-radius-base;
   border-style: solid;
   border-width: 1px;
+  font-family: $font-github;
+  font-size: 12px;
   a, em {
+    font-style: normal;
     color: #666666;
     font-weight: bold;
-    font-style:normal;
-    font-size: 12px;
-    font-family: "Helvetica Neue",Helvetica,arial,freesans,clean,sans-serif;
     text-decoration: none;
   }
 }

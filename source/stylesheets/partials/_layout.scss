@@ -73,7 +73,7 @@ body * {
       margin: 0;
     }
     &:first-child h4 { // site search dark bar on same level like nav.
-      padding-top: 50px;
+      padding-top: 35px;
     }
   }
 }
@@ -137,7 +137,7 @@ body * {
 #headline {
   h1 {
     margin: 0;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     /*
     font-style: italic;
     font-family: $font-family-serif;
@@ -221,6 +221,9 @@ body * {
       background: url(data:image/gif;base64,R0lGODlhEAAQAKUgAP8Aev8Ag/8HiwBT3QJX2gRg3ABq3iF94f1EpPpstVuY5P2Cvnaq6vKeyJO56IXI8vu83vLN4dXX1Mfb9f3V5OHi4PHf6Onr6Oru8+/18vz07P34+fH++f388/n+//z++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKACAALAAAAAAQABAAAAaBQFBlSCwWhZ+kcrkcMp9Kp2ezpCqpQ0/S+tloP9qNlHFQTMAQBGKRdCoGBYIBQwkA7AnPEFPoxx8LdwGDHEMbfn+BgwECHBISHQwEkwcYFgJ3AAuOEhkZDgoMGBsZEQkIDZ6PFxcarhoXGBkcs7GrrLi5ube6vRe8vrsgj8TFxiBBADs=) center left no-repeat;
     }
   }
+  #disqus-thread {
+    font-family: $font-github !important;
+  }
 }
 
 nav {
@@ -277,7 +280,7 @@ aside {
       list-style: none;
       time {
         float: left;
-        width: 6em;
+        width: 8em;
       }
       .tags {
         float: right;

@@ -13,71 +13,6 @@ body * {
   -webkit-backface-visibility: hidden;
 }
 
-@media (min-width: $screen-xs) {
-  
-}
-
-
-@media (min-width: $screen-md) {
-  
-  // http://jsfiddle.net/danield770/scsGj/
-  /*
-  * {
-      margin:0;padding:0;
-  }
-  html,body,.container {
-      height:100%;
-  }
-  .container {
-    display:table;
-    width: 100%;
-    .row {
-      height: 100%;
-      display: table-row;
-      .col-md-3, .col-md-9 {
-        display: table-cell;
-      }
-    }
-  }
-  
-  #wrapper-content, #wrapper-sidebar {
-    float: none;
-  }
-  */
-  
-  /*
-  // second try
-  body > .container {
-    display: table;
-    & > .row {
-      display: table-row;
-      // height: 100%;
-      & > .col-md-3, & > .col-md-9 {
-        display: table-cell;
-        float: none;
-      }
-    }
-  }
-  */
-
-  #wrapper-sidebar {
-    @include background(image-url('/images/100-40-10-monochrome.png'), $brand-secondary);
-  }
-
-  #wrapper-content, #wrapper-footer {
-    @include background(image-url('/images/100-40-10-monochrome.png'), $brand-primary);
-  }
-
-  #wrapper-sidebar aside {
-    h4 {
-      margin: 0;
-    }
-    &:first-child h4 { // site search dark bar on same level like nav.
-      padding-top: 35px;
-    }
-  }
-}
-
 @mixin bar-dark() {
   border-bottom: 5px solid darken($brand-secondary, 20%) !important;
 }
@@ -161,7 +96,7 @@ body * {
 #content {
   background-color: #fff;
   & > section {
-    padding: 20px $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width/2;
+    padding: 20px $grid-gutter-width/2;
   }
   .blog-index {
     #markdown-toc, sup[id*="fnref"] {
@@ -233,12 +168,20 @@ nav {
   footer {
     border-top: 5px solid darken($brand-secondary, 20%) !important;
     background-color: #fff;
-    padding: 10px; // wie in #content > section
+    padding: 10px $grid-gutter-width/2; // wie in #content > section
+  }
+}
+#wrapper-sidebar aside {
+  h4 {
+    margin: 0;
   }
 }
 
-aside {
+aside, #content {
   margin-bottom: 20px;
+}
+
+aside {
   section {
     header h4 {
       padding: 10px 10px 0px 10px;
@@ -250,6 +193,71 @@ aside {
     background-color: #fff;
     // @include box-shadow(5px 5px rgba(0, 0, 0, 0.1));
     // @include box-shadow(#555 0 0px 3px 0px );
+  }
+}
+
+
+@media (min-width: $screen-xs) {
+  
+}
+
+
+@media (min-width: $screen-md) {
+  
+  // http://jsfiddle.net/danield770/scsGj/
+  /*
+  * {
+      margin:0;padding:0;
+  }
+  html,body,.container {
+      height:100%;
+  }
+  .container {
+    display:table;
+    width: 100%;
+    .row {
+      height: 100%;
+      display: table-row;
+      .col-md-3, .col-md-9 {
+        display: table-cell;
+      }
+    }
+  }
+  
+  #wrapper-content, #wrapper-sidebar {
+    float: none;
+  }
+  */
+  
+  /*
+  // second try
+  body > .container {
+    display: table;
+    & > .row {
+      display: table-row;
+      // height: 100%;
+      & > .col-md-3, & > .col-md-9 {
+        display: table-cell;
+        float: none;
+      }
+    }
+  }
+  */
+  #content {
+    margin-bottom: 0;
+  }
+  #wrapper-sidebar {
+    @include background(image-url('/images/100-40-10-monochrome.png'), $brand-secondary);
+  }
+
+  #wrapper-content, #wrapper-footer {
+    @include background(image-url('/images/100-40-10-monochrome.png'), $brand-primary);
+  }
+
+  #wrapper-sidebar aside {
+    &:first-child h4 { // site search dark bar on same level like nav.
+      padding-top: 35px;
+    }
   }
 }
 

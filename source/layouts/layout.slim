@@ -76,7 +76,7 @@ html.no-js lang="#{data.site.lang}"
       .row
         .col-md-9#wrapper-content
           .hidden-xs#headline: h1
-            a> href=(site_url) #{data.site.title}
+            a> href="#{site_url}/" = data.site.title
             small nothing else
           nav.navbar.navbar-default role="navigation"
             .navbar-header
@@ -85,15 +85,14 @@ html.no-js lang="#{data.site.lang}"
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-              a.navbar-brand.visible-xs href="index.html"
-                ' #{data.site.title}
+              a.navbar-brand.visible-xs> href="#{site_url}/" = data.site.title
                 small nothing else
             .collapse.navbar-collapse.navbar-ex1-collapse
               ul.nav.navbar-nav
                 li
-                  = link_to 'Blog', '/'
+                  = link_to 'Blog', "#{site_url}/"
                 li
-                  = link_to 'Archives', '/archives.html'
+                  = link_to 'Archives', "#{site_url}/archives.html"
                 li
                   a href='https://github.com/rriemann' Code
                 li
@@ -105,7 +104,7 @@ html.no-js lang="#{data.site.lang}"
                 li
                   = link_to 'Files', '//people.physik.hu-berlin.de/~rriemann/'
                 li
-                  = link_to 'About', '/about.html'
+                  = link_to 'About', "#{site_url}/about.html"
           div#content
             == yield
         

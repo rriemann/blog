@@ -184,20 +184,23 @@ configure :build do
   # Gzip HTML, CSS, and JavaScript
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#gzip-text-files
   # activate :gzip
-  
-  # this part ensures, that gz-files are delivered by the Apache server using content negotiation.
-  # without renaming the i.e. "index.html" to "index.html.txt" it will receive priority and "index.html.gz" will not be used in any case
-#   after_build do |builder|
-#     Dir.chdir(::Middleman::Application.server.inst.build_dir) do
-#       files = Dir.glob('**/*.gz')
-#       files.map { |file| file[0..-4] }.each do |f| # find corresponding non-gz file by removing ".gz" at the end
-#         unless File.directory?(f)
-#           output_filename = f + '.txt'
-#           File.rename(f, output_filename)
-#           builder.say_status :mv, output_filename
-#         end
-#       end
-#     end
-#   end
+
+  after_build do |builder|
+    require 'fileutils'
+    build_dir = ::Middleman::Application.server.inst.build_dir
+    template_file = build_dir+'/files.template'
+    src_dir   = 'other_site_integration'
+    unless File.directory?(src_dir)
+      FileUtils.mkdir_p(src_dir)
+    end
+    page  = Nokogiri::HTML(File.read template_file)
+    parts = page.xpath("//html/body/div[@class=\"container\"]").to_s.split(/^\s*CUT_HERE\s*$/)
+    [src_dir+'/frontmatter.html', src_dir+'/backmatter.html'].each_with_index do |file, i|
+      File.open(file, 'w') { |file| file.write parts[i] }
+      builder.say_status :create, file
+    end
+    builder.say_status :mv, template_file if File.rename(template_file, src_dir+'/'+File.basename(template_file))
+    builder.say_status :mv, build_dir+'/stylesheets/essentials.css' if File.rename(build_dir+'/stylesheets/essentials.css', src_dir+'/essentials.css')
+  end
 
 end

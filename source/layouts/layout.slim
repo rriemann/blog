@@ -122,3 +122,4 @@ html.no-js lang="#{data.site.lang}"
             ' build: #{%x{git describe --always}} @
             time datetime="#{Time.now.utc.strftime('%Y-%m-%d')}"
               = Time.now.utc.strftime("%d/%m/%y %H:%M UTC")
+    == partial :analytics

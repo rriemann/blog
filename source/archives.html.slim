@@ -8,5 +8,5 @@ per_page: 12
 
 section.archive
   .tag-header
-    h1 Blog Archive
+    h1 Blog #{I18n.t :archive}
   == partial "article-listing", locals: {articles: blog.articles}

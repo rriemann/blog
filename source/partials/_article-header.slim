@@ -8,7 +8,7 @@
       / span.glyphicon.glyphicon-time
       span.glyphicon.glyphicon-pencil
       time datetime="#{article.date.strftime('%Y-%m-%d')}"
-        =<> article.date.strftime('%B %e, %Y')
+        =<> I18n.l article.date.to_date, format: :long
     li.comment
       span.glyphicon.glyphicon-comment>
       / the following url has to match the disqus url

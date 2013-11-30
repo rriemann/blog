@@ -2,9 +2,9 @@
   aside.col-md-12.col-sm-6
     section
       header: h4
-        ' Site Search
+        ==> I18n.t :sitesearch
         small
-          ' by
+          ==> I18n.t :sitesearch_by
           a href="https://duckduckgo.com/about" DuckDuckGo
       div
         form method="get" action="https://duckduckgo.com/"
@@ -34,7 +34,7 @@
             / input type="hidden" name="k4" value="-1"  
             / site
             input type="hidden" name="sites" value=(data.site.host)
-            input.form-control type="text" placeholder="Search" name="q"
+            input.form-control type="text" placeholder=(I18n.t :sitesearch_placeholder) name="q"
             span.input-group-btn
               button.btn.btn-default type="submit"
                 span.glyphicon.glyphicon-search

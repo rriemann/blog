@@ -15,25 +15,25 @@ section.blog-index
     == article.summary
     .clearfix
     a.btn.btn-primary href="#{article.url}"
-      | Read More
+      == I18n.t :read_more
       span.glyphicon.glyphicon-chevron-right
     hr
   - if paginate && num_pages > 1
     ul.pager
       - if prev_page
         li.previous
-          / a title="#{current_page.previous_article.title}" href="#{current_page.previous_article.url}" &larr; Previous
-          = link_to '&larr; Previous', prev_page
+          / a title="#{current_page.previous_article.title}" href="#{current_page.previous_article.url}" &larr; #{I18n.t :previous}
+          = link_to "&larr; #{I18n.t :previous}", prev_page
       - else
         li.previous.disabled
-          span &larr; Previous
+          span &larr; #{I18n.t :previous}
       - if next_page
         li.next
-          / a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" Next &rarr;
-          = link_to 'Next &rarr;', next_page
+          / a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" #{I18n.t :next} &rarr;
+          = link_to "#{I18n.t :next} &rarr;", next_page
       - else
         li.next.disabled
-          span Next &rarr;
+          span #{I18n.t :next} &rarr;
     / p
       | Page
       =<> page_number

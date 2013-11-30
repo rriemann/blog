@@ -1,3 +1,5 @@
+activate :dotenv
+
 ###
 # Compass
 ###
@@ -36,24 +38,17 @@ require 'rgbapng'
 ready do
   blog.tags.each do |tag, articles|
     page "/tags/#{tag}/atom.xml", proxy: "/atom.xml", layout: false do
-      #@articles = blog.articles[0..10]
       @tagname = tag
       @articles = articles[0..10]
     end
   end
-#   page "/tags/kde/atom.xml", proxy: "/atom.xml", layout: false do
-#     #@articles = blog.articles[0..10]
-#     @articles = blog.tags['kde']
-#   end
 end
 
-# ready do
-#   blog.tags.each do |tag, articles|
-#     puts tag
-#     proxy "/tags/#{tag}/atom.xml", "/atom.xml.builder", locals: { tag: tag, articles: articles}, ignore: true
-#   end
-#   # proxy "/atom.xml", "/atom.xml.builder", locals: { articles: blog.articles[0..10]}, ignore: true
-# end
+###
+# Localization settings
+###
+
+activate :i18n, :mount_at_root => :en
 
 ###
 # Blog settings

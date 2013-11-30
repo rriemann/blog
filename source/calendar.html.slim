@@ -9,10 +9,10 @@ per_page: 12
 
 section.archive
   h1
-    ' Posts from
+    ==> I18n.t :posts_from
     - case page_type
     - when 'day'
-      = Date.new(year, month, day).strftime('%e %B %Y')
+      = I18n.l Date.new(year, month, day), format: :long
     - when 'month'
       = Date.new(year, month).strftime('%B %Y')
     - when 'year'
@@ -24,7 +24,7 @@ section.archive
     p
       | Page #{page_number} of #{num_pages}
     - if prev_page
-      p= link_to 'Previous page', prev_page
+      p= link_to I18n.t(:previous), prev_page
   - if paginate
     - if next_page
-      p= link_to 'Next page', next_page
+      p= link_to I18n.t(:next), next_page

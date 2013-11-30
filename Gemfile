@@ -7,7 +7,7 @@ gem "rack-contrib"
 # gem "rack-tidy-ffi"
 
 # gem "middleman"
-gem "middleman", "~> 3.2.0" #, :platform => :mingw
+gem "middleman", :git => "git://github.com/middleman/middleman.git"#"~> 3.2.0" #, :platform => :mingw
 #       gem "wdm", "~> 0.1", :platform => :mingw
 gem "rb-inotify", "~> 0.9", :platform => :ruby
 gem "middleman-livereload", :git => "git://github.com/middleman/middleman-livereload.git"
@@ -16,6 +16,7 @@ gem "middleman-favicon-maker", :git => "git://github.com/follmann/middleman-favi
 gem "middleman-deploy"
 gem "middleman-syntax"
 gem "middleman-blog"
+gem "middleman-dotenv"
 
 gem "kramdown"
 

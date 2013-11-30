@@ -8,23 +8,23 @@
     == yield
     /
       a.btn.btn-primary href="#"
-        | Read More
+        == I18n.t :read_more
         span.glyphicon.glyphicon-chevron-right
     .clearfix
     hr
     ul.pager
       - if current_page.next_article
         li.previous
-          a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" &larr; Previous
+          a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" &larr; #{I18n.t :previous}
       - else
         li.previous.disabled
-          span &larr; Previous
+          span &larr; #{I18n.t :previous}
       - if current_page.previous_article
         li.next
-          a title="#{current_page.previous_article.title}" href="#{current_page.previous_article.url}" Next &rarr;
+          a title="#{current_page.previous_article.title}" href="#{current_page.previous_article.url}" #{I18n.t :next} &rarr;
       - else
         li.next.disabled
-          span Next &rarr;
+          span #{I18n.t :next} &rarr;
     hr
     #disqus_thread
     == partial :disqus

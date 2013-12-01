@@ -4,6 +4,7 @@ title: "Zur Allgemeinen Lage der Sicherheit"
 date: 2013-07-06 21:07
 comments: true
 tags: [german, tricks, meta, security]
+lang: de
 ---
 
 [![GnuPG Logo][img]{:.pull-right.img-thumbnail}][gpg]

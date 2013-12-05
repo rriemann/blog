@@ -6,7 +6,7 @@ module CustomHelpers
       caption = "<div class=\"caption\">#{args[:title]}</div>"
     end
     buffer = image_tag(src, args)
-    "<div class=\"thumbnail\" style=\"max-width:#{args[:width].to_i+10}px\" markdown=\"0\">#{buffer}#{caption}</div>\n"
+    "<div class=\"thumbnail\" style=\"width:#{args[:width].to_i+10}px\" markdown=\"0\">#{buffer}#{caption}</div>\n"
   end
   
   def webcomic

@@ -122,7 +122,7 @@ html.no-js lang=(I18n.locale)
           div#content
             == yield
         
-        .col-md-3#wrapper-sidebar
+        .col-md-3.hidden-print#wrapper-sidebar
           .row
             == partial "aside/site-search"
             == yield_content(:sidebar)

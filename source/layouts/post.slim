@@ -11,8 +11,8 @@
         == I18n.t :read_more
         span.glyphicon.glyphicon-chevron-right
     .clearfix
-    hr
-    ul.pager
+    hr.hidden-print
+    ul.pager.hidden-print
       - if current_page.next_article
         li.previous
           a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" &larr; #{I18n.t :previous}

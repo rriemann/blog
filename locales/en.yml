@@ -34,3 +34,6 @@ en:
   # partial: _recent-webcomics
   recent_webcomics: Recent Webcomics
   
+  # partial: _blog-roll-travels
+  blog_roll_travels: Travel Blogs of my Friends
+  

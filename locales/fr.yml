@@ -33,3 +33,6 @@ fr:
   
   # partial: _recent-webcomics
   recent_webcomics: Webcomics récents
+  
+  # partial: _blog-roll
+  blog_roll_travels: Travel Blogs of my Friends

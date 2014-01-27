@@ -104,6 +104,7 @@ set :slim, {
   :pretty => true,
   :sort_attrs => false
 }
+::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
 
 
 # Assets PATH

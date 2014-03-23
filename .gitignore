@@ -3,6 +3,7 @@
 /other_site_integration
 /.env
 .*
+*~
 *.acn
 *.acr
 *.alg

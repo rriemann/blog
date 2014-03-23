@@ -6,7 +6,7 @@ html {
 body {
   -webkit-text-size-adjust: none;
   // background: #333 url("/images/100-90-5-monochrome.png") 0 0 repeat;
-  @include background(image-url('#{$site-url}/images/100-40-10-monochrome.png'), linear-gradient(left, color-stops($brand-primary, $brand-primary 50%, $brand-secondary 50%)));
+  @include background(image-url('#{$site-url}images/100-40-10-monochrome.png'), linear-gradient(left, color-stops($brand-primary, $brand-primary 50%, $brand-secondary 50%)));
 }
 
 body * {
@@ -147,13 +147,15 @@ body * {
   .footnotes {
     clear: both;
   }
-  .thumbnail iframe, .thumbnail img { // fix your youtube embed and flickr
-    max-width: 100%;
-  }
-  .thumbnail .caption {
-    .flickr-link {
-      padding-left: 18px;
-      background: url(data:image/gif;base64,R0lGODlhEAAQAKUgAP8Aev8Ag/8HiwBT3QJX2gRg3ABq3iF94f1EpPpstVuY5P2Cvnaq6vKeyJO56IXI8vu83vLN4dXX1Mfb9f3V5OHi4PHf6Onr6Oru8+/18vz07P34+fH++f388/n+//z++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKACAALAAAAAAQABAAAAaBQFBlSCwWhZ+kcrkcMp9Kp2ezpCqpQ0/S+tloP9qNlHFQTMAQBGKRdCoGBYIBQwkA7AnPEFPoxx8LdwGDHEMbfn+BgwECHBISHQwEkwcYFgJ3AAuOEhkZDgoMGBsZEQkIDZ6PFxcarhoXGBkcs7GrrLi5ube6vRe8vrsgj8TFxiBBADs=) center left no-repeat;
+  .thumbnail {
+    &, iframe, img { // fix youtube embed and flickr
+      max-width: 100%;
+    }
+    .caption {
+      .flickr-link {
+        padding-left: 18px;
+        background: url(data:image/gif;base64,R0lGODlhEAAQAKUgAP8Aev8Ag/8HiwBT3QJX2gRg3ABq3iF94f1EpPpstVuY5P2Cvnaq6vKeyJO56IXI8vu83vLN4dXX1Mfb9f3V5OHi4PHf6Onr6Oru8+/18vz07P34+fH++f388/n+//z++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKACAALAAAAAAQABAAAAaBQFBlSCwWhZ+kcrkcMp9Kp2ezpCqpQ0/S+tloP9qNlHFQTMAQBGKRdCoGBYIBQwkA7AnPEFPoxx8LdwGDHEMbfn+BgwECHBISHQwEkwcYFgJ3AAuOEhkZDgoMGBsZEQkIDZ6PFxcarhoXGBkcs7GrrLi5ube6vRe8vrsgj8TFxiBBADs=) center left no-repeat;
+      }
     }
   }
   #disqus-thread {
@@ -168,7 +170,7 @@ nav {
   footer {
     border-top: 5px solid darken($brand-secondary, 20%) !important;
     background-color: #fff;
-    padding: 10px $grid-gutter-width/2; // wie in #content > section
+    padding: 10px $grid-gutter-width/2; // like in #content > section
   }
 }
 #wrapper-sidebar aside {
@@ -245,13 +247,15 @@ aside {
   */
   #content {
     margin-bottom: 0;
+    min-height: 100vh;
+    min-height: calc(100vh - 160px);
   }
   #wrapper-sidebar {
-    @include background(image-url('#{$site-url}/images/100-40-10-monochrome.png'), $brand-secondary);
+    @include background(image-url('#{$site-url}images/100-40-10-monochrome.png'), $brand-secondary);
   }
 
   #wrapper-content, #wrapper-footer {
-    @include background(image-url('#{$site-url}/images/100-40-10-monochrome.png'), $brand-primary);
+    @include background(image-url('#{$site-url}images/100-40-10-monochrome.png'), $brand-primary);
   }
 
   #wrapper-sidebar aside {
@@ -309,7 +313,7 @@ aside {
 }
 
 // aside styles
-#recent-comments .dsq-widget, #recent-posts, aside#central-america, aside#recent-webcomics {
+#recent-comments .dsq-widget, #recent-posts, aside#central-america, aside#recent-webcomics, aside#blog-roll {
   ul {
     @include separated-list();
     margin: 0;

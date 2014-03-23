@@ -21,8 +21,4 @@ module CustomHelpers
     end
     out
   end
-  
-  def site_url
-    '//' + settings.host
-  end
 end

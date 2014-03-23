@@ -1,36 +1,27 @@
-// @import url(http://fonts.googleapis.com/css?family=Vollkorn:400,700);
-// @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono);
-// @import url(http://fonts.googleapis.com/css?family=Cutive);
-// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300|Source+Code+Pro:400,700);
-// @import url(http://fonts.googleapis.com/css?family=Raleway);
-@import url(http://fonts.googleapis.com/css?family=Bitter:400);
-
 $brand-secondary:   #ebe8db;
-$brand-primary:     #cb4d51;
+$brand-primary:     #4D7599; // blue
+$brand-primary:     #6F5739; // brown
+$brand-primary:     #4A572E; // dark olive green (check link color)
+$brand-primary:     #4A831B; // gras green
+$brand-primary:     #2F766E; // green teal
+$brand-primary:     #115D78; // dark cyan
+$brand-primary:     #cb4d51; // redish
 $body-bg:           $brand-primary;
-// $navbar-default-bg:                $body-bg;
-// $font-family-sans-serif: 'Droid Sans', 'Source Sans Pro', sans-serif;
+
 // http://css-tricks.com/snippets/css/font-stacks/
 $font-family-sans-serif: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-// $font-family-serif: 'Droid Serif', 'Cutive', serif;
-// $font-family-base: $font-family-serif;
-$font-github: "Helvetica Neue",Helvetica,arial,freesans,clean,sans-serif;
-//$font-family-base: $font-github;
-// $font-family-monospace: 'Source Code Pro', 'Droid Sans Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace; // like Github Gist
-// $font-size-base: 16px;
+$font-github: "Helvetica Neue",Helvetica,arial,freesans,clean,sans-serif; // used for subline of highlighted code
+
+@import url(http://fonts.googleapis.com/css?family=Bitter:400);
+$headings-font-family: 'Bitter', $font-family-sans-serif;
 $headings-font-weight: 400;
+
 $border-radius-base: 0;
 $navbar-default-bg: #fff;
-$navbar-default-brand-color: #000; // $brand-primary;
-// $hr-border: darker($brand-secondary, 20%);
+$navbar-default-brand-color: #000;
 $thumbnail-bg: #fff;
-// $navbar-default-link-hover-color: #fff;
 
-// $headings-font-family: $font-family-sans-serif;
-// $headings-font-family: $font-family-serif;
-// $headings-font-family: serif;
-// $headings-font-family: 'Cutive';
-$headings-font-family: 'Bitter', $font-family-sans-serif;
-
-$site-url: "<%= site_url %>";
+$site-url: "<%= site_url + settings.http_prefix %>";
+// fix path for glyphicon fonts which come along with bootstrap
+$icon-font-path: "<%= settings.http_prefix + settings.fonts_dir %>/bootstrap/";

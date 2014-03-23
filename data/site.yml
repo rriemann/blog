@@ -1,4 +1,4 @@
-lang: de
+lang: en
 title: Robert Riemann
 subtitle: notepad
 description: 
@@ -6,6 +6,8 @@ keywords:
   - Robert Riemann
 author: Robert Riemann
 email:  robert@riemann.cc
+twitter: rriemann
+location: France, Marseille
 
 google_analytics_id: UA-12737249-1
 

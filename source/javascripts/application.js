@@ -1,9 +1,7 @@
-/* from /vendor/javascripts dir */
+/* from from bower vendor dir */
 
-// to activate require use: //= require
-
-// require modernizr/modernizr
-//= require jquery/jquery
+//= require modernizr/modernizr
+//= require jquery/jquery  
 
 /* from  bootstrap-sass gem */
 

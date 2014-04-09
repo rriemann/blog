@@ -139,7 +139,7 @@ configure :build do
     # options.pngcrush_options = false
   # end
   
-  activate :gzip
+  # activate :gzip
 
   # Enable cache buster
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/improving-cacheability.html.markdown#cache-buster-in-query-string

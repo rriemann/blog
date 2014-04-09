@@ -129,7 +129,7 @@ configure :build do
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images
   activate :minify_css
   activate :minify_javascript
-  # activate :minify_html
+  activate :minify_html
   
   # https://github.com/plasticine/middleman-imageoptim
   # activate :imageoptim do |options|

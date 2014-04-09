@@ -129,6 +129,17 @@ configure :build do
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images
   activate :minify_css
   activate :minify_javascript
+  # activate :minify_html
+  
+  # https://github.com/plasticine/middleman-imageoptim
+  # activate :imageoptim do |options|
+    # Setting these to true or nil will let options determine them (recommended)
+    # options.nice = true
+    # options.threads = true
+    # options.pngcrush_options = false
+  # end
+  
+  activate :gzip
 
   # Enable cache buster
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/improving-cacheability.html.markdown#cache-buster-in-query-string
@@ -143,11 +154,10 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
-  # Optional Settings
-  # deploy.remote   = "custom-remote" # remote name or git url, default: origin
-  deploy.branch   = "master" # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  deploy.method = :rsync
+  deploy.host   = ENV['DEPLOY_HOST']
+  deploy.path   = ENV['DEPLOY_PATH']
+  deploy.clean  = true
 end
 
 ## custom

@@ -25,7 +25,8 @@ html.no-js lang=(I18n.locale)
     meta name="description" content="#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"
     meta name="keywords" content="#{yield_content(:keywords).blank? ? data.site.keywords.join(', ') : yield_content(:keywords).join(', ')}"
     meta name="author" content="#{data.site.author}"
-    link type="text/plain" rel="author" href="#{settings.http_prefix}humans.txt"
+    link rel="author" href="https://plus.google.com/+#{data.site.google}?rel=author"
+    link rel="author" type="text/plain" href="#{settings.http_prefix}humans.txt"
     == "\n"
     == "\n"
     link href="#{settings.http_prefix}atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml"
@@ -91,7 +92,7 @@ html.no-js lang=(I18n.locale)
                 li
                   = link_to I18n.t(:files), '//people.physik.hu-berlin.de/~rriemann/'
                 li
-                  = link_to I18n.t(:about_me), "#{site_url}/about.html"
+                  = link_to I18n.t(:about_me), "#{site_url}/about.html", rel: "author"
                 / li.dropdown
                   a.dropdown-toggle data-toggle="dropdown" href="#"
                     ==> I18n.t :choose_language

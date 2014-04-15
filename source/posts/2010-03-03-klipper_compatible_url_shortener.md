@@ -31,7 +31,7 @@ Command for Klipper action
 You can trigger actions manually by `<Ctrl>+<Alt>+<R>` (KDE default).
 
 
-[last]: {{ site.url }}/blog/2010/03/03/awesome_klipper_workflow.html "How to configure Klipper to work with pastie.rb script"
+[last]: /2010/03/03/awesome_klipper_workflow.html "How to configure Klipper to work with pastie.rb script"
 [choq]: http://choqok.gnufolks.org/ "Open Source KDE Mikroblogging Client"
 
 

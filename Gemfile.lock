@@ -188,7 +188,7 @@ DEPENDENCIES
   middleman-blog (~> 3.5.1)
   middleman-deploy
   middleman-dotenv
-  middleman-favicon-maker
+  middleman-favicon-maker (~> 3.5)
   middleman-imageoptim
   middleman-livereload (~> 3.1.0)
   middleman-minify-html

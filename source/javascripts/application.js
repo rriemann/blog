@@ -7,3 +7,5 @@
 
 //= require bootstrap
 //= require bootstrap/affix
+//= require bootstrap/transition
+//= require bootstrap/modal

@@ -99,16 +99,7 @@ The source code used to create this website is [publicly available on GitHub](ht
 
 ## About Data Privacy
 
-This blog uses a self-hosted [Piwik](https://piwik.org/) for traffic analytics.
-Check out the browser plug-in [Ghostery](https://www.ghostery.com/) to prevent tracking on every site.
-
 {::nomarkdown}
-<!-- Button trigger modal -->
-<button class="btn btn-primary pull-right" data-toggle="modal" data-target="#optout">
-  Opt-Out
-</button>
-<div class="clearfix"></div>
-
 <!-- Modal -->
 <div class="modal fade" id="optout" tabindex="-1" role="dialog" aria-labelledby="optoutLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -126,6 +117,21 @@ Check out the browser plug-in [Ghostery](https://www.ghostery.com/) to prevent t
     </div>
   </div>
 </div>
+{:/nomarkdown}
+
+This blog uses an inhouse traffic analytics solution called [Piwik](https://piwik.org/).
+The *do-not-track* [browser setting](http://donottrack.us/) is respected.
+Check out the browser plug-in [Ghostery](https://www.ghostery.com/) to prevent tracking on every site.
+
+{::nomarkdown}
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#optout" id="optoutbutton">
+  Opt-Out
+</button>
+<noscript>
+  <iframe style="border: 0; height: 250px; width: 100%;" src="https://rriemann.rigel.uberspace.de/piwik/index.php?module=CoreAdminHome&action=optOut&language=<%= I18n.locale %>"></iframe>
+</noscript>
 {:/nomarkdown}
 
 

@@ -88,6 +88,9 @@ set :build_dir,    'build'
 set :partials_dir, 'partials'
 set :fonts_dir,    'fonts'
 
+ignore /.*\.kate-swp/
+ignore /.*\.new/
+
 # Livereload
 # use: https://github.com/middleman/middleman-livereload
 activate :livereload
@@ -110,7 +113,7 @@ set :slim, {
 
 configure :development do
   set :disqus, 'worthmentioning-testing'
-  set :host, 'localhost:4567'
+  set :host, '0.0.0.0:4567'
 end
 
 # Build-specific configuration

@@ -1,6 +1,8 @@
 ---
 en:
   subtitle: thinks.
+  description: personal blog of Robert Riemann
+  keywords: Robert Riemann, personal blog
   # menu
   about_me: About Me
   archive:  Archive

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
+<service>
+<engineName>Movable Type Pro 4.21-en</engineName>
+<engineLink>http://www.sixapart.com/movabletype/</engineLink>
+<homePageLink>http://mt4.juneeonline.com/test/</homePageLink>
+<apis>
+<api name="MetaWeblog" preferred="true" apiLink="http://mt4.juneeonline.com/cgi-bin/mt/mt-xmlrpc.cgi" blogID="7" />
+<api name="MovableType" preferred="false" apiLink="http://mt4.juneeonline.com/cgi-bin/mt/mt-xmlrpc.cgi" blogID="7" />
+<api name="Blogger" preferred="false" apiLink="http://mt4.juneeonline.com/cgi-bin/mt/mt-xmlrpc.cgi" blogID="7" />
+<api name="Atom" preferred="false" apiLink="http://mt4.juneeonline.com/cgi-bin/mt/mt-atom.cgi/weblog" blogID="7" />
+</apis>
+</service>
+</rsd>

@@ -1,0 +1,118 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .asset-content h1 {
+font-family:Georgia,Times,serif;
+}
+.asset-name, .archive-title {
+font-family:Georgia,Times,serif !important;
+}
+.asset-content h1 {
+font-size:1.45em;
+padding-top:0.2em;
+font-weight:600;
+}
+.asset-content img {
+max-width:421px;
+border:1px solid #999;
+padding:1px;
+}
+
+#beta h3 {
+font-size:1.3em;
+padding-top:0.8em;
+font-weight:600;
+}
+
+#content {
+  padding-right:54px !important;
+  overflow:hidden !important;
+}
+
+.asset-content h2 {
+font-size:1.3em;
+padding-top:0.2em;
+font-weight:600;
+}
+
+.asset-content ul {
+  list-style-type:circle;
+  list-style-position: inside;
+}
+
+#header-description, #header-name {
+font-weight:normal;
+}
+
+#beta .links {
+  padding-top:25px;
+}
+
+.asset-content, .comments {
+font-size:1.3em;
+line-height:1.8;
+}
+/* Tag Cloud */
+
+/*
+.widget-cloud A {
+   text-decoration:none;
+   background-color:#A4C5CA;
+   color:#000;
+   font-family:arial,verdana;
+}
+.widget-cloud A:hover {
+   color:#fff;
+}
+.widget-cloud .widget-list-item {
+    display: inline;
+    margin: 0 5px 0 0;
+    padding: 0;
+    line-height: 1.9;
+    background: none;
+}
+*/
+
+
+.widget-cloud A.widget-cloud-link {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius-bottomleft:2px;
+-moz-border-radius-bottomright:2px;
+-moz-border-radius-topleft:2px;
+-moz-border-radius-topright:2px;
+-x-system-font:none;
+background:#A4C5CA none repeat scroll 0 0;
+color:#000;
+display:block;
+float:left;
+font-family:Arial,Helvetica,sans-serif;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:16px;
+margin:1px;
+padding:5px;
+text-align:center;
+width:auto;
+text-decoration:none;
+}
+.widget-cloud A.widget-cloud-link:hover {
+color:#fff;
+}
+
+.widget-cloud .rank-1  { font-size: 1.75em; }
+.widget-cloud .rank-2  { font-size: 1.75em; }
+.widget-cloud .rank-3  { font-size: 1.625em; }
+.widget-cloud .rank-4  { font-size: 1.5em; }
+.widget-cloud .rank-5  { font-size: 1.375em; }
+.widget-cloud .rank-6  { font-size: 1.25em; }
+.widget-cloud .rank-7  { font-size: 1.125em; }
+.widget-cloud .rank-8  { font-size: 1em; }
+.widget-cloud .rank-9  { font-size: 0.95em; }
+.widget-cloud .rank-10 { font-size: 0.9em; }
+
+
+.asset-more-link {
+   font-weight:600;
+}

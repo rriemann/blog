@@ -99,6 +99,8 @@ activate :livereload
 activate :directory_indexes
 set :trailing_slash, true
 
+page "/lateinamerika/*", :directory_index => false
+
 set :markdown_engine, :kramdown # now default
 set :markdown, :parse_block_html => true
 

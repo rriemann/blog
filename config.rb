@@ -1,6 +1,7 @@
 activate :dotenv
 
 require 'rgbapng'
+require 'bootstrap-sass'
 
 ###
 # Blog settings

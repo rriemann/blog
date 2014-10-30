@@ -18,8 +18,13 @@ html.no-js lang=(I18n.locale)
     meta charset="UTF-8"
     == "\n"
     == "\n"
-    - content_for(:title, current_page.data.title)
-    title= yield_content(:title).blank? ? data.site.title : yield_content(:title) + " - " + data.site.title
+    title
+      - if current_page.data.title
+        == current_page.data.title + " - " + data.site.title
+      - elsif content_for?(:title)
+        == yield_content(:title) + " - " + data.site.title
+      - else
+        == data.site.title
     == "\n"
     == "\n"
     meta name="description" content="#{current_page.data.description.blank? ? I18n.t(:description, default: data.site.description) : current_page.data.description.chomp}"

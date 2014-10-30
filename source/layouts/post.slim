@@ -1,7 +1,7 @@
 - content_for(:sidebar)
   == partial "aside/recent-posts"
 
-- wrap_layout :layout do
+= wrap_layout :layout do
   section
     == partial "article-header", locals: {article: current_article}
     == yield

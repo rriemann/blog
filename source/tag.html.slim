@@ -6,6 +6,8 @@
   == partial "aside/recent-posts"
 - content_for(:header)
   link href="#{current_page.url}atom.xml" rel="alternate" title="Worth Mentioning - #{tagname}" type="application/atom+xml"
+- content_for(:title)
+  | Posts tagged #{tagname}
 
 section.archive: .tag-header
   h1

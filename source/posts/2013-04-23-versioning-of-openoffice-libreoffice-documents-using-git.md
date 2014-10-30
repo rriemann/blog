@@ -7,6 +7,12 @@ tags: [linux, tricks]
 lang: en
 ---
 
+**Update:** With the probability to save documents directly in *Flat XML* format
+(i.e. `*.fodt` instead of `*.odt`) within LibreOffice, this article is *obsolete*.
+Flat XML files receive the best git versioning you can expect. The images in your
+documents are embedded in the XML file as well. Thanks to Simon for this helpful
+comment.
+
 At the moment I'm preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the [git]
 versioning system. This is pretty straight-forward, because LaTeX documents are

@@ -15,9 +15,10 @@ module CustomHelpers
     out = figure_tag png,  title: data.page.subtitle
     if svg
       out += link_to 'SVG from Inkscape', svg
+      out += " "
     end
     if data.page.license == 'cc-by-nc-sa'
-      out += link_to (image_tag 'by-nc-sa.eu.png', title: "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"), "//creativecommons.org/licenses/by-nc-sa/2.0/", title: "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
+      out += link_to (image_tag 'by-nc-sa.small.png', title: "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"), "//creativecommons.org/licenses/by-nc-sa/2.0/", title: "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
     end
     out
   end

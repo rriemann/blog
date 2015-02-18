@@ -1,7 +1,10 @@
 @charset "utf-8";
 
-// Variables
+// Config und Libraries
 @import "partials/variables";
+
+@import "bootstrap-sprockets";
+@import "partials/bootstrap-variables";
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -53,10 +56,6 @@
 @import "bootstrap/carousel";
 */
 
-// Utility classes
-@import "bootstrap/utilities";
-@import "bootstrap/responsive-utilities";
-
 
 @import "rgbapng";
 @import "compass/css3/box-shadow";
@@ -70,6 +69,5 @@
 #content table {
   width: 100%;
 }
-
 
 

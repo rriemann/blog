@@ -3,7 +3,7 @@
 title: "Zur Allgemeinen Lage der Sicherheit"
 date: 2013-07-06 21:07
 comments: true
-tags: [german, tricks, meta, security]
+tags: [german, tricks, meta, security, surveillance]
 lang: de
 ---
 

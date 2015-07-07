@@ -36,7 +36,7 @@ ready do
   # Add bower's directory to sprockets asset path
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
-  
+
   blog.tags.each do |tag, articles|
     page "/tags/#{tag}/atom.xml", proxy: "/atom.xml", layout: false do
       @tagname = tag
@@ -91,6 +91,7 @@ set :fonts_dir,    'fonts'
 
 ignore /.*\.kate-swp/
 ignore /.*\.new/
+ignore /.*\.backup/
 
 # Livereload
 # use: https://github.com/middleman/middleman-livereload
@@ -126,7 +127,7 @@ configure :build do
 
   # Enable cache buster
   # activate :asset_hash
-  
+
   # Make favicons
   # use: https://github.com/follmann/middleman-favicon-maker
   activate :favicon_maker, :icons => {
@@ -146,7 +147,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :minify_html
-  
+
   # https://github.com/plasticine/middleman-imageoptim
   # activate :imageoptim do |options|
     # Setting these to true or nil will let options determine them (recommended)
@@ -154,7 +155,7 @@ configure :build do
     # options.threads = true
     # options.pngcrush_options = false
   # end
-  
+
   # activate :gzip
 
   # Enable cache buster

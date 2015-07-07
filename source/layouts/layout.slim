@@ -92,7 +92,7 @@ html.no-js lang=(I18n.locale)
                 li
                   a href='https://facebook.com/rriemann' Facebook
                 li
-                  a href='https://www.couchsurfing.org/people/salout' Couchsurfing
+                  a href='https://www.couchsurfing.com/people/salout' Couchsurfing
                 li
                   = link_to I18n.t(:files), '//people.physik.hu-berlin.de/~rriemann/'
                 li
@@ -110,10 +110,10 @@ html.no-js lang=(I18n.locale)
                       = link_to 'deutsch', "#{site_url}/de/"
                     li
                       = link_to 'français', "#{site_url}/fr/"
-                    
+
           div#content
             == yield
-        
+
         .col-md-3.hidden-print#wrapper-sidebar
           .row
             == partial "aside/site-search"

@@ -24,6 +24,10 @@ gem 'compass-rgbapng'
 # official twitter bootstrap sass version with Glyphicons font
 gem 'bootstrap-sass', '~> 3.3.4', :require => false
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-mapbox.js', '~> 2.1.9', :require => false
+end
+
 gem 'slim', '~> 2.0.3'
 gem 'builder', '~> 3.2.2' # XMLfeeds
 

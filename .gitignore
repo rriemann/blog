@@ -1,8 +1,10 @@
 /tmp
 /build
+/vendor
 /other_site_integration
 /.env
 .*
+*.backup
 *~
 *.acn
 *.acr

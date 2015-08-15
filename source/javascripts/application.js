@@ -11,5 +11,6 @@
 //= require bootstrap/affix
 //= require bootstrap/transition
 //= require bootstrap/modal
+//= require bootstrap/collapse
 
 //= require mapbox.js/mapbox.uncompressed

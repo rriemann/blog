@@ -7,11 +7,13 @@ tags: [linux, tricks]
 lang: en
 ---
 
-**Update:** With the probability to save documents directly in *Flat XML* format
+**Update:** With the option to save documents directly in *Flat XML* format
 (i.e. `*.fodt` instead of `*.odt`) within LibreOffice, this article is *obsolete*.
 Flat XML files receive the best git versioning you can expect. The images in your
 documents are embedded in the XML file as well. Thanks to Simon for this helpful
-comment.
+comment. However, in another [comment](#comment-2209333934) it was suggested to
+still process the document to get rid of cursor markers that produce noise in
+the diff.
 
 At the moment I'm preparing my application documents for my job after finishing
 my travels. Of course, I track changes of my LaTeX documents with the [git]

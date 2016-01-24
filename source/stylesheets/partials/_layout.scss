@@ -340,6 +340,10 @@ aside {
   }
 }
 
+abbr[title], abbr[data-original-title] {
+  text-decoration: none;
+}
+
 // remove url after links in print view
 @media print {
   #headline, .post-header, .thumbnail {

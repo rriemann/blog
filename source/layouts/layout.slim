@@ -123,9 +123,10 @@ html.no-js lang=(I18n.locale)
         .col-md-9#wrapper-footer
           footer.text-center: small
             ' Copyright &copy; #{Time.now.year} #{data.site.author} |
-            / ' Powered by #{link_to 'Middleman', '//middlemanapp.com'} |
+            ' Powered by #{link_to 'Middleman', '//middlemanapp.com'}
             / ' Hosted by #{link_to 'Github', '//github.com'} |
-            ==> I18n.t :built,  hash: %x{git describe --always}
-            time datetime="#{File.mtime(current_page.source_file).strftime('%Y-%m-%d')}"
-              == I18n.l File.mtime(current_page.source_file), format: :long
+            / 
+              ==> I18n.t :built,  hash: %x{git describe --always}
+              time datetime="#{File.mtime(current_page.source_file).strftime('%Y-%m-%d')}"
+                == I18n.l File.mtime(current_page.source_file), format: :long
     == partial :analytics

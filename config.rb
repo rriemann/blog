@@ -130,17 +130,17 @@ configure :build do
 
   # Make favicons
   # use: https://github.com/follmann/middleman-favicon-maker
-#   activate :favicon_maker, :icons => {
-#     "favicon_base.png" =>   [
-#       { icon: "apple-touch-icon-114x114-precomposed.png" },
-#       { icon: "apple-touch-icon-72x72-precomposed.png" },
-#       { icon: "apple-touch-icon-57x57-precomposed.png" },
-#       { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
-#       { icon: "apple-touch-icon.png", size: "57x57" },
-#       { icon: "favicon.png", size: "16x16" },
-#       { icon: "favicon.ico", size: "16x16" },
-#     ]
-#   }
+  activate :favicon_maker, :icons => {
+    "favicon_base.png" =>   [
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "apple-touch-icon-57x57-precomposed.png" },
+      { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
+      { icon: "apple-touch-icon.png", size: "57x57" },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "16x16" },
+    ]
+  }
 
   # Minify
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images

@@ -1,8 +1,0 @@
-aside.col-md-12.col-sm-6#recent-webcomics
-  section
-    header: h4==> I18n.t :recent_webcomics
-    div
-      ul.list-unstyled
-        - blog.articles.find_all{|a| a.tags.include? 'webcomic'}.each do |article|
-          li
-            = link_to article.title, article

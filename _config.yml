@@ -82,6 +82,11 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
 
+# Emoji Set Configuration
+# https://github.com/jekyll/jemoji
+emoji:
+  src: "https://cdn.jsdelivr.net/emojione/assets/png"
+
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
 # disqus:                <disqus_shortname>
@@ -184,6 +189,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jemoji
 
 # Theme
 # ---------------------------------------------------------------------------------------

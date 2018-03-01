@@ -10,6 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 
+gem "gsl"
 gem "classifier-reborn" # for lsi (similar posts)
 
 gem "jekyll-theme-hydejack-pro", git: 'https://gitlab.com/rriemann/hydejack-pro.git', branch: 'gem-pro'

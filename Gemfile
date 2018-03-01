@@ -24,7 +24,6 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
-  gem "jekyll-readme-index"
   gem "jekyll-redirect-from"
   gem "jekyll-relative-links"
   gem "jekyll-remote-theme"

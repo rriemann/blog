@@ -80,13 +80,6 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
-defaults:
-  # README.md
-  - scope:
-      path: "README.md"
-    values:
-      layout: welcome
-
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
 
@@ -190,7 +183,6 @@ plugins:
   - jekyll-gist
   - jekyll-optional-front-matter
   - jekyll-paginate
-  - jekyll-readme-index
   - jekyll-redirect-from
   - jekyll-relative-links
   - jekyll-remote-theme

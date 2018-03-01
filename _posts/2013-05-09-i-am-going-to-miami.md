@@ -5,7 +5,7 @@ date: 2013-05-09 09:12
 comments: true
 tags: [central-america, german, travelling, usa]
 lang: de
-layout: post-carribeans
+layout: post
 ---
 
 Ganz vergessen zu erwähnen: Am 1. Juni fliege ich nach Miami. Nach rund zwei

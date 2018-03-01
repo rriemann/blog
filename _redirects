@@ -2,3 +2,4 @@
 # https://www.netlify.com/docs/redirects/
 
 /atom.xml /feed.xml
+/files/rriemann.asc /assets/files/rriemann.asc

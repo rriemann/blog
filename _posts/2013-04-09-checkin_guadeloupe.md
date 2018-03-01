@@ -5,7 +5,7 @@ date: 2013-04-09 06:30
 comments: true
 tags: [central-america, german, travelling]
 lang: de
-layout: post-carribeans
+layout: post
 ---
 
 <div class="thumbnail pull-right" markdown="0" style="width: 400px;">

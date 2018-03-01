@@ -1,13 +1,24 @@
+GIT
+  remote: git@gitlab.com:rriemann/hydejack-pro.git
+  revision: e471857d8246b020b124158c7517ea80eea5718e
+  branch: gem-pro
+  specs:
+    jekyll-theme-hydejack-pro (7.5.0)
+      jekyll (~> 3.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    classifier-reborn (2.2.0)
+      fast-stemmer (~> 1.0)
     colorator (1.1.0)
     ethon (0.11.0)
       ffi (>= 1.3.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
+    fast-stemmer (1.0.2)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
     jekyll (3.6.2)
@@ -85,6 +96,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  classifier-reborn
   jekyll
   jekyll-avatar
   jekyll-default-layout
@@ -98,8 +110,9 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-theme-hydejack-pro!
   jekyll-titles-from-headings
   tzinfo-data
 
 BUNDLED WITH
-   1.15.4
+   1.16.1

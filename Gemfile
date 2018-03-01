@@ -10,6 +10,10 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 
+gem "classifier-reborn" # for lsi (similar posts)
+
+gem "jekyll-theme-hydejack-pro", git: 'git@gitlab.com:rriemann/hydejack-pro.git', branch: 'gem-pro'
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins

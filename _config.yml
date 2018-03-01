@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your page.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://qwtel.com
+url:                   https://blog.riemann.cc
 
 # IMPORTANT: Set The "base URL" of your site.
 #
@@ -15,29 +15,30 @@ url:                   https://qwtel.com
 # When using GitHub Pages, set to '' when hosting a user- or organization page,
 # i.e. when the name of the repository looks like <username>.github.io.
 # Otherwise, set to /<name of repository> (with leading /, but without the < >).
-baseurl:               /hydejack-starter-kit
+baseurl:               ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  en-gb
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack Starter Kit
+title:                 ~rriemann
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  Combines the best of static sites and modern web apps.
-  Open `_config.yml` to edit this text.
+  Personal Blog of Dr. Robert Riemann.
 
 # A shorter description for the sidebar.
-tagline:               >
-  A Jekyll theme with JavaScript powers.
-  Open `_config.yml` to edit this text.
+tagline:               |
+  Personal Blog of   
+  Dr. Robert Riemann.
 
 # A list of keywords for your blog.
-keywords:              []
+keywords:
+  - Dr. Robert Riemann
+  - personal blog
+  - blog
 
 # Used by jekyll-seo-tag.
 logo:                  /assets/icons/icon.png
@@ -45,10 +46,10 @@ logo:                  /assets/icons/icon.png
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Robert Riemann
+  email:               robert@riemann.cc
   # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  twitter:             rriemann_eu
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2017. All rights reserved.
@@ -56,9 +57,9 @@ copyright:             © 2017. All rights reserved.
 # Format of the permalinks
 permalink:             pretty
 
-# Pagination configuration (used by the `blog` layout)
+  # Pagination configuration (used by the `blog` layout)
 paginate:              5
-paginate_path:         /page-:num/
+paginate_path:         /blog/page-:num/
 
 
 # Customizaton
@@ -134,7 +135,7 @@ hydejack:
   no_theme_color:      false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi:             false
+  use_lsi:             true
 
 
 # Collections
@@ -161,6 +162,9 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - node_modules
 
 
 # Plugins and Plugin Configuration
@@ -185,7 +189,8 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # theme: jekyll-theme-hydejack
-remote_theme: qwtel/hydejack@gem-7.5.0
+# remote_theme: qwtel/hydejack@gem-7.5.0
+theme: jekyll-theme-hydejack-pro
 
 
 # SEO Tag
@@ -201,8 +206,8 @@ remote_theme: qwtel/hydejack@gem-7.5.0
 #   yandex:              <verification-id>
 
 # Used for Twitter cards
-# twitter:
-#   username:            <twitter handle>
+twitter:
+  username:            rriemann_eu
 
 # Used for Facebook open graph
 # facebook:
@@ -211,11 +216,14 @@ remote_theme: qwtel/hydejack@gem-7.5.0
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+social:
+  name:                Robert Riemann
+  links:
+    - https://twitter.com/rriemann_eu
+    - https://github.com/rriemann
+    - http://facebook.com/rriemann
+    - https://www.linkedin.com/in/rriemann/
+    - https://stackexchange.com/users/1503737/rriemann
 
 
 # Other Plugins

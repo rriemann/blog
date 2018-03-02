@@ -1,0 +1,37 @@
+{% if site.matomo_analytics %}
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var u="{{site.matomo_analytics.root}}";
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    {% if site.matomo_analytics.no_cookies %}
+    _paq.push(['disableCookies']);
+    {% endif %}
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '{{site.matomo_analytics.site_id}}']);
+
+    loadJSDeferred(u+'piwik.js');
+
+    var timeStartLoadPage, referer, timeItTookToLoadPage;
+    document.getElementById('_yPushState').addEventListener('y-push-state-start', function() {
+      timeStartLoadPage = new Date().getTime();
+      referer = window.location.toString();
+    });
+
+    document.getElementById('_yPushState').addEventListener('y-push-state-ready', function() {
+      timeItTookToLoadPage = new Date().getTime() - timeStartLoadPage;
+    });
+
+    document.getElementById('_yPushState').addEventListener('y-push-state-after', function() {
+      _paq.push(['setReferrerUrl', referer]);
+      _paq.push(['setCustomUrl', window.location.toString()]);
+      _paq.push(['setDocumentTitle', document.title]);
+      _paq.push(['deleteCustomVariables', 'page']);
+      _paq.push(['setGenerationTimeMs', timeItTookToLoadPage]);
+      _paq.push(['trackPageView']);
+    });
+  </script>
+  <!-- End Matomo Code -->
+{% endif %}

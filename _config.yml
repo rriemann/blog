@@ -88,6 +88,12 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 emoji:
   src: "https://cdn.jsdelivr.net/emojione/assets/png"
 
+# Matomo Analytics
+matomo_analytics:
+  root: "//rriemann.rigel.uberspace.de/piwik/"
+  site_id: 1
+  no_cookies: true
+
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
 # disqus:                <disqus_shortname>

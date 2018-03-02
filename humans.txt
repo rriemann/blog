@@ -1,0 +1,16 @@
+---
+layout: null
+---
+# humanstxt.org/
+
+/* AUTHORS */
+        Author:  {{ site.author.name }}
+        Contact: {{ site.author.email }}
+        Twitter: @{{ site.author.twitter }}
+
+/* SITE */
+        Last update: {{ "now" | date: "%Y-%m-%d %H:%M %z" }}
+        Language: English / Deutsch / Français
+        Doctype: HTML5
+        Tools: Kate Editor, Atom Editor, Markdown, Jekyll, Hydejack Theme
+        Code: https://github.com/rriemann/blog.riemann.cc/

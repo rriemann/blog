@@ -1,40 +1,35 @@
 # The primary author of this blog.
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
-author1:
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+rriemann:
+  name:              Robert Riemann
+  email:             robert@riemann.cc
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Hi, I'm Robert Riemann and this is my personal blog.
 
-    Open `_data/authors.yml` to edit this text.
-
-    [Download][kit]{:.btn.btn-primary}
-
-    [kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v7.5.0.zip
+    I'm physicist and computer scientist by education and work currently in Brussels on data protection policy. Here, I write mostly about my [travels](/travels/) and [digitalisation](/digitalisation/).
 
   # This photo will be used in the about section
   picture:
-    path:            https://placehold.it/128x128
+    path:            /assets/img/me.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
-    srcset:
-      1x:            https://placehold.it/128x128
-      2x:            https://placehold.it/256x256
+    # srcset:
+    #   1x:            /assets/img/me,0.5.jpg
+    #   2x:            /assets/img/me.jpg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
-    github:          <username>
-    # email:           mailto:<mail@domain.tld>
+    email:           mailto:robert@riemann.cc
+    twitter:         rriemann_eu
+    github:          rriemann
     # rss:             https://<url>/feed.xml
-    # facebook:        <username>
+    linkedin:        rriemann
+    facebook:        rriemann
     # google:          <number>
     # vk:              <username>
     # youtube:         <string_string_string>
@@ -57,11 +52,10 @@ author1:
     # pinterest:       <username>
     # foursquare:      <number>
     # yelp:            <string>
-    # stackoverflow:   <number/username>
+    # stackoverflow:     1407622/rriemann
     # npm:             <username>
     # hackernews:      <username>
     # trello:          <firstnamelastname>
-    # linkedin:        <firstname-lastname-string>
     # xing:            <firstname_lastname_counter>
     # blogger:         <number>
     # delicious:       <username>

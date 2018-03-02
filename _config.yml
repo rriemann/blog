@@ -155,7 +155,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /category/:name/
+    permalink:         /:name/
     output:            true
 
   featured_tags:

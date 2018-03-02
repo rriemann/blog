@@ -1,7 +1,9 @@
-# Welcome
+# README
 
-This is the personal blog of Robert Riemann, `~rriemann` for short in GNU/Linux jargon.
+This is the source for the personal blog of Robert Riemann.
 
-<!--more-->
+Note that it relies on the theme [Hydejack](http://qwtel.com/hydejack/) in its proprietary pro version. A free software version of the theme is also available.
 
-At the end
+Website: <https://blog.riemann.cc>
+
+Source: <https://github.com/rriemann/blog.riemann.cc/>

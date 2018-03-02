@@ -5,9 +5,10 @@ kate: hl markdown;
 lang: en
 comments: true
 published: true
+categories: [digitalisation]
 tags:
  - big-data
- - startup
+ - start-up
 keywords:
  - hency
  - hencybaby

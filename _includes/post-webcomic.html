@@ -25,8 +25,8 @@
 
   <figure class="webcomic">
     <picture>
-    	<source type="image/svg+xml" srcset="{{ post.svg | prepend: '/assets/img/webcomic/' | absolute_url }}" />
-    	<img src="{{ post.png | prepend: '/assets/img/webcomic/' | absolute_url }}" alt="{{ post.subtitle }}" />
+    	<source type="image/svg+xml" srcset="{{ post.svg | prepend: '/assets/img/webcomic/' | relative_url }}" />
+    	<img src="{{ post.png | prepend: '/assets/img/webcomic/' | relative_url }}" alt="{{ post.subtitle }}" />
     </picture>
     <figcaption>{{ post.subtitle }}</figcaption>
   </figure>

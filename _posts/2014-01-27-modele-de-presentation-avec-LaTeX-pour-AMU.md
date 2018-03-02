@@ -35,8 +35,8 @@ de difference. Comme d'habitude LuaLaTeX est compris dans la distribution LaTeX.
  * [Exemple PDF][pdf]
  * [Logo et fiches LaTeX pour télécharger][file]
 
-[pdf]: {{ '/assets/files/slides-amu.pdf' | absolute_url}}
-[file]: {{ '/assets/files/slides-amu.zip' | absolute_url}}
+[pdf]: {{ '/assets/files/slides-amu.pdf' | relative_url}}
+[file]: {{ '/assets/files/slides-amu.zip' | relative_url}}
 
 ~~~latex
 {% raw %}

@@ -203,8 +203,8 @@ What do you think? Would you use a stocks plasmoid? What do you expect it to dis
 Why didn't you have already used ruby to create a dataengine? `;)` And after all,
 how do I get this engine into KDE trunk?
 
-[img]: {{'/assets/img/plasmaengineviewer_ruby_stocks_v1.0.png' | absolute_url }} "Plasma DataEngine ruby-stocks made with Ruby"
-[file]: {{'/assets/files/plasma-dataengine-ruby-stocks-v1.0.zip' | absolute_url}} "Download Plasma package ruby-stocks v1.0"
+[img]: {{'/assets/img/plasmaengineviewer_ruby_stocks_v1.0.png' | relative_url }} "Plasma DataEngine ruby-stocks made with Ruby"
+[file]: {{'/assets/files/plasma-dataengine-ruby-stocks-v1.0.zip' | relative_url }} "Download Plasma package ruby-stocks v1.0"
 [0]:    http://websvn.kde.org/trunk/playground/base/plasma/dataengines/stocksengine/ "Stocks engine made with C++ from KDE playground"
 [1]:    http://websvn.kde.org/trunk/KDE/kdeexamples/plasma/ruby "Plasma Ruby examples in KDE kdeexamples"
 [2]:    http://chart.finance.yahoo.com/t?s=NOK&lang=en-US&region=US&width=300&height=180 "Stocks Chart for Nokia from Yahoo! Finance"

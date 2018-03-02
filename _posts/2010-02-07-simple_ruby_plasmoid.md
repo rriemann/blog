@@ -156,6 +156,6 @@ within a quarter of an hour!
 
 
 
-[img]: {{'images/simple_ruby_plasmoid_clipboard.png' | absolute_url }} "Simple Plasmoid made with Ruby"
-[file]: {{'/assets/files/simple_ruby_plasmoid_clipboard.tar.gz' | absolute_url }}
+[img]: {{'images/simple_ruby_plasmoid_clipboard.png' | relative_url }} "Simple Plasmoid made with Ruby"
+[file]: {{'/assets/files/simple_ruby_plasmoid_clipboard.tar.gz' | relative_url }}
 [0]:   http://techbase.kde.org/Development/Tutorials/Plasma/Ruby/SimplePasteApplet "Tutorial on KDE Techbase Wiki"

@@ -19,151 +19,137 @@ hide_description: true
 menu: true
 ---
 
-**Hydejack** is the complete package for professionals on the web.
-It features a blog suitable for both prose and technical documentation,
-a showcase for your projects, and a resume that is well-integrated with the design.
+> *humanist, moralist, physicist, and cosmopolitan from Berlin*
 
-> Your presence on the web --- A [blog], a [portfolio] and a [resume].
-{:.lead}
+I obtained a Bachelor and Master degree in physics from the *Humboldt University of Berlin* (HU Berlin), and a PhD degree in computer science from the *École Normale Supérieure de Lyon* (ENS Lyon).
 
-## Download
-There are two versions of **Hydejack**: The *free version* includes basic blogging functionality,
-as did previous versions of the theme.
-The *PRO version* includes additional features for professionals:
-A [portfolio], a [resume] layout and a [welcome] page to feature your favorite projects and posts.
+During my studies, I became knowledgeable and passionate about open source and free software, cryptography, data protection, big data analysis, modern web development (Fullstack), and peer-to-peer technology such as BitTorrent or Bitcoin.
 
-This table details what is and isn't included in each respective version.
+After my studies, I had the chance to work on EU policies about data protection at the *European Data Protection Supervisor* (EDPS).
 
-|                                     | Free                                   | PRO                                          |
-|:------------------------------------|:--------------------------------------:|:--------------------------------------------:|
-| Blog                                | &#x2714;                               | &#x2714;                                     |
-| [Features][feat]                    | &#x2714;                               | &#x2714;                                     |
-| [Portfolio] Layout                  |                                        | &#x2714;                                     |
-| [Resume] Layout                     |                                        | &#x2714;                                     |
-| [Welcome] Layout                    |                                        | &#x2714;                                     |
-| [Newsletter Box][news]              |                                        | &#x2714;                                     |
-| [Custom Forms][forms]               |                                        | &#x2714;                                     |
-| No Hydejack Branding                |                                        | &#x2714;                                     |
-| License                             | [GPL-3.0][license]                     | [PRO]                                        |
-| Source                              | [GitHub][src]                          | Included                                     |
-| Support[^1]                         | No                                     | No                                           |
-| Price                               | Free                                   | $29                                          |
-|                                     | [**Download**][kit]                    | [**Buy Now - $29**][buy] [^2]                |
-{:.stretch-table}
+In my spare time, I like to go dancing Swing, to sing in a choir and play guitar. I spend a considerable amount of time to learn more about free software and improve free software. I am a fan of Couchsurfing and of
+a united Europe.
 
-[^1]: You MAY open an issue on GitHub, but no response and/or fix is guaranteed.
-      You understand that using Jekyll requires technical know-how, and is NOT comparable to Wordpress in terms of usability.
-      Please use the free version to confirm that Hydejack works for you.
-      For more, see the [PRO] license.
+## Contact
 
-## Features
-Both versions include these features:
+Mail
 
-* Full in-app page loading, powered by [hy-push-state]{:.external}
-* A customizable sidebar that turns into a drawer menu on mobile, powered by [hy-drawer]{:.external}
-* Advanced FLIP animations, inspired by Material Design
-* Good [Google PageSpeed Score][gpss][^4]
-* Higher *perceived speed* thanks to content pre-fetching
-* [Syntax highlighting](#syntax-highlighting), powered by [Rouge]
-* [LaTeX math blocks](#latex-math-blocks), powered by [KaTeX]
-* Change the wording of built-in strings and possibly translate in other languages
-* Support for categories and tags
-* Built-in icons for many social networks
-* Simple and semantic HTML — can be viewed even with text-based browsers
-* Author section below each article and support for multiple authors
-* Progressive enhancement — sacrifice features, not content
-* Google Analytics and Google Fonts support
-* Disqus comments
-* Print layout — Used to render Hydejack's [PDF documentation][pdf]
-* Blog layout via `jekyll-paginate` (optional)
-* SEO meta tags via `jekyll-seo-tag` (optional)
-* Github avatars via `jekyll-avatar` (optional)
-* Gist support via `jekyll-gist` (optional)
+: <robert@riemann.cc> <br>
+  pgp fingerprint[^1]: `748F FAD5 40A1 FC46 4035  140A E2F5 D37D 8CA0 510F` ([Download][gpg-file], [Keybase Proofs][keybase])
 
-[^4]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.  
+Facebook
 
-### Syntax Highlighting
-Syntax highlighting powered by [Rouge].
+: [rriemann](https://www.facebook.com/rriemann)
 
-~~~ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-~~~
+Twitter
 
-### LaTeX Math Blocks
-Write formulas in familiar LaTeX syntax. Powered by [KaTeX].
+: [@rriemann_eu](https://twitter.com/rriemann_eu)
 
-$$
-\begin{aligned}
-  \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
-            &= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
-            &= (x_1, \ldots, x_n)
-               \left(\begin{array}{ccc}
-                 \phi(e_1, e_1)  & \cdots & \phi(e_1, e_n) \\
-                 \vdots          & \ddots & \vdots         \\
-                 \phi(e_n, e_1)  & \cdots & \phi(e_n, e_n)
-               \end{array}\right)
-               \left(\begin{array}{c}
-                 y_1    \\
-                 \vdots \\
-                 y_n
-               \end{array}\right)
-\end{aligned}
-$$
+GitHub
 
-### Newsletter Subscription Box*
-The *PRO version* has built-in support for [Tinyletter] subscription boxes.
+: [rriemann](http://github.com/rriemann)
 
-If you are using a different newsletter service, like MailChimp,
-you can build a custom newsletter subscription box using [custom forms][forms].
+CouchSurfing
 
-## Versions
-### Free Version
-The *free version* features the design and tech of **Hydejack**, but only supports basic blogging.
+: [saLOUt](http://www.couchsurfing.org/people/salout)
 
-[**Download**][kit]
+Google
 
-### PRO Version
-The *PRO version* aims to be the complete package for professionals on the web.
-It includes layouts for your [portfolio],
-your [resume] (with support for [JSON Resume](https://jsonresume.org/)),
-a [welcome] page to introduce yourself to visitors,
-built-in support for [Tinyletter], and from element styles so you can build arbitrary contact forms.
+: [+RobertRiemann](https://plus.google.com/+RobertRiemann?rel=author)
 
-[**Buy Now - $29**][buy] [^2]
+Telegram
 
-[^2]: Transactions secured by [Stripe](https://stripe.com). Downloads handled by [Simple Goods](https://simplegoods.co/).  
+: [rriemann](https://telegram.me/rriemann)
 
-[blog]: https://qwtel.com/hydejack/blog/
-[portfolio]: https://qwtel.com/hydejack/variations/
-[resume]: https://qwtel.com/hydejack/resume/
-[download]: https://qwtel.com/download/
-[welcome]: https://qwtel.com/hydejack/
-[forms]: https://qwtel.com/hydejack/forms-by-example/
+ORCID ID
 
-[feat]: #features
-[news]: #newsletter-subscription-box
-[syntax]: #syntax-highlighting
-[latex]: #latex-math-blocks
+: [orcid.org/0000-0002-1727-9015](https://orcid.org/0000-0002-1727-9015)
 
-[license]: https://qwtel.com/hydejack/LICENSE/
-[pro]: https://qwtel.com/hydejack/licenses/PRO/
-[docs]: https://qwtel.com/hydejack/docs/7.5.0/
+Keybase
 
-[kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v7.5.0.zip
-[src]: https://github.com/qwtel/hydejack
-[gem]: https://rubygems.org/gems/jekyll-theme-hydejack
-[buy]: https://app.simplegoods.co/i/AQTTVBOE
+: [rriemann][keybase]
 
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fqwtel.com%2Fhydejack%2F
-[wiki]: https://github.com/qwtel/hydejack/blob/master/docs/7.5.0/index.md
-[pdf]: https://github.com/qwtel/hydejack/releases/download/v7.5.0/Documentation._.Hydejack.pdf
-[hy-push-state]: https://qwtel.com/hy-push-state/
-[hy-drawer]: https://qwtel.com/hy-drawer/
-[rouge]: http://rouge.jneen.net
-[katex]: https://khan.github.io/KaTeX/
-[tinyletter]: https://tinyletter.com/
+LinkedIn
 
-*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+: [rriemann](https://www.linkedin.com/in/rriemann/)
+
+Flickr
+
+: [saloutions](https://www.flickr.com/photos/27621704@N07/)
+
+IRC (freenode)
+
+: rriemann on [#suse](irc://chat.freenode.org/suse),
+  [#opensuse-de](irc://chat.freenode.org/opensuse-de),
+  [#kde](irc://chat.freenode.org/kde)
+
+{::comment}
+
+jabber
+
+: <rriemann@jabber.ccc.de>
+
+Last.fm
+
+: [saLOUt](https://www.last.fm/user/saLOUt)
+{: style="margin-top:0" }
+
+{:/comment}
+
+## About This Site
+
+This site is built using the [Jekyll](https://jekylrb.com)
+static site generator and hosted with [Netlify](https://netlify.com/).
+The source code used to create this website is [publicly available on GitHub](https://github.com/rriemann/blog/) as well.
+
+{::comment}
+{:/comment}
+
+## About Data Privacy
+
+{::nomarkdown}
+<!-- Modal -->
+<div class="modal fade" id="optout" tabindex="-1" role="dialog" aria-labelledby="optoutLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="optoutLabel">Tracking Opt-Out</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="border: 0; height: 250px; width: 100%;" src="https://rriemann.rigel.uberspace.de/piwik/index.php?module=CoreAdminHome&action=optOut&language=<%= I18n.locale %>"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{:/nomarkdown}
+
+This blog uses an inhouse traffic analytics solution called [Piwik](https://piwik.org/).
+The *do-not-track* [browser setting](http://donottrack.us/) is respected.
+Check out the browser plug-in [Ghostery](https://www.ghostery.com/) to prevent tracking on every site.
+
+{::nomarkdown}
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#optout" id="optoutbutton">
+  Opt-Out
+</button>
+<noscript>
+  <iframe style="border: 0; height: 250px; width: 100%;" src="https://rriemann.rigel.uberspace.de/piwik/index.php?module=CoreAdminHome&action=optOut&language=<%= I18n.locale %>"></iframe>
+</noscript>
+{:/nomarkdown}
+
+
+
+## Note on Copyright
+
+If not otherwise noted, the content of this website is published under the terms of the
+[Creative Commons BY-NC-SA 3.0 license][cc].
+
+[cc]: http://creativecommons.org/licenses/by-nc-sa/3.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic"
+[^1]: Pretty Good Privacy: <http://en.wikipedia.org/wiki/Pretty_Good_Privacy>
+[gpg-file]: {{'/assets/files/rriemann.asc' | absolute_url }}
+[keybase]: https://keybase.io/rriemann

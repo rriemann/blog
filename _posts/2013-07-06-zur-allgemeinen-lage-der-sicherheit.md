@@ -3,6 +3,7 @@
 title: "Zur Allgemeinen Lage der Sicherheit"
 date: 2013-07-06 21:07
 comments: true
+categories: [digitalisation]
 tags: [german, tricks, meta, security, surveillance]
 lang: de
 ---
@@ -32,7 +33,7 @@ Das sind erst einmal Tatsachen, die wir hinnehmen müssen. Selbst wenn es nicht
 unserer Regierungen wären, die hier die Daten abschnorcheln, so muss man davon
 ausgehen, dass es vielleicht jemand anderes probiert.
 
-Noch am selben Tag kontert *David Hugendick* mit 
+Noch am selben Tag kontert *David Hugendick* mit
 [Datenschutz: Wir lassen uns nicht verschlüsseln](http://www.zeit.de/kultur/2013-06/replik-datensparsamkeit-prism).
 Er formuliert unter anderem:
 

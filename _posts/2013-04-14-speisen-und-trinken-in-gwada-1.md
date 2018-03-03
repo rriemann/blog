@@ -3,7 +3,8 @@
 title: "Speisen in Gwada №1"
 date: 2013-04-14 19:46
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

@@ -3,7 +3,8 @@
 title: "Check-In Guadeloupe"
 date: 2013-04-09 06:30
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

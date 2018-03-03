@@ -3,7 +3,8 @@
 title: "Verkehr in Guadeloupe"
 date: 2013-04-11 20:30
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

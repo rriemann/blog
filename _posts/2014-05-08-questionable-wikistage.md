@@ -3,6 +3,7 @@ title: Questionable WikiStage
 date: 2014-05-08 23:45 CEST
 kate: hl markdown;
 lang: en
+categories: [digitalisation]
 tags:
  - big-data
  - wikistage
@@ -256,6 +257,3 @@ sector.
 [^4]: I always thought that Wikipedia solely relies on donations to stay independent.
 [^5]: compare: <http://thecostofknowledge.com/>,  
       <http://gowers.files.wordpress.com/2012/02/elsevierstatementfinal.pdf>
-
-
-

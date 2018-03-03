@@ -3,7 +3,8 @@
 title: "StreetView Basse-Terre"
 date: 2013-04-17 23:45
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

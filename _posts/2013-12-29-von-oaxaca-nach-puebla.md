@@ -3,7 +3,8 @@
 title: "Von Oaxaca Nach Puebla"
 date: 2013-12-29 23:55
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 published: true

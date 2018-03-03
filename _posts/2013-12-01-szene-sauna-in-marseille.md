@@ -2,6 +2,7 @@
 # kate: hl markdown;
 title: Szene-Sauna in Marseille
 date: 2013-12-01 16:31 CET
+categories: [travels]
 tags: [german, marseille, france]
 lang: de
 ---

@@ -3,7 +3,8 @@ title: Raucher im Straßenverkehr
 date: 2015-02-16 22:40 CET
 comments: true
 kate: hl markdown;
-tags: [german, travelling, france]
+categories: [travels]
+tags: [german, travels, france]
 keywords:
   - Crêpes
   - Fahrrad fahren
@@ -113,7 +114,7 @@ Kundendienst eine Ersatzteil-Anfrage.
 
 [^2]: Ja, ich hätte natürlich an dem Auto vorbei fahren können. Dazu hätte ich jedoch
       den Fahrradweg verlassen müssen (und wäre auf der Straße gegen die Fahrtrichtung gefahren).
-      
+
 [^3]: Ich habe in Berlin Kinder (< 14 J.) nicht aufgerauchte Kippen aus dem
       Straßenbahngleisbett fischen sehen, die sie daraufhin aufgeraucht haben.
       Daher denkt daran euren Müll FÜR KINDER UNERREICHBAR UND NICHT SICHTBAR zu

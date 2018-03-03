@@ -3,7 +3,8 @@
 title: "Wasserfälle und Vulkan in Basse-Terre"
 date: 2013-04-29 20:02
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

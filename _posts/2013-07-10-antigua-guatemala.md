@@ -3,7 +3,8 @@
 title: "Antigua Guatemala"
 date: 2013-07-10 23:37
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---
@@ -63,6 +64,6 @@ Ein echter „Geschäftsmann“ eben.
 
 
 
-[^1]: Ich bediene mich hier dem stilistischen Mittel einer [besonders ausgefeilten Erzählsituation](https://de.wikipedia.org/wiki/Typologisches_Modell_der_Erz%C3%A4hlsituationen#Ich-Erz.C3.A4hlsituation) (ein tolles Beispiel im Wiki!) – was tut man nicht alles, damit sich die Leser nicht langweilen! Oder bin ich es, der hier zu viel Zeit hat? 
-[^2]: Tatsächlich ist das hier in Zentral-Amerika häufig so. Sobald einmal alle Flächen ausgewischt wurden, beginnt das Reinigungspersonal sogleich von vorne den Schmutz von rechts nach links zu wischen. Es erinnert mehr an Bodenbefeuchtung denn an ernsthaftes Reinigen. Hierbei lässt sich natürlich nicht ausschließen, dass damit doch graduelle hygienische Verbesserungen einhergehen. 
-[^3]: Dazu muss ich sagen: Seit dem ich unterwegs bin, habe ich wenigstens eine Filiale pro Land besucht und versucht ein Photo der Preistafel zu machen – gegessen habe ich dort eher seltener. Schließlich ist McDonalds – von der kulinarischen Perspektive einmal abgesehen – in anderen Ländern nicht nur relativ teuer, sondern häufig auch absolut teurer als in Deutschland. 
+[^1]: Ich bediene mich hier dem stilistischen Mittel einer [besonders ausgefeilten Erzählsituation](https://de.wikipedia.org/wiki/Typologisches_Modell_der_Erz%C3%A4hlsituationen#Ich-Erz.C3.A4hlsituation) (ein tolles Beispiel im Wiki!) – was tut man nicht alles, damit sich die Leser nicht langweilen! Oder bin ich es, der hier zu viel Zeit hat?
+[^2]: Tatsächlich ist das hier in Zentral-Amerika häufig so. Sobald einmal alle Flächen ausgewischt wurden, beginnt das Reinigungspersonal sogleich von vorne den Schmutz von rechts nach links zu wischen. Es erinnert mehr an Bodenbefeuchtung denn an ernsthaftes Reinigen. Hierbei lässt sich natürlich nicht ausschließen, dass damit doch graduelle hygienische Verbesserungen einhergehen.
+[^3]: Dazu muss ich sagen: Seit dem ich unterwegs bin, habe ich wenigstens eine Filiale pro Land besucht und versucht ein Photo der Preistafel zu machen – gegessen habe ich dort eher seltener. Schließlich ist McDonalds – von der kulinarischen Perspektive einmal abgesehen – in anderen Ländern nicht nur relativ teuer, sondern häufig auch absolut teurer als in Deutschland.

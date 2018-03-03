@@ -3,7 +3,8 @@
 title: "Ein Toller Tag in Chiapas, Mexiko"
 date: 2013-07-19 18:35
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---
@@ -79,7 +80,7 @@ zu Gesicht zu bekommen.
 Wir erreichen sicher unseren Hafen und halten in Chiapa de Corzo um zu Mittag zu
 essen. Die Einheimischen tauchen sofort ab. Wir Europäer sind unter uns und essen,
 was wir für traditionelle mexikanische Küche halten. Wir werden dabei gestört von
-zwei Musikern die eine Art traditionelles Xylophon bearbeiten, dass es nur so 
+zwei Musikern die eine Art traditionelles Xylophon bearbeiten, dass es nur so
 scheppert.
 
 Danach trennen wir uns von der Reisegruppe und fahren individuell für umgerechnet
@@ -137,7 +138,7 @@ Wir nutzen die Gelegenheit und blockieren den Handfön für eine halbe Stunde
 um unsere Wanderschuhe doch noch trocken zu bekommen. Dazu scheint heute die Sonne.
 So haben wir schließlich das schlechte Wetter hinter uns gelassen. `:)`
 
-[^1]: [siehe hier]({{ site.url }}/2013/07/10/antigua-guatemala/#fn:1) 
+[^1]: [siehe hier]({{ site.url }}/2013/07/10/antigua-guatemala/#fn:1)
 [Palenque]: <http://de.wikipedia.org/wiki/Palenque>
-[^2]: Ihr seht: Urlaub hat nur bedingt etwas mit Erholung zu tun. Früh aufstehen, viel laufen, viel organisieren – das ist auch Arbeit! 
-[Cañón del Sumidero]: <http://de.wikipedia.org/wiki/Ca%C3%B1%C3%B3n_del_Sumidero> 
+[^2]: Ihr seht: Urlaub hat nur bedingt etwas mit Erholung zu tun. Früh aufstehen, viel laufen, viel organisieren – das ist auch Arbeit!
+[Cañón del Sumidero]: <http://de.wikipedia.org/wiki/Ca%C3%B1%C3%B3n_del_Sumidero>

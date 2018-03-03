@@ -3,7 +3,8 @@
 title: "Das Karibische Meer (Forts.): Unterwasser"
 date: 2013-06-04 21:53
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

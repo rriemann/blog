@@ -3,7 +3,8 @@
 title: "2 Wochen in Miami"
 date: 2013-06-16 12:18
 comments: true
-tags: [central-america, german, travelling, usa]
+categories: [travels]
+tags: [central-america, german, travels, usa]
 lang: de
 layout: post
 ---

@@ -3,7 +3,8 @@
 title: "Das Karibische Meer"
 date: 2013-05-15 22:36
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---
@@ -73,7 +74,7 @@ machen könnt, der dafür bekannt ist ab und zu Gäste bei sich mitsegeln zu las
 Nach einer kurzfristigen Absage wegen schlechten Wetters vor ein paar Wochen schon,
 habe ich Jean vergangenes Wochenende endlich persönlich kennengelernt. Er hat meine
 WG und eine weitere (Berliner) Medizinstudentin auf sein Boot eingeladen und wir
-waren zwei Tage zusammen unterwegs: Ein Tag Anfahrt von Saint-François zur 
+waren zwei Tage zusammen unterwegs: Ein Tag Anfahrt von Saint-François zur
 Nachbarinsel nach Marie-Galante, Übernachtung auf dem Boot, ein Tag Rückfahrt
 zum Heimathafen.
 

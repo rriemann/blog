@@ -3,7 +3,8 @@
 title: "Tango, Chor und Konzerte in Guadeloupe"
 date: 2013-06-09 14:41
 comments: true
-tags: [central-america, german, travelling]
+categories: [travels]
+tags: [central-america, german, travels]
 lang: de
 layout: post
 ---

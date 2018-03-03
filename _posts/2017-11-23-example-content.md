@@ -26,6 +26,8 @@ categories: [hydejack]
 tags: [example, content]
 # If you want a category or tag to have its own page,
 # check out `_featured_categories` and `_featured_tags` respectively.
+
+published: false
 ---
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.

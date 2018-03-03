@@ -1,6 +1,7 @@
 ---
 title: Cebit awards offline surveillance startup Viewsy
 date: 2014-03-19 23:17 CET
+categories: [digitalisation]
 tags:
  - big-data
  - surveillance
@@ -44,7 +45,7 @@ I see the following problems:
 * Ultimatively, people have to trust a company to handle their data respectfully
   even though, there is no direct (contractual) aggreement between the visitors
   (we don't speak about customers yet) of the retail store and this company.
-  
+
 I hope that some new affords regarding personal data protection
 on a national or better international level will consider these practices as
 illegal before it gets deployed.

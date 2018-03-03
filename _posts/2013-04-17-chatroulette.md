@@ -3,7 +3,8 @@
 title: "Chatroulette"
 date: 2013-04-17 23:30
 comments: true
-tags: [central-america, travelling, recommendations, german]
+categories: [travels]
+tags: [central-america, travels, recommendations, german]
 lang: de
 layout: post
 ---

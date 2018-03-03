@@ -3,7 +3,8 @@
 title: "I Am Going To Miami"
 date: 2013-05-09 09:12
 comments: true
-tags: [central-america, german, travelling, usa]
+categories: [travels]
+tags: [central-america, german, travels, usa]
 lang: de
 layout: post
 ---

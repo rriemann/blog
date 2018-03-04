@@ -10,8 +10,7 @@ slug: digitalisation
 
 # (Optional) Write a short (~150 characters) description of this featured category.
 description: >
-  This is a featured category, which have their own page.
-  Check out `_featured_categories/digitalisation.md` to learn how to create your own.
+  Posts related to the wider topic of digitalisation including field experiences (start-ups), education, and security.
 
 # Setting `menu` will generate an entry in the sidebar for this category.
 # menu: true

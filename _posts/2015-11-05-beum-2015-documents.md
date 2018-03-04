@@ -9,6 +9,7 @@ keywords:
   - Model EU Belgrade (BEUM) 2015
 lang: en
 published: true
+excerpt_separator: <!--more-->
 ---
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/49091796@N04/6201381800" title="Paperback Book vs. Amazon Kindle"><img src="https://farm7.staticflickr.com/6018/6201381800_124be760c2.jpg" width="680" height="430" alt="Paperback Book vs. Amazon Kindle"></a>
 
@@ -23,8 +24,6 @@ Regulation:
 
 Directive:
 : <http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2015_068_R_0001>
-
-<!-- more -->
 
 
 **BEUM Shortened Versions!** Please be aware of the fact that the

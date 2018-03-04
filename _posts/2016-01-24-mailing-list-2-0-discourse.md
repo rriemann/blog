@@ -12,6 +12,7 @@ keywords:
   - email
   - mailing lists
   - discourse
+excerpt_separator: <!--more-->
 ---
 
 **You got a few people working on something and you seek for an efficient way to

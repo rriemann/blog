@@ -12,13 +12,9 @@ keywords:
  - email
 ---
 
-
-<%= flickr_tag 13334048894, size: 'z', title: 'Keep your data safe!' %>{:.pull-right style="max-width: 500px; width: 100%;margin-left:5px;"}
 **So many associations use GMail for their general communication with members. Often, this comprises the sending of newsletters. Recently, the organisers of the UN politics simulation [MUN LyonMUN][LM] leaked this way by accident a large number of participants mail addresses (mine as well). I decided to raise awareness of the security risks by a little experiment and also to test the reaction of the organisers.**
 
-
-
-### Incident
+## Incident
 
 On Friday 0:25[^tired], I received a mail from the organisers of this year’s [Model United Nations] (MUN) conference in Lyon called [LyonMUN][LM]. The mail has been sent from <lyonmun2017@gmail.com> to 222 people, that either participated in earlier editions in the conference or already signed up for this year’s edition. Purpose of the mailing: promote the upcoming edition and urge people to pay the conference fees.
 
@@ -37,14 +33,14 @@ For that reason, I though of a more creative approach to initiate a discourse. I
 
 <!-- more -->
 
-### One Round-Mail and a lot of Confusion
+## One Round-Mail and a lot of Confusion
 
 So I decided to answer the newsletter and send my response to the original sender, but most importantly also to about 200 of those 221 other people listed in the newsletter:
 
 > Hello everyone!
-> 
-> how are you? :) Do you think it makes sense to attend LyonMUN more than once? 
-> A reminder less than 24h before they start assigning positions (whatever that 
+>
+> how are you? :) Do you think it makes sense to attend LyonMUN more than once?
+> A reminder less than 24h before they start assigning positions (whatever that
 > means) is maybe a bit too last minute…
 >
 > All the best–   
@@ -64,20 +60,20 @@ well?”
 
 I have not expected to receive such mails. I replied in the first two cases that I could not do anything and put the actual organiser in CC, so that they would get the question and could address it properly. Eventually, I received a mail from the organisers explaining that the newsletter was actually only supposed to be a payment reminder.
 
-### Asking for Money
+## Asking for Money
 
 I hoped for an excuse to have leaked my personal mail address (or the fact that I participated). To render the issues even more evident, I escalated the situation and decided to reply in the third case with a request for payment:
 
 > Hello Maxi [name changed],   
-> 
+>
 > have you sent the money to
-> 
+>
 > Robert Riemann   
 > IXXI Lyon   
 > IBAN FR7762756778270183266949365 ?   
-> 
+>
 > If so, I can assign you. :)
-> 
+>
 > Kind regards,   
 > Robert
 
@@ -88,10 +84,10 @@ I hoped for an excuse to have leaked my personal mail address (or the fact that 
 In reaction, I got two messages from the organisers:
 
 1. Mélanie Villar, that we "should all know and love" (quote from [her presentation][MV]) sent me via Facebook a message request:
-    
+
     > Hey Robert, pourquoi tu donnes un faux IBAN par mail???   
     > C'est quoi ce délire
-  
+
 2. Nicolas Klingelschmitt, the LyonMUN 2017 director, wrote me a very appropriate message that I try to summarise here:
     - He appreciates my alert addressing the leak of mail addresses.
     - He explains I would have received the mail due to my informal consent for few promotional mails.
@@ -102,7 +98,7 @@ I asked Nicolas Klingelschmitt then to quote from his mail which he denied while
 
 I further brought some light into my intentions that were subsequently acknowledged with the remark that my method would be highly inappropriate from their point of view. More interestingly, they mentioned that their GMail account would have been locked for some time which would postpone the sending of a dedicated ERRATUM mail.
 
-### ERRATUM
+## ERRATUM
 
 Eventually, an erratum mail was sent to everyone with an excuse of the data leak, a notice on how to stop subsequent mailings from Lyon MUN and this paragraph:
 
@@ -110,7 +106,7 @@ Eventually, an erratum mail was sent to everyone with an excuse of the data leak
 
 I just sent a request for payment and they still mention only the potential of fraud. I think it is appropriate to admit that unauthorised mails have been sent. Further, they advise to check the sender mail address. How should that be possible?
 
-### Conclusion: We are not done yet.
+## Conclusion: We are not done yet.
 
 From a security point of view, there are still rather easy attack vectors. Note, that the official sender mail address is `LyonMun2017@gmail.com`. I just registered the GMail addresses `LyonMUN.helpdesk` and `LyonMUN2018`. Next year, it is I that has the official mail address and I could send requests for payments on their behalf to those 222 people. Further, I could try to make pass the helpdesk address as official mail address. The potential participants have no effective mean to distinguish here between official and fraud mail address.
 
@@ -120,7 +116,7 @@ Moreover, one could just send mails from the official mail address. Not all mail
 
 {% include figure image_path="/assets/img/lyonmun-mail-impersonation-gmail.jpg" alt="The mail gets delivered in the inbox of GMail and a short warning is displayed." caption="The mail gets delivered in the inbox of GMail and a short warning is displayed." %}
 
-To be perfectly secure, inform participants right away to find the payment information uniquely on the website (that should use https/SSL). Further, I advise to use mail addresses ending on `@lyonmun.com`. As such, it is more complicated to create similar-looking mail addresses. Further, this may also solve the issue to find oneself blocked to send mails. 
+To be perfectly secure, inform participants right away to find the payment information uniquely on the website (that should use https/SSL). Further, I advise to use mail addresses ending on `@lyonmun.com`. As such, it is more complicated to create similar-looking mail addresses. Further, this may also solve the issue to find oneself blocked to send mails.
 
 Unfortunately, even with DKIM, the impersonation of mail senders cannot be prevented in all cases. To prevent the latter, one could use an intranet instead of mails, e.g. based on [Discourse](http://discourse.org/). I wrote an article about it [earlier](2016-01-24-mailing-list-2-0-discourse.html).
 

@@ -8,8 +8,6 @@ comments: true
 lang: de
 ---
 
-## Vorwort
-
 Als ich gefragt wurde, ob ich am Heiligen[^1] Abend 2010 den
 Weihnachtsmann vertreten würde, habe ich mir gleich überlegt,
 auch ein Gedicht vortragen zu wollen, um die kleinen Kinder

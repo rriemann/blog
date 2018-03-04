@@ -26,7 +26,7 @@ in these early days. Users have been mostly universities, and I guess, not every
 but mostly the STEM disciplines Science, Technology, Engineering, and Mathematics.
 So it comes at no surprise that mails are perceived as inconvenient and antiquated.
 
-*[STEM]: Science, Technology, Engineering, and Mathematics
+<!--more-->
 
 ### Mails are dead
 
@@ -195,3 +195,5 @@ per mail. The response will appear immediately online for those that are connect
 
 Providing a simple mail interface for minimalists and a comprehensive website
 for more advanced use cases, Discourse is a good match.
+
+*[STEM]: Science, Technology, Engineering, and Mathematics

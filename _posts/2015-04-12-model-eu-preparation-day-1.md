@@ -3,7 +3,7 @@ title: Model EU Preparation Day 1
 date: 2015-04-12 23:49 CEST
 comments: true
 kate: hl markdown;
-tags: [meu2015]
+tags: [model-eu]
 keywords:
   - MEU Strasbourg
 lang: en
@@ -61,4 +61,3 @@ because the check-in at the European Parliament is supposed to take quite some t
 
 Good night,   
 Robert
-

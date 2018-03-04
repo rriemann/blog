@@ -1,13 +1,14 @@
 ---
-title: Open Letter to BETA e.V. 
+title: Open Letter to BETA e.V.
 date: 2015-03-03 00:12 CET
 comments: true
 kate: hl markdown;
-tags: [big-data, surveillance, meu2015]
+tags: [big-data, surveillance, model-eu, data-protection]
 keywords:
   - BETA e.V.
   - Facebook
   - MEU Strasbourg
+  - Data Protection
 lang: en
 published: true
 ---
@@ -54,32 +55,32 @@ Robert Riemann
 [^5]: I will finish with a comparison (c.f [Godwin's Law](https://en.wikipedia.org/wiki/Godwin%27s_law)):   
       If Nazi Germany had deployed Facebook already, the Holocaust would have been
       even more fatal.
-      
+
 [^6]: <http://money.cnn.com/2015/01/27/technology/facebook-mohammed/index.html>
 [^7]: <http://www.theguardian.com/environment/2014/jan/30/snowden-nsa-spying-copenhagen-climate-talks>
 
 On Monday 02 March 2015 15:31:06 you wrote:
 
 > Dear participant,
-> 
+>
 > Thank you very much for your payment. Please treat this email as
 > confirmation of it and as formal acceptance to MEU [[simulation Model European Union], author's note] 2015.
-> 
+>
 > While we wait for payment of all participants to be finalised, please
 > follow this link to add yourself to the MEU 2015 Participants Facebook
 > group:
-> 
+>
 > https://www.facebook.com/groups/390413847808226/
-> 
+>
 > If you do not already have Facebook, you have my utmost respect. However,
 > you are about to lose it as you will need a Facebook account to receive
 > all the preparatory materials leading up to the conference. Easy come,
 > easy go.
-> 
+>
 > I look forward to meeting you in Strasbourg!
-> 
+>
 > Best wishes
-> 
+>
 > Josef
 
 [simulation Model European Union]: <http://meu-strasbourg.org/>
@@ -90,7 +91,7 @@ On Monday 02 March 2015 15:31:06 you wrote:
 Apparently, some other participants have protested as well. So we got another mail:
 
 > Dear participants,
-> 
+>
 > You have informed me that you do not wish to use Facebook in the run up to
 > the conference in order to receive materials from us and to introduce
 > yourselves to fellow participants. Having given it some thought, this is

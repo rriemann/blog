@@ -3,7 +3,7 @@ title: Model EU Impressions
 date: 2015-05-03 14:54 CEST
 comments: true
 kate: hl markdown;
-tags: [meu2015]
+tags: [model-eu]
 keywords:
   - MEU Strasbourg
 lang: en
@@ -51,7 +51,7 @@ of the the council of ministers took place in parallel and we met them mostly
                     can be found later on.
 
 For this post, I will pick some concepts we got to known that you might find interesting.
-                    
+
 ## Formal Debate
 
 Factions have at least 25 members, but can gather much more deputies. The
@@ -79,7 +79,7 @@ that can be raised (literally) during the ongoing debate. Some examples:
 - **blue card** (point of question) to be raised to ask a question related to the
   previous speaker; question doesn’t need to be responded to; both question and
   response have tough time limits of about 30 seconds
-  
+
 The *blue card* is naturally the most used mean to engage. After listening to the
 contribution of a deputy from the other wing, one might have the urgent need
 to file a blue card to explain that s/he is all wrong. Unfortunately, this is not

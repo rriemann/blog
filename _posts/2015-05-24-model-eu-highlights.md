@@ -3,7 +3,7 @@ title: Model EU Highlights
 date: 2015-05-24 20:31 CEST
 comments: true
 kate: hl markdown;
-tags: [meu2015]
+tags: [model-eu]
 keywords:
   - MEU Strasbourg
 lang: en

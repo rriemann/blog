@@ -3,22 +3,20 @@ title: Belgrade Model EU 2015 Documents
 date: 2015-11-05 18:58 CEST
 comments: true
 kate: hl markdown;
-tags: [beum2015]
+tags: [model-eu,linux,ruby]
 keywords:
   - BETA e.V.
   - Model EU Belgrade (BEUM) 2015
 lang: en
 published: true
 ---
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/49091796@N04/6201381800" title="Paperback Book vs. Amazon Kindle"><img src="https://farm7.staticflickr.com/6018/6201381800_124be760c2.jpg" width="680" height="430" alt="Paperback Book vs. Amazon Kindle"></a>
 
-<%= flickr_tag 6201381800, size: 'b', title: 'best-practice (paper-free) reading of EU regulations' %>
+**Dear participants of the Model European Union simulation 2015, I totally support the aim of the simulation organisers to print less paper during the conference.**
 
-### Dear participants of the Model European Union simulation 2015,
+<!--more-->
 
-I totally support the aim of the simulation organisers to print less paper during the conference.
-So I will provide, as I did [last time](posts/2015-04-09-meu-strasbourg-2015-documents.html),
-the juridical texts in various eBook formats! The text used in the conference are
-shortened! The original sources are probably these ones:
+So I will provide, as I did [last time](posts/2015-04-09-meu-strasbourg-2015-documents.html), the juridical texts in various eBook formats! The text used in the conference are shortened! The original sources are probably these ones:
 
 Regulation:
 : <http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2015.169.01.0001.01.ENG>
@@ -33,7 +31,7 @@ Directive:
 documents below are based on a modified, shortened version of the original texts.
 {:.alert .alert-danger}
 
-#### Regulation
+### Regulation
 
 Source: <https://gallery.mailchimp.com/a9ddb05b2c9bf890d75b042ac/files/BEUM2015_Regulation.docx>
 
@@ -44,7 +42,7 @@ In English:
 * [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/beum2015/BEUM2015_Regulation.mobi)
 
 
-#### Directive
+### Directive
 
 Source: <https://gallery.mailchimp.com/a9ddb05b2c9bf890d75b042ac/files/BEUM2015_Directive.docx>
 
@@ -55,7 +53,9 @@ In English:
 * [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/beum2015/BEUM2015_Directive.mobi)
 
 
-### How it is done
+## How it is done
+
+Save the following ruby script in an executable file called `formatter.rb`.
 
 ~~~ruby
 #!/usr/bin/env ruby
@@ -97,8 +97,5 @@ docxfile = basename + '.docx'
 #   %x[pdfbook --booklet false --signature '32' --suffix 'booklet' #{pdffile}]
 # end
 ~~~
-ruby script *formatter.rb*
-{: .code-meta}
 
 [Download formatter.rb](http://people.physik.hu-berlin.de/~rriemann/meu/formatter.rb)
-

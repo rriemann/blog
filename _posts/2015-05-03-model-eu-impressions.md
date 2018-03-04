@@ -12,8 +12,11 @@ published: true
 
 ## The Schedule of an MEP
 
-{% include figure image_path="/assets/img/meu-strasbourg-parlament-session.jpeg" alt="Parliament Session in the faction room of the European People’s Party in the European Parliament in Strasbourg. <div class='pull-right'>Copyright by <a href='https://www.facebook.com/meustrasbourg/photos/a.960959337256664.1073741838.235910456428226/961960990489832/'>MEU Strasbourg on Facebook</a></div>" caption="Parliament Session in the faction room of the European People’s Party in the European Parliament in Strasbourg. <div class='pull-right'>Copyright by <a href='https://www.facebook.com/meustrasbourg/photos/a.960959337256664.1073741838.235910456428226/961960990489832/'>MEU Strasbourg on Facebook</a></div>" %}{:.pull-right}
+![Parliament Session in the faction room of the European People’s Party in the European Parliament in Strasbourg.][meu-parlament-img]
 
+*Parliament Session in the faction room of the European People’s Party in the European Parliament in Strasbourg. Copyright by [MEU Strasbourg on Facebook](https://www.facebook.com/meustrasbourg/photos/a.960959337256664.1073741838.235910456428226/961960990489832/).*
+
+[meu-parlament-img]: {{'/assets/img/meu-strasbourg-parlament-session.jpeg' | absolute_url }}
 
 It’s Sunday and it's already two weeks that I’ve been in Strasbourg. The simulation
 of the EU parliament has been great. I thought initially that I would blog every
@@ -28,7 +31,9 @@ We left the parliament around 6 pm. So what happened in between?
 
 <!--more-->
 
-<%= figure_tag '/images/meu-schedule.jpeg', width: '500px', title: "MEU Strasbourg 2015 Schedule for Monday." %>{:.pull-right}
+[![MEU Strasbourg 2015 Schedule for Monday.][meu-schedule-img]][meu-schedule-img]
+
+[meu-schedule-img]: {{ '/assets/img/meu-schedule.jpeg' | relative_url }}
 
 The simulation comprised moderated, formal debates within the members of the parliament
 (MEPs), press conferences of the faction leaders and lobbyists, hearings of the

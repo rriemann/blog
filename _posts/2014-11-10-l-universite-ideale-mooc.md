@@ -4,6 +4,7 @@ published: true
 date: 2014-11-10 16:00 CEST
 kate: hl markdown;
 lang: fr
+categories: [digitalisation]
 tags:
  - education
  - france

@@ -3,6 +3,7 @@ title: Too much Spam (on Facebook)
 date: 2015-08-08 10:25 CEST
 comments: true
 kate: hl markdown;
+categories: [digitalisation]
 tags: [society,tricks]
 keywords:
   - Facebook
@@ -13,6 +14,7 @@ keywords:
   - uBlock
 lang: en
 published: true
+excerpt_separator: <!--more-->
 ---
 
 {% include figure image_path="/assets/img/ublock-firefox.jpg" alt="Blocking websites" caption="Blocking websites" %}{:.pull-right}
@@ -20,25 +22,15 @@ published: true
 **Facebook tries to adapt the personal stream in such a way that we like it. However,
 the result is not perfect.**
 
-### Crawling the Facebook timeline
+## Crawling the Facebook timeline
 
 I confess: I spend too much time on facebook. How much? It does’t matter, every
 moment seems too much. There is not only Spam (sometimes referred to as *promoted
 content*, read: commercial, payed content), but also Hoaxes, Scam and selfies.
 
+<!--more-->
 
-<!-- more -->
-
-<div />
-{: .clearfix}
-
-<div>
-<!-- Hoax -->
-<div><div><h4>
-[More on Hoax](#collapseHoax){:role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseHoax" aria-expanded="true" aria-controls="collapseHoax"}
-</h4>{:.panel-title}
-</div>{:.panel-heading role="tab" #headingHoax}
-<div><div>
+## More on Hoax
 If you know the
 internet already for a while, you might know the phenomenon [hoax] as well. I’ll
 give an example:
@@ -60,25 +52,19 @@ many postcards for months because in the mail was no deadline.
       NSA revelations, one has to be a bit precious. At least I hope Facebook
       does’t know.
 [hoax]: http://hoax-info.tubit.tu-berlin.de/
-</div>{:.panel-body}
-</div>{:#collapseHoax .panel-collapse .collapse .in role="tabpanel" aria-labelledby="headingHoax"}
-</div>{:.panel .panel-primary}
 
-<!-- Scam -->
-<div><div><h4>
-[More on Scam](#collapseScam){:role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseScam" aria-expanded="true" aria-controls="collapseScam"}
-</h4>{:.panel-title}
-</div>{:.panel-heading role="tab" #headingScam}
-<div><div>
+## More on Scam
+
 You probably heard about Spam. That’s old. There is a new one that
-is called *Scam*, also known as the [Confidencial Trick][scam].
+is called *Scam*, also known as the [Confidential Trick][scam].
 
 > Boy who could’t afford books asks mailman for junk mail to read; Mailman responds
-> spectacularily.
-> {::nomarkdown}<footer><a href="http://www.huffingtonpost.com/entry/boy-asks-mailman-junk-mail-books-read_55b6b002e4b0224d88338ba4" target="_blank" ref="no-follow">Huffington Post</a></footer>{:/nomarkdown}
+> spectacularly.
 
-You are provided enough information to make you courious. You click on the link,
-find the information banal and get back to facebook. Since short, Facebook measures
+*[Huffington Post](http://www.huffingtonpost.com/entry/boy-asks-mailman-junk-mail-books-read_55b6b002e4b0224d88338ba4)*
+
+You are provided enough information to make you curious. You click on the link,
+find the information banal and get back to Facebook. Since short, Facebook measures
 the time you spent on linked websites. Have you remarked the embedded Facebook App
 browser[^2]? It’s for a surplus of surveillance, of course! If people get back after
 a very short moment, content gets tagged as scam and will be less promoted in the
@@ -87,18 +73,10 @@ network to improve the overall user experience.
 [scam]: https://en.wikipedia.org/wiki/Scam
 [^2]: This is how it works on Android. If you find the Facebook App settings, you
       can actually opt-out. I recommend to do so.
-</div>{:.panel-body}
-</div>{:#collapseScam .panel-collapse .collapse role="tabpanel" aria-labelledby="headingScam"}
-</div>{:.panel .panel-primary}
-</div>{:.panel-group #accordion role="tablist" aria-multiselectable="true"}
 
+## Blocking advertisements and entire pages
 
-### Blocking advertisements and entire pages
-
-Blocking ads in the browser works very well for already few years. Check out
-[Adblock Plus](https://adblockplus.org/), or if you are suspicious about their
-[business model](https://en.wikipedia.org/wiki/Adblock_Plus#Controversy_over_ad_filtering_and_ad_whitelisting)
-of paid white-listing, better go for [uBlock](https://www.ublock.org/) as I do.
+Blocking ads in the browser works very well for already few years. Check out [Adblock Plus](https://adblockplus.org/), or if you are suspicious about their [business model](https://en.wikipedia.org/wiki/Adblock_Plus#Controversy_over_ad_filtering_and_ad_whitelisting) of paid white-listing, better go for [uBlock](https://www.ublock.org/) as I do.
 
 I also took personal counter measures against scam.
 
@@ -112,19 +90,11 @@ I also took personal counter measures against scam.
 
 ### Selfies
 
-{% include figure image_path="/assets/img/selfies-autocorrection.jpg" alt="My PC doesn’t know “selfies”." caption="My PC doesn’t know “selfies”." %}{:.pull-right}
+{% include figure image_path="/assets/img/selfies-autocorrection.jpg" alt="My PC doesn’t know “selfies”." caption="My PC doesn’t know “selfies”." %}
 
-But there is more on the Facebook timeline: Selfies. I find this somehow
-quite ego-centric[^3]. This week, I came arcross a photo album
-tagged with `#selfie-time`. This was obviously the self-chosen motto. Now, one is
-allowed to let go all constraints. Problem solved.
+But there is more on the Facebook timeline: Selfies. I find this somehow quite ego-centric[^3]. This week, I came arcross a photo album tagged with `#selfie-time`. This was obviously the self-chosen motto. Now, one is allowed to let go all constraints. Problem solved.
 
-As far as I know, there is pretty much nothing one can do. However, there are
-[browser-plugins](http://jezebel.com/5932109/finally-a-way-to-turn-facebook-baby-pictures-into-adorable-cats)
-that promise to replace Facebook baby photos with cats and there is a
-[Conchita Wurst-plugin](wurstify.me) that just adds a beard on every face in the
-web. Technically speaking, we are already close to replace selfies with something
-else - think of cats!
+As far as I know, there is pretty much nothing one can do. However, there are [browser-plugins](http://jezebel.com/5932109/finally-a-way-to-turn-facebook-baby-pictures-into-adorable-cats) that promise to replace Facebook baby photos with cats and there is a [Conchita Wurst-plugin](wurstify.me) that just adds a beard on every face in the web. Technically speaking, we are already close to replace selfies with something else - think of cats!
 
 [^3]: I wrote first selfish. I guess this was not the original reason to call these
       photos selfies.

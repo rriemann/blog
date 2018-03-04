@@ -4,6 +4,7 @@ date: 2016-01-24 19:17 CET
 kate: hl markdown;
 published: true
 lang: en
+categories: [digitalisation]
 tags:
   - tricks
 keywords:

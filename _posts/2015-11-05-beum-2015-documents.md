@@ -29,7 +29,7 @@ Directive:
 
 **BEUM Shortened Versions!** Please be aware of the fact that the
 documents below are based on a modified, shortened version of the original texts.
-{:.alert .alert-danger}
+{:.message}
 
 ### Regulation
 

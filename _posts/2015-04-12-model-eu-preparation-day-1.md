@@ -24,7 +24,7 @@ Parliament building.
 I’m 5 minutes to late in the then empty lobby and realise that against my intuition
 there is not even a trace of the ~100 people.
 
-<!-- more -->
+<!--more-->
 
 I decide to catch them on the walk
 to the Cathedral of Strasbourg. Once arrived, I’m still alone. I meet a participant

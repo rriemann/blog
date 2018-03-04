@@ -20,7 +20,7 @@ womöglich auch nicht schreiben. Was war also passiert? Reisen wir (natürlich
 nur in Gedanken) zurück nach Mexiko – in die Vergangenheit. Anno 2013. Wir
 schreiben den 17. Juli, morgens.
 
-<!-- more -->
+<!--more-->
 
 ### Oaxaca
 

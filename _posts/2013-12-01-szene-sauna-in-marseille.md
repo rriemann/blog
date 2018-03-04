@@ -27,7 +27,7 @@ Ich ziehe mir einen zweiten Pullover an, stelle meine Möbel um und nehme direkt
 neben der Heizung Platz. Zum Abend hin wird es noch ein wenig kühler. Ich mache
 mir warme Gedanken: In eine Sauna müsste man heute gehen. Einfacher gesagt als getan.
 
-<!-- more -->
+<!--more-->
 
 ## Saunalandschaft in Marseille
 

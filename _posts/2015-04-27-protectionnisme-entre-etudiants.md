@@ -26,7 +26,7 @@ pratiquent souvent le protectionnisme qui augmente les inégalités.
 C'est dommage, car au sein de la société, il me semble que les étudiants sont plus
 engagés et progressistes. Voici mes arguments.
 
-<!-- more -->
+<!--more-->
 
 ## Mon expérience à Berlin
 

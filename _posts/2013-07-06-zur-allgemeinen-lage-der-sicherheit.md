@@ -18,7 +18,7 @@ Eine kurze Link-Sammlung zu Verschlüsselungstechniken für jedermann.
 [img]: http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png
 [gpg]: http://www.gnupg.org/ "Gnu GPG"
 
-<!-- more -->
+<!--more-->
 
 Worum es bei der Bespitzelung geht und wie man sich dagegen wehren kann,
 beschreibt *Ludwig Greven* in seinem Artikel

@@ -13,7 +13,6 @@ keywords:
   - email
   - mailing lists
   - discourse
-excerpt_separator: <!--more-->
 ---
 
 **You got a few people working on something and you seek for an efficient way to
@@ -51,7 +50,7 @@ Let’s summarise some downsides of mails:
 - You cannot link to a mail. You have to send a copy every time.
 - You cannot take back a mail once you have sent it.
 
-<!-- more -->
+<!--more-->
 
 ### 21st century features
 

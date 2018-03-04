@@ -25,7 +25,7 @@ ebenfalls einige Crêpes zu backen, so dass durch den Erlös die Vereinskasse si
 der schwarzen Null annähern mag – eine gute Sache. Außerdem könnte ich selbst
 vorweg ein paar Crêpes zum Mittag essen. Also los.
 
-<!-- more -->
+<!--more-->
 
 Ich bin immer wieder erstaunt, wie wenig Zutaten in den Crêpes-Teig gehören: Ein
 bisschen Milch, ein bisschen Mehl, Salz. Beim Salz gehen die französischen Lehrmeinungen

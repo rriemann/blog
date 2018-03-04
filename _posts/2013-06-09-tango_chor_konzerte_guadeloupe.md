@@ -21,7 +21,7 @@ zwei Monate in Guadeloupe zu Papier zu bringen (*schenkelklopf*).
 
 Thema diesmal: Kultur.
 
-<!-- more -->
+<!--more-->
 
 Von meinem Ausflug zum [Festival Terre de Blues][festival] hatte ich ja schon
 berichtet. Bislang verschwiegen habe ich, dass ich hier im Chor war und Tango

@@ -43,7 +43,7 @@ Unfortunately, this is not the end of the story. Last week, the EU commissioner
 significant tech case since Brussels took on Microsoft a decade ago” (source:
 [Financial Times]).
 
-<!-- more -->
+<!--more-->
 
 This can only be a first step. It has been a while that I’m waiting for Brussels to
 make a case to put the smart phone operating systems and their respective application

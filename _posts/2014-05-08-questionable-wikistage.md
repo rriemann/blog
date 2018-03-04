@@ -32,7 +32,7 @@ Short summary: Do not consider WikiStage for contribution!
 
 Let's have a closer look.
 
-<!-- more -->
+<!--more-->
 
 ## What is WikiStage?
 

@@ -31,7 +31,7 @@ I made a bad experience when I made during the last year’s edition LyonMUN 201
 
 For that reason, I though of a more creative approach to initiate a discourse. It is not like security in the internet is not a topic for LyonMUN. On their website, the press team posted not even 2 weeks ago an article concerning [cyber defence](http://www.lyonmun.com/index.php/2017/03/20/les-enjeux-de-la-cyber-defense-dans-les-elections-presidentielles/). Unfortunately, LyonMUN has apparently not adopted adequate measures on their own. Let’s see what happened!
 
-<!-- more -->
+<!--more-->
 
 ## One Round-Mail and a lot of Confusion
 

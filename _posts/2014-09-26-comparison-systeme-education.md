@@ -39,7 +39,7 @@ finaux (alld. Abitur) ou la possibilité de changer pour une école dans un autr
 land.
 
 
-<!-- more -->
+<!--more-->
 
 Je suis allé à l'école à Berlin, qui est son propre Land (dit: villes-états).
 J'ai passé six ans à l'école primaire et puis j'ai changé au lycée, que j'ai fini

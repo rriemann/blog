@@ -19,7 +19,7 @@ Taxis (noch) teurer. Es gibt ein paar wenige Buslinien, die hauptsächlich die R
 der Küste entlang bedienen und von der EU kofinanziert werden. Busse fahren nur zwischen
 6h und 18h.
 
-<!-- more -->
+<!--more-->
 
 
 {% include figure image_path="/assets/img/central-america/no-schedule_thumb.jpg" alt="Ganz ehrlich: <br/> Kein Plan" caption="Ganz ehrlich: <br/> Kein Plan" width="$3" %}{:.pull-left}

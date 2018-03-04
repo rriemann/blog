@@ -24,7 +24,7 @@ Yesterday evening, we had our check-in, a short recap of important rules that ha
 been distributed ahead of time per mail, but were assumed to haven’t been read, and
 finally the EuroFEAST, our international potluck.
 
-<!-- more -->
+<!--more-->
 
 So what has been remarkable so far? After the first irritation that there would
 be hardly other Germans represented at the conference, it is clear now. We are

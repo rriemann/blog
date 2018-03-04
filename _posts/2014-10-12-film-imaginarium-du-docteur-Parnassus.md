@@ -35,7 +35,7 @@ plusieurs au Docteur Parnassus qui semble aimer jouer tout autant que lui. Grâc
 Des siècles plus tard, il tombe amoureux et fait un pacte avec le diable. Il
 récupère sa jeunesse en échange de son premier enfant lorsque ce dernier aura 16 ans.
 
-<!-- more -->
+<!--more-->
 
 Après cette brève introduction, l’action commence 3 jours avant le seizième
 anniversaire de sa jeune fille Valentina qui n’est pas au courant. Le Docteur Parnassus et sa

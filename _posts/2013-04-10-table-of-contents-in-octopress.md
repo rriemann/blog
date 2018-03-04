@@ -24,7 +24,7 @@ solution that I found.
 [origin]: http://brizzled.clapper.org/blog/2012/02/04/generating-a-table-of-contents-in-octopress/
 [Octopress]: http://octopress.org/
 
-<!-- more -->
+<!--more-->
 
 
 ### Generating the Table Of Contents
@@ -73,7 +73,7 @@ Snippet for *sass/custom/_styles.scss*
 
 One problem I came across is that the links of the TOC are only relative using
 HTML anchors. So if only a part of your post is shown, because you made usage of
-`<!-- more -->` and the post is shown in your blog index page, it won't work.
+`<!--more-->` and the post is shown in your blog index page, it won't work.
 
 I decided that I don't want to show the TOC in this case at all and added
 additionally the following lines to my style description.

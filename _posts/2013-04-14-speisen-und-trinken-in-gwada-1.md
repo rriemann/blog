@@ -16,7 +16,7 @@ Aus der [Dokumentation auf Youtube][doku], die ich zur Reisevorbereitung
 gesehen habe, ging schon hervor, dass man auch hier gerne typisch französisch
 speist. Es sind ja auch viele Franzosen hier, die im Mutterland geboren wurden.
 
-<!-- more -->
+<!--more-->
 
 Hauptnahrungsmittel ist hier tatsächlich das Baguette. Statt Rotwein gibt es
 aber den guten[^1] „Rhum agricole“[^2], der aus dem hier großflächig angebauten

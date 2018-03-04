@@ -31,7 +31,7 @@ hapert es aber noch – viele US-Bürger ziehen es vor sich in geschlossene Anst
 also gesicherte Residenzen zurückzuziehen. Das Quartier, an dem ich heute vorbei
 gefahren bin, war nicht nur umzäunt, sondern hatte sogar einen tiefen Graben.
 
-<!-- more -->
+<!--more-->
 
 ### Panama City
 

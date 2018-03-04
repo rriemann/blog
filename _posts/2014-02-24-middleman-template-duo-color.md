@@ -18,7 +18,7 @@ starting point like it is [Octopress] (my prior choice) for the Jekyll community
 
 {% include figure image_path="/assets/img/template-desktop.png" alt="Desktop View" caption="Desktop View" %}
 
-<!-- more -->
+<!--more-->
 
 {% include figure image_path="/assets/img/template-mobile.png" alt="Mobile View" caption="Mobile View" %}{:.pull-right}
 

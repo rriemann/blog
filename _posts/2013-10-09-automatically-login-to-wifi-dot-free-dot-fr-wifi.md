@@ -12,7 +12,7 @@ you can find at many places in French cities. Unfortunately you have to login
 manually using the gateway page <https://wifi.free.fr/> for every wifi reconnect.
 Ähm – do you really have to? `;)`
 
-<!-- more -->
+<!--more-->
 
 
 I'm one of these lucky guys who can actually receive this hotspot in the own flat.

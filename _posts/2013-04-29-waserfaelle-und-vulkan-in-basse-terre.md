@@ -22,7 +22,7 @@ ist es wesentlich grüner. Der üppige tropische Wald spendet zudem eine erfrisc
 Kühle, die ich in Grande-Terre jetzt wieder vermisse, seitdem nach einer sehr
 verregneten Woche hier wieder schönes Wetter ist.
 
-<!-- more -->
+<!--more-->
 
 ### Wasserfälle
 

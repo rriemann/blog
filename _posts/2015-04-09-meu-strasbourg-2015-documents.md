@@ -20,7 +20,7 @@ We have been asked to read quite a lot of papers. Instead of printing them out a
 you find them on the server. I generated some derivates that you hopefully find
 usefull.
 
-<!-- more -->
+<!--more-->
 
 #### Data Protection Regulation
 

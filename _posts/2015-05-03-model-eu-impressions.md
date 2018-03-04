@@ -26,7 +26,7 @@ of sessions in the parliament and a social program in the evening. Usually, we g
 up by 6:20 am to pass the security at the European Parliament entrance before 8 am.
 We left the parliament around 6 pm. So what happened in between?
 
-<!-- more -->
+<!--more-->
 
 <%= figure_tag '/images/meu-schedule.jpeg', width: '500px', title: "MEU Strasbourg 2015 Schedule for Monday." %>{:.pull-right}
 

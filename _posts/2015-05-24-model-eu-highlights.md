@@ -25,7 +25,7 @@ it felt like a parody. I enjoyed both!
 If you have been part of the adventure, what was your personal highlight? In the
 following, I will share mine with you (in no particular order).
 
-<!-- more -->
+<!--more-->
 
 - We were discussing the *Data Protection Regulation* and Lobbyists have been
   invited to comment on the current draft of the commission. The lobbyist

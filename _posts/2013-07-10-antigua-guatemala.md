@@ -28,7 +28,7 @@ in den Garten und schaue zu, wie die jungen, uniformierten Guatemalteken ihre
 Hausaufgaben machen und ein paar Touristen (wahrscheinlich US-Amerikaner) mit
 ihren Eifons spielen. Ist die Welt nicht friedlich?
 
-<!-- more -->
+<!--more-->
 
 <%= flickr_tag 3630898681, size: 'z', title: "Antigua Guatemala." %>
 

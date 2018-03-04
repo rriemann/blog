@@ -24,7 +24,7 @@ leave as well: to Romania!**
 
 Why Romania? I used [Kayak Explore](http://www.kayak.de/explore/GVA/) to find cheap flights from Lyon, Saint-Etienne and Geneva. Porto would have been an option and surprisingly Bucharest even though its quite far away. Both countries I have never been to. A friend of mine from Bucharest was very enthusiastic about my intentions and rescheduled his week and took care for my accommodation. A week later, I arrived at *Bucharest Otopeni Intl.* Airport. I decided to take the bus to go down-town Bucharest. In the bus I met a father with his daughter that has worked for the German cruise company AIDA. Both are fluent in English. Also when I missed to get out of the bus, I could ask locals in English without any issues – and not only the young (Erasmus) generation.
 
-<!-- more -->
+<!--more-->
 
 {% gist 01e5ef43cc5402394a8b1f8a914a0779 %}
 

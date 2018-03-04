@@ -28,7 +28,7 @@ Momenten kommt uns der Gedanke krank und blass nach 4 Monaten Karibik/Mittelamer
 nach Hause zurück zukehren. Immerhin regnet es diesen Morgen nicht. Es besteht
 Aussicht auf Besserung.
 
-<!-- more -->
+<!--more-->
 
 ### Chiapas
 

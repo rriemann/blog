@@ -35,7 +35,7 @@ suivre, comment bouger. Je savais vraiment rien. En allemand, on parle d'un saut
 [^1]: Avec ma colocation, on n’a pas trouvé un proverbe français qui veut dire
       la même chose. Je suis à l'écoute de vos propositions.
 
-<!-- more -->      
+<!--more-->      
 
 Quoi faire ? Je ne voulais plus y aller. J’ai proposé ensemble de commencer un cours de
 danse de salon. Un de mes meilleurs amis m’a proposé de demander dans

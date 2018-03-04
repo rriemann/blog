@@ -18,7 +18,7 @@ dass viele Hostel-Gäste, wie ich eben auch, es vorziehen im Wohnzimmer zu chill
 und abzuwarten, bis die Mittagssonne nicht mehr so stark ist. Zeit, meinen Blog
 etwas zu füllen.
 
-<!-- more -->
+<!--more-->
 
 ### Miami Downtown
 

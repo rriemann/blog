@@ -25,7 +25,7 @@ resolved yet. `:(`
     /usr/include/gsl/gsl_vector_complex_double.h:167:5: note: previous declaration of 'gsl_vector_complex_equal' was here
     make: *** [vector_complex.o] Error 1
 
-<!-- more -->
+<!--more-->
 
 ### Solution
 

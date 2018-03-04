@@ -33,7 +33,7 @@ on how to fight the American predominance of internet monopolists, you want to
 make a 2nd class participant, just because I don't want to disclose my political
 engagement on Facebook[^5].
 
-<!-- more -->
+<!--more-->
 
 I strongly disagree with your decision. Unfortunately we don't have means on
 Facebook. However, as your organisation ([BETA e.V.]) is registered in Germany,

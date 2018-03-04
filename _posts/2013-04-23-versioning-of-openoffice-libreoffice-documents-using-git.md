@@ -29,7 +29,7 @@ can handle binary files, but the log is not really helpfull.
 Since git version 1.6.1 or later, you can specify dedicated diff filters per
 file extensions to track these files as well as plain text files.
 
-<!-- more -->
+<!--more-->
 
 Knowing that files [OpenDocument] files `*.ods`, `*.odt` or `*.odp` are only gziped folders of xml
 files, it is perfectly obvious to extract the files before comparision. This way,

@@ -57,7 +57,7 @@ The used hash tags are not very surprising and belong to the standard canon, to
 the pop culture of the students from this program. However, I’m always curious
 about innovation. So I eventually clicked on their website <http://www.hency.com>.
 
-<!-- more -->
+<!--more-->
 
 ## Disruptive Service, Decentralisation
 

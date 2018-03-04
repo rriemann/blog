@@ -28,7 +28,7 @@ de difference. Comme d'habitude LuaLaTeX est compris dans la distribution LaTeX.
 [le logo]: http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/amu.pdf
 [guide du design]: http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/charte_graphique_generale_amu_0.pdf
 
-<!-- more -->
+<!--more-->
 
 ## Fichiers
 

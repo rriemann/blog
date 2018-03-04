@@ -18,7 +18,7 @@ sagen – war ja schließlich alles auf französisch und die Worte haben sich ma
 wieder überschlagen. Letztlich war es aber ganz lustig, daher will ich es hier
 kurz erwähnen.
 
-<!-- more -->
+<!--more-->
 
 Gregor erklärt uns das Prinzip in Kürze. Es wird eine Videokonferenz vergleichbar
 mit Skype mit einer anderen, zufällig ausgewählten Person aufgebaut. Sogleich

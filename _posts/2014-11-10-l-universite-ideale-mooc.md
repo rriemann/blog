@@ -37,7 +37,7 @@ même livres à la bibliothèque. Aussi muets – la discussion reste imposibble
 
 Ne pensez-vous pas qu’on puisse faire mieux ?
 
-<!-- more -->
+<!--more-->
 
 Les avancées technologiques ont déjà permis d’individualiser beaucoup de services
 différents à grande échelle. Il est utile de reçevoir des recommandations

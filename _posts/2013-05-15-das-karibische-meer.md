@@ -34,7 +34,7 @@ also noch um einiges wärmer. Bis gestern war ich noch fasziniert davon, dass
 selbst beim Schwimmen in Ufernähe 2-3 verschiedene Sorten bunter Fische unter mir
 hindurch schwimmen. Aber ich möchte nicht vorweg greifen.
 
-<!-- more -->
+<!--more-->
 
 ### Kanu Fahren Und Windsurfen
 

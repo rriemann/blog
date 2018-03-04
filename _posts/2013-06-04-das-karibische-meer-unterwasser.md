@@ -18,7 +18,7 @@ gegangen. Was war passiert?
 
 [zunächst]: /2013/05/15/das-karibische-meer/
 
-<!-- more -->
+<!--more-->
 
 ### Tauchen (Scuba-Diving)
 

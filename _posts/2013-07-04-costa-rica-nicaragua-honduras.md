@@ -14,7 +14,7 @@ viel mehr als einer Woche Costa-Rica, Nicaragua und Honduras „abgearbeitet“.
 Natürlich ist das längst nicht genug Zeit um diese Länder wirklich kennenzulernen.
 Ich würde also sagen, ich habe ein paar Städtereisen unternommen.
 
-<!-- more -->
+<!--more-->
 
 ### Costa Rica: San José
 

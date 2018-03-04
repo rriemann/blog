@@ -14,7 +14,6 @@ keywords:
   - uBlock
 lang: en
 published: true
-excerpt_separator: <!--more-->
 ---
 
 {% include figure image_path="/assets/img/ublock-firefox.jpg" alt="Blocking websites" caption="Blocking websites" %}{:.pull-right}
@@ -92,7 +91,7 @@ I also took personal counter measures against scam.
 
 {% include figure image_path="/assets/img/selfies-autocorrection.jpg" alt="My PC doesn’t know “selfies”." caption="My PC doesn’t know “selfies”." %}
 
-But there is more on the Facebook timeline: Selfies. I find this somehow quite ego-centric[^3]. This week, I came arcross a photo album tagged with `#selfie-time`. This was obviously the self-chosen motto. Now, one is allowed to let go all constraints. Problem solved.
+But there is more on the Facebook timeline: Selfies. I find this somehow quite ego-centric[^3]. This week, I came across a photo album tagged with `#selfie-time`. This was obviously the self-chosen motto. Now, one is allowed to let go all constraints. Problem solved.
 
 As far as I know, there is pretty much nothing one can do. However, there are [browser-plugins](http://jezebel.com/5932109/finally-a-way-to-turn-facebook-baby-pictures-into-adorable-cats) that promise to replace Facebook baby photos with cats and there is a [Conchita Wurst-plugin](wurstify.me) that just adds a beard on every face in the web. Technically speaking, we are already close to replace selfies with something else - think of cats!
 

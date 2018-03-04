@@ -18,7 +18,7 @@ which can be rooted with a modified firmware. The customizable firmware is
 provided by the [Freetz][freetz] project and allows you to combine different
 modular packages to add functionality.
 
-<!-- more -->
+<!--more-->
 
 After playing a little bit with Freetz, I even got a lighttpd webserver with
 ruby and caching capabilities running. Of course, the original firmware as well

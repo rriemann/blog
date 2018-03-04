@@ -25,7 +25,7 @@ Read on how to install it on [OpenSUSE].
 [OpenSUSE]: http://www.opensuse.org/
 [git]: http://git-scm.com/
 
-<!-- more -->
+<!--more-->
 
 The presented solutions features a btrfs
 filesystem RAID-1 `:)` and some custom patches. Instead of init.d startup scripts,

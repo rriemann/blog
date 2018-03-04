@@ -22,7 +22,7 @@ meine freiwilligen Französisch-Hausaufgaben. Ich hoffe, dass ich noch Gelegenhe
 finde mich darin zu vertiefen. Bislang bin ich praktisch nie dazu gekommen, da
 sich stets Ablenkung gefunden hat.
 
-<!-- more -->
+<!--more-->
 
 ### Die Deutsche Enklave
 

@@ -25,7 +25,7 @@ geblieben. Damals war portables Internet, GPS und Offline-Routing unerreichbar.
 Facebook war noch nicht omnipräsent. Mein Couchsurfing-Profil gab es tatsächlich
 schon, lag jedoch brach.
 
-<!-- more -->
+<!--more-->
 
 Der größte Unterschied ist für mich vielleicht, dass ich diesmal alleine reise.
 Dafür bleibe ich aber doppel so lange. `;)` Nachdem die letzte Reise zumindest

@@ -112,7 +112,7 @@ im Dirndl lässt sich in der Einkaufsmeile Miami Beachs auch finden.
 
 Ein besonderes Highlight war hier „The Wonder Drug“ für nur 2$, die hier im
 Supermarkt verfauft werden wie sonst anderswo Kaugummis. Ich konnte mich gerade
-noch zusammenreißen und habe mich nicht umfangreich eingedeckt. `;)`
+noch zusammenreißen und habe mich nicht umfangreich eingedeckt. :wink:
 
 <%= figure_tag '/images/central-america/wonder-drug-miami.jpg', title:'Wonder Drug aus dem Hause Bayer: Nur 2$.', width: '400px' %>{:.pull-right}
 

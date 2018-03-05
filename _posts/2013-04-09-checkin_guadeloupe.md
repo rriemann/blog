@@ -28,7 +28,7 @@ schon, lag jedoch brach.
 <!--more-->
 
 Der größte Unterschied ist für mich vielleicht, dass ich diesmal alleine reise.
-Dafür bleibe ich aber doppel so lange. `;)` Nachdem die letzte Reise zumindest
+Dafür bleibe ich aber doppel so lange. :wink: Nachdem die letzte Reise zumindest
 in groben Zügen vorher geplant wurde, habe ich diesmal nur zwei Flüge gebucht.
 Kurzfristig hat mir doch jemand zugesagt mich vom Flughafen abholen zu können,
 so dass ich mich zumindest um die erste Übernachtung nicht weiter kümmern musste.

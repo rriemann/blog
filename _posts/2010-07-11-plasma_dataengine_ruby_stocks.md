@@ -200,7 +200,7 @@ Yahoo! Finance. The most work will probably be to create a settings dialog simil
 to the one you find [here][3] below the chart.
 
 What do you think? Would you use a stocks plasmoid? What do you expect it to display?
-Why didn't you have already used ruby to create a dataengine? `;)` And after all,
+Why didn't you have already used ruby to create a dataengine? :wink: And after all,
 how do I get this engine into KDE trunk?
 
 [img]: {{'/assets/img/plasmaengineviewer_ruby_stocks_v1.0.png' | relative_url }} "Plasma DataEngine ruby-stocks made with Ruby"

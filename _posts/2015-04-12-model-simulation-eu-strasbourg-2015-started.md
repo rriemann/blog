@@ -17,7 +17,7 @@ published: true
 during the following 7 days, I will be at Strasbourg for the simulation of the
 European Parliament in the European Parliament. The adventure started yesterday
 and I will try to blog here regulary if I find some time (could be the last post
-already `;)`) or [tweet](https://twitter.com/rriemann_eu) hashtag
+already :wink:) or [tweet](https://twitter.com/rriemann_eu) hashtag
 [#MEUs2015](https://twitter.com/hashtag/MEUs2015).
 
 Yesterday evening, we had our check-in, a short recap of important rules that have

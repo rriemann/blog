@@ -21,7 +21,7 @@ Bestnoten aufwarten kann. Meine Wohnung/Zimmer ist mit einem einzigen elektrisch
 betriebenen Heizkörper ausgestattet. Ich heize also mit Atomstrom. Von den 58
 Reaktorblöcken in ganz Frankreich (9 in ganz Deutschland) befinden sich 6 alleine
 zwischen Marseille und Genf. Man kann also von dezentralem Atomstrom aus der Region
-sprechen. `;)` Von der dort erzeugten Wärme ist hier leider nicht viel zu spüren.
+sprechen. :wink: Von der dort erzeugten Wärme ist hier leider nicht viel zu spüren.
 
 Ich ziehe mir einen zweiten Pullover an, stelle meine Möbel um und nehme direkt
 neben der Heizung Platz. Zum Abend hin wird es noch ein wenig kühler. Ich mache

@@ -91,7 +91,7 @@ Das Wetter ist perfekt (also nur über Basse-Terre hängen graue Regenwolken).
 Wir fühlen die große Weite, die Freiheit und alsbald die Seekrankheit. Während
 ich mich am Heck sitzend die vier Stunden unserer Überfahrt ausschließlich auf
 den Horizont konzentriere, verbringen meine Freunde die Reise fast ausschließlich
-im Liegen (das hilft!). Einer übergibt sich (nur so viel: ich war's nicht. `;)`).
+im Liegen (das hilft!). Einer übergibt sich (nur so viel: ich war's nicht. :wink:).
 Jean tröstet uns und macht uns Hoffnung, dass es uns auf der Rücktour besser gehen
 wird, da wir uns dann schon daran gewöhnt haben würden. In Marie-Galante angekommen
 verbringen wir die Nacht vor dem Hafen. Die Nacht wie auch unser Schlaf verlaufen

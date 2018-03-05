@@ -10,7 +10,7 @@ The not so expansive French mobile phone operator [free.fr](http://www.free.fr) 
 some nice extras for their clients. People can use the free.fr hotspots, which
 you can find at many places in French cities. Unfortunately you have to login
 manually using the gateway page <https://wifi.free.fr/> for every wifi reconnect.
-Ähm – do you really have to? `;)`
+Ähm – do you really have to? :wink:
 
 <!--more-->
 

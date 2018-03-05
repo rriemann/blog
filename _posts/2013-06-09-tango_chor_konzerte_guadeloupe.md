@@ -49,7 +49,7 @@ seinen Ursprung hat. Gerne müssen auch einmal alle innehalten, damit sich ein
 paar Jugendliche spontan im Breakdance battlen können.
 
 Die Clubs sind zumeist ohne Eintritt. Getränke bezahlbar. In Miami Beach ist das
-ganz anders. `;)` Vorgeglüht wird klassischer Weise mit dem
+ganz anders. :wink: Vorgeglüht wird klassischer Weise mit dem
 [Ti-Punch](http://en.wikipedia.org/wiki/Ti%27Punch) – etwas Rum, eine halbe Limette
 und etwas brauner Rohrzucker. Richtig betrinken tun sich aber nur die Weißen.
 Die Atmosphäre ist sehr friedlich. Auffällig ist jedoch, dass Weiße und Schwarze

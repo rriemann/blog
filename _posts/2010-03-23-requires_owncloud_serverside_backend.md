@@ -40,7 +40,7 @@ is also satisfied with a simple sftp connection (ssh://).
 
 After all you might want to read an [article][saas] about the disadvantages of
 SaaS published by <http://www.gnu.org>. Exaggerated message in one sentence: Don't get dependant of other
-people server services. `;)`
+people server services. :wink:
 
 
 [owncloud]: http://owncloud.org "official ownCloud homepage/wiki"

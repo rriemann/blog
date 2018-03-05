@@ -58,7 +58,7 @@ An aktuellen Anleitungen dürfte es momentan im Netz nicht fehlen:
   * Youtube-Demonstration Schritt-für-Schritt: <http://www.youtube.com/watch?v=drWdLiU3oIA>
 * Verschlüsseltes Chatten (auch mit Facebook-Freunden)
   * für Mac OS: [Adium](http://www.adium.im/)
-  * Linux-Nuter wissen sich selber zu helfen. `;)` (Kopete oder Pidgin)
+  * Linux-Nuter wissen sich selber zu helfen. :wink: (Kopete oder Pidgin)
   * für Windows: hm, schwierig. Lieber zu Linux oder Mac wechseln. [Wikipedia](http://de.wikipedia.org/wiki/Off-the-Record_Messaging#Verf.C3.BCgbarkeit) weiß mehr.
 
 Das wäre dann schon erstmal ein guter Anfang.

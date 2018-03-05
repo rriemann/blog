@@ -23,7 +23,7 @@ Tous les détails sont prix du [guide du design] officiel.
 **Attention! :** Cettes fiches LaTeX marchent uniquement avec XeLaTeX ou LuaLaTex,
 parce que j'utilise le package »fontspec« pour configurer la police de caractères
 et cette package n'existe pas pour pdfLaTex. Mais en général, ça fait pas trop
-de difference. Comme d'habitude LuaLaTeX est compris dans la distribution LaTeX. `;)`
+de difference. Comme d'habitude LuaLaTeX est compris dans la distribution LaTeX. :wink:
 
 [le logo]: http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/amu.pdf
 [guide du design]: http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/charte_graphique_generale_amu_0.pdf

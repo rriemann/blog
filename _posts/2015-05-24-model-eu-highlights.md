@@ -29,7 +29,7 @@ If you have been part of the adventure, what was your personal highlight? In the
 
 - French MEP Yannick announced at the beginning of his contribution to address the Parliament in French that would be the most beautiful language of the world. While some MEPs considered if this would comprise *a right of reply* (personal or national honour violated), the chair called the Parliament to order and stated that all 24 official EU languages of the EU are equally beautiful.
 
-  The other day, Yannick did the same move when expressing his respect for the interpreting French women that would be the most beautiful in the world. However, the Parliament was working too slow to reply to this. Or, I was too slow to note that some chair stated that of course all women in the EU are equally beautiful. `;)`
+  The other day, Yannick did the same move when expressing his respect for the interpreting French women that would be the most beautiful in the world. However, the Parliament was working too slow to reply to this. Or, I was too slow to note that some chair stated that of course all women in the EU are equally beautiful. :wink:
 
 - After the first days, a new faction “Progressive Feminists of Europe Party” (PFEP) was founded with 100% female members.
 
@@ -45,7 +45,7 @@ If you have been part of the adventure, what was your personal highlight? In the
 
 - The *voting system* was a highlight. Not only crashed the system once for no obvious reason and needed to be restarted (probably hacked from remote), I could also tinker a bit with the system. Of course, only for academic purposes[^whale]! I admit that I pressed the voting button of the seat next to me that was free. That’s something only MEPs at the far-left or -right can do. When the result was presented, I raised a question to ask why there would have been one more vote this time. Everyone was confused as this was not the case. I didn't understand first, but realised then that I had just voted for someone else. Nice. The vote we had only a moment later, I did the same and this time, someone else was asking why there was actually one vote more in the ballot. It’s like I would have predicted what would happen. Nobody found this weird. We just repeated the election and this time I voted only for me, so we could go on. The irregularity is actually easy to resolve as the voting behavior of every seat is printed out for every voting. However, no one knew this at this time. I consider this as an experiment that shows that the average MEU deputy doesn’t really care for the vote and doesn’t question the accurancy.
 
-[^whale]: Who sees the analogy to Japanese hunt for whales that is actually internationally outlawed. `;)`
+[^whale]: Who sees the analogy to Japanese hunt for whales that is actually internationally outlawed. :wink:
 
 #### The Internationale
 
@@ -83,7 +83,7 @@ TODO
 
 [^votes]: In the council, ministers have votes according to the population size of the member state.
 
-- The Feminists party proposed a 50% gender quorum for the European Central Bank boards. The ECR (my faction) was proposing another amendment with a 30% gender quorum (real conservatives politics!). Other voices have been raised that support to hire board members on competence rather than gender. Another MEP pointed out that 50% is not realisable in a board with an odd number of members as intended. I pointed  out that the rule is discriminating inter-sexual candidates. The debate continued after the hearing during the coffee break (informal debate `;)`).
+- The Feminists party proposed a 50% gender quorum for the European Central Bank boards. The ECR (my faction) was proposing another amendment with a 30% gender quorum (real conservatives politics!). Other voices have been raised that support to hire board members on competence rather than gender. Another MEP pointed out that 50% is not realisable in a board with an odd number of members as intended. I pointed  out that the rule is discriminating inter-sexual candidates. The debate continued after the hearing during the coffee break (informal debate :wink:).
 
 
 I had a lot of fun during the week. If you have not participated yet in such a simulation, I can only encourage you. Do not hesitate. You will get to known many interesting people as well. I’m confident that I will meet my fellow MEPs again. Yannick is visiting me tomorrow. I will be part of the volunteers team for the next years edition as a so called *BETA Information Technology Officer*. Pretty sure I won’t be the only one.

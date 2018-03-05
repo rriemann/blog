@@ -11,7 +11,7 @@ lang: en
 
 Much time has passed since i wrote my [previous blog post][announcement] about
 Kubeplayer. Things doesn't change so much, but nowadays Kubeplayer is quite
-stable and doesn't crash anymore. `;)`
+stable and doesn't crash anymore. :wink:
 
 After a lot of difficulties I got Kubeplayer packaged for opensuse. It's ready
 to install with only [one click][oneclick] in the case you are using openSuSE

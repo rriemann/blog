@@ -15,7 +15,7 @@ published: true
 This is a follow-up comment for my dear friends that have been discussing with
 me the [Proposal for the EU Data Protection Regulation][proposal]. In our parliament
 simulation, we had the honour to welcome a very strong participant representing
-a Google lobbyist that was hard to deal with (hi Lois `;)`).
+a Google lobbyist that was hard to deal with (hi Lois :wink:).
 
 In my candidature, I chose the lobbyist role as my second choice, but I was
 eventually chosen to represent a British Conservatives politician in the
@@ -73,6 +73,6 @@ Google that support this impression:
 It might be not the most easiest to read or understand, but give it a try.
 Smart phones are part of our daily life and the economy and policy behind it
 should be picked out as a central theme in schools already. For most of you,
-this is already to late. I ask you therefore to read it nevertheless—as it were homework `;)`.
+this is already to late. I ask you therefore to read it nevertheless—as it were homework :wink:.
 
 *PS: Facebook isn’t better. This is for another time.*

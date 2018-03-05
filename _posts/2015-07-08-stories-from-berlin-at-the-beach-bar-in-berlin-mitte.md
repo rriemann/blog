@@ -61,7 +61,7 @@ TODO flickr '161735338'
 
 - *Fritz Cola*: from Hamburg, less sweet, sold in glass bottles
 - *Schweppes Ginger Ale*: drink on the base of ginger, less sweet
-- *Club-Mate*: drink on the base of caffeine `;)`. Not my favourite one, but a very important part of German subculture (especially hacker culture). Read along on [Wikipedia](https://en.wikipedia.org/wiki/Club-Mate).
+- *Club-Mate*: drink on the base of caffeine :wink:. Not my favourite one, but a very important part of German subculture (especially hacker culture). Read along on [Wikipedia](https://en.wikipedia.org/wiki/Club-Mate).
 - *Apfelschorle*: This is actually just sparkling water with apple juice mixed right in place. You can find *Lift* in some countries. There is a variety of other *Schorles*, e.g. *Rhabarberschorle* on the base of rhubarb (sold in bottles).
 
 #### Wegbier (Beer to go)
@@ -79,4 +79,4 @@ The barkeeper gets the 4 Euro and starts mixing the Apfelschorle. Then, he remar
 However, when they realised that I just ordered Apfelschorle and not a beer,
 everyone was groaning. So they are in Berlin.
 
-[^1]: This is not completely true. I mentioned this already when I was still in Norway and someone put a coin in my hands. Though this doesn’t count, as I gave back the coin instead of spending it. `;)`
+[^1]: This is not completely true. I mentioned this already when I was still in Norway and someone put a coin in my hands. Though this doesn’t count, as I gave back the coin instead of spending it. :wink:

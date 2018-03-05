@@ -109,7 +109,7 @@ Je n’aurais pas eu à écrire cette contribution si j’étais d’accord ! C
 veut pas, c’est une polarisation entre les citoyens qui pourrait un jour devenir
 la racine d’une sérieux conflit. Pour ça, il faut améliorer le discours entre
 les gens qui pense différemment et travailler sur la capacité de négociation et faire des
-compromis. Le gens qui me connaissent savent que ce n’est pas facile non plus pour moi. `;)`
+compromis. Le gens qui me connaissent savent que ce n’est pas facile non plus pour moi. :wink:
 
 Je ne connais pas (beaucoup) d’étudiants de science politique, de commerce, des
 étudiants en parcours pour devenir fonctionnaire. Comme tous les hommes, j’ai peur

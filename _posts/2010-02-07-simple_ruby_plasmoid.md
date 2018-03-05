@@ -123,7 +123,7 @@ end
 # kate: remove_trailing_space on; replace-trailing-space-save on; indent-width 2; indent-mode ruby;
 ~~~
 
-The second file you need is the *metadata.desktop* containing all the meta data. `;)`
+The second file you need is the *metadata.desktop* containing all the meta data. :wink:
 
 ~~~ini
 [Desktop Entry]

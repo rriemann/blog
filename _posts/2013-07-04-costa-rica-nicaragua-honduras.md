@@ -117,7 +117,7 @@ Nicht weit ab habe ich auch einen Vogel-Zoo besucht und das Spa Resort Copán Ru
 Zunächst habe ich etwas über die hochtrabene Bezeichnung schmunzeln müssen –
 zu unrecht, wie sich herausstellte. Mitten im Wald tritt irgendwo kochendes Wasser
 aus. Hangabwerts gibt es viele hübsch angelegte Becken unterschiedlichster Temperatur.
-Geht da auch hin, wenn ihr in der Gegend seid! `;)`
+Geht da auch hin, wenn ihr in der Gegend seid! :wink:
 
 {% include figure image_path="/assets/img/central-america/honduras-copan-ruinas-parrot.jpg" alt="Photo von Julie." caption="Photo von Julie." %}{:.pull-left}
 

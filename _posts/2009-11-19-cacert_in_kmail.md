@@ -35,7 +35,7 @@ your CAcert-Page with Konqueror and navigate to your certificate. A click on the
 link there should automatically start the KDE certificate manager Kleopatra. You
 should get a notice that your certificate was successfully imported.
 
-Remeber: Imported is not the same as working/usable. `;)`
+Remeber: Imported is not the same as working/usable. :wink:
 
 Add `disable-trusted-cert-crl-check` to the end of the file `~/.gnupg/gpgsm.conf` and
 `allow-mark-trusted` to the (new) file `gpg-agent.conf`.

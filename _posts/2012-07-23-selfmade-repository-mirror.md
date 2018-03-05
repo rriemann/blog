@@ -22,7 +22,7 @@ modular packages to add functionality.
 
 After playing a little bit with Freetz, I even got a lighttpd webserver with
 ruby and caching capabilities running. Of course, the original firmware as well
-as Freetz allow the configuration of dynamic DNS services. `;)`
+as Freetz allow the configuration of dynamic DNS services. :wink:
 
 I ended up with a configuration including:
 

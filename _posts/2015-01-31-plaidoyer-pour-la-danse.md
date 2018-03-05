@@ -14,7 +14,7 @@ tags:
 Pourquoi danser ? C’est un texte pour les gens qui n’ont jamais dansé ou
 l’ont abandonné après peu. Lorsque je parle de danser, je pense à la danse sur la
 musique tout seul, dans un groupe ou en couple qui ressemble à plus que
-balancer ses pieds. `;)`
+balancer ses pieds. :wink:
 
 La danse et toute la culture qui s'en rapporte, peut ouvrir un monde très enrichissant
 pour ceux qui sont loin de la sphère artistique dans leur vie professionnelle ou
@@ -118,7 +118,7 @@ Dommage que je n’habite plus là-bas.
 J’ai quand même gardé cet esprit. Depuis j’habite à Lyon, j’ai pris des cours de
 Rock et de Salsa pendant quelques mois. J’ai découvert que je préfère toujours le
 Tango. J’ai même eu la chance de assister un cours de danse classique, que j’ai
-bien aimé – ce n'est pas trop loin du Tango `;)`.
+bien aimé – ce n'est pas trop loin du Tango :wink:.
 
 Par hasard, je suis en bonne compagnie au boulot, ce que je trouve déjà un peu
 particulier sachant que l’on est tous dans le domaine informatique. Mes deux

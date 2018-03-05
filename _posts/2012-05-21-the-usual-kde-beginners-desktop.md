@@ -22,7 +22,7 @@ or for considering a clearer warning of unlocking the screen. I vote for:
 > Please copy this into the form field below:   
 > I asked my son's friend and got his permission.
 
-`;)`
+:wink:
 
 
 [img]: <%= site_url %>/images/messed-up-kde-desktop.jpg "It seems to be hard for new users to control all features of the Plasma Desktop"

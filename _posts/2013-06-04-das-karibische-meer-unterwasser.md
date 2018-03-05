@@ -58,7 +58,7 @@ Und all dass ist keine 2 km vom Strand entfernt. Vieles könnte man selbst mit d
 Schnorchel erkunden.
 
 Meine Tauchgänge haben meine bisherige Reise sehr bereichert. Ich kann nur jedem
-empfehlen auch einen Tauchkurs in Guadeloupe zu belegen. `;)` Wer bereits den Tauchschein
+empfehlen auch einen Tauchkurs in Guadeloupe zu belegen. :wink: Wer bereits den Tauchschein
 hat, kann für 40€ (ohne CHU-Rabatt) einfach nur einen Tauchgang machen.
 
 ### Segeln (Nachtrag)
@@ -79,7 +79,7 @@ Max ist bereits einen Tag vor mir nach Köln abgereist und hat mein Gepäck
 um meine Französisch-Bücher erleichtert. Einen Tag nach mir sind unsere
 Berliner Nachbarn nach Haue geflogen und haben meine Sonnenbrille mitgenommen.
 Die Gewichtsersparnis ist hier vernachlässigbar. Ich bin ihnen aber trotzdem dankbar.
-`;)` Seit dem ich in Miami bin, hat sich die Sonne auch noch nicht blicken lassen.
+:wink: Seit dem ich in Miami bin, hat sich die Sonne auch noch nicht blicken lassen.
 Schicksal – ich werde mir wohl schnell wieder eine Brille kaufen müssen.
 
 {% include figure image_path="/assets/img/central-america/guadeloupe-letters.jpg" alt="Unser Appartment ist gesäubert, das Gepäck verstaut: <br> Zeit für Last-Minute-Post." caption="Unser Appartment ist gesäubert, das Gepäck verstaut: <br> Zeit für Last-Minute-Post." %}

@@ -105,7 +105,7 @@ train to Sinaia. Trains are a very comfortable and a cheap way to travel in Roma
 
 Once arrived, we walk up the mountain. The castle is not open for visits,
 because we are out of season. In general, we meet only very few tourists. That’s
-bad for the little artesian market where people must be freezing like hell `;)`,
+bad for the little artesian market where people must be freezing like hell :wink:,
 but good for us. After the trip, we have dinner in a traditional restaurant.
 The food reminded on Hungarian dishes - probably the most eastern kitchen I knew
 so far.
@@ -154,7 +154,7 @@ However, independent of the origin, all people I met in Romania have been super
 friendly and well coming. It has been a nice trip and I recommend everyone to
 visit Romania. It won't be my last time either.
 
-[^name]: He? Obviously, I won’t disclose names. `;)`
+[^name]: He? Obviously, I won’t disclose names. :wink:
 
 ### Gallery
 

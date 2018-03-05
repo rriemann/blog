@@ -52,7 +52,7 @@ of the the council of ministers took place in parallel and we met them mostly
 
 [^council-meeting]: That’s why there have been elected members of the parliament being
                     responsible to communicate with elected ministers during the coffee
-                    break `;)` (a.k.a. Trilogue Meetings) to insure that an agreement
+                    break :wink: (a.k.a. Trilogue Meetings) to insure that an agreement
                     can be found later on.
 
 For this post, I will pick some concepts we got to known that you might find interesting.
@@ -138,7 +138,7 @@ message in discretion.
 
 Unfortunately, this is not a very secure system. During the simulation, I received
 fraud messages: People writing messages secretly signed on behalf of someone
-else. Nice hack. That’s how you seed doubts within your opponent factions. `;)`
+else. Nice hack. That’s how you seed doubts within your opponent factions. :wink:
 
 ## Amending Law Proposals
 

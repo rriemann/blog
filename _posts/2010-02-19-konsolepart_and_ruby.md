@@ -38,7 +38,7 @@ You can change the working directory for the built-in shell
 by a nice dialog and can execute some command by the lineedit. To send your command
 to the shell, you have to press enter.
 
-I know there are a lot of bugs. `;)` But it is just a quick and dirty demo.
+I know there are a lot of bugs. :wink: But it is just a quick and dirty demo.
 
 ## main.rb
 

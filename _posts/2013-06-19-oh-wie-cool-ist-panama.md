@@ -131,7 +131,7 @@ weltweit! Da ist man in Panama sehr stolz drauf.
 
 Interessanter weise dürfen die Schiffskapitäne ihr Schiff nicht selbst durch den
 Kanal steuern, sondern müssen die Kontrolle an ausgebildete Spezialisten aus Panama
-abgeben (das sichert Arbeitsplätze `;)` ).
+abgeben (das sichert Arbeitsplätze :wink: ).
 
 {% include figure image_path="/assets/img/central-america/panama-canal.jpg" alt="Viel Platz ist zu beiden Seiten der Fähre nicht mehr. Viele Schiffe werden so konstruiert, dass sie noch durch den Kanal passen." caption="Viel Platz ist zu beiden Seiten der Fähre nicht mehr. Viele Schiffe werden so konstruiert, dass sie noch durch den Kanal passen." width="$3" %}
 

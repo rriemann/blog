@@ -80,9 +80,9 @@ Blocking ads in the browser works very well for already few years. Check out [Ad
 I also took personal counter measures against scam.
 
 - I started commenting posts in my timeline with links to the wikipedia hoax or scam article.
-  It wasn’t liked so far. `;)`
+  It wasn’t liked so far. :wink:
 - I added `huffington` to my Adblock plugin. In 80% of the cases it seems to be
-  scam to me. Now, when I accidently `;)` think of reading their stuff, I get a
+  scam to me. Now, when I accidently :wink: think of reading their stuff, I get a
   fullscreen warning and have to accept a one-time exception.
   I feel so much better now. Of course, the list is incomplete and depends on your
   Facebook friends or the own personal interests.

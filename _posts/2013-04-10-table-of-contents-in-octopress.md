@@ -29,7 +29,7 @@ solution that I found.
 
 ### Generating the Table Of Contents
 
-I'm going to add some further TOC levels for demonstration purposes. `;)`
+I'm going to add some further TOC levels for demonstration purposes. :wink:
 
 #### Using Kramdown
 

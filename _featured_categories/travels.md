@@ -17,5 +17,5 @@ hide_description: true
 # menu: true
 ---
 
-I started blogging about my travels in 2009 when I went to [South America]({{'/lateinamerika' | relative_url }}). Since then, I try to write down some notes if I find time.
+I started blogging about [my travels in 2009]({{'/lateinamerika' | relative_url }}) when I went to South America. Since then, I try to write down some notes if I find time.
 {:.message}

@@ -9,7 +9,7 @@ lang: de
 layout: post
 ---
 
-TODO flickr_tag 2613566235
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/11500806@N07/2613566235" title="Ronald McDonald&#x27;s Garden - El jardín de Ronaldo ~ La Antigua, Guatemala"><img src="https://farm4.staticflickr.com/3087/2613566235_c5ed6b614b_z.jpg" width="640" height="480" alt="Ronald McDonald&#x27;s Garden - El jardín de Ronaldo ~ La Antigua, Guatemala"></a>
 
 *Antigua Guatemala. Innenhof.*
 
@@ -17,7 +17,7 @@ Wir befinden uns[^1] im Innenhof eines in der 4a Calle poniente befindlichen Kol
 
 <!--more-->
 
-TODO flickr_tag 3630898681
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/25863371@N07/3630898681" title="Volcán de Agua, Antigua, Guatemala"><img src="https://farm3.staticflickr.com/2465/3630898681_6d1eeabed2_z.jpg" width="640" height="427" alt="Volcán de Agua, Antigua, Guatemala"></a>
 
 *Antigua Guatemala.*
 

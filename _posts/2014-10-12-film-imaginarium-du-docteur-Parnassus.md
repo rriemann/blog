@@ -18,10 +18,7 @@ description: >
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/29745871@N08/3955618071" title="poster UK The Imaginarium of Doctor Parnassus"><img src="https://farm3.staticflickr.com/2588/3955618071_1a96146836_o.jpg" width="800" height="600" alt="poster UK The Imaginarium of Doctor Parnassus"></a>
 
-
 *Affiche cinématographique.*
-
-*Ce texte fait parti de mes devoirs hebdomadaires du cours français.*
 
 Le film britannique »L’imaginarium du docteur Parnassus« de Terry Gilliam est un conte qui a lieu à l’époque moderne. Le film est sorti durant l’hiver 2009.
 

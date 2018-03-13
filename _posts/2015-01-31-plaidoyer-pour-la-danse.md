@@ -27,9 +27,10 @@ Je suis tombé gravement amoureux d'une fille à la fin du baccalauréat qui ét
 
 Quoi faire ? Je ne voulais plus y aller. J’ai proposé ensemble de commencer un cours de danse de salon. Un de mes meilleurs amis m’a proposé de demander dans son école de musique pour connaître les conditions. Quelques semaines plus tard, un autre élève m'a mis au courant que cet ami a commencé lui-même des cours avec ma bien-aimée. J’étais en colère et j’ai abandonné l’idée de faire de cours de danse au même moment.
 
-TODO flickr_tag 10991554394
-
-*Justin Timberlake performing in Tulsa at the BOK Center*
+<div>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/48595779@N04/10991554394" title="Justin Timberlake - BOK Center"><img src="https://farm3.staticflickr.com/2826/10991554394_80eebfee8a_z.jpg" width="640" height="480" alt="Justin Timberlake - BOK Center"></a>
+<em>Justin Timberlake performing in Tulsa at the BOK Center</em>
+</div>{:.align-left style="width:100%; max-width:300px"}
 
 Pendant les premiers 3 ans à la fac, j'étais bien occupé. Ma petite amie de l’époque ne s’intéressait pas du tout à la danse. Peut-être, je n'ai jamais demandé. Puis, après notre rupture et plusieurs déménagement je me sentais complètement perdu et je me suis mis à découvrir beaucoup de nouveaux activités. Un ami m’a raconté de son expérience de Tango Argentin pendant son sejour Erasmus à Paris. Je n'avais pas une espérance en particulier et je me suis inscrit au centre de sports de l’université. J’ai suivi les cours avec une fille que je ne connaissait pas encore avant. Elle me semblait toujours encore plus perdu que moi et toujours insatisfait dans la dans globalité. Cela ne m’a pas beaucoup motivé à continuer. J’ai accepté quand-même de commencer un autre cours débutant le semestre suivant avec une bonne amie Russe. Cela s’est beaucoup mieux passé, mais il y avait toujours un peu d’embarras, parce que l’on n’a pas très bien progressé. Le Tango, ce n’est pas facile. J’ai souvent pensé à abandonner les séances.
 
@@ -39,25 +40,22 @@ La chanson d’été à Berlin c’était le [Party Rock Anthem] de LMFAO, qui e
 
 ## Tango Argentin
 
-TODO
-
-{% include figure image_path="/assets/img/tango-band-2012.jpg" alt="Groupe de Tango avec des Bandoneon, Berlin" caption="Groupe de Tango avec des Bandoneon, Berlin" %}{:.pull-right}
+{% include figure image_path="/assets/img/tango-band-2012.jpg" alt="Groupe de Tango avec des Bandoneon, Berlin" caption="Groupe de Tango avec des Bandoneon, Berlin" %}
 
 Quelques semaines plus tard, début d'automne, j’ai fait la connaissance d’une nouvelle arrivante à Berlin de Russe que j’ai rencontré sur une des nombreux activités mis en place par la communauté Couchsurfing dans laquelle je me suis beaucoup engagé à cette époque là. Avec son esprit mondial, son charme et son manque d'égards, elle m’a vraiment impressionné. D’un côté, c’était très stupide, d’un autre côté, c’était une expérience pour la vie. Je n’ai pas beaucoup étudié pendent ces mois. Elle avait aussi déjà fait quelques cours de Tango et – sachant que Berlin est le haut-lieu de Tango Argentin en Europe[^2] – elle s’est lancé dans Tango à grand élan – et moi, j’ai la accompagné. On a dancé le Tang deux voire trois fois par semaine de Tango. Ma première vraie danse, c’était avec elle. J’ai beaucoup aimé.
 
-Cette temps ne dura pas très longtemps. À la fin de son Erasmus, nous n’avons plus parlé ni dansé. Je n’avais pas progressé aussi vite qu’elle et elle m’a laissé tombé. J’étais toujours plus ou moins jaloux/amoureux et il y avait des disputes. De cette temps là, il y a deux comics [(1)] et [(2)] que j’ai dessiné et publié.
+Cette temps ne dura pas très longtemps. À la fin de son Erasmus, nous n’avons plus parlé ni dansé. Je n’avais pas progressé aussi vite qu’elle et elle m’a laissé tombé. J’étais toujours plus ou moins jaloux/amoureux et il y avait des disputes. De cette temps là, il y a deux comics [(1)](2013-01-06-quantifying_someones_character.md) et [(2)](2012-09-28-leichtigkeit.md) que j’ai dessiné et publié.
 
 [^2]: Oui, c’est vrai. À Paris il y a aussi une communauté de Tango qui est assez large.
-[(1)]: _posts/2013-01-06-quantifying_someones_character.md
-[(2)]: _posts/2012-09-28-leichtigkeit.md
 
 ## Danser partout
 
-TODO flickr_tag 14810712952
+<div>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/39034650@N03/14810712952" title="Lindy Hop at Herräng Dance Camp"><img src="https://farm6.staticflickr.com/5554/14810712952_32885f2765_z.jpg" width="480" height="640" alt="Lindy Hop at Herräng Dance Camp"></a>
+<em>Herräng Dance Camp 2014, Suède</em>
+</div>{:.align-left style="max-width:300px; width: 100%"}
 
-*Herräng Dance Camp 2014, Suède'*
-
-TODO En 2013 et 2014, j’ai beaucoup voyagé. Souvent, j’ai assisté à des cours de danse. C’est devenu une habitude :slight_smile:. J’ai dansé du Tango à Baie-Mahault en Guadeloupe. Sur la même île, j’ai essayé aussi quelques danse folklorique sur les soirées après des répétitions chorale. Mon premier essaie de Salsa suivait. J’en ai fait plusieurs pendant les voyages dans les mois suivantes en Amérique Centrale.
+En 2013 et 2014, j’ai beaucoup voyagé. Souvent, j’ai assisté à des cours de danse. C’est devenu une habitude :slight_smile:. J’ai dansé du Tango à Baie-Mahault en Guadeloupe. Sur la même île, j’ai essayé aussi quelques danse folklorique sur les soirées après des répétitions chorale. Mon premier essaie de Salsa suivait. J’en ai fait plusieurs pendant les voyages dans les mois suivantes en Amérique Centrale.
 
 Avec un peu de retard, mes amis Berlinois ont aussi fini par découvrir la danse. Dommage que je n’habite plus là-bas.
 

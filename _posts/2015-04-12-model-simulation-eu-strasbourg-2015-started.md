@@ -10,7 +10,7 @@ lang: en
 published: true
 ---
 
-TODO flickr_tag 2331067209
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/31817492@N00/2331067209" title="European Parliament, Strasbourg"><img src="https://farm3.staticflickr.com/2376/2331067209_fa196e9af2_z.jpg" width="640" height="268" alt="European Parliament, Strasbourg"></a>
 *The EU parliament in Strasbourg.*
 
 ### Hello everyone,

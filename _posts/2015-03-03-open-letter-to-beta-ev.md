@@ -14,7 +14,7 @@ lang: en
 published: true
 ---
 
-TODO flickr_tag 9693216217
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/76254519@N08/9693216217" title="Neues Facebook Anti-Like"><img src="https://farm8.staticflickr.com/7327/9693216217_9b8f80d83b_z.jpg" width="640" height="426" alt="Neues Facebook Anti-Like"></a>
 *Freedom not fear demonstration in Berlin, 2013.*
 
 #### Dear Josef,

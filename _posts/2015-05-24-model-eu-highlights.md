@@ -10,7 +10,7 @@ lang: en
 published: true
 ---
 
-TODO flickr_tag 17125256478
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/36612355@N08/17125256478" title="Olive trees: MEPs to demand answers on how to tackle spread of killer bacteria"><img src="https://farm8.staticflickr.com/7683/17125256478_fc816901fa_z.jpg" width="640" height="428" alt="Olive trees: MEPs to demand answers on how to tackle spread of killer bacteria"></a>
 *EU Parliament in Strasbourg*
 
 I wrote already [some posts][model-eu] about my recent experience as a participant in the 2015 edition of the Strasbourg Model European Union simulation. I got attributed the role of an ECR deputy from the UK.
@@ -51,15 +51,13 @@ If you have been part of the adventure, what was your personal highlight? In the
 
 Instrumental Version from [Wikipedia (en)](//en.wikipedia.org/wiki/The_Internationale)
 
-TODO
-
-<audio src="//upload.wikimedia.org/wikipedia/en/d/d1/Internationale_orchestral_arrangement.ogg" controls="" style="width:100%"/>
+<audio src="//upload.wikimedia.org/wikipedia/en/d/d1/Internationale_orchestral_arrangement.ogg" controls=""/>
 
 - Faction leader Niko could not stand the “desperate capitalist talks” anymore during the Banking Union hearings and started playing the Internationale by holding his phone close to his microphone.
 
 - The strong co-operation of the Ministers of Ireland and UK in the Council led to rumours on unification negotiations. A unification would have the interesting side effect that according to the Lisbon treaty the new country wouldn’t be part of the EU anymore without further ado. Problem solved! (Tory’s perspective)
 
-- The chair had to ask the MEPs to remember their original identity as a MEP from the Left (Niko again) has “accidently” changed name badge and seat with a Liberals MEP. Happens!
+- The chair had to ask the MEPs to remember their original identity as a MEP from the Left (Niko again) has “accidentally” changed name badge and seat with a Liberals MEP. Happens!
 
 - The right wing factions (ECR and EFDD) found new ways to demonstrate their disagreement towards the banking union. They filed a blue card[^1] and proposed to accumulate the left-over speaking time and time for response for a minute of silence during the hearing to give honour to the now soon-failing EU.
 
@@ -68,12 +66,9 @@ TODO
 
 - Amendments passed the Council/Parliament that were missing some crucial words effectively negating the whole idea. This was noted the last plenary session day (Friday) and could fixed only by some generous exceptions to the official procedure granted by the chair.
 
-TODO
-
 ![Display of voting terminal in our conference room.]({{'/assets/img/meu-vote-marie-colombani.jpeg' | relative_url }})
 
 *Display of voting terminal in our conference room. Photo by [Marie](https://www.facebook.com/groups/390413847808226/permalink/409648702551407/)*
-
 
 - The vote to the close-the-debate motion during the hearing just before the final vote on the Banking Union was a tie (38 - 38).
 

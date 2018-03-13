@@ -7,6 +7,7 @@ kate: hl markdown;
 lang: fr
 tags:
  - society
+ - french
  - france
 keywords:
  - étudiants
@@ -18,8 +19,7 @@ description: >
   des établissements d'enseignement supérieur.
 ---
 
-TODO flickr_tag 3468724878
-
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/8517236@N02/3468724878" title="Cour aux Ernest - panoramique (2)"><img src="https://farm4.staticflickr.com/3555/3468724878_44e51ab84d_z.jpg" width="100%" height="203" alt="Cour aux Ernest - panoramique (2)"></a>
 *École normale supérieure de Paris.*
 
 Je ne comprends pas les associations étudiantes des établissements d'enseignement supérieur, c'est à dire, les universités et les grandes écoles. À mon avis, ils pratiquent souvent le protectionnisme qui augmente les inégalités. C'est dommage, car au sein de la société, il me semble que les étudiants sont plus engagés et progressistes. Voici mes arguments.

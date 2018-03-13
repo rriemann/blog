@@ -20,11 +20,9 @@ description: >
   Ce texte fait parti de mes devoirs hebdomadaires du cours français.
 ---
 
-TODO flickr 13475151983
+![University Life 239](https://farm8.staticflickr.com/7343/13475151983_4c86d29d6c_b.jpg)
 
-*Beaucoup d'étudiants."
-
-*Ce texte fait parti de mes devoirs hebdomadaires du cours français.*
+*Beaucoup d'étudiants. Source: [Flickr/francisco_osoria](https://www.flickr.com/photos/30330906@N04/13475151983).*
 
 ## Étudier en Allemagne
 

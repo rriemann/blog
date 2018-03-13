@@ -4,7 +4,7 @@ title: "Das Karibische Meer"
 date: 2013-05-15 22:36
 comments: true
 categories: [travels]
-tags: [central-america, german, travels]
+tags: [central-america, german]
 lang: de
 layout: post
 ---

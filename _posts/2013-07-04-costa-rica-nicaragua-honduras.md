@@ -4,7 +4,7 @@ title: "Costa Rica, Nicaragua, Honduras"
 date: 2013-07-04 18:48
 comments: true
 categories: [travels]
-tags: [central-america, german, travels]
+tags: [central-america, german]
 lang: de
 layout: post
 ---

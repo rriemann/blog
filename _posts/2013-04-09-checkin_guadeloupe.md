@@ -4,7 +4,7 @@ title: "Check-In Guadeloupe"
 date: 2013-04-09 06:30
 comments: true
 categories: [travels]
-tags: [central-america, german, travels]
+tags: [central-america, german]
 lang: de
 layout: post
 ---
@@ -75,9 +75,6 @@ Für einen ersten Eindruck muss das erstmal reichen!
 
 > Je ne veux pas travailler. – Ich will nicht arbeiten.
 
-<div class="thumbnail" markdown="0" style="width:570px">
-  <iframe width="560" height="315" src="//www.youtube.com/embed/ANVQScgIeag?HD=1;rel=0;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
-  <div class="caption">
-    Pink Martini - Sympathique
-  </div>
-</div>
+{% include video id="ANVQScgIeag" provider="youtube" %}
+
+*Pink Martini - Sympathique*

@@ -7,6 +7,8 @@ comments: true
 lang: en
 ---
 
+# Making Of ruby-stocks Plasma DataEngine
+
 ## Hello Planet KDE, hello RubyCorner
 
 Since I wrote my last Blog post much time has past. After my last exam last

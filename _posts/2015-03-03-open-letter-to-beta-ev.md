@@ -3,6 +3,7 @@ title: Open Letter to BETA e.V.
 date: 2015-03-03 00:12 CET
 comments: true
 kate: hl markdown;
+categories: [digitalisation]
 tags: [big-data, surveillance, model-eu, data-protection]
 keywords:
   - BETA e.V.
@@ -13,7 +14,8 @@ lang: en
 published: true
 ---
 
-<%= flickr_tag 9693216217, size: 'b', title: 'Freedom not fear demonstration in Berlin, 2013' %>{:.pull-right}
+TODO flickr_tag 9693216217
+*Freedom not fear demonstration in Berlin, 2013.*
 
 #### Dear Josef,
 
@@ -21,27 +23,17 @@ my Facebook account is blocked.
 
 I am asking you again to be sure that there is no misunderstanding.
 
-You want that I use a profile on a US enterprise network, where EU privacy
-standards are willingly and legally broken, censorship is performed (e.g. Turkey[^6]),
-and data is abused to retain citizens of any country. They have still death penalty[^3]
-over there and use whatever is necessary to eavesdrop even international political
-conferences (NSA spying on Copenhagen climate talks[^7]).
+You want that I use a profile on a US enterprise network, where EU privacy standards are willingly and legally broken, censorship is performed (e.g. Turkey[^6]), and data is abused to retain citizens of any country. They have still death penalty[^3] over there and use whatever is necessary to eavesdrop even international political conferences (NSA spying on Copenhagen climate talks[^7]).
 
-While the German data protection officers criticise the platforms for their illegal
-terms of use[^1] [^2] (e.g. real name obligation), and the EU is funding research projects[^4]
-on how to fight the American predominance of internet monopolists, you want to
-make a 2nd class participant, just because I don't want to disclose my political
-engagement on Facebook[^5].
+While the German data protection officers criticise the platforms for their illegal terms of use[^1] [^2] (e.g. real name obligation), and the EU is funding research projects[^4] on how to fight the American predominance of internet monopolists, you want to make a 2nd class participant, just because I don't want to disclose my political engagement on Facebook[^5].
 
 <!--more-->
 
-I strongly disagree with your decision. Unfortunately we don't have means on
-Facebook. However, as your organisation ([BETA e.V.]) is registered in Germany,
-you have to stick to the German data protection laws.
+I strongly disagree with your decision. Unfortunately we don't have means on Facebook. However, as your organisation ([BETA e.V.]) is registered in Germany, you have to stick to the German data protection laws.
 
 I ask you urgently to revise your communication strategy.
 
-Sincerely,
+Sincerely,  
 Robert Riemann
 
 [BETA e.V.]: http://www.beta-europe.org/
@@ -52,9 +44,7 @@ Robert Riemann
       <https://en.wikipedia.org/wiki/Capital_punishment#mediaviewer/File:Death_Penalty_World_Map.svg>
 
 [^4]: <http://byte-project.eu>
-[^5]: I will finish with a comparison (c.f [Godwin's Law](https://en.wikipedia.org/wiki/Godwin%27s_law)):   
-      If Nazi Germany had deployed Facebook already, the Holocaust would have been
-      even more fatal.
+[^5]: I will finish with a comparison (c.f [Godwin's Law](https://en.wikipedia.org/wiki/Godwin%27s_law)): If Nazi Germany had deployed Facebook already, the Holocaust would have been even more fatal.
 
 [^6]: <http://money.cnn.com/2015/01/27/technology/facebook-mohammed/index.html>
 [^7]: <http://www.theguardian.com/environment/2014/jan/30/snowden-nsa-spying-copenhagen-climate-talks>

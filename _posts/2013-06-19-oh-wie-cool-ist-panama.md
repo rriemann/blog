@@ -4,7 +4,7 @@ title: "Oh, Wie Cool Ist Panama"
 date: 2013-06-19 23:14
 comments: true
 categories: [travels]
-tags: [central-america, german, travels]
+tags: [central-america, german]
 lang: de
 layout: post
 ---

@@ -4,7 +4,7 @@ title: "Festival Terre De Blues"
 date: 2013-05-26 20:58
 comments: true
 categories: [travels]
-tags: [central-america, german, travels]
+tags: [central-america, german]
 lang: de
 layout: post
 ---

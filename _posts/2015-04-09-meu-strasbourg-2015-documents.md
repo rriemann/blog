@@ -3,7 +3,7 @@ title: MEU Strasbourg 2015 Documents
 date: 2015-04-09 16:58 CEST
 comments: true
 kate: hl markdown;
-tags: [meu2015]
+tags: [model-eu]
 keywords:
   - BETA e.V.
   - MEU Strasbourg
@@ -12,13 +12,12 @@ published: true
 ---
 
 
-<%= flickr_tag 6201381800, size: 'b', title: 'best-practice (paper-free) reading of EU regulations' %>
+TODO flickr_tag 6201381800
+*Best-practice (paper-free) reading of EU regulations.*
 
 ### Dear participants of the Model European Union simulation 2015,
 
-We have been asked to read quite a lot of papers. Instead of printing them out as
-you find them on the server. I generated some derivates that you hopefully find
-usefull.
+We have been asked to read quite a lot of papers. Instead of printing them out as you find them on the server. I generated some derivates that you hopefully find usefull.
 
 <!--more-->
 
@@ -29,20 +28,17 @@ All files: <http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regu
 
 In English:
 
-* [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT.azw3)
-* [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT.epub)
-* [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT.mobi)
-* [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT-booklet.pdf)
+- [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT.azw3)
+- [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT.epub)
+- [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT.mobi)
+- [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_EN_TXT-booklet.pdf)
 
 In German:
 
-* [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT.azw3)
-* [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT.epub)
-* [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT.mobi)
-* [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT-booklet.pdf)
-
-
-
+- [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT.azw3)
+- [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT.epub)
+- [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT.mobi)
+- [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Data-Protection-Regulation/CELEX_52012PC0011_DE_TXT-booklet.pdf)
 
 #### Single Resolution Mechanism
 
@@ -51,19 +47,17 @@ All files: <http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Me
 
 In English:
 
-* [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT.azw3)
-* [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT.epub)
-* [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT.mobi)
-* [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT-booklet.pdf)
-  (staple together each consecutive 8 sheets)
+- [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT.azw3)
+- [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT.epub)
+- [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT.mobi)
+- [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_EN_TXT-booklet.pdf) (staple together each consecutive 8 sheets)
 
 In German:
 
-* [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT.azw3)
-* [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT.epub)
-* [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT.mobi)
-* [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT-booklet.pdf)
-  (staple together each consecutive 8 sheets)
+- [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT.azw3)
+- [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT.epub)
+- [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT.mobi)
+- [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Resolution-Mechanism/CELEX_52013PC0520_DE_TXT-booklet.pdf) (staple together each consecutive 8 sheets)
 
 
 #### Single Supervisory Mechanism
@@ -73,21 +67,23 @@ All files: <http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-R
 
 In English:
 
-* [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT.azw3)
-* [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT.epub)
-* [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT.mobi)
-* [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT-booklet.pdf)
+- [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT.azw3)
+- [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT.epub)
+- [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT.mobi)
+- [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_EN_TXT-booklet.pdf)
   (staple together each consecutive 8 sheets)
 
 In German:
 
-* [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT.azw3)
-* [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT.epub)
-* [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT.mobi)
-* [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT-booklet.pdf)
+- [ebook Kindle](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT.azw3)
+- [ebook epub](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT.epub)
+- [ebook mobi](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT.mobi)
+- [booklet for duplex printing](http://people.physik.hu-berlin.de/~rriemann/meu/Single-Supervisory-Mechanism/CELEX_52012PC0511_DE_TXT-booklet.pdf)
   (staple together each consecutive 8 sheets)
 
 ### How it is done
+
+Save the following ruby script in an executable file called `formatter.rb`.
 
 ~~~ruby
 #!/usr/bin/env ruby
@@ -130,8 +126,5 @@ if File.exists? pdffile
   %x[pdfbook --booklet false --signature '32' --suffix 'booklet' #{pdffile}]
 end
 ~~~
-ruby script *formatter.rb*
-{: .code-meta}
 
 [Download formatter.rb](http://people.physik.hu-berlin.de/~rriemann/meu/formatter.rb)
-

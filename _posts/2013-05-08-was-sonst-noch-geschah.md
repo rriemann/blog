@@ -4,7 +4,7 @@ title: "Was Sonst Noch Geschah"
 date: 2013-05-08 14:40
 comments: true
 categories: [travels]
-tags: [central-america, german, travels]
+tags: [central-america, german]
 lang: de
 layout: post
 ---

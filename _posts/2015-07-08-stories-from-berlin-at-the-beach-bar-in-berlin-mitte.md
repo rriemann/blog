@@ -5,8 +5,8 @@ comments: true
 kate: hl markdown;
 categories: [travels]
 tags:
-  - Berlin
-  - Germany
+  - berlin
+  - germany
   - sustainability
 keywords:
   - Berlin

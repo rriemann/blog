@@ -4,7 +4,7 @@ title: "25 Jahre Robert: Aufbruch zu Neuem"
 date: 2013-06-06 19:29
 comments: true
 categories: [travels]
-tags: [central-america, german, travels, usa]
+tags: [central-america, german, usa]
 lang: de
 layout: post
 ---

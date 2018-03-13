@@ -3,7 +3,7 @@ title: Impressions from Romania
 date: 2015-07-08 01:32 CEST
 comments: true
 kate: hl markdown;
-tags: [travels]
+tags: [romania]
 categories: [travels]
 keywords:
   - Romania

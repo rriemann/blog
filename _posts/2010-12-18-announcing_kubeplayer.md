@@ -7,6 +7,8 @@ comments: true
 lang: en
 ---
 
+# Announcing Kubeplayer (youtube w/o flash)
+
 ## Hello Planet KDE, hello RubyCorner
 
 Earlier this year I started writing a KDE application using

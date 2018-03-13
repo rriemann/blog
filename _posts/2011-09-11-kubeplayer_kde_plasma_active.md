@@ -21,9 +21,7 @@ Before delivering any further details, you may want to see the video
 demonstration on how Kubeplayer performs using [Meego][meego] and
 [KDE Plasma Active][active].
 
-<div class="thumbnail" markdown="0" style="width:650px">
-  <iframe width="640" height="360" src="//www.youtube.com/embed/sOOTMVH-bjo" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include video id="sOOTMVH-bjo" provider="youtube" %}
 
 If you don't like [watching the video using Youtube][youtube], you can download
 the [webm file][video] directly.

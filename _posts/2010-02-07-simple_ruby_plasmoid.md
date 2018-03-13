@@ -7,6 +7,8 @@ comments: true
 lang: en
 ---
 
+# Simple Ruby Plasmoid
+
 ## Hello Planet KDE, hello RubyCorner
 
 After some blog posts on my old blog about KDE programming with Ruby

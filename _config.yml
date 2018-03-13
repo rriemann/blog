@@ -31,7 +31,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               |
-  Personal Blog of
+  Personal Blog of   
   Robert Riemann, PhD
 
 # A list of keywords for your blog.
@@ -87,8 +87,8 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 # Emoji Set Configuration
 # https://github.com/jekyll/jemoji
-emoji:
-  src: "https://cdn.jsdelivr.net/emojione/assets/png"
+# emoji:
+  # src: "/assets/img" -> /assets/img/emoji/unicode/1f44f.png
 
 # Matomo Analytics
 matomo_analytics:

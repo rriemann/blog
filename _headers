@@ -1,10 +1,10 @@
 # Custom Netlify Headers
 # https://www.netlify.com/docs/headers-and-basic-auth/
 
-/assets/icomoon/fonts/icomoon.woff*
+/assets/icomoon/fonts/*.woff
   Access-Control-Allow-Origin: *
   Content-Type: application/font-woff
 
-/assets/icomoon/fonts/icomoon.ttf*
+/assets/icomoon/fonts/*.ttf
   Access-Control-Allow-Origin: *
   Content-Type: application/font-ttf

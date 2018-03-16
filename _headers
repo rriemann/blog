@@ -1,0 +1,5 @@
+# Custom Netlify Headers
+# https://www.netlify.com/docs/headers-and-basic-auth/
+
+/icomoon/fonts/*
+  Access-Control-Allow-Origin = "*"

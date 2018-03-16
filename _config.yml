@@ -183,6 +183,8 @@ exclude:
   - node_modules
 
 include:
+  - _headers
+  - _redirects
   - _posts.md
 
 

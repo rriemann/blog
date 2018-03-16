@@ -1,29 +1,33 @@
 ---
 layout:       project
-date:         29 Jun 2017
-title:        Solid Orange
-caption:      A solid orange sidebar
+date:         30 Oct 2017
+title:        Radio Blue EU
+caption:      Podcast
 description:  >
-  This flavor of Hydejack changes the accent color and sidebar color to the same orange as the "09"-theme of the original Hyde Jekyll theme.
-image:        /assets/img/projects/base-orange.jpg
+  The podcast Radio Blue EU Brussels is an independent volunteer project of few trainees of EU institutions.
+image:        /assets/img/projects/radio-blue.jpg
 screenshot:
-  src:        /assets/img/projects/base-orange.jpg
-  srcset:
-    1920w:    /assets/img/projects/base-orange.jpg
-    960w:     /assets/img/projects/base-orange@0,5x.jpg
-    480w:     /assets/img/projects/base-orange@0,25x.jpg
-accent_color: '#d28445'
-accent_image: none
+  src:        /assets/img/projects/radio-blue.jpg
+  # srcset:
+  #   1920w:    /assets/img/projects/default.jpg
+  #   960w:     /assets/img/projects/default@0,5x.jpg
+  #   480w:     /assets/img/projects/default@0,25x.jpg
+links:
+  - title:    Website
+    url:      https://www.radio-blue.eu/
+featured:     true
+accent_color: '#3f61cc'
+accent_image: https://www.radio-blue.eu/assets/images/sidebar-bg.jpg
 ---
 
-To use this flavor, change your `_config.yml` to include:
+![Cat](https://placekitten.com/g/200/300){:.lead}
 
-~~~yml
-accent_color: '#d28445'
-accent_image: none
-~~~
+It features everything that's hot right now:
+* Aerial shot of a beach
+* A heading font that's way too bold
+* ...with slab serifs
+* A theme color that's also the coat of a 1957 Chevy (almost)
 
-***
 
 ## Attributions
 

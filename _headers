@@ -2,9 +2,9 @@
 # https://www.netlify.com/docs/headers-and-basic-auth/
 
 /assets/icomoon/fonts/icomoon.woff*
-  Access-Control-Allow-Origin: "*"
-  Content-Type: "application/font-woff"
+  Access-Control-Allow-Origin: *
+  Content-Type: application/font-woff
 
 /assets/icomoon/fonts/icomoon.ttf*
-  Access-Control-Allow-Origin: "*"
-  Content-Type: "application/font-ttf"
+  Access-Control-Allow-Origin: *
+  Content-Type: application/font-ttf

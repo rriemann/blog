@@ -44,11 +44,6 @@ Je trouve ça normal, car ces formations sont financées par l'État. On est tou
 
 J’étais inscrit à l'université d'Aix-Marseille pendant quelques mois. J’ai travaillé à l’École Centrale dans une équipe composée d’étudiants/chercheurs de Centrale et Aix-Marseille. Ce n’était pas drôle. Je ne recevais aucun mail des associations de Centrale puisque j’étais étudiant d’Aix-Marseille. Je me rappelle avoir demandé à une étudiante quand aura lieu la prochaine séance de cinéma sur le campus en lui montrant une affiche d’un événement que j’avais raté. Sa réponse : «Les événements sont communiqués par mail, mais si tu ne les reçoit pas, c’est que tu n’es pas invité». J’étais tellement étonné.
 
-
-TODO flickr_tag 5699473984
-
-*Jardin d’école normale supérieure de Lyon.*
-
 Depuis que je suis à Lyon, j’ai remarqué aussi à plusieurs reprises que les étudiants font tout pour rester entre eux. À l’ENS, il est impossible pour les étudiants extérieurs d’assister aux cours de sport (et probablement pareil pour les langues[^1]). Ce n’est pas une question de prix, c’est juste impossible. Plus grave encore : les étudiants partagent cette idée.
 
 [^1]: Je pense c’est effectivement possible, mais je ne connais pas des conditions.

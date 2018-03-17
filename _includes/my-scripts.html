@@ -19,16 +19,16 @@
     loadJSDeferred(u+'piwik.js');
 
     var timeStartLoadPage, referer, timeItTookToLoadPage;
-    document.getElementById('_yPushState').addEventListener('y-push-state-start', function() {
+    document.getElementsByTagName('hy-push-state')[0].addEventListener('hy-push-state-start', function() {
       timeStartLoadPage = new Date().getTime();
       referer = window.location.toString();
     });
 
-    document.getElementById('_yPushState').addEventListener('y-push-state-ready', function() {
+    document.getElementsByTagName('hy-push-state')[0].addEventListener('hy-push-state-ready', function() {
       timeItTookToLoadPage = new Date().getTime() - timeStartLoadPage;
     });
 
-    document.getElementById('_yPushState').addEventListener('y-push-state-after', function() {
+    document.getElementsByTagName('hy-push-state')[0].addEventListener('hy-push-state-after', function() {
       _paq.push(['setReferrerUrl', referer]);
       _paq.push(['setCustomUrl', window.location.toString()]);
       _paq.push(['setDocumentTitle', document.title]);

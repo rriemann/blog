@@ -17,7 +17,7 @@ links:
     url:      https://www.radio-blue.eu/
 featured:     true
 accent_color: '#3f61cc'
-accent_image: https://www.radio-blue.eu/assets/images/sidebar-bg.jpg
+accent_image: /assets/img/sidebar-bg-eu.jpg
 ---
 
 ![Cat](https://placekitten.com/g/200/300){:.lead}

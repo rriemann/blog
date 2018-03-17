@@ -5,9 +5,9 @@ title:        CaST Writing
 caption:      Clear and Smart Technical Writing
 description:  >
   Clear and Smart Technical Writing is a modern workflow to draft technical documents based on different free software components such as Markdown and Atom.
-image:        https://rriemann.github.io/cast-writing/assets/img/screenshot-atom-editor.png
+image:       /assets/img/projects/cast-writing.jpg
 screenshot:
-  src:        https://rriemann.github.io/cast-writing/assets/img/screenshot-atom-editor.png
+  src:       /assets/img/projects/cast-writing.jpg
   # srcset:
   #   1920w:    /assets/img/projects/default.jpg
   #   960w:     /assets/img/projects/default@0,5x.jpg
@@ -17,7 +17,7 @@ links:
     url:      https://rriemann.github.io/cast-writing
 featured:     true
 accent_color: '#90370b'
-accent_image:  https://rriemann.github.io/cast-writing/assets/img/patrick-fore-381196-blur.jpg
+accent_image: /assets/img/sidebar-typewriter-patrick-fore-381196-blur.jpg
 ---
 
 # CaST Writing

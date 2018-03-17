@@ -84,6 +84,22 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      comments: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      comments: false
+
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
 

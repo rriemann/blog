@@ -4,7 +4,7 @@
 basics:
   name: "Robert Riemann"
   label: "PhD in Computer Science and M.Sc. in Physics"
-  picture: "http://blog.riemann.cc/images/me.jpg" # TODO
+  picture: "https://blog.riemann.cc/assets/img/me.jpg"
   email: "robert@riemann.cc"
   # phone: "(912) 555-4321"
   website: "https://blog.riemann.cc"

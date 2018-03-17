@@ -10,14 +10,15 @@ tags:
   - dance
 ---
 
-flickr_tag 6313173436
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/eric00000007/6313173436" title="Lindy Shock 2011"><img src="https://farm7.staticflickr.com/6044/6313173436_7b570ea61d_z.jpg" width="100%" height="427" alt="Lindy Shock 2011"></a>
+
 *Lindy Shock 2011, Roumanie.*
 
 Pourquoi danser ? C’est un texte pour les gens qui n’ont jamais dansé ou l’ont abandonné après peu. Lorsque je parle de danser, je pense à la danse sur la musique tout seul, dans un groupe ou en couple qui ressemble à plus que balancer ses pieds. :wink:
 
 La danse et toute la culture qui s'en rapporte, peut ouvrir un monde très enrichissant pour ceux qui sont loin de la sphère artistique dans leur vie professionnelle ou dans leurs loisirs comme c'était le cas pour moi.
 
-## Premiers pas
+## Premiers Pas
 
 Je suis tombé gravement amoureux d'une fille à la fin du baccalauréat qui était dans la même promotion comme moi. Elle était très sportive et un peu introvertie. J'ai essayé de m'approcher en proposant de l'accompagner sur les sortis jogging ou venir avec elle sur le cours de danse contemporaine. C'était ma première expérience de danse – dans ce moment là cent pour cent contre ma nature – et dans un cours exclusivement féminin. Elles avaient déjà commencé le travail sur une choréographie. Je ne savais pas comment suivre, comment bouger. Je savais vraiment rien. En allemand, on parle d'un saut à eau froide[^1]. Je me suis senti très gêné en tant que seul mec et seul débutant.
 

@@ -53,7 +53,7 @@ author:
   twitter:             rriemann_eu
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2017. All rights reserved.
+copyright:             © 2017 Robert Riemann. Content published under [Creative Commons BY-NC-SA 3.0 license](http://creativecommons.org/licenses/by-nc-sa/3.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic").
 
 # Format of the permalinks
 permalink:             pretty

@@ -100,6 +100,13 @@ defaults:
     values:
       comments: false
 
+scholar:
+  bibtex_filters:
+    - latex
+    - markdown
+  sort_by: 'year,month'
+  order: 'descending'
+
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
 
@@ -221,6 +228,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   - jemoji
+  - 'jekyll/scholar'
 
 # Theme
 # ---------------------------------------------------------------------------------------

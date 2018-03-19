@@ -1,0 +1,89 @@
+---
+# Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+layout: base
+---
+
+{% assign entry = page.entry %}
+{% assign separator = site.data.strings.separator | default:"|" %}
+{% assign nsd = site.hydejack.no_structured_data | default:site.no_structured_data %}
+
+<article class="page" role="article" {% unless nsd %}vocab="http://schema.org/" typeof="CreativeWork"{% endunless %}>
+  <meta property="mainEntityOfPage" content="{{ page.url | absolute_url }}"/>
+
+  <header>
+    <h1 class="page-title" property="name">{{ entry.title }}</h1>
+
+    <p class="post-date heading">
+      {% assign parent = site.pages | where:"show_collection",project.collection | first %}
+      {% if parent %}
+        <a href="{{ parent.url | relative_url }}" class="flip-title" property="genre">{{ parent.title }}</a>
+        {{ separator }}
+      {% endif %}
+      {% if entry.author %}
+        {{ entry.author }}
+        {{ separator }}
+      {% endif %}
+      {% comment %}
+      {% assign output_format = site.data.strings.date_formats.output | default:"%Y-%m-%d" %}
+      <time datetime="{{ entry.date | date_to_xmlschema }}" property="datePublished">{{ entry.date | date:output_format }}</time>
+      {% endcomment %}
+      {{ entry.month | capitalize }} {{ entry.year }}
+      <span class="fr">
+        <span class="sr-only">{{ separator }} {{ site.data.strings.links | default:"Links" }}{{ site.data.strings.colon }}</span>
+        {% if entry.doi %}
+          <a class="external" href="https://doi.org/{{ entry.doi }}" property="sameAs">DOI</a>
+        {% endif %}
+        {% if entry.x-slides %}
+          <a class="external" href="{{ entry.x-slides }}">Slides</a>
+        {% endif %}
+        {% if entry.url contains "://" %}
+          <a class="external" href="{{ entry.url }}" property="sameAs">Download</a>
+        {% endif %}
+
+      </span>
+    </p>
+
+    {% include message.html text=entry.abstract hide=page.hide_description property="description" alt="" %}
+  </header>
+
+  {{ entry.annote | markdownify }}
+
+  <h3>BibTeX</h3>
+  <pre>{{ entry.bibtex }}</pre>
+
+</article>
+
+<hr class="dingbat related" />
+
+{% assign addons = site.hydejack.output_addons %}
+{% unless addons %}{% assign addons = "about,newsletter" | split:"," %}{% endunless %}
+{% for addon in addons %}
+  {% case addon %}
+  {% when 'about' %}
+     {% include about.html %}
+  {% when 'newsletter' %}
+    {% include pro/newsletter.html %}
+  {% when 'other' %}
+    {% include other-outputs.html %}
+  {% else %}
+  {% endcase %}
+{% endfor %}

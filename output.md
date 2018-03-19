@@ -22,10 +22,12 @@ My research papers are also listed under [orcid.org/0000-0002-1727-9015](https:/
 ## Talks
 
 
-- 2018-02-20 Smart Working: Clear and Smart Technical Writing at the EDPS <https://slides.com/rriemann/cast-writing-edps>
+2018-02-20, Brussels, *European Data Protection Supervisor*, All-Staff Meeting
+:  Smart Working: Clear and Smart Technical Writing
 
+  [Slides](https://slides.com/rriemann/cast-writing-edps)
 
-- 2017-12-18 Centralised​ ​ vs​ ​ Decentralised​ ​ Systems: an​ ​ Interdisciplinary​ ​ Perspective  <http://www.ixxi.fr/agenda/seminaires/confiance-dans-les-systemes-delocalises> (Defense Talk, )
+2017-12-18, Lyon, *École Normale Superieure Centralised​ ​ vs​ ​ Decentralised​ ​ Systems: an​ ​ Interdisciplinary​ ​ Perspective  <http://www.ixxi.fr/agenda/seminaires/confiance-dans-les-systemes-delocalises> (Defense Talk, )
 
 - S. G RUMBACH , R. R IEMANN . Distributed Random Process for a Large-Scale Peer-to-Peer Lottery, in "Proc.
 of 17th IFIP Distributed Applications and Interoperable Systems", Neuchâtel, Switzerland, L. Y. C HEN , H.

@@ -101,11 +101,19 @@ defaults:
       comments: false
 
 scholar:
+  # style: oscola-no-ibid # i.e. chicago-author-date, ieee, ieee-with-url, see `ruby -r "csl/styles" -e "puts CSL::Style.ls"`
+  style: '_plugins/computing-surveys.csl'
   bibtex_filters:
     - latex
-    - markdown
+    # - markdown
   sort_by: 'year,month'
   order: 'descending'
+  # style: _plugins/ieee.csl
+  bibliography: papers.bib
+  # see example https://github.com/ashinkarov/ashinkarov.github.com
+  details_dir:    output
+  details_layout: output-details.html
+  details_link: 'Details and Download'
 
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------

@@ -33,15 +33,8 @@ layout: base
     <h1 class="page-title" property="name">{{ entry.title }}</h1>
 
     <p class="post-date heading">
-      {% assign parent = site.pages | where:"show_collection",project.collection | first %}
-      {% if parent %}
-        <a href="{{ parent.url | relative_url }}" class="flip-title" property="genre">{{ parent.title }}</a>
-        {{ separator }}
-      {% endif %}
-      {% if entry.author %}
-        {{ entry.author }}
-        {{ separator }}
-      {% endif %}
+      <a href="{{ '/output/#papers' | relative_url }}">Papers</a>
+      {{ separator }}
       {% comment %}
       {% assign output_format = site.data.strings.date_formats.output | default:"%Y-%m-%d" %}
       <time datetime="{{ entry.date | date_to_xmlschema }}" property="datePublished">{{ entry.date | date:output_format }}</time>
@@ -58,12 +51,19 @@ layout: base
         {% if entry.url contains "://" %}
           <a class="external" href="{{ entry.url }}" property="sameAs">Download</a>
         {% endif %}
-
       </span>
+      <div class="clearfix"></div>
+      {% if entry.author %}
+        <strong>Authors:</strong>
+        {{ entry.author }}
+      {% endif %}
     </p>
-
-    {% include message.html text=entry.abstract hide=page.hide_description property="description" alt="" %}
   </header>
+
+  <p class="message">
+    <strong>Abstract:</strong>
+    {{entry.abstract}}
+  </p>
 
   {{ entry.annote | markdownify }}
 

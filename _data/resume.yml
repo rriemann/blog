@@ -75,8 +75,8 @@ work:
   - company: "atech GmbH"
     position: "Working Student"
     website: "http://www.atech.de/"
-    startDate: "2011-03-15"
-    endDate: "2013-05-31"
+    startDate: "2011-05-01"
+    endDate: "2013-03-31"
     summary: >
       Administrating workstations and server machines, installing and maintaining of source code infrastructure, developing cross-plattform C++ code, prototyping new product features.
 
@@ -122,7 +122,7 @@ education:
     area: "Physics"
     studyType: "Master"
     startDate: "2010-10-01"
-    endDate: "2013-05-31"
+    endDate: "2013-03-31"
     gpa: "1.7"
 
   - institution: "Humboldt University of Berlin"

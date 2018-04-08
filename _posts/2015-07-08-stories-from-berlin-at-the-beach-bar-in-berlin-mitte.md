@@ -22,8 +22,7 @@ lang: en
 published: true
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/43229874@N03/6149364145" title="Museumsinsel | Museum Island"><img src="https://farm7.staticflickr.com/6158/6149364145_0591c49288_z.jpg" width="640" height="348" alt="Museumsinsel | Museum Island"></a>
-*Bode Museum on Museum Island as seen from Strandbar Mitte.*
+{% flickr 6149364145 "Bode Museum on Museum Island as seen from Strandbar Mitte." %}
 
 **This is a post about payment systems, bottle deposit and pragmatism of the people from Berlin at one of the very original outdoor bars in the heart of the city of Berlin. What happened?**
 
@@ -42,8 +41,7 @@ Right at this place, the [Beach Bar] offers throughout the summer open air balls
 
 [Big Map](https://api.tiles.mapbox.com/v4/rriemann.mli0jmfp/page.html?access_token=pk.eyJ1IjoicnJpZW1hbm4iLCJhIjoiODgwZGJiNTdjYmRlOWE1NzkwMGQwMDljZWUzMTMzYzAifQ.fFrHR0eLYKhxLsUbDrD0vQ)
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/43229874@N03/6149360587" title="Tango Nacht Strandbar Mitte | Dancing tango at Strandbar Mitte, Monbijou Park"><img src="https://farm7.staticflickr.com/6154/6149360587_5cc4b2d2af_z.jpg" width="100%" height="314" alt="Tango Nacht Strandbar Mitte | Dancing tango at Strandbar Mitte, Monbijou Park"></a>
-*People Dancing at the Beach Bar.*
+{% flickr 6149360587 "People Dancing at the Beach Bar." %}
 
 So I've been there with few friends to watch and dance a bit Swing (Lindy Hop). My friends left a bit earlier and I went to the bar to get a drink.
 
@@ -53,10 +51,8 @@ If you have ever danced something like Swing or Tango, you probably know that it
 
 However, there are many sparkling, non-alcoholic beverages that I actually miss abroad.
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/72526421@N00/161735338" title="Apfelschorle"><img src="https://farm1.staticflickr.com/66/161735338_3d7003510f_z.jpg?zz&#x3D;1" width="640" height="491" alt="Apfelschorle"></a>
-<em>Apfelschorle. Looks like a <a href="https://en.wikipedia.org/wiki/Ma%C3%9F">Maß Bavarian beer</a>, but it is not.</em>
-</div>{:.align-right style="width:100%; max-width: 300px;"}
+
+{% flickr 161735338 "Apfelschorle. Looks like a <a href='https://en.wikipedia.org/wiki/Ma%C3%9F'>Maß Bavarian beer</a>, but it is not." %}{:.align-right style="width:100%; max-width: 300px;"}
 
 - *Fritz Cola*: from Hamburg, less sweet, sold in glass bottles
 - *Schweppes Ginger Ale*: drink on the base of ginger, less sweet

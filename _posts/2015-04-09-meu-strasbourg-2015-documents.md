@@ -11,9 +11,7 @@ lang: en
 published: true
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/49091796@N04/6201381800" title="Paperback Book vs. Amazon Kindle"><img src="https://farm7.staticflickr.com/6018/6201381800_124be760c2_z.jpg" width="640" height="425" alt="Paperback Book vs. Amazon Kindle"></a>
-
-*Best-practice (paper-free) reading of EU regulations.*
+{% flickr 6201381800 "Best-practice (paper-free) reading of EU regulations." %}
 
 ### Dear participants of the Model European Union simulation 2015,
 

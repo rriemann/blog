@@ -21,9 +21,7 @@ description: >
   Ce texte fait parti de mes devoirs hebdomadaires du cours français.
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/53964481@N08/6550979045" title="21st Century Classroom"><img src="https://farm8.staticflickr.com/7012/6550979045_a8059b5cb6_o.jpg" width="1024" height="768" alt="21st Century Classroom"></a>
-
-*Étudiant du 21ìem siècle.*
+{% flickr 6550979045 "Étudiant du 21ìem siècle." %}
 
 Dans les derniers siècles, le système éducatif a été reformé pour faciliter l’accès à l’éducation. Dans beaucoup de pays, l’école est obligatoire et dans de nombreux pays de plus en plus de jeunes rejoignent des institutions universitaires pour approfondir leurs connaissances.
 

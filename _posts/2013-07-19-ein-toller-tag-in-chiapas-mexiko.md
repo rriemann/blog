@@ -9,7 +9,7 @@ lang: de
 layout: post
 ---
 
-<div><a data-flickr-embed="true"  href="https://www.flickr.com/photos/62963919@N00/1186527727" title="Mexican Flag over Ensenada"><img src="https://farm2.staticflickr.com/1245/1186527727_0354e3b474.jpg" width="100%" height="414" alt="Mexican Flag over Ensenada"></a></div>{:.align-right style="max-width: 300px;"}
+{% flickr 1186527727 %}{:.align-right style="max-width: 300px;"}
 
 ### Prolog
 
@@ -27,19 +27,13 @@ Die Fahrt zum Cañon überrascht mit einigen phänomenalen Ausblicken. Die Stra�
 
 Wir besteigen das Boot und fahren flussaufwärts durch die enge Schlucht Richtung Staudamm. Die Felswände zu beiden Seiten ragen beinahe senkrecht bis zu 1000 m Richtung Himmel. Wasserfälle entspringen inmitten der Felswände und sorgen für eine seltsame Vegetation. Ein Wasserfall wird passender weise „Weihnachtsbaum“ genannt. Wie schön muss es sein den Cañon auf eigene Faust im Kanu zu erkunden.
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/15603139@N07/7381001278" title="Cañon del Sumidero"><img src="https://farm8.staticflickr.com/7216/7381001278_87388fc314.jpg" width="100%" height="480" alt="Cañon del Sumidero"></a>
-
-*Die Felswände zu Seiten des Flusses Río Grijalva sind bis zu 1.000 m hoch.*
+{% flickr 7381001278 "Die Felswände zu Seiten des Flusses Río Grijalva sind bis zu 1.000 m hoch." %}
 
 Auf dem Rückweg finden wir einige Krokodile, die sich auf einer Sandbank sonnen. Die Idee mit dem Kanu durch den Cañon zu paddeln oder gar zu baden wird sofort verworfen. Ich freue mich trotzdem über die Krokodile, die wohl mehr als doppelt so alt sein mögen wie ich und eine beachtliche Körpergröße aufweisen. Schließlich hatte ich in den Everglades kein Glück ausgewachsene Alligatoren in freier Wildbahn zu Gesicht zu bekommen.
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/30659367@N00/5867561745" title="Sumidero Canyon-34"><img src="https://farm7.staticflickr.com/6060/5867561745_7f4d4933a7.jpg" width="100%" height="480" alt="Sumidero Canyon-34"></a>
+{% flickr 5867561745 "Abhängig vom Sonnenstand erscheint der Cañon in ganz anderem Licht." %}
 
-*Abhängig vom Sonnenstand erscheint der Cañon in ganz anderem Licht.*
-
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/30659367@N00/5868038358" title="Sumidero Canyon-10"><img src="https://farm6.staticflickr.com/5234/5868038358_426bd96d44.jpg" width="100%" height="480" alt="Sumidero Canyon-10"></a>
-
-*Hier geht man besser nicht baden. Hier chillen die Krokodile am Ufer – aber es mögen ja noch welche im Wasser sein!*
+{% flickr 5868038358 "Hier geht man besser nicht baden. Hier chillen die Krokodile am Ufer – aber es mögen ja noch welche im Wasser sein!" %}
 
 Wir erreichen sicher unseren Hafen und halten in Chiapa de Corzo um zu Mittag zu essen. Die Einheimischen tauchen sofort ab. Wir Europäer sind unter uns und essen, was wir für traditionelle mexikanische Küche halten. Wir werden dabei gestört von zwei Musikern die eine Art traditionelles Xylophon bearbeiten, dass es nur so scheppert.
 
@@ -49,7 +43,7 @@ Unseren halben Tag in Tuxtla verbringen wir in der Innenstadt. Wir schreiben ein
 
 Wir gehen in den nächsten Supermarkt um unsere Wasservorräte aufzufüllen, und stellen erstaunt fest, dass es sich hierbei um die mexikanische Ausgabe von Walmart handelt. Wir hatten ja schon noch in den USA bedauert dieses Stück amerikanischer Kultur nicht vor Ort gefunden zu haben. Jetzt hat es doch geklappt!
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/15918207@N03/8317104037" title="Jardin de Marimba"><img src="https://farm9.staticflickr.com/8496/8317104037_6ab7af9152.jpg" width="100%" height="375" alt="Jardin de Marimba"></a>
+{% flickr 8317104037 %}
 
 Dem Reiseführer zu Folge gibt es jeden Tag im Marimba-Park ein Konzert. Auf Nachfrage erfahren wir, dass dieses stets um 18h beginnt – also in einer halben Stunde. Schon bald beginnen Musiker mit dem Aufbau. Darunter natürlich auch zwei Marimbas, dieses seltsame Xylophon, welches dem Park den Namen gibt. Das sich dem anschließende Konzert kann sich hören lassen: eine Mischung aus Salsa, Swing und Jazz. Und von Profis gespielt, integriert sich der Klang der Marimbas ganz wunderbar. Gleich zu Beginn eröffnet ein Rentner-Paar die Tanzfläche. Weitere lassen nicht auf sich warten. Nach der ersten Pause verjüngt sich das Publikum dramatisch. Der Park ist eine einzige große Salsa-Party. (Und wir mitten drin – da bleibt kein Fuß still!) Das Spektakel geht Insider-Informationen zu Folge bis 21h. Leider müssen wir schon etwas eher gehen und den Bus nicht zu verpassen. Gerne wären wir morgen wieder von der Partie gewesen. Hier kann die Party-Metropole Berlin noch etwas lernen.
 

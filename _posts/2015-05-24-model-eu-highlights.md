@@ -10,8 +10,7 @@ lang: en
 published: true
 ---
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/36612355@N08/17125256478" title="Olive trees: MEPs to demand answers on how to tackle spread of killer bacteria"><img src="https://farm8.staticflickr.com/7683/17125256478_fc816901fa_z.jpg" width="640" height="428" alt="Olive trees: MEPs to demand answers on how to tackle spread of killer bacteria"></a>
-*EU Parliament in Strasbourg*
+{% flickr 17125256478 "EU Parliament in Strasbourg" %}
 
 I wrote already [some posts][model-eu] about my recent experience as a participant in the 2015 edition of the Strasbourg Model European Union simulation. I got attributed the role of an ECR deputy from the UK.
 

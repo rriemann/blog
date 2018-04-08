@@ -10,9 +10,7 @@ tags:
   - dance
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/eric00000007/6313173436" title="Lindy Shock 2011"><img src="https://farm7.staticflickr.com/6044/6313173436_7b570ea61d_z.jpg" width="100%" height="427" alt="Lindy Shock 2011"></a>
-
-*Lindy Shock 2011, Roumanie.*
+{% flickr 6313173436 "Lindy Shock 2011, Roumanie." %}
 
 Pourquoi danser ? C’est un texte pour les gens qui n’ont jamais dansé ou l’ont abandonné après peu. Lorsque je parle de danser, je pense à la danse sur la musique tout seul, dans un groupe ou en couple qui ressemble à plus que balancer ses pieds. :wink:
 
@@ -28,10 +26,8 @@ Je suis tombé gravement amoureux d'une fille à la fin du baccalauréat qui ét
 
 Quoi faire ? Je ne voulais plus y aller. J’ai proposé ensemble de commencer un cours de danse de salon. Un de mes meilleurs amis m’a proposé de demander dans son école de musique pour connaître les conditions. Quelques semaines plus tard, un autre élève m'a mis au courant que cet ami a commencé lui-même des cours avec ma bien-aimée. J’étais en colère et j’ai abandonné l’idée de faire de cours de danse au même moment.
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/48595779@N04/10991554394" title="Justin Timberlake - BOK Center"><img src="https://farm3.staticflickr.com/2826/10991554394_80eebfee8a_z.jpg" width="640" height="480" alt="Justin Timberlake - BOK Center"></a>
-<em>Justin Timberlake performing in Tulsa at the BOK Center</em>
-</div>{:.align-left style="width:100%; max-width:300px"}
+
+{% flickr 10991554394 "Justin Timberlake performing in Tulsa at the BOK Center" %}{:.align-left style="width:100%; max-width:300px"}
 
 Pendant les premiers 3 ans à la fac, j'étais bien occupé. Ma petite amie de l’époque ne s’intéressait pas du tout à la danse. Peut-être, je n'ai jamais demandé. Puis, après notre rupture et plusieurs déménagement je me sentais complètement perdu et je me suis mis à découvrir beaucoup de nouveaux activités. Un ami m’a raconté de son expérience de Tango Argentin pendant son sejour Erasmus à Paris. Je n'avais pas une espérance en particulier et je me suis inscrit au centre de sports de l’université. J’ai suivi les cours avec une fille que je ne connaissait pas encore avant. Elle me semblait toujours encore plus perdu que moi et toujours insatisfait dans la dans globalité. Cela ne m’a pas beaucoup motivé à continuer. J’ai accepté quand-même de commencer un autre cours débutant le semestre suivant avec une bonne amie Russe. Cela s’est beaucoup mieux passé, mais il y avait toujours un peu d’embarras, parce que l’on n’a pas très bien progressé. Le Tango, ce n’est pas facile. J’ai souvent pensé à abandonner les séances.
 
@@ -51,10 +47,8 @@ Cette temps ne dura pas très longtemps. À la fin de son Erasmus, nous n’avon
 
 ## Danser partout
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/39034650@N03/14810712952" title="Lindy Hop at Herräng Dance Camp"><img src="https://farm6.staticflickr.com/5554/14810712952_32885f2765_z.jpg" width="480" height="640" alt="Lindy Hop at Herräng Dance Camp"></a>
-<em>Herräng Dance Camp 2014, Suède</em>
-</div>{:.align-left style="max-width:300px; width: 100%"}
+
+{% flickr 14810712952 "Herräng Dance Camp 2014, Suède" %}{:.align-left style="max-width:300px; width: 100%"}
 
 En 2013 et 2014, j’ai beaucoup voyagé. Souvent, j’ai assisté à des cours de danse. C’est devenu une habitude :slight_smile:. J’ai dansé du Tango à Baie-Mahault en Guadeloupe. Sur la même île, j’ai essayé aussi quelques danse folklorique sur les soirées après des répétitions chorale. Mon premier essaie de Salsa suivait. J’en ai fait plusieurs pendant les voyages dans les mois suivantes en Amérique Centrale.
 

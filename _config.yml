@@ -129,6 +129,10 @@ matomo_analytics:
   site_id: 1
   no_cookies: true
 
+# Flickr
+flickr:
+  width_viewport: "(min-width: 90em) calc(48rem-2*1rem), (min-width: 54em) calc(42rem-1rem-1.5rem), (min-width: 40em) calc(38rem-1rem-1.5rem), calc(100vw-2rem)"
+
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
 disqus:                worthmentioning
@@ -237,6 +241,7 @@ plugins:
   - jekyll-titles-from-headings
   - jemoji
   - 'jekyll/scholar'
+  - jekyll-flickr
 
 # Theme
 # ---------------------------------------------------------------------------------------

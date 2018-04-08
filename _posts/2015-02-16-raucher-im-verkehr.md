@@ -13,8 +13,7 @@ lang: de
 published: true
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/96323831@N06/12457266685" title="Biker"><img src="https://farm4.staticflickr.com/3677/12457266685_bae5c2201e_z.jpg" width="640" height="427" alt="Biker"></a>
-*Biker in Berlin.*
+{% flickr 12457266685 "Biker in Berlin." %}
 
 Ich gebe zu: Ja, ich habe ein wenig provoziert.
 

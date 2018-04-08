@@ -30,8 +30,7 @@ Why Romania? I used [Kayak Explore](http://www.kayak.de/explore/GVA/) to find ch
 
 ## Business as Usual
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/27621704@N07/18073336322" title="Street life, Bucharest"><img src="https://farm6.staticflickr.com/5470/18073336322_626b5253a3_k.jpg" width="2048" height="1365" alt="Street life, Bucharest"></a>
-
+{% flickr 18073336322 %}
 
 I got a place to stay at a friend of a friend’s place. He was living in a
 flat share close to metro station Obor. When I arrived, he[^name] opened
@@ -158,7 +157,7 @@ visit Romania. It won't be my last time either.
 
 ### Gallery
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/27621704@N07/albums/72157651096933793" title="Romania"><img src="https://farm9.staticflickr.com/8833/17888797618_b326c27559_k.jpg" width="2048" height="1365" alt="Romania"></a>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/27621704@N07/albums/72157651096933793" title="Romania"><img src="https://farm9.staticflickr.com/8833/17888797618_4a795b0645_z.jpg" width="640" height="427" alt="Romania"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 {::comment}
 BigMac: 9,90 Lei

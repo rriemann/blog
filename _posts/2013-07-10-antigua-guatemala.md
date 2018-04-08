@@ -9,17 +9,13 @@ lang: de
 layout: post
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/11500806@N07/2613566235" title="Ronald McDonald&#x27;s Garden - El jardín de Ronaldo ~ La Antigua, Guatemala"><img src="https://farm4.staticflickr.com/3087/2613566235_c5ed6b614b_z.jpg" width="640" height="480" alt="Ronald McDonald&#x27;s Garden - El jardín de Ronaldo ~ La Antigua, Guatemala"></a>
-
-*Antigua Guatemala. Innenhof.*
+{% flickr 2613566235 "Antigua Guatemala. Innenhof." %}
 
 Wir befinden uns[^1] im Innenhof eines in der 4a Calle poniente befindlichen Kolonialbaus in Antigua Guatemala. Das hohe Eingangsportal ist aufwendig restauriert. Der Boden ist noch nass – gerade wurde wieder ausgewischt[^2]. Durch einen Torbogen gelangen wir in den im Innenhof gelegenen Garten, welcher von Bäumen und Hecken sowie Wandelgängen zu zwei Seiten gesäumt ist. Die Mitte des Gartens ziert einer der größeren Springbrunnen. Das Panorama wird von dem Vulkan Agua dominiert, dessen Spitze einige Wolken durchbohrt und jene somit scheinbar am sonst azurblauen Nachmittagshimmel zu fixieren scheint. Eine Anzahl von Tischen und Bänken lädt dazu ein sich hier niederzulassen und zu verweilen. Auf der Bank nahe des Brunnens sehe ich Ronald sitzen. Ich gehe zurück zum Eingangsportal an den Ketchup-Spendern vorbei und bestelle mir das McMenu dél Dia (ein doppelten Cheeseburger, Pommes, Cola) und einen einfachen Cheeseburger für 38 Quetzales, also 3,80€. Dann setze ich mich wieder in den Garten und schaue zu, wie die jungen, uniformierten Guatemalteken ihre Hausaufgaben machen und ein paar Touristen (wahrscheinlich US-Amerikaner) mit ihren Eifons spielen. Ist die Welt nicht friedlich?
 
 <!--more-->
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/25863371@N07/3630898681" title="Volcán de Agua, Antigua, Guatemala"><img src="https://farm3.staticflickr.com/2465/3630898681_6d1eeabed2_z.jpg" width="640" height="427" alt="Volcán de Agua, Antigua, Guatemala"></a>
-
-*Antigua Guatemala.*
+{% flickr 3630898681 "Antigua Guatemala." %}
 
 Tatsächlich hat Antigua in Guatemala einen Sonderstatus. Ohne selbst andere Städte bislang gesehen zu haben, fällt es mir doch nicht schwer das zu glauben. Die ehemalige Landeshauptstadt ist umsäumt von teils noch aktiven Vulkanen. Wegen heftigen Erdbeben vor ein paar Hundert Jahren wurde schließlich beschlossen die Hauptstadt nach Ciudad de Guatemala zu verlegen. Einige prunkvolle Kirchenhäuser und der Flair einer vergangenen Epoche sind der Stadt aus dieser Zeit noch geblieben.
 

@@ -9,9 +9,7 @@ lang: de
 layout: post
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/48528470@N08/4448404135" title="Visability?"><img src="https://farm5.staticflickr.com/4050/4448404135_8981e81926_z.jpg" width="640" height="480" alt="Visability?"></a>
-
-*Korallenriff.*
+{% flickr 4448404135 "Korallenriff." %}
 
 Während ich mich [zunächst](2013-05-15-das-karibische-meer.md) dem Karibischen Meer nur oberflächlich genähert habe, bin ich in den letzten beiden Wochen dem Meer im wahrsten Sinne auf den Grund gegangen. Was war passiert?
 

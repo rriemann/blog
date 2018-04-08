@@ -7,9 +7,13 @@ img.emoji {
 }
 
 // italic image caption
-figure {
+.content figure {
+  img {
+    // margin-bottom: inherit;
+  }
   figcaption {
     font-style: italic;
+    font-size: smaller;
   }
 }
 

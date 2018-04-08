@@ -32,6 +32,9 @@ group :jekyll_plugins do
   gem "jekyll-titles-from-headings"
   gem "jemoji"
   gem "jekyll-scholar"
+  # Added at 2018-04-08 20:32:43 +0200 by rriemann:
+  gem "jekyll-flickr", "~> 0.1.1"
+  # gem 'jekyll-flickr', :git => 'https://github.com/rriemann/jekyll-flickr'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

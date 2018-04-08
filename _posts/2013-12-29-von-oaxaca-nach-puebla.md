@@ -10,10 +10,8 @@ layout: post
 published: true
 ---
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/15979571@N00/2832591281" title="Puebla, Mexico"><img src="https://farm4.staticflickr.com/3071/2832591281_a87455774f_z.jpg" width="640" height="480" alt="Puebla, Mexico"></a>
-<em>Straße in Puebla.</em>
-</div>{:.align-right style="width:100%; max-width:300px;"}
+
+{% flickr 2832591281 "Straße in Puebla." %}{:.align-right style="width:100%; max-width:300px;"}
 
 Nach zwei letzten, phänomenalen Wochen in Mexiko bin ich am 30. Juli wieder sicher in Berlin gelandet. Durch diesen Vorausgriff nehme ich dem Folgenden vielleicht etwas die Spannung. Auf der anderen Seite würde ich andernfalls womöglich auch nicht schreiben. Was war also passiert? Reisen wir (natürlich nur in Gedanken) zurück nach Mexiko – in die Vergangenheit. Anno 2013. Wir schreiben den 17. Juli, morgens.
 
@@ -27,19 +25,15 @@ Das Hostel zählt mit über 90 Betten zu den Größeren. Freudige Überraschung:
 
 Die Stadt ist Landeshauptstadt der gleichnamigen Region und bekannt für ihre exquisite Küche. Über Geschmack lässt sich ja bekanntlich streiten – die Ausführungen unseres Magens überzeugen jedoch. Wir belassen es bei konservativer Kost und probieren nur auf explizite Einladung – man will schließlich nicht unhöflich sein – z.B. verschiedenste frittierte, knusprige Insekten (würzig, süß).
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/31538854@N00/2711976489" title="Guelaguetza Popular"><img src="https://farm4.staticflickr.com/3111/2711976489_5e4d2cbb76_z.jpg" width="640" height="480" alt="Guelaguetza Popular"></a>  
-<em>Festival la Guelaguetza.</em>
-</div>{:.align-left style="width:100%; max-width:300px;"}
+{% flickr 2715145492 %}
+
+{% flickr 14731598121 "Festival la Guelaguetza." %}{:.align-left style="width:100%; max-width:300px;"}
 
 Oaxaca kann dennoch überzeugen. Die Stadt ist sehr schön und, zumindest in diesen Wochen, sehr lebendig. In der Universitätsstadt gibt es viele, junge Leute. Vor dem Rathaus am zentralen Stadt-Park wird demonstriert. Am selben Tag laufen im Rahmen des alljährlichen, traditionellen Folklore-Tanz-Festivals Guelaguetza bunt gekleidete Tänzerinnen in Gruppen durch die Stadt. Sie werden jeweils von Blaskapellen begleitet (sowohl musikalisch als auch wortwörtlich).
 
 Am nächsten Morgen werden wir von Neuankömmlingen geweckt. Wir kommen mit zwei jungen Mexikanern ins Gespräch und beschließen gemeinsam die antike Stätte Monte Albán zu besuchen.
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/51186333@N00/4091375299" title="Monte Alban_2061"><img src="https://farm3.staticflickr.com/2702/4091375299_d59ebee3c8_z.jpg" width="640" height="426" alt="Monte Alban_2061"></a>
-<em>Antike Stätte Monte Albán</em>
-</div>{:.align-right style="width:100%; max-width:300px;"}
+{% flickr 4091375299 "Antike Stätte Monte Albán" %}{:.align-right style="width:100%; max-width:300px;"}
 
 Zurück in Oaxaca angekommen gehen wir gemeinsam in einer einfachen Kantine essen. Ich entscheide mich für die Spinatnudeln und werde erstmals von der deftigen Schärfe Mexikanischen Essens überrascht – sah doch so harmlos aus!
 
@@ -55,17 +49,13 @@ Meinem Taxifahrer können wir in gebrochenem Spanisch und mit Händen und Füße
 
 Am nächsten Morgen überlegen wir länger, ob es nicht günstiger wäre direkt nach Mexiko-Stadt weiterzureisen. So schnell wollen wir dann aber doch nicht aufgeben.
 
-<div>
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/51186333@N00/5193423950" title="Puebla 01446"><img src="https://farm5.staticflickr.com/4108/5193423950_56092a1e58_z.jpg" width="640" height="480" alt="Puebla 01446"></a>
-<em>Kathedrale in Puebla. <a href="http://www.flickr.com/photos/omaromar/sets/72157625308037271/with/5193423950/">Mehr Bilder</a>.</em>
-</div>{:.align-right style="width:100%; max-width:300px;"}
+{% flickr 5193423950 "Kathedrale in Puebla. <a href='http://www.flickr.com/photos/omaromar/sets/72157625308037271/with/5193423950/'>Mehr Bilder</a>." %}{:.align-right style="width:100%; max-width:300px;"}
 
 Nach einer erneuten Taxi-Fahrt ins [Zentrum Pueblas] finden wir überraschenderweise doch noch zwei Jugendherbergen, die auch in der vergangenen Nacht nicht ausgebucht gewesen sein sollen. Beim Erkunden des Stadtzentrum stellt sich heraus, dass sich das Örtchen mit 1,5 Millionen Einwohnern doch sehen lassen kann. So gehört die Altstadt auch schon seit 1987 zum UNESCO Weltkulturerbe. Noch am Abend soll im Stadttheater eine mexikanische Beatle-Coverband spielen. Wir besorgen uns Tickets und besichtigen bis zum Abend noch eine gewaltige Kathedrale, wie sie so typisch für Mexiko ist, und einige Märkte. Im Park zeigen noch einige Tekwondo-Kämpfer, die wohl den letzten Bus verpasst haben (oder in Puebla wohnen/Urlaub machen), was sie drauf haben.
 
 Am nächsten Tag unternehmen wir zusammen mit einigen anderen Herbergsgästen einen Ausflug ins nahe gelegene [Cholula], welches bekannt für seine vielen Kirchen ist. Tatsächlich scheint an jeder Ecke ein Gotteshaus zu stehen.
 
 Am Abend können wir uns nicht wirklich dazu entschließen mit den anderen Reisenden wieder ins Stadttheater zu gehen. Die Ausführung zur Aufführung des Einlasspersonals auf Spanisch vermag uns nicht zu überzeugen. Freundlicherweise werden wir schließlich ganz unbürokratisch eingeladen. Studentische Musik-Gruppen aus vielen verschiedenen Regionen spielen und tanzen zu landestypischer Musik. Puebla war ganz klar seinen Besuch wert. Am dritten Morgen fahren wir weiter in die 130 Kilometer entfernte Hauptstadt „Ciudad de México“ (Mexiko-Stadt).
-
 
 [^1]: Ausgangspunkt ist hier mein [letzter Blogbeitrag]({{ site.url }}/2013/07/19/ein-toller-tag-in-chiapas-mexiko/) zu Chiapas.   
 [^2]: Tatsächlich: <http://www.tkdmundialpuebla.com>

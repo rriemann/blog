@@ -11,7 +11,7 @@ lang: en
 published: true
 ---
 
-<div><a data-flickr-embed="true"  href="https://www.flickr.com/photos/ysl807/21663559454/" title="Ohne Titel"><img src="https://farm1.staticflickr.com/616/21663559454_968f1da278.jpg" width="300" height="500" alt="Ohne Titel"></a><em>Google HQ with Android statue: looking cute on purpose.</em></div>{:.align-right style="max-width:300px;"}
+{% flickr 6180104944 "Google Android mascot: looking cute on purpose." %}
 
 This is a follow-up comment for my dear friends that have been discussing with me the [Proposal for the EU Data Protection Regulation][proposal]. In our parliament simulation, we had the honour to welcome a very strong participant representing a Google lobbyist that was hard to deal with (hi Lois :wink:).
 

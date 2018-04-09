@@ -20,6 +20,7 @@ keywords:
   - bottle deposit
 lang: en
 published: true
+image: https://farm7.staticflickr.com/6158/6149364145_0591c49288_b.jpg
 ---
 
 {% flickr 6149364145 "Bode Museum on Museum Island as seen from Strandbar Mitte." %}

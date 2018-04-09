@@ -11,6 +11,7 @@ keywords:
   - Brașov
 lang: en
 published: true
+image: https://farm6.staticflickr.com/5470/18073336322_580ec52c6d_b.jpg
 ---
 
 # Impressions from Romania

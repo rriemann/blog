@@ -8,6 +8,7 @@ tags: [central-america, german, mexico]
 lang: de
 layout: post
 published: true
+image: https://farm4.staticflickr.com/3071/2832591281_a87455774f_b.jpg
 ---
 
 

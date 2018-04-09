@@ -7,6 +7,7 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: https://farm4.staticflickr.com/3087/2613566235_c5ed6b614b_b.jpg
 ---
 
 {% flickr 2613566235 "Antigua Guatemala. Innenhof." %}

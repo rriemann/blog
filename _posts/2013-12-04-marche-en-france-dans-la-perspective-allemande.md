@@ -9,6 +9,7 @@ keywords:
   - marché français
   - Allemagne
   - France
+image: /assets/img/marche-1.jpg
 ---
 
 ![Marché dans une petite village en France, 2013. Tous droits réservés.]({{ '/assets/img/marche-1.jpg' | relative_url }})

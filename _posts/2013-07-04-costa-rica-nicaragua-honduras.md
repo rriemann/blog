@@ -7,6 +7,7 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: /assets/img/central-america/nicaragua-leon-vulcano.jpg
 ---
 
 Ich hänge mit dem Bloggen einmal wieder einige Länder hinterher. Ich habe in nicht

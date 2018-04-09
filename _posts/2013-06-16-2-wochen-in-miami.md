@@ -7,6 +7,7 @@ categories: [travels]
 tags: [central-america, german, usa]
 lang: de
 layout: post
+image: /assets/img/central-america/skyline-car-miami.jpg
 ---
 
 {% include figure image_path="/assets/img/central-america/skyline-car-miami.jpg" alt="Unterwegs nach Miami Downtown." caption="Unterwegs nach Miami Downtown." width="400px" %}{:.pull-right}
@@ -108,13 +109,13 @@ im Dirndl lässt sich in der Einkaufsmeile Miami Beachs auch finden.
 
 <div class="clearfix" />
 
-<%= figure_tag '/images/central-america/tcom-miami.jpg', title:'Edel-Laden in der Innenstadt: T-Mobile.' %>{:.pull-right}
+{% include figure image_path="/images/central-america/tcom-miami.jpg" alt="Edel-Laden in der Innenstadt: T-Mobile." caption="Edel-Laden in der Innenstadt: T-Mobile." width="400px" %}
 
 Ein besonderes Highlight war hier „The Wonder Drug“ für nur 2$, die hier im
 Supermarkt verfauft werden wie sonst anderswo Kaugummis. Ich konnte mich gerade
 noch zusammenreißen und habe mich nicht umfangreich eingedeckt. :wink:
 
-<%= figure_tag '/images/central-america/wonder-drug-miami.jpg', title:'Wonder Drug aus dem Hause Bayer: Nur 2$.', width: '400px' %>{:.pull-right}
+{% include figure image_path="/images/central-america/wonder-drug-miami.jpg" alt="Wonder Drug aus dem Hause Bayer: Nur 2$." caption="Wonder Drug aus dem Hause Bayer: Nur 2$." %}
 
 In den Hostels trifft man vor allem Touristen, die sich Nachmittags an den Strand
 legen, abends in den teuren Scene-Clubs abfeiern und morgens verschlafen. Klassische
@@ -149,8 +150,7 @@ In Key West habe ich das Hemmingway-Haus besichtigt und die polydaktylen Hemming
 mit 6 Zehen an den Pfoten getroffen. Ein Geschenk Marlene Dietrichs wird dort
 auch ausgestellt. So klein ist die Welt.
 
-
-<%= figure_tag '/images/central-america/route-1-key-west.jpg', title:'Anfang und Ende des US-Straßennetzes.' %>{:.pull-left}
+{% include figure image_path="/images/central-america/route-1-key-west.jpg" alt="Anfang und Ende des US-Straßennetzes." caption="Anfang und Ende des US-Straßennetzes." %}
 
 {% include figure image_path="/assets/img/central-america/southernmost-point-key-west.jpg" alt="Südspitze der USA" caption="Südspitze der USA" %}{:.pull-left}
 

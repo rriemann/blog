@@ -11,6 +11,7 @@ keywords:
   - Lyon
 lang: de
 published: true
+image: https://farm4.staticflickr.com/3677/12457266685_bae5c2201e_b.jpg
 ---
 
 {% flickr 12457266685 "Biker in Berlin." %}

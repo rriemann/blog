@@ -7,6 +7,7 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: https://farm2.staticflickr.com/1245/1186527727_0354e3b474_z.jpg?zz=1
 ---
 
 {% flickr 1186527727 %}{:.align-right style="max-width: 300px;"}

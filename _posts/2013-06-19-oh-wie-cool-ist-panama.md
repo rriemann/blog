@@ -7,6 +7,7 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: /assets/img/central-america/san-blas-palms.jpg
 ---
 
 {% include figure image_path="/assets/img/central-america/panama-city-skyline_thumb.jpg" alt="Blick aus dem Hostel auf Panama City." caption="Blick aus dem Hostel auf Panama City." %}{:.pull-right}
@@ -62,7 +63,7 @@ anschließen kann und buche direkt für den nächsten Tag.
 ### San Blas
 
 
-{% include figure image_path="/assets/img/central-america/san-blas-palms.jpg" alt="San Blas." caption="San Blas." width="$3" %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/san-blas-palms.jpg" alt="San Blas." caption="San Blas." %}
 
 Wir stehen früh auf und fahren von der Pazifik-Küste zur Karibischen Küste Panamas.
 Dort befindet sich das Archipel[^2] „San Blas“. Wir werden übersetzt auf eine der
@@ -101,8 +102,7 @@ Kaum angekommen, eröffnet sich die Möglichkeit ein [Reggae-Festival][Festival]
 Abend zu besuchen. Ich werfe alle Konzepte bezüglich irgendwelcher Budgets über
 Bord und schließe mich an.
 
-<%= image_tag '/images/central-america/panama-city-concert.jpg', width: '400px' %>
-{:.img-thumbnail}
+{% include figure image_path="/assets/img/central-america/panama-city-concert.jpg" %}
 
 Für 25$ Eintritt und weitere 10$ versteckte Steuern lässt man uns auf das Gelände.
 Neben dem VIP-Bereich, eine Tribüne vor der Bühne, gibt es auch noch einen
@@ -113,10 +113,9 @@ einmal zu Gemüte führen. Auf Youtube gibt es auch einige Aufnahmen.
 
 <div class="clearfix" />
 
-<div class="thumbnail" style="width: 650px" markdown="0">
-  <iframe width="640" height="360" src="//www.youtube.com/embed/EmgFjFRdvnk?HD=1;rel=0;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
-  <div class="caption">Groundation – Babylon Rule Dem. Auf <a href="//youtu.be/EmgFjFRdvnk">Youtube</a> sehen.</div>
-</div>
+{% include video id="cUv4f3Bw73M" provider="youtube" %}
+
+*Groundation – Babylon Rule Dem. Auf [Youtube](//youtu.be/cUv4f3Bw73M) sehen.*{: style="font-size: smaller;"}
 
 ### Panamakanal
 
@@ -151,8 +150,7 @@ gewinnen können. `:)`
 
 ### Boquete
 
-<%= image_tag '/images/central-america/panama-bus.jpg' %>
-{:.img-thumbnail.pull-left}
+![](/images/central-america/panama-bus.jpg)
 
 Mit dem Nachtbus bin ich dann via Davíd nach Boquete weiter gereist. Panama setzt
 neben modernen Mercedes-Benz-Reisebussen (klimatisiert auf unter 15°C – *bibber*)
@@ -170,7 +168,7 @@ Am Nachmittag habe ich dann eine Kaffee-Plantage besucht. Das war überaus inter
 Kaffee wird dort gänzlich ohne Chemikalien angebaut. Darüberhinaus werden viele
 Arbeitsschritte noch per Hand erledigt.
 
-{% include figure image_path="/assets/img/central-america/panama-coffee.jpg" alt="Was ist daran eigentlich so lustig?" caption="Was ist daran eigentlich so lustig?" %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/panama-coffee.jpg" alt="Was ist daran eigentlich so lustig?" caption="Was ist daran eigentlich so lustig?" %}
 
 Ich erfahre, dass stark gerösteter Kaffee, die Grundlage für den Espresso und vielerlei
 weiterer Kaffee-Spezialitäten, das Potential der Bohnen nicht voll ausschöpft und nur

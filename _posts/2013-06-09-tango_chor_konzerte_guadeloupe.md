@@ -9,10 +9,6 @@ lang: de
 layout: post
 ---
 
-
-* toc
-{:toc}
-
 {% include figure image_path="/assets/img/central-america/salsa-show.jpg" alt="Show-Einlage im Salsa-Club in Les Abymes." caption="Show-Einlage im Salsa-Club in Les Abymes." %}{:.pull-left}
 
 Da es hier in Miami Beach einfach zu warm ist (33°C), bleibe ich über die

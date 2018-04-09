@@ -9,9 +9,6 @@ lang: de
 layout: post
 ---
 
-* toc
-{:toc}
-
 ### Prolog
 
 Während die ersten Bewohner Guadeloupes, südamerikanische Übersiedler ab 3500

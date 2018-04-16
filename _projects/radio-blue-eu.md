@@ -20,6 +20,12 @@ accent_color: '#3f61cc'
 accent_image: /assets/img/sidebar-bg-eu.jpg
 ---
 
+During my time as a trainee within the EU institutions, I initiated, setup a podcast. Together with a trainee colleague a couple of episodes have been produced.
+
+Check it out: <https://www.radio-blue.eu/>
+
+{% comment %}
+
 ![Cat](https://placekitten.com/g/200/300){:.lead}
 
 It features everything that's hot right now:
@@ -47,3 +53,5 @@ Screenshots can be reused under [CC-BY-SA-4.0].
 
 [CC-BY-SA-4.0]: https://creativecommons.org/licenses/by-sa/4.0/
 [CC-BY-SA-3.0]: https://creativecommons.org/licenses/by-sa/3.0/
+
+{% endcomment %}

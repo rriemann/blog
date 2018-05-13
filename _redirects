@@ -4,6 +4,7 @@
 /atom.xml /feed.xml
 /files/rriemann.asc /assets/files/rriemann.asc
 
+/files/ https://people.physik.hu-berlin.de/~rriemann/ 302!
 /files/* https://people.physik.hu-berlin.de/~rriemann/:splat 302
 
 

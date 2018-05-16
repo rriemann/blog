@@ -6,6 +6,8 @@ description: >
   We are glad you want to come over! Here is your ultimate guide to Brussels.
 hide_description: false
 sitemap: false
+lang: en
+image: https://farm6.staticflickr.com/5594/15170142356_fe5cbecdf3_z.jpg
 ---
 
 {% flickr 15170142356 "Place Flagey in Brussels." %}

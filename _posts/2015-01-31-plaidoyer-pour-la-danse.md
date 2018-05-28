@@ -8,6 +8,7 @@ tags:
   - france
   - french
   - dance
+ image: https://farm7.staticflickr.com/6044/6313173436_7b570ea61d_b.jpg
 ---
 
 {% flickr 6313173436 "Lindy Shock 2011, Roumanie." %}

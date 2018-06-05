@@ -32,10 +32,10 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 | PDF               | [open][enp]{:.no-mark-external} :gb: | *soon* :fr: | [open][dep]{:.no-mark-external} :de: |
 
 [eno]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq.md
-[enp]: {{ '/assets/files/gpdr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
+[enp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
 
 [deo]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-de.md
-[dep]: {{ '/assets/files/gpdr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}
+[dep]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}
 
 <div style="text-align:right">
 Brussels, the {{ page.date | date: "%e %B %Y"}}

@@ -35,10 +35,10 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 | PDF             | [öffnen][enp]{:.no-mark-external} :gb: | *bald* :fr: | [öffnen][dep]{:.no-mark-external} :de: |
 
 [eno]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq.md
-[enp]: {{ '/assets/files/gpdr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
+[enp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
 
 [deo]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-de.md
-[dep]: {{ '/assets/files/gpdr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}
+[dep]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}
 
 <div style="text-align:right">
 Brüssel, den 6. Juni 2018

@@ -95,8 +95,16 @@ Last.fm
 
 ## Privacy Notice
 
-This blog uses an in-house traffic analytics solution called [Piwik](https://piwik.org/) with no cookies.
-The *do-not-track* [browser setting](http://donottrack.us/) is respected.
+This blog uses an in-house traffic analytics solution called [Matomo](https://matomo.org) with no cookies. The *do-not-track* [browser setting](http://donottrack.us/) is respected. Information on your geographical location, your device format, operating system and brower language is aggregated and stored with the purpose to better address the blog audience in the future. None of this data is shared with third parties.
+
+Some webpages may embed media from Disqus, Flickr, Youtube and Google Maps. In these cases, the privacy policy of the respective platform applies:
+
+- [Disqus](https://help.disqus.com/terms-and-policies/disqus-privacy-policy)
+- [Flickr](https://www.smugmug.com/about/privacy-flickr)
+- [Youtube](https://policies.google.com/privacy)
+- [Google Maps Privacy Policy](https://www.google.com/intl/en-GB_BE/help/terms_maps.html)
+
+This privacy policy is subject to change without notice.
 
 {::comment}
 <iframe style="border: 0; width: 100%;" src="https://rriemann.rigel.uberspace.de/piwik/index.php?module=CoreAdminHome&action=optOut&language={{site.lang}}"></iframe>

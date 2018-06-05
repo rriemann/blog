@@ -1,0 +1,221 @@
+\documentclass{scrlttr2}
+\KOMAoptions{
+  foldmarks=true,
+  fromalign=left,
+  % fromrule=afteraddress,
+  fromemail,
+  % fromphone,
+  % parskip=full
+  parskip=half,
+  firsthead=false,
+  enlargefirstpage=true,
+  % addrfield=topaligned,
+  addrfield=off,
+  DIV=16,
+}
+\usepackage[UKenglish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+%   colorlinks  = true,
+%   urlcolor  = darkblue,
+%   pdftitle  = {},
+%   pdfsubject  = {},
+%   pdfauthor = {Robert Riemann},
+%   pdfkeywords = {},
+  pdfcreator  = {pdftex},
+  pdfproducer = {pdftex}
+}
+\usepackage{microtype}
+%\usepackage{garamondx}
+\usepackage{charter}
+
+\usepackage{lastpage}
+\usepackage{scrpage2}
+% ===========================
+%    HEAD- AND FOOTLINES
+% ===========================
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ifoot{\usekomavar{subject}}
+\ofoot{\thepage\ of \pageref{LastPage}}
+\ihead{}
+\ohead{}
+
+\makeatletter
+% \@addtoplength{refvpos}{-6cm}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+\let\tightlist\relax
+
+\begin{document}
+
+\setkomavar{place}{Brussels}
+
+\setkomavar{backaddressseparator}{\ \textperiodcentered\ }
+% \setkomavar{signature}{\\[-2\baselineskip]\parbox[t]{\linewidth}{\raggedright Robert Riemann, Brussels\\Xavier Lavayssière, Paris\\Franz Ritschel, Köln}}
+\setkomavar{date}{6th June 2018}
+\setkomavar{subject}{Open Letter: Call for a collaborative data protection FAQ}
+
+% \let\oldhref\href\renewcommand{\href}[2]{\oldhref{#1}{#2}\footnote{\url{#1}}}
+
+\begin{letter}{}
+\opening{Dear Data Protection and IT Professionals,}
+
+
+The EU's new law \emph{General Data Protection Regulation} (GDPR for
+short) applies from 25 May 2018 onwards. It consists of 99~articles and
+173~recitals that fill together 88~pages
+\href{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG}{in
+the official publication}. Different than a technical standardisation
+document, many laws must first be interpreted under consideration of
+case law from past judgements and published opinions of data protection
+authorities. As a result, even compliance questions for relatively
+simple applications such as a mailing list cannot be answered without
+profound study of many legal documents. Complex concepts such as
+\emph{privacy by design} and \emph{pseudonymisation} are the source for
+many questions yet to be answered.
+
+At the same time, the tech industry has worked for many years on
+solutions to setup fairly easy personal data processing applications.
+Thanks to e.g. \emph{Google Sheets}, \emph{Doodle}, \emph{Mailchimp}, or
+\emph{Wordpress}, even non-experts can nowadays become data controllers
+with only few clicks or swipes. The development of peer-to-peer
+protocols for distributed databases, e.g. \emph{Bitcoin},
+\emph{\href{https://datproject.org/}{Dat}}, or
+\emph{\href{https://ipfs.io/}{IPFS}}, has the potential to further lower
+the initial hurdle to become a data controller---up to the point of
+unconsciousness of the controller.
+
+To allow for a rapid adoption of data protection obligations, and in
+turn an overall increase of data hygiene, training for data controllers
+and processors is needed and must be accessible not only for those who
+can afford to dedicate resources, but at best to all data controllers
+and processors. For this reason, we call for the foundation of a
+collaborative Internet knowledge database under a free
+\href{https://creativecommons.org/}{creative commons} license to ensure
+its broad and continuous availability.
+
+So far, freely accessible practical advice is often, if not mostly,
+offered by stakeholders that may have conflicting business interests.
+Online service providers, law firms and training institutes may gear
+advice towards their own services. Restrictive licenses may prevent good
+advice from being freely shared. Erroneous or out-dated advice may not
+be updated. Especially, the latter is important as GDPR compliance is a
+moving target. New judgements or advances in state-of-the-art privacy
+engineering\footnote{The GDPR mandates in Art.~25 on data protection by
+  design and by default controllers of data processing to take into
+  account among others the state of the art when defining means for data
+  processing and during the data processing itself.} require continuous
+updates.
+
+As data protection is an interdisciplinary field, the knowledge database
+should be co-authored jointly by legal experts and computer engineers
+and must accommodate the needs of both communities. The platform \emph{Stack
+Exchange} provides communities with a software solution for collaborative
+freqently asked questions (FAQ). The platform is well-known to most
+computer engineers for offering
+\href{https://stackoverflow.com}{stackoverflow.com} and started more
+recently
+\href{https://law.stackexchange.com}{law.stackexchange.com}\footnote{\href{https://law.stackexchange.com}{law.stackexchange.com}
+  covers already questions on
+  \href{https://law.stackexchange.com/questions/tagged/gdpr}{GDPR} and
+  \href{https://law.stackexchange.com/questions/tagged/gdpr+data-protection}{data
+  protection}. However, we feel that data protection deserves its own
+  platform that encompasses also other disciplines such as computer
+  engineering or ethics.}. The collaboration is organised as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Questions, answers and meta-data are published in the Internet under a
+  free license
+  (\href{https://creativecommons.org/licenses/by-sa/3.0/}{cc by-sa}) and
+  are available for download in machine-readable form.
+\item
+  Anybody can ask or answer a question.
+\item
+  The best answers are voted to the top.
+\item
+  Users earn reputation points for every vote they receive.
+\item
+  Users unlock privileges as they earn reputation, like the ability to
+  comment or vote.
+\item
+  Moderators are elected among users, and top users have access to
+  special tools to help moderate.
+\end{itemize}
+
+To provide for an overall high quality of answers, references to primary
+sources shall be used where opinions are inevitable. This rule is also
+employed by Wikipedia and can be enforced by both moderators and top
+users.
+
+The signatories support the foundation of such a collaborative data
+protection knowledge database in form of frequently asked questions.
+
+\textbf{Authors and Initial Signatories:}
+
+\begin{itemize}
+\tightlist
+\item
+  Robert Riemann, Brussels
+\item
+  Xavier Lavayssière, Paris
+\item
+  Franz Ritschel, Köln
+\end{itemize}
+
+
+\textbf{Contact:}
+
+If you want to receive updates or if you have questions, please send
+your request to
+\href{mailto:gdpr-faq@riemann.cc}{\nolinkurl{gdpr-faq@riemann.cc}}. If
+you want to become a signatory, send a mail to
+\href{mailto:gdpr-faq-sign@riemann.cc}{\nolinkurl{gdpr-faq-sign@riemann.cc}}.
+Requests in French language are answered at
+\href{mailto:gdpr-faq@lesbricodeurs.fr}{\nolinkurl{gdpr-faq@lesbricodeurs.fr}}
+and for signing at
+\href{mailto:gdpr-faq-signer@lesbricodeurs.fr}{\nolinkurl{gdpr-faq-signer@lesbricodeurs.fr}}.
+
+\newpage
+
+\textbf{List of Recipients:}
+
+\begin{itemize}
+\tightlist
+\item
+  the
+  \emph{\href{https://edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en}{Internet
+  Privacy Engineering Network}} (IPEN for short), an initiative of the
+  European Data Protection Supervisor
+\item
+  \emph{\href{https://stackoverflow.com/company}{Stack Overflow}}, the
+  company behind the famous knowledge database
+  \href{https://stackoverflow.com}{stackoverflow.com} for programmers
+\item
+  the \href{https://edri.org/}{European Digital Rights} (EDRi for
+  short), an association of civil and human rights organisations from
+  across Europe
+\item
+  the participants of the 2018 edition of the
+  \href{http://privacyforum.eu/}{Annual Privacy Forum} (APF for short)
+\item
+  the organisation committee of the international conference
+  \href{http://www.cpdpconferences.org/}{Computers, Privacy and Data
+  Protection} (CPDP for short)
+\item
+  and non-disclosed individual recipients
+\end{itemize}
+
+
+\end{letter}
+
+\end{document}

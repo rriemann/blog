@@ -1,0 +1,221 @@
+\documentclass{scrlttr2}
+\KOMAoptions{
+  foldmarks=true,
+  fromalign=left,
+  % fromrule=afteraddress,
+  fromemail,
+  % fromphone,
+  % parskip=full
+  parskip=half,
+  firsthead=false,
+  enlargefirstpage=true,
+  % addrfield=topaligned,
+  addrfield=off,
+  DIV=16,
+}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+%   colorlinks  = true,
+%   urlcolor  = darkblue,
+%   pdftitle  = {},
+%   pdfsubject  = {},
+%   pdfauthor = {Robert Riemann},
+%   pdfkeywords = {},
+  pdfcreator  = {pdftex},
+  pdfproducer = {pdftex}
+}
+\usepackage{microtype}
+%\usepackage{garamondx}
+\usepackage{charter}
+
+\usepackage{lastpage}
+\usepackage{scrpage2}
+% ===========================
+%    HEAD- AND FOOTLINES
+% ===========================
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ifoot{\usekomavar{subject}}
+\ofoot{\thepage\ of \pageref{LastPage}}
+\ihead{}
+\ohead{}
+
+\makeatletter
+% \@addtoplength{refvpos}{-6cm}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+\let\tightlist\relax
+
+\begin{document}
+
+\setkomavar{place}{Brüssel}
+
+\setkomavar{backaddressseparator}{\ \textperiodcentered\ }
+\setkomavar{signature}{\\[-2\baselineskip]\parbox[t]{\linewidth}{\raggedright Robert Riemann, Brussels\\Xavier Lavayssière, Paris\\Franz Ritschel, Köln}}
+\setkomavar{date}{6th June 2018}
+\setkomavar{subject}{Offener Brief: Aufruf zur Gründung einer kollaborativen FAQ für Datenschutz}
+
+% \let\oldhref\href\renewcommand{\href}[2]{\oldhref{#1}{#2}\footnote{\url{#1}}}
+
+\begin{letter}{}
+\opening{Sehr geehrte Datenschutz- und IT-Expert\_innen,}
+
+Die neue EU-Datenschutz-Grundverordnung (DSGVO) gilt ab dem 25. Mai
+2018. Sie besteht aus 99~Artikeln und 173~Erwägungsgründen und umfasst
+88~Seiten
+\href{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG}{in
+der amtlichen Fassung}. Anders als technische Normen ist die DSGVO ein
+Gesetz und wird von der Rechtsprechung und den Rechtsanwender, allen
+voran den Datenschutzbehörden, durch Urteile bzw. Stellungnahmen
+ausgelegt. Dadurch können auch Fragen zu simplen Anwendungen wie
+Mailinglisten nicht ohne gründliches Studium vieler Rechtsdokumente
+beantwortet werden. Komplexe Konzepte wie \emph{Privacy by Design} oder
+\emph{Pseudonymisierung} sind erst recht Quelle vieler Fragen, die es zu
+beantworten gilt.
+
+Gleichzeitig arbeiten Technologiefirmen schon seit Jahren an Lösungen,
+um die Verarbeitung von persönlichen Daten relativ einfach zu gestalten.
+Dank \emph{Google Sheets}, \emph{Doodle}, \emph{Mailchimp} oder
+\emph{Wordpress} können heutzutage auch Nicht-Experten mit wenigen
+Klicks zu Verantwortlichen im Sinne der DSGVO zu werden.
+Peer-to-Peer-Protokolle für verteilte Datenbanken, z.B. Bitcoin,
+\emph{\href{https://datproject.org/}{Dat}} oder
+\emph{\href{https://ipfs.io/}{IPFS}} könnten die Zugangsbarrieren weiter
+abbauen---bis hin zur Unmerklichkeit der Verarbeitung seitens der
+Verantwortlich\_innen.
+
+Um aber Datenschutzverpflichtungen schnell und wirksam übernehmen zu
+können und um damit insgesamt einen Beitrag zu einer höheren
+Datensicherheit zu leisten, sind wohl oder übel Schulungen für
+Verantwortliche und Auftragsverarbeiter nötig. Diese dürfen nicht nur
+wenigen Profis zugänglich sein, sondern sollten allen Verantwortlichen
+und Auftragsverarbeitern offen stehen. Aus diesem Grund rufen wir zur
+Gründung einer englisch-sprachigen, kollaborativen
+Internet-Wissensdatenbank auf, die unter
+\href{https://creativecommons.org/}{freier Lizenz} betrieben werden soll
+um eine hohe Reichweite zu ermöglichen.
+
+Bislang wurden frei zugängliche praktische Ratschläge oft, wenn nicht
+sogar überwiegend, von Dienstanbietern angeboten, die eigene, eventuell
+entgegengesetzte, Geschäftsinteressen verfolgen mögen. So geben etwa
+viele Online-Diensteanbieter, Anwaltskanzleien oder Ausbildungsinstitute
+Ratschläge um auch eigene Diensteistungen zu bewerben. Restriktive
+Lizenzen der Ratschläge verhindern, dass guter Rat kostenlos
+weitergegeben werden kann. Fehlerhafte und veraltete Ratschläge können
+zumeist nicht verbessert werden. Letzteres ist besonders wichtig, da die
+Einhaltung der DSGVO ein bewegliches Ziel ist, denn durch neue Urteile
+oder Fortschritte in der modernen Privatsphäre entwickelt sich der
+Datenschutz ständig weiter\footnote{Die DSGVO verlangt von
+  Verantwortlichen in Art.~25 über Datenschutz durch Technikgestaltung
+  und durch datenschutzfreundliche Voreinstellungen den gegenwertigen
+  Stand der Technik zu berücksichtigen, wenn Datenverarbeitung geplannt
+  wird oder bereits statt findet.}. Ratschläge müssen deshalb
+kontinuierlich angepasst werden können.
+
+Da Datenschutz ein interdisziplinäres Feld ist, sollte die
+Wissensdatenbank gemeinsam von Rechts- und IT-Experten angelegt werden
+und muss daher die Bedüfnisse beider Gruppen beachten. Die Plattform
+\emph{Stack Exchange} bietet für die Beantwortung häufig gestellter
+Fragen (FAQ) eine passende Softwarelösung. Die Plattform ist den meisten
+IT-Experten bereits von der Seite
+\href{https://stackoverflow.com}{stackoverflow.com} vertraut und bietet
+mit
+\href{https://law.stackexchange.com}{law.stackexchange.com}\footnote{\href{https://law.stackexchange.com}{law.stackexchange.com}
+  listet bereits Fragen zur
+  \href{https://law.stackexchange.com/questions/tagged/gdpr}{DSGVO} und
+  \href{https://law.stackexchange.com/questions/tagged/gdpr+data-protection}{Datenschutz}.
+  Jedoch finden wir, dass Datenschutz eine eigene Plattform verdient um
+  andere Fachbereiche wie Informatik und Ethik besser einzubeziehen.}
+seit kurzem auch ein englisch-sprachiges Angebot für Rechts-Experten.
+Die Zusammenarbeit ist sets wie folgt organisiert:
+
+\begin{itemize}
+\tightlist
+\item
+  Fragen, Antworten und Metadaten werden im Internet unter einer freien
+  Lizenz (\href{https://creativecommons.org/licenses/by-sa/3.0/}{cc
+  by-sa}) veröffentlicht und stehen in maschinenlesbarer Form zum
+  Download bereit.
+\item
+  Jede Person kann eine Frage stellen oder beantworten.
+\item
+  Die besten Antworten werden an die Spitze gewählt.
+\item
+  Nutzer\_innen erhalten für jede abgegebene Stimme Reputationspunkte.
+\item
+  Benutzer entsperren Privilegien, wenn sie sich Reputation verdienen,
+  und können dann zum Beispiel Inhalte kommentieren oder bewerten.
+\item
+  Moderatoren werden unter Benutzern ausgewählt, und Top-Benutzer
+  bekommen die Möglichkeit bei der Moderation zu helfen.
+\end{itemize}
+
+Um eine insgesamt hohe Qualität der Antworten zu gewährleisten, soll auf
+Primärquellen verwiesen werden, wenn Meinungen unvermeidbar sind. Diese
+Regel wird unter anderem von Wikipedia angewendet und kann sowohl von
+Moderatoren als auch von Top-Benutzern durchgesetzt werden.
+
+Die Unterzeichner unterstützen die Gründung einer solchen kollaborativen
+Wissensdatenbank zum Thema Datenschutz in Form von häufig gestellten
+Fragen (FAQ).
+
+\textbf{Autoren und Erstunterzeichner:}
+
+\begin{itemize}
+\tightlist
+\item
+  Robert Riemann, Brüssel
+\item
+  Xavier Lavayssière, Paris
+\item
+  Franz Ritschel, Köln
+\end{itemize}
+
+\textbf{Kontakt:}
+
+Wenn Sie Updates erhalten möchten oder Fragen haben, senden Sie bitte
+Ihre Anfrage an
+\href{mailto:gdpr-faq@riemann.cc}{\nolinkurl{gdpr-faq@riemann.cc}}. Wenn
+Sie Unterzeichner werden möchten, senden Sie eine E-Mail an
+\href{mailto:gdpr-faq-sign@riemann.cc}{\nolinkurl{gdpr-faq-sign@riemann.cc}}.
+Anfragen in Französischer Sprache werden von
+\href{mailto:gdpr-faq@lesbricodeurs.fr}{\nolinkurl{gdpr-faq@lesbricodeurs.fr}}
+beantwortet and von
+\href{mailto:gdpr-faq-signer@lesbricodeurs.fr}{\nolinkurl{gdpr-faq-signer@lesbricodeurs.fr}}
+um Unterzeicher zu werden.
+
+\newpage
+
+\textbf{Liste der Empfänger:}
+
+\begin{itemize}
+\tightlist
+\item
+  das \href{https://edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en}{Internet Privacy Engineering Network} (kurz IPEN), eine Initiative des Europäischen Datenschutzbeauftragten EDPS
+\item
+  Stack Overflow, das Unternehmen hinter der bekannten Wissensdatenbank
+  \href{https://stackoverflow.com}{stackoverflow.com} für IT-Experten
+\item
+  der Verband \href{https://edri.org/}{European Digital Rights} (kurz
+  EDRi) von Bürger- und Menschenrechtsorganisationen aus ganz Europa
+\item
+  die Teilnehmer des \href{http://privacyforum.eu/}{Annual Privacy Forums} (kurz APF) 2018
+\item
+  das Organisationskomitee der internationalen Konferenz
+  \href{http://www.cpdpconferences.org/}{Computer, Privacy and Data
+  Protection} (kurz CPDP)
+\item
+  und weitere einzelne Personen
+\end{itemize}
+
+\end{letter}
+
+\end{document}

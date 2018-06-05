@@ -1,0 +1,75 @@
+\documentclass{scrlttr2}
+\KOMAoptions{
+  foldmarks=true,
+  fromalign=left,
+  % fromrule=afteraddress,
+  fromemail,
+  % fromphone,
+  % parskip=full
+  parskip=half,
+  firsthead=false,
+  enlargefirstpage=true,
+  % addrfield=topaligned,
+  addrfield=off,
+  DIV=16,
+}
+\usepackage[UKenglish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+%   colorlinks  = true,
+%   urlcolor  = darkblue,
+%   pdftitle  = {},
+%   pdfsubject  = {},
+%   pdfauthor = {Robert Riemann},
+%   pdfkeywords = {},
+  pdfcreator  = {pdftex},
+  pdfproducer = {pdftex}
+}
+\usepackage{microtype}
+%\usepackage{garamondx}
+\usepackage{charter}
+
+\usepackage{lastpage}
+\usepackage{scrpage2}
+% ===========================
+%    HEAD- AND FOOTLINES
+% ===========================
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ifoot{\usekomavar{subject}}
+\ofoot{\thepage\ of \pageref{LastPage}}
+\ihead{}
+\ohead{}
+
+\makeatletter
+% \@addtoplength{refvpos}{-6cm}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+\let\tightlist\relax
+
+\begin{document}
+
+\setkomavar{place}{Brussels}
+
+\setkomavar{backaddressseparator}{\ \textperiodcentered\ }
+\setkomavar{signature}{\\[-2\baselineskip]\parbox[t]{\linewidth}{\raggedright Robert Riemann, Brussels\\Xavier Lavayssière, Paris\\Franz Ritschel, Köln}}
+\setkomavar{date}{6th June 2018}
+\setkomavar{subject}{$title$}
+
+% \let\oldhref\href\renewcommand{\href}[2]{\oldhref{#1}{#2}\footnote{\url{#1}}}
+
+\begin{letter}{}
+\opening{Dear Data Protection Professionals and Computer Engineers,}
+
+$body$
+
+\end{letter}
+
+\end{document}

@@ -1,0 +1,217 @@
+\documentclass{scrlttr2}
+\KOMAoptions{
+  foldmarks=true,
+  fromalign=left,
+  % fromrule=afteraddress,
+  fromemail,
+  % fromphone,
+  % parskip=full
+  parskip=half,
+  firsthead=false,
+  enlargefirstpage=true,
+  % addrfield=topaligned,
+  addrfield=off,
+  DIV=16,
+}
+\usepackage[UKenglish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+%   colorlinks  = true,
+%   urlcolor  = darkblue,
+%   pdftitle  = {},
+%   pdfsubject  = {},
+%   pdfauthor = {Robert Riemann},
+%   pdfkeywords = {},
+  pdfcreator  = {pdftex},
+  pdfproducer = {pdftex}
+}
+\usepackage{microtype}
+%\usepackage{garamondx}
+\usepackage{charter}
+
+\usepackage{lastpage}
+\usepackage{scrpage2}
+% ===========================
+%    HEAD- AND FOOTLINES
+% ===========================
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ifoot{\usekomavar{subject}}
+\ofoot{\thepage\ of \pageref{LastPage}}
+\ihead{}
+\ohead{}
+
+\makeatletter
+% \@addtoplength{refvpos}{-6cm}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+\let\tightlist\relax
+
+\begin{document}
+
+\setkomavar{place}{Bruxelles}
+
+\setkomavar{backaddressseparator}{\ \textperiodcentered\ }
+\setkomavar{signature}{\\[-2\baselineskip]\parbox[t]{\linewidth}{\raggedright Robert Riemann, Bruxelles\\Xavier Lavayssière, Paris\\Franz Ritschel, Cologne}}
+\setkomavar{date}{6 Juin 2018}
+\setkomavar{subject}{Lettre ouverte pour l'ouverture d'un espace RGPD}
+
+% \let\oldhref\href\renewcommand{\href}[2]{\oldhref{#1}{#2}\footnote{\url{#1}}}
+
+\begin{letter}{}
+\opening{Chers professionnels de la protection des données et de
+l'informatique}
+
+Le \emph{Règlement Général de Protection des données}~(RGPD) s'applique
+depuis le 25~mai 2018. Ce règlement européen consiste en 99~articles et
+173~considérants qui atteignent 88~pages dans la
+\href{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG}{publication
+officielle}. Contrairement à un document de standardisation technique,
+les articles de ce règlement doivent être interprétés en regard de la
+jurisprudence et les opinions de spécialistes. En conséquence, la mise
+en conformité de systèmes simples comme une liste de diffusion ne peut
+pas être effectuée sans l'étude de plusieurs documents juridiques. Les
+concepts complexes comme \emph{privacy by design} et la
+\emph{pseudonymisation} soulèvent de nombreuses questions.
+
+Dans le même temps, les entreprises développent des solutions qui
+permettent facilement de recueillir et manipuler des données
+personnelles. Grâce à \emph{Google Sheets}, \emph{Doodle},
+\emph{Mailchimp} ou \emph{Wordpress} des non spécialistes peuvent
+devenir des contrôleur de données en quelques clics. Le développement de
+protocoles pair à pair pour des bases de données distribuées comme le
+\emph{Bitcoin}, \emph{\href{https://datproject.org/}{Dat}} ou
+\emph{\href{https://ipfs.io/}{IPFS}}, a le potentiel d'abaisser
+davantage l'obstacle initial pour devenir contrôleur de données jusqu'au
+point d'inconscience du contrôleur.
+
+Pour permettre une adoption rapide des obligations en matière de
+protection des données et, partant, une augmentation générale de
+l'hygiène autour données, une meilleure information de tous responsables
+du traitement et de leurs sous-traitants est nécessaire, et pas
+seulement à ceux qui peuvent se permettre d'y consacrer des ressources.
+Pour cette raison, nous demandons la création d'une base de
+connaissances collaborative sur Internet sous licence
+\href{https://creativecommons.org/}{Creative Commons} gratuite afin
+d'assurer sa disponibilité large et continue.
+
+Jusqu'à présent, les conseils pratiques librement accessibles sont
+souvent offerts par des parties prenantes avec des intérêts commerciaux.
+Les prestataires de services en ligne, les cabinets d'avocats et les
+organismes de formation orientent leurs conseils vers leurs propres
+services. Les licences restrictives empêchent de partager librement les
+conseils et analyses. Les conseils erronés ou périmés peuvent ne pas
+être mis à jour. Ce dernier point est d'autant plus important que la
+conformité au RGPD est une cible mouvante. Les nouvelles décisions ou
+les progrès techniques en matière de protection de la vie
+privée\footnote{L'article 25 de la RGPD demande de prendre en compte
+  notamment l'état de l'art lorsque lors de la conception et de la
+  réalisation du traitement de données.} demandent des mises à jour
+continues.
+
+Comme la protection des données est un champ interdisciplinaire, la base
+de connaissances devrait être construite par des professionnels du droit
+et de l'informatique, et répondre aux besoins des deux communautés. La
+plateforme Stack Exchange fournit aux communautés une solution
+logicielle pour construire une base de connaissances collaborative sous
+la forme de questions-réponses. Cette plateforme est bien connue des
+informaticien via \href{http://stackoverflow.com/}{stackoverflow.com} et
+a récemment ouvert
+\href{https://law.stackexchange.com}{law.stackexchange.com}\footnote{\href{https://law.stackexchange.com}{law.stackexchange.com}
+  couvre en partie les questions de
+  \href{https://law.stackexchange.com/questions/tagged/gdpr}{RGPD} and
+  \href{https://law.stackexchange.com/questions/tagged/gdpr+data-protection}{protection
+  des donnéesata protection}. Cependant, il nous semble que la
+  protection des données personnelles nécessite une plateforme propre
+  qui regroupe les autres disciplines comme l'informatique ou l'éthique.}.
+La collaboration sur la plateforme est organisé de la façon suivante :
+
+\begin{itemize}
+\tightlist
+\item
+  Les questions, les réponses et leurs métadonnées sont publiées sur
+  internet, sous une licence ouverte
+  (\href{https://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA}) et
+  sont téléchargeables dans un format interprétable par ordinateur
+\item
+  Tout le monde peut poser une question ou répondre
+\item
+  Les meilleurs réponses sont votées
+\item
+  L'utilisateur gagne de la réputation pour chaque vote reçu
+\item
+  L'utilisateur débloque des avantages au travers de la réputation
+  reçue, comme la capacité de commenter ou voter
+\item
+  Les modérateurs sont élus parmis les utilisateurs et les utilisateurs
+  les plus reconnus ont accès à des outils pour aider à la modération
+\end{itemize}
+
+Afin d'assurer la qualité des réponses, des références sont utilisées
+lorsque des points sont discutables. Cette règle, également employée par
+Wikipedia, est garantie par les modérateurs et les utilisateurs les plus
+reconnus.
+
+Les signataires soutiennent la création d'une telle base de données
+collaborative de connaissances sur la protection des données sous forme
+de questions fréquemment posées.
+
+\textbf{Auteurs et signataires initiaux :}
+
+\begin{itemize}
+\tightlist
+\item
+  Robert Riemann, Bruxelles
+\item
+  Xavier Lavayssière, Paris
+\item
+  Franz Ritschel, Cologne
+\end{itemize}
+
+\textbf{Contact:}
+
+Si vous voulez recevoir des mises à jours ou si vous avez une question,
+vous pouvez nous contacter
+\href{mailto:gdpr-faq@lesbricodeurs.fr}{\nolinkurl{gdpr-faq@lesbricodeurs.fr}}.
+Si vous voulez signer la lettre, vous vous pouvez écrire à
+\href{mailto:gdpr-faq-signer@lesbricodeurs.fr}{\nolinkurl{gdpr-faq-signer@lesbricodeurs.fr}}
+
+\newpage
+
+\textbf{Liste des destinataires:}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en}{Internet
+  Privacy Engineering Network}, une initiative du contrôleur européen de
+  la protection des données
+\item
+  \href{https://stackoverflow.com/company}{Stack Overflow}, l'entreprise
+  à l'origine de la base de connaissances
+  \href{http://stackoverflow.com/}{stackoverflow.com}
+\item
+  \href{https://edri.org/}{European Digital Rights}, une association
+  d'organisations de défense des droits civils et des droits de l'homme
+  à travers l'europe
+\item
+  Les participants à l'édition 2018 du
+  \href{http://privacyforum.eu/}{Annual Privacy Forum}
+\item
+  Le comité d'organisation de la conférence
+  \href{http://www.cpdpconferences.org/}{Computers, Privacy and Data
+  Protection}
+\item
+  Une liste de récipiendaires individuels
+\end{itemize}
+
+\end{letter}
+
+\end{document}

@@ -26,13 +26,16 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 </div></figcaption>
 </figure>
 
-| Language Versions | English                              | French      | German                               |
-| ----------------- | ------------------------------------ | ----------- | ------------------------------------ |
-| Online            | [open][eno] :gb:                     | *soon* :fr: | [open][deo] :de:                     |
-| PDF               | [open][enp]{:.no-mark-external} :gb: | *soon* :fr: | [open][dep]{:.no-mark-external} :de: |
+| Language Versions | English                              | French                               | German                               |
+| ----------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ |
+| Online            | :gb: [open][eno]                     | :fr: [open][fro]                     | :de: [open][deo]                     |
+| PDF               | :gb: [open][enp]{:.no-mark-external} | :fr: [open][frp]{:.no-mark-external} | :de: [open][dep]{:.no-mark-external} |
 
 [eno]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq.md
 [enp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
+
+[fro]: https://lesbricodeurs.fr/notes/RGPD-FAQ/
+[frp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-fr.pdf' | absolute_url }}
 
 [deo]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-de.md
 [dep]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}

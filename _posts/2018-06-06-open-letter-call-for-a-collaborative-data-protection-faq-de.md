@@ -29,10 +29,10 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 </div></figcaption>
 </figure>
 
-| Sprachversionen | Englisch                               | Französisch                            | Deutsch                                |
-| --------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- |
-| Online          | :gb: [öffnen][eno]                     | :fr: [öffnen][fro]                     | :de: [öffnen][deo]                     |
-| PDF             | :gb: [öffnen][enp]{:.no-mark-external} | :fr: [öffnen][frp]{:.no-mark-external} | :de: [öffnen][dep]{:.no-mark-external} |
+| Sprachversionen | Englisch                               | Französisch                            | Deutsch                                | Italienisch                            |
+| --------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- |
+| Online          | :gb: [öffnen][eno]                     | :fr: [öffnen][fro]                     | :de: [öffnen][deo]                     | :it: [öffnen][ito]                     |
+| PDF             | :gb: [öffnen][enp]{:.no-mark-external} | :fr: [öffnen][frp]{:.no-mark-external} | :de: [öffnen][dep]{:.no-mark-external} | :it: [öffnen][itp]{:.no-mark-external} |
 
 [eno]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq.md
 [enp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
@@ -42,6 +42,9 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 
 [deo]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-de.md
 [dep]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}
+
+[ito]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-it.md
+[itp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-it.pdf' | absolute_url }}
 
 <div style="text-align:right">
 Brüssel, den 6. Juni 2018
@@ -53,7 +56,7 @@ Brüssel, den 6. Juni 2018
 Die neue EU-Datenschutz-Grundverordnung (DSGVO) gilt ab dem 25. Mai 2018. Sie besteht aus 99 Artikeln und 173 Erwägungsgründen und umfasst 88 Seiten [in der amtlichen Fassung][GDPR-eurlex]. Anders als technische Normen ist die DSGVO ein Gesetz und wird von der Rechtsprechung und den Rechtsanwender, allen voran den Datenschutzbehörden, durch Urteile bzw. Stellungnahmen ausgelegt. Dadurch können auch Fragen zu simplen Anwendungen wie Mailinglisten nicht ohne gründliches Studium vieler Rechtsdokumente beantwortet werden. Komplexe Konzepte wie *Privacy by Design* oder *Pseudonymisierung* sind erst recht Quelle vieler Fragen, die es zu beantworten gilt.
 
 Gleichzeitig arbeiten Technologiefirmen schon seit Jahren an Lösungen, um die Verarbeitung von persönlichen Daten relativ einfach zu gestalten.
-Dank *Google Sheets*, *Doodle*, *Mailchimp* oder *Wordpress* können heutzutage auch Nicht-Experten mit wenigen Klicks zu Verantwortlichen im Sinne der DSGVO zu werden. Peer-to-Peer-Protokolle für verteilte Datenbanken, z.B. Bitcoin, *[Dat]* oder *[IPFS]* könnten die Zugangsbarrieren weiter abbauen---bis hin zur Unmerklichkeit der Verarbeitung seitens der Verantwortliche.
+Dank *Google Sheets*, *Doodle*, *Mailchimp* oder *Wordpress* können heutzutage auch Nicht-Experten mit wenigen Klicks zu Verantwortlichen im Sinne der DSGVO zu werden. Peer-to-Peer-Protokolle für verteilte Datenbanken, z.B. *Bitcoin*, *[Dat]* oder *[IPFS]* könnten die Zugangsbarrieren weiter abbauen---bis hin zur Unmerklichkeit der Verarbeitung seitens der Verantwortliche.
 
 Um aber Datenschutzverpflichtungen schnell und wirksam übernehmen zu können und um damit insgesamt einen Beitrag zu einer höheren Datensicherheit zu leisten, sind wohl oder übel Schulungen für Verantwortliche und Auftragsverarbeiter nötig. Diese dürfen nicht nur wenigen Profis zugänglich sein, sondern sollten allen Verantwortlichen und Auftragsverarbeitern offen stehen. Aus diesem Grund rufen wir zur Gründung einer englisch-sprachigen, kollaborativen Internet-Wissensdatenbank auf, die unter [freier Lizenz][creative commons] betrieben werden soll um eine hohe Reichweite zu ermöglichen.
 

@@ -1,0 +1,228 @@
+\documentclass{scrlttr2}
+\KOMAoptions{
+  foldmarks=true,
+  fromalign=left,
+  % fromrule=afteraddress,
+  fromemail,
+  % fromphone,
+  % parskip=full
+  parskip=half,
+  firsthead=false,
+  enlargefirstpage=true,
+  % addrfield=topaligned,
+  addrfield=off,
+  DIV=16,
+}
+\usepackage[UKenglish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+%   colorlinks  = true,
+%   urlcolor  = darkblue,
+%   pdftitle  = {},
+%   pdfsubject  = {},
+%   pdfauthor = {Robert Riemann},
+%   pdfkeywords = {},
+  pdfcreator  = {pdftex},
+  pdfproducer = {pdftex}
+}
+\usepackage{microtype}
+%\usepackage{garamondx}
+\usepackage{charter}
+
+\usepackage{lastpage}
+\usepackage{scrpage2}
+% ===========================
+%    HEAD- AND FOOTLINES
+% ===========================
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ifoot{\usekomavar{subject}}
+\ofoot{\thepage\ of \pageref{LastPage}}
+\ihead{}
+\ohead{}
+
+\makeatletter
+% \@addtoplength{refvpos}{-6cm}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+\let\tightlist\relax
+
+\begin{document}
+
+\setkomavar{place}{Bruxelles}
+
+\setkomavar{backaddressseparator}{\ \textperiodcentered\ }
+\setkomavar{signature}{\\[-2\baselineskip]\parbox[t]{\linewidth}{\raggedright Robert Riemann, Brussels\\Xavier Lavayssière, Paris\\Franz Ritschel, Köln}}
+\setkomavar{date}{6 giugno 2018}
+\setkomavar{subject}{Lettera aperta: appello per uno spazio collaborativo di FAQ sulla
+protezione dei dati}
+
+% \let\oldhref\href\renewcommand{\href}[2]{\oldhref{#1}{#2}\footnote{\url{#1}}}
+
+\begin{letter}{}
+\opening{Cari professionisti della protezione dei dati e dell'IT,}
+
+Il nuovo Regolamento Generale sulla Protezione dei Dati (in breve RGPD)
+si applica a decorrere dal 25 maggio 2018. È costituito da 99 articoli e
+173 considerando che occupano 88 pagine nella
+\href{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG}{pubblicazione
+ufficiale}. A differenza di un documento di normalizzazione tecnica,
+molti di questi articoli devono essere prima interpretati alla luce
+della giurisprudenza già consolidata e dei pareri precedentemente
+emanati dalle autorità di protezione dei dati. Di conseguenza, persino
+questioni di conformità per applicazioni relativamente semplici come una
+mailing list non possono essere risolti senza uno studio approfondito di
+diversi documenti giuridici. Concetti complessi come la \emph{privacy by
+design} e la \emph{pseudonimizzazione} sono fonte di molte domande a cui
+si deve ancora rispondere.
+
+Allo stesso tempo, da molti anni nel settore dell'alta tecnologia si
+lavora a soluzioni agili che permettano la raccolta e il trattamento dei
+dati personali. Grazie a \emph{Google Sheets}, \emph{Doodle},
+\emph{Mailchimp}, o \emph{Wordpress}, anche i non esperti, oggigiorno,
+possono diventare responsabili del trattamento di dati personali in
+pochi clic o passaggi. Lo sviluppo di protocolli peer-to-peer per
+database modulabili, come \emph{Bitcoin},
+\emph{\href{https://datproject.org/}{Dat}} o
+\emph{\href{https://ipfs.io/}{IPFS}}, è in grado di ridurre
+ulteriormente le difficoltà iniziali per diventare responsabile del
+trattamento di dati, fino ad uno stadio di inconsapevolezza del
+responsabile.
+
+Per consentire una rapida adozione degli obblighi di protezione dei dati
+e, di conseguenza, un aumento generale della qualità dei dati, è
+necessaria una formazione per i responsabili del trattamento dei dati e
+gli incaricati del trattamento e deve essere accessibile non solo a
+coloro che possono permettersi di dedicarvi le risorse. Per questo
+motivo, chiediamo la creazione di una banca dati di conoscenze
+collaborativa su internet sotto la licenza
+\href{https://creativecommons.org/}{Creative Commons} per garantire la
+sua ampia e continua disponibilità.
+
+Finora, i consigli pratici liberamente accessibili sono spesso, se non
+per lo più, offerti da parti interessate che possono avere interessi
+commerciali in conflitto. Fornitori di servizi online, studi legali e
+istituti di formazione possono orientare la consulenza verso i propri
+servizi. Le licenze restrittive possono impedire che un buon consiglio
+venga condiviso liberamente. I consigli errati o datati potrebbero non
+essere aggiornati. Quest'ultimo punto è particolarmente importante in
+quanto la conformità al RGPD è un obiettivo mobile. Nuove sentenze o
+avanzamenti tecnici in materia di protezione della vita
+privata\footnote{Il RGPD richiede all'art.~25, dedicato alla protezione
+  dei dati fin dalla progettazione e protezione per impostazione
+  predefinita, che i titolari del trattamento dei dati debbano tener
+  conto, tra le altre cose, dello stato dell'arte al momento di
+  determinare i mezzi del trattamento e all'atto del trattamento stesso.}
+richiedono aggiornamenti continui.
+
+Poiché la protezione dei dati è un settore interdisciplinare, la banca
+dati di conoscenza dovrebbe essere redatta congiuntamente da giuristi e
+ingegneri informatici e soddisfare le esigenze di entrambe le comunità.
+La piattaforma \emph{Stack Exchange} fornisce alle comunità una
+soluzione software per domande frequenti (FAQ) collaborative. La
+piattaforma è ben nota alla maggior parte degli ingegneri informatici
+via \href{https://stackoverflow.com}{stackoverflow.com} e ha avviato più
+recentemente
+\href{https://law.stackexchange.com}{law.stackexchange.com}\footnote{\href{https://law.stackexchange.com}{law.stackexchange.com}
+  include già domande sul
+  \href{https://law.stackexchange.com/questions/tagged/gdpr}{RGPD} e la
+  \href{https://law.stackexchange.com/questions/tagged/gdpr+data-protection}{protezione
+  dei dati}. Tuttavia, riteniamo che la protezione dei dati personali
+  meriti una sua propria piattaforma che comprenda anche altre
+  discipline come l'ingegneria informatica o l'etica.}. La
+collaborazione è organizzata come segue:
+
+\begin{itemize}
+\tightlist
+\item
+  Le domande, le risposte e i loro metadati sono pubblicati su internet
+  sotto una licenza gratuita
+  (\href{https://creativecommons.org/licenses/by-sa/3.0/}{cc by-sa}) e
+  sono scaricabili e leggibili da dispositivo elettronico.
+\item
+  Chiunque può chiedere o rispondere a una domanda.
+\item
+  Le risposte migliori vengono votate.
+\item
+  Gli utenti guadagnano in reputazione per ogni voto che ricevono.
+\item
+  Gli utenti sbloccano dei vantaggi attraverso la reputazione
+  guadagnata, così come la possibilità di commentare o votare.
+\item
+  I moderatori sono eletti tra gli utenti e i principali utenti hanno
+  accesso a strumenti speciali per aiutare a moderare.
+\end{itemize}
+
+Per fornire un'alta qualità globale delle risposte, i riferimenti alle
+fonti principali dovrebbero essere utilizzati laddove vi siano dei punti
+soggetti ad opinioni divergenti. Questa regola è anche utilizzata da
+Wikipedia e può essere applicata dagli moderatori e dagli utenti
+principali.
+
+I firmatari supportano la creazione di tale banca dati collaborativa di
+conoscenze sulla protezione dei dati collaborativo sotto forma di
+domande frequenti.
+
+\textbf{Autori e firmatari iniziali:}
+
+\begin{itemize}
+\tightlist
+\item
+  Robert Riemann, Brüssel
+\item
+  Xavier Lavayssière, Paris
+\item
+  Franz Ritschel, Köln
+\end{itemize}
+
+\textbf{Contatto:}
+
+Se si desidera ricevere aggiornamenti o se si hanno domande, si prega di
+inviare la richiesta a
+\href{mailto:gdpr-faq@riemann.cc}{\nolinkurl{gdpr-faq@riemann.cc}}. Se
+si desidera diventare firmatario, si prega di inviare una mail a
+\href{mailto:gdpr-faq-sign@riemann.cc}{\nolinkurl{gdpr-faq-sign@riemann.cc}}.
+Le richieste in lingua francese sono da indirizzare a
+\href{mailto:gdpr-faq@lesbricodeurs.fr}{\nolinkurl{gdpr-faq@lesbricodeurs.fr}}
+e per la firma a
+\href{mailto:gdpr-faq-signer@lesbricodeurs.fr}{\nolinkurl{gdpr-faq-signer@lesbricodeurs.fr}}.
+
+\newpage
+
+\textbf{Elenco dei destinatari:}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en}{Internet
+  Privacy Engineering Network} (IPEN), un'iniziativa del garante europeo
+  della protezione dei dati
+\item
+  Stack Overflow, la società dietro il famoso database di conoscenze
+  \href{https://stackoverflow.com}{stackoverflow.com} per i
+  programmatori
+\item
+  \href{https://edri.org/}{European Digital Rights} (EDRi),
+  un'associazione di organizzazioni a difesa dei diritti civili e umani
+  di tutta Europa
+\item
+  i partecipanti all'edizione 2018
+  dell'\href{http://privacyforum.eu/}{Annual Privacy Forum} (APF)
+\item
+  il comitato organizzativo della conferenza internazionale
+  \href{http://www.cpdpconferences.org/}{Computer, Privacy and Data
+  Protection} (CPDP)
+\item
+  una lista di singoli destinatari
+\end{itemize}
+
+\end{letter}
+
+\end{document}

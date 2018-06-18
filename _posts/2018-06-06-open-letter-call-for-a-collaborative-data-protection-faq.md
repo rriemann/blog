@@ -26,10 +26,10 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 </div></figcaption>
 </figure>
 
-| Language Versions | English                              | French                               | German                               |
-| ----------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| Online            | :gb: [open][eno]                     | :fr: [open][fro]                     | :de: [open][deo]                     |
-| PDF               | :gb: [open][enp]{:.no-mark-external} | :fr: [open][frp]{:.no-mark-external} | :de: [open][dep]{:.no-mark-external} |
+| Language Versions | English                              | French                               | German                               | Italian                              |
+| ----------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
+| Online            | :gb: [open][eno]                     | :fr: [open][fro]                     | :de: [open][deo]                     | :it: [open][ito]                     |
+| PDF               | :gb: [open][enp]{:.no-mark-external} | :fr: [open][frp]{:.no-mark-external} | :de: [open][dep]{:.no-mark-external} | :it: [open][itp]{:.no-mark-external} |
 
 [eno]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq.md
 [enp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-en.pdf' | absolute_url }}
@@ -39,6 +39,9 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 
 [deo]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-de.md
 [dep]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-de.pdf' | absolute_url }}
+
+[ito]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-it.md
+[itp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-it.pdf' | absolute_url }}
 
 <div style="text-align:right">
 Brussels, the {{ page.date | date: "%e %B %Y"}}

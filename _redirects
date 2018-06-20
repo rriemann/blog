@@ -4,6 +4,7 @@
 /atom.xml /feed.xml
 /files/rriemann.asc /assets/files/rriemann.asc
 
+/resume.pdf https://people.physik.hu-berlin.de/~rriemann/share/cv-rriemann.pdf 302!
 /files/ https://people.physik.hu-berlin.de/~rriemann/ 302!
 /files/* https://people.physik.hu-berlin.de/~rriemann/:splat 302
 

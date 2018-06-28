@@ -66,8 +66,8 @@ Also the documentation portal of Firefox has a notice on its [web page to the Re
 
 According to the recommendation of the RFC standard, Firefox does not send a Referer field when:
 
-1) the referring resource is a local "file" or "data" URI,
-2) an unsecured HTTP request is used and the referring page was received with a secure protocol (HTTPS).
+1. the referring resource is a local "file" or "data" URI,
+2. an unsecured HTTP request is used and the referring page was received with a secure protocol (HTTPS).
 
 That means, if e.g. https://newborn.xx/videos/some_video contains a link to another HTTPS web page, the Referer field *is* sent.
 

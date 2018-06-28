@@ -17,7 +17,7 @@ description: |
 image: /assets/img/http-referer.png
 ---
 
-Consider a web page with URL *α* on web server *A* containing a link to a web page with URL *β* on web server *B*. If a web page visitor clicks on the link to *β*, many browsers send along with the request to get the website *β* to server *B* the referring webpage *α*. This information is sent in form of a HTTP request header.
+Consider a web page with URL *α* on web server *A* containing a link to a web page with URL *β* on web server *B*. If a web page visitor clicks on the link to *β*, many browsers send along with the request to server *B* for the web page *β* the referring webpage *α*. This information is sent in form of a HTTP request header.
 
 <!--more-->
 

@@ -57,6 +57,8 @@ Il nuovo Regolamento Generale sulla Protezione dei Dati (in breve RGPD) si appli
 
 Allo stesso tempo, da molti anni nel settore dell’alta tecnologia si lavora a soluzioni agili che permettano la raccolta e il trattamento dei dati personali. Grazie a *Google Sheets*, *Doodle*, *Mailchimp*, o *Wordpress*, anche i non esperti, oggigiorno, possono diventare responsabili del trattamento di dati personali in pochi clic o passaggi. Lo sviluppo di protocolli peer-to-peer per database modulabili, come *Bitcoin*, *[Dat]* o *[IPFS]*, è in grado di ridurre ulteriormente le difficoltà iniziali per diventare responsabile del trattamento di dati, fino ad uno stadio di inconsapevolezza del responsabile.
 
+<!--more-->
+
 Per consentire una rapida adozione degli obblighi di protezione dei dati e, di conseguenza, un aumento generale della qualità dei dati, è necessaria una formazione per i responsabili del trattamento dei dati e gli incaricati del trattamento e deve essere accessibile non solo a coloro che possono permettersi di dedicarvi le risorse. Per questo motivo, chiediamo la creazione di una banca dati di conoscenze collaborativa su internet sotto la licenza [Creative Commons][creative commons] per garantire la sua ampia e continua disponibilità.
 
 Finora, i consigli pratici liberamente accessibili sono spesso, se non per lo più, offerti da parti interessate che possono avere interessi commerciali in conflitto. Fornitori di servizi online, studi legali e istituti di formazione possono orientare la consulenza verso i propri servizi. Le licenze restrittive possono impedire che un buon consiglio venga condiviso liberamente. I consigli errati o datati potrebbero non essere aggiornati. Quest’ultimo punto è particolarmente

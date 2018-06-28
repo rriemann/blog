@@ -54,6 +54,8 @@ The EU’s new law *General Data Protection Regulation* (GDPR for short) applies
 At the same time, the tech industry has worked for many years on solutions to setup fairly easy personal data processing applications.
 Thanks to e.g. *Google Sheets*, *Doodle*, *Mailchimp*, or *Wordpress*, even non-experts can nowadays become data controllers with only few clicks or swipes. The development of peer-to-peer protocols for distributed databases, e.g. *Bitcoin*, *[Dat]*, or *[IPFS]*, has the potential to further lower the initial hurdle to become a data controller---up to the point of unconsciousness of the controller.
 
+<!--more-->
+
 To allow for a rapid adoption of data protection obligations, and in turn an overall increase of data hygiene, training for data controllers and processors is needed and must be accessible not only for those who can afford to dedicate resources, but at best to all data controllers and processors. For this reason, we call for the foundation of a collaborative Internet knowledge database under a free [creative commons] license to ensure its broad and continuous availability.
 
 So far, freely accessible practical advice is often, if not mostly, offered by stakeholders that may have conflicting business interests. Online service providers, law firms and training institutes may gear advice towards their own services. Restrictive licenses may prevent good advice from being freely shared. Erroneous or out-dated advice may not be updated. Especially, the latter is important as GDPR compliance is a moving target. New judgements or advances in state-of-the-art privacy engineering[^state-of-art] require continuous updates.

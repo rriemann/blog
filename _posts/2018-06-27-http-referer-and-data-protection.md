@@ -93,6 +93,18 @@ This bug makes though a different assumption on when a Referer field should be s
 
 Let us see what happens. :blush:
 
+## Update (2018-06-28)
 
+While we wait for a comfortable user interface to disable the referer field, one can change the configuration of Firefox manually. I found the solution at [a Mozilla Support page](https://support.mozilla.org/en-US/questions/1130505#answer-895983).
+
+1. In a new tab, type or paste `about:config` in the address bar and press Enter/Return. Click the button promising to be careful.
+2. In the search box above the list, type or paste `referer` and pause while the list is filtered
+3. Double-click the `network.http.referer.XOriginPolicy` preference and enter the desired value:
+
+| Value | Policy                                                            |
+| :---- | :---------------------------------------------------------------- |
+| 0     | no restrictions (default)                                         |
+| 1     | base domain must match (send from a.example.com to b.example.com) |
+| 2     | full host name must match (only b.example.com to b.example.com)   |
 
 *[HTTP]: Hypertext Transfer Protocol

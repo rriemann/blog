@@ -26,7 +26,7 @@ et cette package n'existe pas pour pdfLaTex. Mais en général, ça fait pas tro
 de difference. Comme d'habitude LuaLaTeX est compris dans la distribution LaTeX. :wink:
 
 [le logo]: http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/amu.pdf
-[guide du design]: http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/charte_graphique_generale_amu_0.pdf
+[guide du design]: https://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/charte_graphique_amu_2015.pdf
 
 <!--more-->
 
@@ -60,7 +60,7 @@ de difference. Comme d'habitude LuaLaTeX est compris dans la distribution LaTeX.
 % Alter the Beamer template
 
 % set new colors according to AMU design
-% http://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/charte_graphique_generale_amu_0.pdf
+% https://dircom.univ-amu.fr/sites/dircom.univ-amu.fr/files/charte_graphique_amu_2015.pdf
 \definecolor{AMUDarkBlue}{RGB}{0,103,186}
 \definecolor{AMULightBlue}{RGB}{110,188,253}
 \definecolor{AMUYellow}{RGB}{246,189,23}

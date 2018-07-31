@@ -20,8 +20,10 @@ I live close[^privacy] to [Place Flagey](https://en.wikipedia.org/wiki/Place_Fla
 
 Brussels has two airports. In the best case, you arrived at *Brussels Zaventem* (also called *Brussels National*, code BRU). If so, you have two options.
 
-- The :bus: bus 12 to *Brussels City* leaves every quarter of an hour. Unless you want to go first to the EU quarter (*Place Luxembourg*), consider to leave 3 stops later at *Bordet* and take one of the trains to *Germoir* (e.g. S4, S5, S9). From there, it is only few minutes to walk.
+- The :bus: bus 12 or 21 to *Brussels City* leaves every quarter of an hour. You can buy a ticket for 4,50€ at the ticket machine.  Unless you want to go first to the EU quarter (*Place Luxembourg*) or save money, consider to leave the bus at *Da Vinci* to walk over to the train station  *Bordet* and take one of the trains to *Germoir* (e.g. S4, S5, S9).
 - You can also take one of the trains from the Airport to Place Luxembourg. This is with 9,00€ more expensive, but can be faster. From Place Luxembourg, there are trains and buses to *Germoir*.
+
+From *Germoir*, it is only few minutes to walk.
 
 ## Arrive by Train :bullettrain_side:
 

@@ -72,7 +72,7 @@ You also do not want to read the lengthy privacy policy <https://www.pottermore.
 
 **Legal Notice:** Wizard House names may be protected under some legal acts in some countries.
 
-**Privacy Notice:** No personal data is stored or transfered.
+**Privacy Notice:** No personal data from this quiz is stored or transferred.
 
 
 ## Automated Decision Making

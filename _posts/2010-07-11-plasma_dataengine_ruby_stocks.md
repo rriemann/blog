@@ -192,8 +192,7 @@ X-KDE-PluginInfo-EnabledByDefault=true
 
 ## What Comes Next?
 
-[![Simple Plasmoid made with Ruby][2]{:.pull-left style="width:256px;height:178px;"}][2]The
-engine should be quite usable by now. I plan to create a plasmoid which
+The engine should be quite usable by now. I plan to create a plasmoid which
 lets you search for a company name to get the stocks symbol and then shows
 some important numbers (like the weather widget, but without these nice graphics).
 

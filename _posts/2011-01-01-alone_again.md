@@ -12,7 +12,7 @@ lang: en
 layout: post-webcomic
 ---
 
-
-[Video by Gilbert O'Sullivan][video]
+Alone Again (Naturally) by Gilbert O'Sullivan [on Youtube][video] and [on Spotify][spotify].
 
 [video]: http://www.youtube.com/watch?v=D_P-v1BVQn8&t=1m53s "Alone Again (Naturally) by Gilbert O'Sullivan"
+[spotify]: https://open.spotify.com/track/4lHQCzdK3VdYQvQZnnRouG "Alone Again (Naturally) by Gilbert O'Sullivan"

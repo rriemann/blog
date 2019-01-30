@@ -15,7 +15,7 @@ basics:
     # postalCode: "1060"
     city: "Brussels"
     countryCode: "BE"
-    region: "Saint Gilles"
+    region: "Ixelles"
   profiles:
     - network: "Twitter"
       username: "rriemann_eu"

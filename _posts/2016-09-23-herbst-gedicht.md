@@ -9,7 +9,7 @@ lang: de
 ---
 
 {% include figure image_path="/assets/img/louis_pradel_morning.jpg" alt="Place Louis Pradel (Opéra) in Lyon, France: Hatschi!" caption="Place Louis Pradel (Opéra) in Lyon, France: Hatschi!" %}
-*Nach meinem ersten [Herbst-Gedicht aus dem Jahr 2010](/posts/2011-12-13-herbst_gedicht.html)
+*Nach meinem ersten [Herbst-Gedicht aus dem Jahr 2010](2011-12-13-herbst_gedicht.md)
 nun 6 Jahre später ein versöhnliches Gedicht zur selben Jahreszeit.*
 
 ---

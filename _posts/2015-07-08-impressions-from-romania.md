@@ -14,14 +14,12 @@ published: true
 image: https://farm6.staticflickr.com/5470/18073336322_580ec52c6d_b.jpg
 ---
 
-# Impressions from Romania
-
-## Prolog
-
 **Back in February 2015, I was overtaken by school holidays: My French
 collaborators have been well prepared and prepared their vacation ahead of time.
 I didn’t want to be the lonely guy in the office and decided spontaneously to
 leave as well: to Romania!**
+
+## Prolog
 
 Why Romania? I used [Kayak Explore](http://www.kayak.de/explore/GVA/) to find cheap flights from Lyon, Saint-Etienne and Geneva. Porto would have been an option and surprisingly Bucharest even though its quite far away. Both countries I have never been to. A friend of mine from Bucharest was very enthusiastic about my intentions and rescheduled his week and took care for my accommodation. A week later, I arrived at *Bucharest Otopeni Intl.* Airport. I decided to take the bus to go down-town Bucharest. In the bus I met a father with his daughter that has worked for the German cruise company AIDA. Both are fluent in English. Also when I missed to get out of the bus, I could ask locals in English without any issues – and not only the young (Erasmus) generation.
 

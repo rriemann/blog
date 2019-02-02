@@ -13,6 +13,8 @@ Initially, I wanted to blog about my travels. In the end, I refactored old code 
 
 So if you use [Jekyll](http://jekyllrb.com/) for blogging, you can install this plugin and add HTML previews for links to popular websites very easily.
 
+<!--more-->
+
 ```liquid
 {% raw %}{% onebox https://github.com/rriemann/jekyll-onebox/blob/master/README.md %}{% endraw %}
 ```

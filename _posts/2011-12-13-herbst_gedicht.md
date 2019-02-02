@@ -35,5 +35,5 @@ bin ich im Einklang mit der Welt.
 Sie hat sich auf mich eingestellt.
 {: .verse}
 
-*Verfasst am 18. November 2010 und meiner damals vormaligen Freundin gewidmet.*
+*Verfasst am 18. November 2010 und meiner damaligen Ex-Freundin gewidmet.*
 {: .verse}

@@ -48,7 +48,9 @@ layout: base
         {% if entry.x-slides %}
           <a class="external" href="{{ entry.x-slides }}">Slides</a>
         {% endif %}
-        {% if entry.url contains "://" %}
+        {% if entry.x-download %}
+          <a class="external" href="{{ entry.x-download }}" property="sameAs">Download</a>
+        {% elsif entry.url contains "://" %}
           <a class="external" href="{{ entry.url }}" property="sameAs">Download</a>
         {% endif %}
       </span>

@@ -102,12 +102,14 @@ defaults:
 
 scholar:
   # style: oscola-no-ibid # i.e. chicago-author-date, ieee, ieee-with-url, see `ruby -r "csl/styles" -e "puts CSL::Style.ls"`
-  style: '_plugins/computing-surveys.csl'
-  bibtex_filters:
-    - latex
-    # - markdown
-  sort_by: 'year,month'
-  order: 'descending'
+  # style: '_plugins/computing-surveys.csl'
+  # style: oscola-no-ibid
+  style: _plugins/taylor-and-francis-chicago-note.csl
+  # bibtex_filters:
+  #   - latex
+  #   - markdown
+  sort_by: year,month
+  order: descending,descending
   # style: _plugins/ieee.csl
   bibliography: papers.bib
   # see example https://github.com/ashinkarov/ashinkarov.github.com

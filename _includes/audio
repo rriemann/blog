@@ -1,0 +1,6 @@
+{% capture audio_id %}{{ include.id }}{% endcapture %}
+{% capture audio_provider %}{{ include.provider }}{% endcapture %}
+
+{% if audio_provider == "spotify" %}
+<iframe src="https://open.spotify.com/embed/{{ audio_id }}" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+{% endif %}

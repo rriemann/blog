@@ -13,11 +13,11 @@ published: true
 
 {% flickr 6201381800 "Paperback Book vs. Amazon Kindle" %}
 
-**Dear participants of the Model European Union simulation 2015, I totally support the aim of the simulation organisers to print less paper during the conference.**
+**Dear participants of the Model European Union simulation 20beum15, I totally support the aim of the simulation organisers to print less paper during the conference.**
 
 <!--more-->
 
-So I will provide, as I did [last time](posts/2015-04-09-meu-strasbourg-2015-documents.html), the juridical texts in various eBook formats! The text used in the conference are shortened! The original sources are probably these ones:
+So I will provide, as I did [last time](2015-04-09-meu-strasbourg-2015-documents.md), the legal texts in various eBook formats! The texts used for the conference are shortened! The original sources are probably these ones:
 
 Regulation:
 : <http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2015.169.01.0001.01.ENG>

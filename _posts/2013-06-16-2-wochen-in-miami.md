@@ -10,7 +10,7 @@ layout: post
 image: /assets/img/central-america/skyline-car-miami.jpg
 ---
 
-{% include figure image_path="/assets/img/central-america/skyline-car-miami.jpg" alt="Unterwegs nach Miami Downtown." caption="Unterwegs nach Miami Downtown." width="400px" %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/skyline-car-miami.jpg" alt="Unterwegs nach Miami Downtown." caption="Unterwegs nach Miami Downtown." %}
 
 Ich schreibe aus dem Hostel „Luna's Castle“ in Panama City. Während es in Berlin
 19:30 Uhr sein müsste, ist es hier gerade 12:30 Uhr (7 Stunden Zeitverschiebung).
@@ -35,7 +35,7 @@ ich schon im Flugzeug begonnen hatte zu bearbeiten. Ihr seht, ich arbeite
 tatsächlich einen kleinen Spaziergang durch Miami wagen – mein erster Ausflug in
 den USA überhaupt.
 
-{% include figure image_path="/assets/img/central-america/signs-miami_thumb.jpg" alt="Schilderwald in Miami. <br/> Schilderwald in Miami. <br/> Schilderwald in Miami." caption="Schilderwald in Miami. <br/> Schilderwald in Miami. <br/> Schilderwald in Miami." %}{:.pull-left}
+{% include figure image_path="/assets/img/central-america/signs-miami_thumb.jpg" alt="Schilderwald in Miami. <br/> Schilderwald in Miami. <br/> Schilderwald in Miami." caption="Schilderwald in Miami. <br/> Schilderwald in Miami. <br/> Schilderwald in Miami." %}{:.align-left}
 
 Ich würde bereits gewarnt, dass man lieber in Miami Beach unterwegs ist als in
 Miami (zwei verschiedene Städte). Schließlich sei Miami Beach touristischer. Ich
@@ -50,12 +50,12 @@ mehrmals erklärt wurde. Das öffentliche Verkehrsnetz ist nicht sehr dicht. Daf
 sind alle Straßen sehr gut ausgebaut. Etwas wichtigere Straßen im Zentrum haben
 locker 3 Spuren in jede Richtung.
 
-{% include figure image_path="/assets/img/central-america/church-miami_thumb.jpg" alt="Kirchtürme überragen in Miami nichts." caption="Kirchtürme überragen in Miami nichts." %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/church-miami_thumb.jpg" alt="Kirchtürme überragen in Miami nichts." caption="Kirchtürme überragen in Miami nichts." %}{:.align-right}
 
 
 Nachdem ich also 2 Tage durch riesige Straßenflure gezogen bin, vorbei an mächtigen
 Hochhäusern, ohne städtisches, geschäftiges Treiben vorzufinden, habe ich mich
-geschlagen gegeben und dann doch beschlossen in die Touristische Hochburg „[Miami Beach]“
+geschlagen gegeben und dann doch beschlossen in die Touristische Hochburg [Miami Beach](2013-05-09-i-am-going-to-miami.md)
 umzuziehen. Freundlicherweise konnte ich mir noch einen Internationalen Stromstecker-Adapter
 und einen Reiseführer zu Florida leihen. Nun perfekt vorbereitet, wurde ich bis vor
 die Haustür meiner nächsten Couchsurfing-Bleibe gefahren. Wenn reisen doch immer
@@ -67,9 +67,7 @@ zunächst in spanisch an – teilweise können sie gar kein englisch. Das hat mi
 doch etwas überrascht. Somit habe ich schon in den USA erfahren, was mich in Zentral-Amerika
 noch erwarten würde: Non-verbale Kommunikation.
 
-[Miami Beach]: /2013/05/09/i-am-going-to-miami/ "Video: I am going to Miami"
-
-{% include figure image_path="/assets/img/central-america/breakfast-miami.jpg" alt="Inklusiv-Frühstück: Karge Kost." caption="Inklusiv-Frühstück: Karge Kost." %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/breakfast-miami.jpg" alt="Inklusiv-Frühstück: Karge Kost." caption="Inklusiv-Frühstück: Karge Kost." %}{:.align-right}
 
 ### Miami Beach
 
@@ -93,12 +91,12 @@ hat. Dazu gibt es Bananen. Ahornsirup steht auch bereit.
 </small>
 
 
-<div class="clearfix" />
+<div class="cf" />
 
-{% include figure image_path="/assets/img/central-america/pretzels-miami.jpg" alt="Miami Starbucks: Jetzt neu!!" caption="Miami Starbucks: Jetzt neu!!" width="350px" %}{:.pull-left}
-{% include figure image_path="/assets/img/central-america/kraut-miami.jpg" alt="Sauerkraut – echt deutsch." caption="Sauerkraut – echt deutsch." width="350px" %}{:.pull-left}
+{% include figure image_path="/assets/img/central-america/pretzels-miami.jpg" alt="Miami Starbucks: Jetzt neu!!" caption="Miami Starbucks: Jetzt neu!!" width="350px" %}{:.align-left}
+{% include figure image_path="/assets/img/central-america/kraut-miami.jpg" alt="Sauerkraut – echt deutsch." caption="Sauerkraut – echt deutsch." width="350px" %}{:.align-left}
 
-<div class="clearfix" />
+<div class="cf" />
 
 
 Auf meinen städtischen Streifzügen habe ich probiert alle deutschen Einflüsse,
@@ -152,9 +150,9 @@ auch ausgestellt. So klein ist die Welt.
 
 {% include figure image_path="/images/central-america/route-1-key-west.jpg" alt="Anfang und Ende des US-Straßennetzes." caption="Anfang und Ende des US-Straßennetzes." %}
 
-{% include figure image_path="/assets/img/central-america/southernmost-point-key-west.jpg" alt="Südspitze der USA" caption="Südspitze der USA" %}{:.pull-left}
+{% include figure image_path="/assets/img/central-america/southernmost-point-key-west.jpg" alt="Südspitze der USA" caption="Südspitze der USA" %}{:.align-left}
 
-<div class="clearfix" />
+<div class="cf" />
 
 Ich habe mich in Key West auch einmal brav neben den Meilenstein gestellt, der
 den südlichsten Punkt der USA markieren soll, und auch selbst ein Photo gemacht.

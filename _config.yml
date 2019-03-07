@@ -53,7 +53,9 @@ author:
   twitter:             rriemann_eu
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2017 Robert Riemann. Content published under [Creative Commons BY-NC-SA 3.0 license](http://creativecommons.org/licenses/by-nc-sa/3.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic").
+copyright: |
+  © 2017 Robert Riemann. Content published under [Creative Commons BY-NC-SA 3.0 license](http://creativecommons.org/licenses/by-nc-sa/3.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic").
+  Emojis provided by [EmojiOne](https://www.emojione.com) under their [Free License 4.4](https://d1j8pt39hxlh3d.cloudfront.net/contracts/finalized-pdfs/LCGnjl1eVeD3V95FHpjWUVprvBPVQLKq.pdf).
 
 # Format of the permalinks
 permalink:             pretty
@@ -122,8 +124,8 @@ scholar:
 
 # Emoji Set Configuration
 # https://github.com/jekyll/jemoji
-# emoji:
-  # src: "/assets/img" -> /assets/img/emoji/unicode/1f44f.png
+emoji:
+  src: "/assets/img" # -> /assets/img/emoji/unicode/1f44f.png
 
 # Matomo Analytics
 matomo_analytics:
@@ -218,6 +220,7 @@ exclude:
   - package.json
   - package-lock.json
   - node_modules
+  - emojione-license.md
 
 include:
   - _headers

@@ -10,7 +10,7 @@ layout: post
 image: /assets/img/central-america/san-blas-palms.jpg
 ---
 
-{% include figure image_path="/assets/img/central-america/panama-city-skyline_thumb.jpg" alt="Blick aus dem Hostel auf Panama City." caption="Blick aus dem Hostel auf Panama City." %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/panama-city-skyline_thumb.jpg" alt="Blick aus dem Hostel auf Panama City." caption="Blick aus dem Hostel auf Panama City." %}{:.align-right}
 
 Am 13. Juni bin ich in Panama angekommen. Seit dem ist das Reisen wieder
 spannend. Allein die ersten drei Tage waren soviel aufregender als die knapp zwei
@@ -48,7 +48,7 @@ wegen etwas besorgt. Von dort auch soll ich ja nicht in die falsche Richtung lau
 Und auf die Mädchen soll ich aufpassen. Das klang bedeutungsschwer – ich habe mich
 nicht erkundigt, was sie mir damit sagen wollte.
 
-{% include figure image_path="/assets/img/central-america/panama-city-ruins_thumb.jpg" alt="Blick aus dem Hostel auf Panama City: <br/> andere Richtung." caption="Blick aus dem Hostel auf Panama City: <br/> andere Richtung." %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/panama-city-ruins_thumb.jpg" alt="Blick aus dem Hostel auf Panama City: <br/> andere Richtung." caption="Blick aus dem Hostel auf Panama City: <br/> andere Richtung." %}{:.align-right}
 
 Ich checke also im Hostel „Luna's Castle“ ein. Auf dem Tresen befindet sich eine
 Karte mit der näheren Umgebung. Vier Häuserblocks in unserer direkten Nachbarschaft
@@ -57,8 +57,6 @@ sind dort tatsächlich zur „Red Zone“ erklärt, die man besser nicht erkunde
 Ich buche zunächst für eine Nacht. 10 Minuten später erfahre ich von einer abgelegenen
 Karibischen Insel – das Paradies[^1] – ein Geheimtipp. Ich frage, ob ich mich
 anschließen kann und buche direkt für den nächsten Tag.
-
-<div class="clearfix" />
 
 ### San Blas
 
@@ -79,7 +77,7 @@ noch ganz gut durch. Das soll allerdings nicht heißen, dass es mich nicht stör
 als einziger kein spanisch zu sprechen. Ich werde kurzfristig etwas unternehmen
 müssen…
 
-{% include figure image_path="/assets/img/central-america/san-blas-stars.jpg" alt="Wetterbedingt kein Sternenhimmel, <br/> dafür gibt es ein Sternenmeer." caption="Wetterbedingt kein Sternenhimmel, <br/> dafür gibt es ein Sternenmeer." %}{:.pull-left}
+{% include figure image_path="/assets/img/central-america/san-blas-stars.jpg" alt="Wetterbedingt kein Sternenhimmel, dafür gibt es ein Sternenmeer." caption="Wetterbedingt kein Sternenhimmel, dafür gibt es ein Sternenmeer." %}{:.align-left}
 
 Zum Mittag gibt es Reis mit Fisch. Im Anschluss schwimmen wir zu den zwei kleineren,
 benachbarten Inseln. Die Kleinere ist tatsächlich wohnzimmergroß und beherbergt
@@ -108,18 +106,14 @@ Für 25$ Eintritt und weitere 10$ versteckte Steuern lässt man uns auf das Gel�
 Neben dem VIP-Bereich, eine Tribüne vor der Bühne, gibt es auch noch einen
 Premium-Bereich, der das Economy-Publikum leider gänzlich von der Bühne abtrennt.
 Das war ziemlich schade. Dafür war das erste Konzert von [Groundation] der Hammer.
-Wer gerade nicht in Deutschland ist, kann sich die Gruppe auf [Grooveshark] gerne
-einmal zu Gemüte führen. Auf Youtube gibt es auch einige Aufnahmen.
+Man kann sich die Gruppe auf [Spotify] oder [Youtube] gerne
+einmal zu Gemüte führen.
 
-<div class="clearfix" />
-
-{% include video id="cUv4f3Bw73M" provider="youtube" %}
-
-*Groundation – Babylon Rule Dem. Auf [Youtube](//youtu.be/cUv4f3Bw73M) sehen.*{: style="font-size: smaller;"}
+{% include audio id="track/3wNhQD8LSqMJtK1XCVgyKK" provider="spotify" %}
 
 ### Panamakanal
 
-{% include figure image_path="/assets/img/central-america/lock-panama_thumb.jpg" alt="Hamburger Expertise am Werk. <br/> Kurz vor der Miraflores-Schleuse." caption="Hamburger Expertise am Werk. <br/> Kurz vor der Miraflores-Schleuse." %}{:.pull-right}
+{% include figure image_path="/assets/img/central-america/lock-panama_thumb.jpg" alt="Hamburger Expertise am Werk. <br/> Kurz vor der Miraflores-Schleuse." caption="Hamburger Expertise am Werk. <br/> Kurz vor der Miraflores-Schleuse." %}{:.align-center}
 
 Am nächsten Tag besichtigen wir den [Panamakanal]. Die Schiffe passen tatsächlich
 nur sehr knapp durch die Schleusen. Im Besucherzentrum der Schleuse „Miraflores“
@@ -134,8 +128,6 @@ abgeben (das sichert Arbeitsplätze :wink: ).
 
 {% include figure image_path="/assets/img/central-america/panama-canal.jpg" alt="Viel Platz ist zu beiden Seiten der Fähre nicht mehr. Viele Schiffe werden so konstruiert, dass sie noch durch den Kanal passen." caption="Viel Platz ist zu beiden Seiten der Fähre nicht mehr. Viele Schiffe werden so konstruiert, dass sie noch durch den Kanal passen." width="$3" %}
 
-
-
 ### Tango in Panama City
 
 Für den Abend habe ich mir eine Tango-Tanzstunde mit anschließendem Tanzen ganz
@@ -146,11 +138,11 @@ mit Tango begonnen haben muss.
 Nachdem ich vom Tango in Miami etwas enttäuscht war, da so wenig Leute dort waren,
 wurde das nun noch einmal getoppt. Nichtsdestotrotz habe ich eine wunderbare
 Privat-Stunde genossen und vielleicht auch meine Begleitung langfristig für Tango
-gewinnen können. `:)`
+gewinnen können. :smile:
 
 ### Boquete
 
-![](/images/central-america/panama-bus.jpg)
+{% include figure image_path="/assets/img/central-america/panama-bus.jpg" alt="Bus in Panama." caption="Bus in Panama" %}{:.align-right}
 
 Mit dem Nachtbus bin ich dann via Davíd nach Boquete weiter gereist. Panama setzt
 neben modernen Mercedes-Benz-Reisebussen (klimatisiert auf unter 15°C – *bibber*)
@@ -207,7 +199,8 @@ damit sagen möchte. All’ das passt sehr gut.
 [Festival]: http://www.lastfm.de/event/3595806+Organica+Roots+Festival
 [Groundation]: http://en.wikipedia.org/wiki/Groundation
 [Kindle Paperwhite]: http://de.wikipedia.org/wiki/Amazon_Kindle#Kindle_Paperwhite
-[Grooveshark]: http://grooveshark.com/#!/artist/Groundation/173977
+[Youtube]: https://youtu.be/cUv4f3Bw73M "Groundation auf Youtube"
+[Spotify]: https://open.spotify.com/album/7G45S3yiopYRmqpmrpO7tX "Album Hebron Gate von Groundation auf Spotify"
 [Janosch]: http://de.wikipedia.org/wiki/Janosch
 [Geocaching]: http://de.wikipedia.org/wiki/Geocaching
 [^1]: „Paradies“ darf man hier nicht überbewerten. Wer schon einmal in der Karibik gereist ist, hat ja das „Paradies“ bereits kennengelernt und weiß dann schon, womit er zu rechnen hat.

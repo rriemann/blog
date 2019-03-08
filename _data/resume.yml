@@ -111,10 +111,15 @@ work:
 
 volunteer:
   - organization: "Bringing Europeans Together Association"
+    position: "Elected Trustee"
+    website: "https://www.beta-europe.org/"
+    startDate: "2018-10-01"
+    # endDate: "2018-09-30"
+  - organization: "Bringing Europeans Together Association"
     position: "Chief Technology Officer"
-    website: "https://beta-europe.org/"
+    website: "https://www.beta-europe.org/"
     startDate: "2015-07-01"
-    # endDate: "2013-01-01"
+    endDate: "2018-09-30"
     summary: "Supporting EU politics simulations in many European cities."
     highlights:
       - Developing customised website CMS for network partners in Italy, France, Slovakia, Portugal and Poland.

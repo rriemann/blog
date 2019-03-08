@@ -20,9 +20,9 @@ menu: true
 
 > *humanist, moralist, physicist, and cosmopolitan from Berlin*
 
-During my studies, I became knowledgeable and passionate about open source and free software, cryptography, data protection, big data analysis, modern web development (Fullstack), and peer-to-peer technology such as BitTorrent or Bitcoin.
+During my studies, I became knowledgeable and passionate about open source and free software, cryptography, data protection, big data analysis, modern web development (Fullstack), and peer-to-peer technology such as BitTorrent or Blockchain/Bitcoin.
 
-After my studies, I had the chance to work on EU policies about data protection at the *European Data Protection Supervisor* (EDPS). Check out [my resumé](/resume.md) for more information.
+After my PhD studies, I joined the IT Policy team of the *European Data Protection Supervisor* (EDPS). Check out [my résumé](../resume.md) for more information.
 
 In my spare time, I like to go dancing Swing, to sing in a choir and play guitar. I spend a considerable amount of time to learn more about free software and improve free software. I am a fan of Couchsurfing and of
 a united Europe.

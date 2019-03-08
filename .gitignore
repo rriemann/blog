@@ -7,6 +7,8 @@
 # Logs
 logs
 *.log
+/.netlify
+/.jekyll-metadata
 
 # Runtime data
 pids

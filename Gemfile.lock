@@ -71,7 +71,7 @@ GEM
       jekyll (~> 3.0)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
-    jekyll-flickr (0.1.1)
+    jekyll-flickr (0.1.2)
       flickraw (~> 0.9.9)
       flickraw-cached (>= 20120701)
       jekyll-cache (~> 1.2)
@@ -158,7 +158,7 @@ DEPENDENCIES
   jekyll-avatar
   jekyll-default-layout
   jekyll-feed
-  jekyll-flickr (~> 0.1.1)
+  jekyll-flickr (~> 0.1.2)
   jekyll-gist
   jekyll-optional-front-matter
   jekyll-paginate
@@ -174,4 +174,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.16.2
+   1.16.6

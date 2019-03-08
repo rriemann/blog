@@ -33,7 +33,7 @@ group :jekyll_plugins do
   gem "jemoji", "0.9.0"
   gem "jekyll-scholar"
   # Added at 2018-04-08 20:32:43 +0200 by rriemann:
-  gem "jekyll-flickr", "~> 0.1.1"
+  gem "jekyll-flickr", "~> 0.1.2"
   # gem 'jekyll-flickr', :git => 'https://github.com/rriemann/jekyll-flickr'
 end
 

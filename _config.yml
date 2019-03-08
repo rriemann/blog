@@ -188,7 +188,7 @@ hydejack:
   no_theme_color:      false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi:             true
+  use_lsi:             false
 
 
 # Collections

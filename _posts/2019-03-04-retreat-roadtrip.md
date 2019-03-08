@@ -75,7 +75,7 @@ I continue my journey to the French Alps and leave again the highway to the city
 
 {% include figure image_path="/assets/img/einstein-museum-living-room.jpg" caption="The living room of Einstein in Bern." alt="The living room of Einstein in Bern." %}
 
-{% include figure image_path="/assets/img/einstein-museum-guest-book.jpg" caption="The guest book of the Einstein Museum Bern full. <br/> It is full of personal data." alt="The guest book of the Einstein Museum Bern. It is full of personal data." %}{:.align-right}
+{% include figure image_path="/assets/img/einstein-museum-guest-book.jpg" caption="The guest book of the Einstein Museum Bern. <br/> It is full of personal data." alt="The guest book of the Einstein Museum Bern. It is full of personal data." %}{:.align-right}
 
 While strawling to the old city, I discover an Einstein museum installed in his former flat. In the museum I learn that Einstein’ first and only daughter has been lost. I wonder if this daughter is still alive and knows her famous parents. On the way out, I notice the guest book of the museum, in which people—many apparently greedy for significance after the recent impressions from Einstein’s live–let other people know of their visit. For many, this is just a guest book. For me, it is a filing system containing personal data subject to data protection laws. As I need to arrive in the Alps before sunset, I decide to not inform the only present staff member of this recent discovery and just leave.
 

@@ -8,6 +8,9 @@
 /files/ https://people.physik.hu-berlin.de/~rriemann/ 302!
 /files/* https://people.physik.hu-berlin.de/~rriemann/:splat 302
 
+# Proxying piwik
+/piwik/* https://rriemann.rigel.uberspace.de/piwik/:splat 200
+
 
 # Travels (301 redirect)
 /2015/07/08/stories-from-berlin-at-the-beach-bar-in-berlin-mitte/ /travels/2015/07/08/stories-from-berlin-at-the-beach-bar-in-berlin-mitte/

@@ -21,8 +21,10 @@ My research papers are also listed under [orcid.org/0000-0002-1727-9015](https:/
 
 ## Talks
 
+2019-03-21, Geneva, *[International Committee of the Red Cross](https://www.icrc.org)*, Data Protection Office
+:  Introduction to Web Service Behavioural Tracking and their Assessment
 
-2018-02-20, Brussels, *European Data Protection Supervisor*, All-Staff Meeting
+2018-02-20, Brussels, *[European Data Protection Supervisor](https://edps.europa.eu)*, All-Staff Meeting
 :  Smart Working: Clear and Smart Technical Writing
 
   [Slides](https://slides.com/rriemann/cast-writing-edps)

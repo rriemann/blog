@@ -20,10 +20,4 @@ X-Content-Type-Options: nosniff
 Referrer-Policy: same-origin
 X-XSS-Protection: 1; mode=block
 # documentation: https://content-security-policy.com/
-  Content-Security-Policy: default-src     'self';
-  Content-Security-Policy: frame-ancestors 'none';
-  Content-Security-Policy: frame-src       'self' *.tiles.mapbox.com disqus.com slides.com www.youtube.com www.youtube-nocookie.com;
-  Content-Security-Policy: font-src        'self' fonts.gstatic.com;
-  Content-Security-Policy: img-src         'self' *.staticflickr.com upload.wikimedia.org;
-  Content-Security-Policy: style-src-elem  'self' fonts.googleapis.com *.disquscdn.com;
-  Content-Security-Policy: script-src-elem 'self' worthmentioning.disqus.com disqus.com *.disquscdn.com cdn.jsdelivr
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src 'self' *.tiles.mapbox.com disqus.com slides.com www.youtube.com www.youtube-nocookie.com; font-src 'self' fonts.gstatic.com; img-src 'self' *.staticflickr.com upload.wikimedia.org; style-src-elem 'self' fonts.googleapis.com *.disquscdn.com; script-src-elem 'self' worthmentioning.disqus.com disqus.com *.disquscdn.com cdn.jsdelivr

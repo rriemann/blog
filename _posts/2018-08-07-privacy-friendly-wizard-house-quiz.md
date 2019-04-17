@@ -20,7 +20,7 @@ You also do not want to read the lengthy privacy policy <https://www.pottermore.
 
 <!--more-->
 
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="/assets/js/vue.min.js"></script>
 
 ## Find your Wizard House
 

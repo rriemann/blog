@@ -25,7 +25,7 @@ or for considering a clearer warning of unlocking the screen. I vote for:
 :wink:
 
 
-[img]: <%= site_url %>/images/messed-up-kde-desktop.jpg "It seems to be hard for new users to control all features of the Plasma Desktop"
+[img]: /assets/img/messed-up-kde-desktop.jpg "It seems to be hard for new users to control all features of the Plasma Desktop"
 [opensuse]: http://www.opensuse.org
 [^1]: Did you recognize these empty plasma panels on each edge of the screen
       which prevents all application to get maximized properly?

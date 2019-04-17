@@ -84,9 +84,9 @@ gleich auf zu regnen und die Sonne trat zum Vorschein. So ist Basse-Terre.
 
 <div class="thumbnail" markdown="0" style="width: 690px">
 <video controls="controls">
-  <source src="/images/central-america/waterfall-2.webm" type="video/webm"/>
+  <source src="/assets/img/central-america/waterfall-2.webm" type="video/webm"/>
   Installiere Firefox oder einen anderen webm-kompatiblen Browser um das Video
-  direkt zu sehen. <a href="/images/central-america/waterfall-2.webm">Hier</a>
+  direkt zu sehen. <a href="/assets/img/central-america/waterfall-2.webm">Hier</a>
   herunterladen.
 </video>
 <div class="caption">Es regnet in Strömen. Ich probiere meine „Technik“ trocken zu halten.</div>

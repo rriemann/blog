@@ -38,8 +38,8 @@ open the pastebin page yourself!
 I like it. Just want to share this with you in the case you was locking for
 something similiar. `:)`
 
-[menu]: <%= site_url %>/images/klipper_pastie_menu.png
-[settings]: <%= site_url %>/images/klipper_pastie_settings.png
+[menu]: /assets/img/klipper_pastie_menu.png
+[settings]: /assets/img/klipper_pastie_settings.png
 
 
 ## pastie.rb

@@ -182,4 +182,4 @@ a.exec
 
 
 [kde]: http://kde.org/
-[img]: <%= site_url %>/images/konsolepart_ruby_demo.png "GUI integrating KonsolePart"
+[img]: /assets/img/konsolepart_ruby_demo.png "GUI integrating KonsolePart"

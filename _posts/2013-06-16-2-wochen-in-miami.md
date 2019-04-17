@@ -107,13 +107,13 @@ im Dirndl lässt sich in der Einkaufsmeile Miami Beachs auch finden.
 
 <div class="clearfix" />
 
-{% include figure image_path="/images/central-america/tcom-miami.jpg" alt="Edel-Laden in der Innenstadt: T-Mobile." caption="Edel-Laden in der Innenstadt: T-Mobile." width="400px" %}
+{% include figure image_path="/assets/img/central-america/tcom-miami.jpg" alt="Edel-Laden in der Innenstadt: T-Mobile." caption="Edel-Laden in der Innenstadt: T-Mobile." width="400px" %}
 
 Ein besonderes Highlight war hier „The Wonder Drug“ für nur 2$, die hier im
 Supermarkt verfauft werden wie sonst anderswo Kaugummis. Ich konnte mich gerade
 noch zusammenreißen und habe mich nicht umfangreich eingedeckt. :wink:
 
-{% include figure image_path="/images/central-america/wonder-drug-miami.jpg" alt="Wonder Drug aus dem Hause Bayer: Nur 2$." caption="Wonder Drug aus dem Hause Bayer: Nur 2$." %}
+{% include figure image_path="/assets/img/central-america/wonder-drug-miami.jpg" alt="Wonder Drug aus dem Hause Bayer: Nur 2$." caption="Wonder Drug aus dem Hause Bayer: Nur 2$." %}
 
 In den Hostels trifft man vor allem Touristen, die sich Nachmittags an den Strand
 legen, abends in den teuren Scene-Clubs abfeiern und morgens verschlafen. Klassische
@@ -148,7 +148,7 @@ In Key West habe ich das Hemmingway-Haus besichtigt und die polydaktylen Hemming
 mit 6 Zehen an den Pfoten getroffen. Ein Geschenk Marlene Dietrichs wird dort
 auch ausgestellt. So klein ist die Welt.
 
-{% include figure image_path="/images/central-america/route-1-key-west.jpg" alt="Anfang und Ende des US-Straßennetzes." caption="Anfang und Ende des US-Straßennetzes." %}
+{% include figure image_path="/assets/img/central-america/route-1-key-west.jpg" alt="Anfang und Ende des US-Straßennetzes." caption="Anfang und Ende des US-Straßennetzes." %}
 
 {% include figure image_path="/assets/img/central-america/southernmost-point-key-west.jpg" alt="Südspitze der USA" caption="Südspitze der USA" %}{:.align-left}
 

@@ -7,7 +7,7 @@ comments: true
 lang: en
 ---
 
-![KMainWindow](<%= site_url %>/images/kmainwindow.png "KMainWindow"){: .pull-right}
+![KMainWindow](/assets/img/kmainwindow.png "KMainWindow"){: .pull-right}
 Starting using the Qt-Toolkit (or the extension with KDE classes) is a little difficult. Especially if you never used really the toolkit with C++. So you have to learn translating the C++ API reference into ruby.
 
 Some usefull links:

@@ -10,8 +10,8 @@ layout: post
 ---
 
 <div class="thumbnail pull-right" markdown="0" style="width: 400px;">
-  <a href="/images/central-america/blue-sky-palm.jpg">
-    <img src="/images/central-america/blue-sky-palm.jpg" style="width:100%" />
+  <a href="/assets/img/central-america/blue-sky-palm.jpg">
+    <img src="/assets/img/central-america/blue-sky-palm.jpg" style="width:100%" />
   </a>
   <div class="caption">Die Sonne steht hier senkrecht über mir.</div>
 </div>
@@ -51,8 +51,8 @@ in der Stadt Basse-Terre kostet 1,75€; der Cheeseburger 2,60€. Das Kilo Bana
 im Supermarkt Carrefour von der Plantage nebenan kostet hier 1,30€.
 
 <div class="thumbnail pull-right" markdown="0" style="width:100%">
-  <a href="/images/central-america/beach-sainte-anne_thumb.jpg">
-    <img src="/images/central-america/beach-sainte-anne_thumb.jpg" style="width:100%" />
+  <a href="/assets/img/central-america/beach-sainte-anne_thumb.jpg">
+    <img src="/assets/img/central-america/beach-sainte-anne_thumb.jpg" style="width:100%" />
   </a>
   <div class="caption">Strand in Sainte-Anne.</div>
 </div>

@@ -51,7 +51,7 @@ Cette temps ne dura pas très longtemps. À la fin de son Erasmus, nous n’avon
 
 {% flickr 14810712952 "Herräng Dance Camp 2014, Suède" %}{:.align-left style="max-width:300px; width: 100%"}
 
-En 2013 et 2014, j’ai beaucoup voyagé. Souvent, j’ai assisté à des cours de danse. C’est devenu une habitude :slight_smile:. J’ai dansé du Tango à Baie-Mahault en Guadeloupe. Sur la même île, j’ai essayé aussi quelques danse folklorique sur les soirées après des répétitions chorale. Mon premier essaie de Salsa suivait. J’en ai fait plusieurs pendant les voyages dans les mois suivantes en Amérique Centrale.
+En 2013 et 2014, j’ai beaucoup voyagé. Souvent, j’ai assisté à des cours de danse. C’est devenu une habitude :slightly_smiling_face:. J’ai dansé du Tango à Baie-Mahault en Guadeloupe. Sur la même île, j’ai essayé aussi quelques danse folklorique sur les soirées après des répétitions chorale. Mon premier essaie de Salsa suivait. J’en ai fait plusieurs pendant les voyages dans les mois suivantes en Amérique Centrale.
 
 Avec un peu de retard, mes amis Berlinois ont aussi fini par découvrir la danse. Dommage que je n’habite plus là-bas.
 

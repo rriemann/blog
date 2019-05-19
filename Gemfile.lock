@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/rriemann/jekyll-maps
+  revision: f924d5ad345247d5330e011404a4f7f1d501a50f
+  branch: mapbox
+  specs:
+    jekyll-maps (2.3.1)
+      jekyll (~> 3.0)
+
+GIT
   remote: https://gitlab.com/rriemann/hydejack-pro.git
   revision: d9dcfc73a6bdad8de278751069fdfc80e386d23e
   branch: gem-pro
@@ -160,6 +168,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-flickr (~> 0.1.2)
   jekyll-gist
+  jekyll-maps!
   jekyll-optional-front-matter
   jekyll-paginate
   jekyll-redirect-from

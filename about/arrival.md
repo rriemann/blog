@@ -14,7 +14,12 @@ image: https://farm6.staticflickr.com/5594/15170142356_fe5cbecdf3_z.jpg
 
 I live close[^privacy] to [Place Flagey](https://en.wikipedia.org/wiki/Place_Flagey) around coordinate [geo:50.8275,4.3770?z=15](geo:50.8275,4.3770?z=15&q=50.8275,4.3770) (try link on your phone).
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10081.020364982125!2d4.371260755055555!3d50.826438757803594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ5JzM5LjEiTiA0wrAyMiczNy4yIkU!5e0!3m2!1sen!2sbe!4v1526511673979" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+{% mapbox
+   width="100%"
+   zoom="15"
+   latitude="50.8275"
+   longitude="4.3770"
+   show_popup="false" %}
 
 ## Arrive by Aeroplane :airplane:
 

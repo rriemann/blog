@@ -2,6 +2,7 @@
 layout: "post"
 title: "Node Script to Display Cookies"
 date: "2019-01-30 23:04"
+modified: "2019-05-24 12:34"
 comments: true
 tags:
   - node
@@ -33,8 +34,22 @@ const url = process.argv[2];
   try {
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
-    const cookies = await page._client.send('Network.getAllCookies');
-    console.log(cookies);
+
+    var cookies = await page._client.send('Network.getAllCookies');
+    cookies = cookies.cookies.map( cookie => {
+      cookie.expiresUTC = new Date(cookie.expires * 1000);
+
+      return cookie;
+    });
+
+    var persistantCookies = cookies.filter(c => {
+      return !c.session;
+    });
+
+    console.log({
+      persistantCookies: persistantCookies,
+      persistantCookiesCount: persistantCookies.length,
+    });
   } catch(error) {
     console.error(error);
   } finally {

@@ -182,6 +182,8 @@ languages:
     fluency: "Full professional proficiency"
   - language: "French"
     fluency: "Professional working proficiency"
+  - language: Italian
+    fluency: Elementary proficiency
 
 interests:
   - name: Dancing

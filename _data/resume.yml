@@ -17,31 +17,31 @@ basics:
   location:
     # address: "2712 Broadway St"
     # postalCode: "1060"
-    city: "Brussels"
-    countryCode: "BE"
-    region: "Ixelles"
+    city: Ixelles
+    countryCode: BE
+    region: Brussels
   profiles:
-    - network: "Twitter"
-      username: "rriemann_eu"
-      url: "http://twitter.com/rriemann_eu/"
-    - network: "LinkedIn"
-      username: "Robert Riemann"
-      url: "https://www.linkedin.com/in/rriemann/"
+    - network: Twitter
+      username: rriemann_eu
+      url: http://twitter.com/rriemann_eu/
+    - network: LinkedIn
+      username: Robert Riemann
+      url: https://www.linkedin.com/in/rriemann/
     - network: Github
       username: rriemann
-      url: "https://github.com/rriemann"
+      url: https://github.com/rriemann
 work:
   - company: "European Data Protection Supervisor"
     position: "Technology and Security Officer"
     website: "http://edps.europa.eu/"
     startDate: "2018-03-15"
     # endDate: "2018-02-28"
-    summary: >
-      Supporting the IT Policy team.
+    # summary: >
+    #    Supporting the IT Policy unit.
     highlights:
       - Monitoring technology
-      - Drafting policy
-      - Consulting technology (in-house)
+      - Drafting IT policy
+      - Inspecting/auditing IT projects
       - Promoting innovation (in-house)
 
   - company: "European Data Protection Supervisor"
@@ -155,6 +155,11 @@ education:
     gpa: "1.7"
 
 awards:
+  - title: "Global Privacy and Data Protection Award (Category: Innovation)"
+    date: "2019-10-22"
+    awarder: "International Conference of Data Protection & Privacy Commissioners (ICDPPC, precessor of Global Privacy Assembly)"
+    summary:
+
   - title: "Runner-Up Best Student Paper"
     date: "2017-05-31"
     awarder: 32nd International Conference on ICT Systems Security and Privacy Protection (IFIP SEC 2017)
@@ -171,12 +176,6 @@ skills:
       - "HTML"
       - "CSS"
       - "Javascript"
-  - name: "Compression"
-    level: "Master"
-    keywords:
-      - "Mpeg"
-      - "MP4"
-      - "GIF"
 
 languages:
   - language: "German"

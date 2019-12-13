@@ -33,7 +33,7 @@ layout: base
     <h1 class="page-title" property="name">{{ entry.title }}</h1>
 
     <p class="post-date heading">
-      <a href="{{ '/output/#papers' | relative_url }}">Papers</a>
+      <a href="{{ '/output/' | relative_url }}">Output</a>
       {{ separator }}
       {% comment %}
       {% assign output_format = site.data.strings.date_formats.output | default:"%Y-%m-%d" %}
@@ -62,12 +62,17 @@ layout: base
     </p>
   </header>
 
+  {% if entry.abstract %}
   <p class="message">
     <strong>Abstract:</strong>
     {{entry.abstract}}
   </p>
+  {% endif %}
 
   {{ entry.annote | markdownify }}
+
+  <h3>Citation (Chicago Manual of Style 17th edition)</h3>
+  {% reference entry.key %}
 
   <h3>BibTeX</h3>
   <pre>{{ entry.bibtex }}</pre>

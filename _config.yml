@@ -104,14 +104,14 @@ scholar:
   # style: oscola-no-ibid # i.e. chicago-author-date, ieee, ieee-with-url, see `ruby -r "csl/styles" -e "puts CSL::Style.ls"`
   # style: '_plugins/computing-surveys.csl'
   # style: oscola-no-ibid
-  style: _plugins/taylor-and-francis-chicago-note.csl
+  style: _plugins/chicago-author-date-with-eventtitle.csl
   # bibtex_filters:
   #   - latex
   #   - markdown
-  sort_by: year,month
+  sort_by: date
   order: descending,descending
   # style: _plugins/ieee.csl
-  bibliography: papers.bib
+  bibliography: "*.bib"
   # see example https://github.com/ashinkarov/ashinkarov.github.com
   details_dir:    output
   details_layout: output-details.html

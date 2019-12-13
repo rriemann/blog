@@ -1,5 +1,18 @@
 %% Papers
 
+@unpublished{rriemann2019,
+	author = {Robert Riemann},
+	title = {Peer-to-Peer Protocols and Data Protection in the European Union},
+	date = {2019-10-24},
+	year = 2019,
+	month = oct,
+	location = {Amsterdam},
+	url = {https://www.ivir.nl/plsceurope2019/},
+	note = {Discussed at 4th European Privacy Law Scholars Conference (PLSC Europe)},
+	howpublished = {Discussed at 4th European Privacy Law Scholars Conference (PLSC Europe)},
+	abstract = {Some Peer-to-Peer applications like Bitcoin, BitTorrent and others avoid authorities that introduce a single point of failure. Instead, the application users are equally powerful peers that interact directly with each other. After a short introduction of selected applications with focus on their ephemeral personal data processing, their benefits for the protection of users’ personal data and their conflicts with European data protection law are discussed.}
+}
+
 @incollection{schiffner2018,
 	doi = {10.1007/978-3-030-02547-2_2},
 	url = {https://doi.org/10.1007%2F978-3-030-02547-2_2},
@@ -25,9 +38,7 @@
 	date = {2018-04-03},
 	month = mar,
 	url = {https://www.zukunftsdialog.eu/2018/03/30/risiken-fuer-europaeische-aussenpolitik-workshop-report-2017/},
-	abstract = {What risks might the European Union be facing in 2027? Shaken by growing internal agitation as well as wider geopolitical developments, the European Union (EU) needs to redefine its role on the world scene while strengthening its core project. Integration has taken place on all levels and risks are therefore increasingly a concern to the Union as a whole. The Lisbon Treaty established in 2009 several instruments to strengthen and coordinate its external action. This policy, however, faces serious internal and external challenges that question its capacity to define and defend European interests in the long run. European Union policy-makers therefore need to analyse risks and take precautionary measures.
-
-In this report, a group of 30 young German, French and Polish professionals from diverse academic backgrounds and career fields present five scenarios on major risks threatening European foreign policy interests.}
+	abstract = {What risks might the European Union be facing in 2027? Shaken by growing internal agitation as well as wider geopolitical developments, the European Union (EU) needs to redefine its role on the world scene while strengthening its core project. Integration has taken place on all levels and risks are therefore increasingly a concern to the Union as a whole. The Lisbon Treaty established in 2009 several instruments to strengthen and coordinate its external action. This policy, however, faces serious internal and external challenges that question its capacity to define and defend European interests in the long run. European Union policy-makers therefore need to analyse risks and take precautionary measures. In this report, a group of 30 young German, French and Polish professionals from diverse academic backgrounds and career fields present five scenarios on major risks threatening European foreign policy interests.}
 }
 
 @phdthesis{riemann2017thesis,
@@ -35,14 +46,13 @@ In this report, a group of 30 young German, French and Polish professionals from
 	author = {Riemann, Robert},
 	url = {https://hal.inria.fr/tel-01675509},
 	school = {{Ecole normale sup{\'e}rieure de Lyon}},
-	year = {2017},
-	month = {dec},
+	year = 2017,
+	month = dec,
+	date = {2017-12-18},
 	keywords = { distributed systems ; Aggregation of confidential data ;  distributed aggregation ;  Kademlia ;  online voting ;  online lottery ;  Vote {\'e}lectronique ;   Kademlia ;  Agr{\'e}gation distribu{\'e}e ; Aggregation confidentielle ;  syst{\`e}mes distribu{\'e}s ;  vote en ligne},
 	pdf = {https://hal.inria.fr/tel-01675509/file/Thesis.pdf},
 	hal_id = {tel-01675509},
-	abstract = {
-	Aggregation of values that need to be kept confidential while guaranteeing the robustness of the process and the correctness of the result is necessary for an increasing number of applications. Various kinds of surveys, such as medical ones, opinion polls, referendums, elections, as well as new services of the Internet of Things, such as home automation, require the aggregation of confidential data. In general, the confidentiality is ensured on the basis of trusted third parties or promises of cryptography, whose capacities cannot be assessed without expert knowledge. The ambition of this thesis is to reduce the need for trust in both authorities and technology and explore methods for large-scale data aggregations, that ensure a high degree of confidentiality and rely neither on trusted third parties nor solely on cryptography. Inspired by BitTorrent and Bitcoin, P2P protocols are considered. The first contribution of this thesis is the extension of the distributed aggregation protocol BitBallot with the objective to cover aggregations in P2P networks comprising adversarial peers with fail-stop or Byzantine behaviour. The introduced changes allow eventually to maintain an accurate result in presence of an adversarial minority. The encountered scalability limitations lead to the second contribution with the objective to support large-scale aggregations. Inspired by both BitBallot and BitTorrent, a novel distributed protocol called ADVOKAT is proposed. In both protocols, peers are assigned to leaf nodes of a tree overlay network which determines the computation of intermediate aggregates and restricts the exchange of data. The partition of data and computation among a network of equipotent peers limits the potential for data breaches and reduces the need for trust in authorities. The protocols provide a middleware layer whose flexibility is demonstrated by voting and lottery applications.
-	},
+	abstract = {Aggregation of values that need to be kept confidential while guaranteeing the robustness of the process and the correctness of the result is necessary for an increasing number of applications. Various kinds of surveys, such as medical ones, opinion polls, referendums, elections, as well as new services of the Internet of Things, such as home automation, require the aggregation of confidential data. In general, the confidentiality is ensured on the basis of trusted third parties or promises of cryptography, whose capacities cannot be assessed without expert knowledge. The ambition of this thesis is to reduce the need for trust in both authorities and technology and explore methods for large-scale data aggregations, that ensure a high degree of confidentiality and rely neither on trusted third parties nor solely on cryptography. Inspired by BitTorrent and Bitcoin, P2P protocols are considered. The first contribution of this thesis is the extension of the distributed aggregation protocol BitBallot with the objective to cover aggregations in P2P networks comprising adversarial peers with fail-stop or Byzantine behaviour. The introduced changes allow eventually to maintain an accurate result in presence of an adversarial minority. The encountered scalability limitations lead to the second contribution with the objective to support large-scale aggregations. Inspired by both BitBallot and BitTorrent, a novel distributed protocol called ADVOKAT is proposed. In both protocols, peers are assigned to leaf nodes of a tree overlay network which determines the computation of intermediate aggregates and restricts the exchange of data. The partition of data and computation among a network of equipotent peers limits the potential for data breaches and reduces the need for trust in authorities. The protocols provide a middleware layer whose flexibility is demonstrated by voting and lottery applications.},
 	x-slides = {http://people.physik.hu-berlin.de/%7Erriemann/publications/presentations/phd-defense-slides.pdf},
 }
 
@@ -53,10 +63,25 @@ In this report, a group of 30 young German, French and Polish professionals from
 	school = {{Humboldt University of Berlin}},
 	year = {2013},
 	month = feb,
+	date = {2013-02-01},
 	keywords = {quantum cryptography, quantum key distribution, privacy amplification, experiment},
 	pdf = {https://riemann.cc/files/publications/rriemann-master-thesis.pdf},
 	x-slides = {https://riemann.cc/files/publications/presentations/masters-defense-slides-de.pdf},
-	type={Master’s thesis}
+	type = {Master’s thesis}
+}
+
+@thesis{riemann2010thesis,
+	title = {Diskriminierung von Top-Ereignissen ausdem W+Jets-Untergrund mittels Shape-Variablen bei ATLAS},
+	language = {German},
+	date = {2010-09-03},
+	month = sep,
+	year = 2010,
+	author = {Robert Riemann},
+	type = {Bachelor’s thesis},
+	school = {{Humboldt University of Berlin}},
+	keywords = {ATLAS, top quark, particle physics},
+	x-slides = {https://people.physik.hu-berlin.de/~rriemann/publications/presentations/Bachelor-Verteidigung.pdf},
+	x-download = {https://people.physik.hu-berlin.de/~rriemann/publications/rriemann-bachelor-thesis.lowres.pdf}
 }
 
 @inproceedings{riemann2017rome,
@@ -76,7 +101,8 @@ In this report, a group of 30 young German, French and Polish professionals from
 	title = {{Secure and trustable distributed aggregation based on Kademlia}},
 	url = {https://hal.inria.fr/hal-01529326},
 	volume = {502},
-	year = {2017},
+	year = 2017,
+	date = {2017-05-04},
 	x-slides = {https://slides.com/rriemann/p2p-evoting}
 }
 
@@ -94,7 +120,8 @@ In this report, a group of 30 young German, French and Polish professionals from
 	title = {{Distributed Protocols at the Rescue for Trustworthy Online Voting}},
 	url = {https://hal.inria.fr/hal-01501424},
 	x-slides = {https://people.physik.hu-berlin.de/%7Erriemann/publications/presentations/icissp-2017-trust-online-voting.pdf},
-	year = {2017}
+	year = 2017,
+	date = {2017-02-19}
 }
 
 @inproceedings{riemann2017lottery,
@@ -104,15 +131,16 @@ In this report, a group of 30 young German, French and Polish professionals from
 	doi = {10.1007/978-3-319-59665-5_3},
 	file = {:home/rriemann/go/PhD/Literature/Distributed Random Process for a large-scale Peer-to-Peer Lottery.pdf:pdf},
 	isbn = {978-3-319-59664-8},
-	month = jun,
+	month = may,
 	pages = {34--48},
 	publisher = {Springer},
 	series = {DAIS'17},
 	title = {{Distributed Random Process for a large-scale Peer-to-Peer Lottery}},
 	url = {https://hal.inria.fr/hal-01583824},
 	year = {2017},
+	date = {2017-05-24},
 	abstract = {Most online lotteries today fail to ensure the verifiability of the random process and rely on a trusted third party. This issue has received little attention since the emergence of distributed protocols like Bitcoin that demonstrated the potential of protocols with no trusted third party. We argue that the security requirements of online lotteries are similar to those of online voting, and propose a novel distributed online lottery protocol that applies techniques developed for voting applications to an existing lottery protocol. As a result, the protocol is scalable, provides efficient verification of the random process and does not rely on a trusted third party nor on assumptions of bounded computational resources. An early prototype confirms the feasibility of our approach.},
-	x-slides={https://slides.com/rriemann/p2p-lottery}
+	x-slides = {https://slides.com/rriemann/p2p-lottery}
 }
 
 @article{leifgen2014,
@@ -124,7 +152,8 @@ In this report, a group of 30 young German, French and Polish professionals from
   pages={023021},
   doi={10.1088/1367-2630/16/2/023021},
   url={http://iopscience.iop.org/article/10.1088/1367-2630/16/2/023021},
-  year={2014},
-  month=feb,
-  abstract={We demonstrate a quantum key distribution (QKD) testbed for room temperature single photon sources based on defect centres in diamond. A BB84 protocol over a short free-space transmission line is implemented. The performance of nitrogen-vacancy (NV) as well as silicon-vacancy defect (SiV) centres is evaluated. An extrapolation for the future applicability of such sources in quantum information processing is discussed.}
+  year = 2014,
+  month = feb,
+	date = {2014-02-13},
+  abstract = {We demonstrate a quantum key distribution (QKD) testbed for room temperature single photon sources based on defect centres in diamond. A BB84 protocol over a short free-space transmission line is implemented. The performance of nitrogen-vacancy (NV) as well as silicon-vacancy defect (SiV) centres is evaluated. An extrapolation for the future applicability of such sources in quantum information processing is discussed.}
 }

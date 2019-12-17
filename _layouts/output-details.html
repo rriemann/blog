@@ -50,8 +50,9 @@ layout: base
         {% endif %}
         {% if entry.x-download %}
           <a class="external" href="{{ entry.x-download }}" property="sameAs">Download</a>
-        {% elsif entry.url contains "://" %}
-          <a class="external" href="{{ entry.url }}" property="sameAs">Download</a>
+        {% endif %}
+        {% if entry.url %}
+          <a class="external" href="{{ entry.url }}" property="sameAs">Website</a>
         {% endif %}
       </span>
       <div class="clearfix"></div>

@@ -35,7 +35,7 @@ group :jekyll_plugins do
   # Added at 2018-04-08 20:32:43 +0200 by rriemann:
   gem "jekyll-flickr", "~> 0.1.2"
   # gem 'jekyll-flickr', :git => 'https://github.com/rriemann/jekyll-flickr'
-  gem "jekyll-maps", git: "https://github.com/rriemann/jekyll-maps", branch: "mapbox"
+  gem "jekyll-maps", git: "https://github.com/rriemann/jekyll-maps", branch: "mapbox-geojson"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

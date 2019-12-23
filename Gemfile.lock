@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/rriemann/jekyll-maps
-  revision: f924d5ad345247d5330e011404a4f7f1d501a50f
-  branch: mapbox
+  revision: 61ec29d2bade388bc9b2e01ef5d742754ac01399
+  branch: mapbox-geojson
   specs:
     jekyll-maps (2.3.1)
       jekyll (~> 3.0)

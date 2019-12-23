@@ -8,18 +8,23 @@ hide_description: false
 sitemap: false
 lang: en
 image: https://farm6.staticflickr.com/5594/15170142356_fe5cbecdf3_z.jpg
+geojson:
+  type: FeatureCollection
+  features:
+    - type: Feature
+      properties: {}
+      geometry:
+        type: Point
+        coordinates:
+        - 4.377008378505707
+        - 50.82750225823352
 ---
 
 {% flickr 15170142356 "Place Flagey in Brussels." %}
 
 I live close[^privacy] to [Place Flagey](https://en.wikipedia.org/wiki/Place_Flagey) around coordinate [geo:50.8275,4.3770?z=15](geo:50.8275,4.3770?z=15&q=50.8275,4.3770) (try link on your phone).
 
-{% mapbox
-   width="100%"
-   zoom="15"
-   latitude="50.8275"
-   longitude="4.3770"
-   show_popup="false" %}
+{% mapbox width="100%" zoom="15" show_popup="false" %}
 
 ## Arrive by Aeroplane :airplane:
 

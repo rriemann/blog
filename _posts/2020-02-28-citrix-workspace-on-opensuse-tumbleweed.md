@@ -2,7 +2,7 @@
 layout: post
 title: Citrix Workspace on openSUSE Tumbleweed
 date: 2020-02-28 13:00
-modified: 2020-02-28 13:00
+modified: 2020-05-12 09:14
 comments: true
 tags:
   - linux
@@ -43,6 +43,14 @@ Afterwards, the application did not segfault any longer. However, it produced an
 
 Afterwards, Citrix Workspace worked for me. If I have too much time, I will try to use the vendor package and see if I still get the segfault considering that I have now openssl 1.0.0 installed.
 
+## Exchanging Data between Citrix Host and Citrix Client
+
+There are two options to get data from your host OS to your Citrix client:
+
+1. Clipboard: Copy'n'paste of text from the host to the client is suppoted on Linux. It did not work for me with files.
+2. Mapping client devices: folders from the host can be mapped in the client as distinct drives. This is very useful to exchange files between host and client. To configure this option, launch from the startmenu  "Citrix Receiver (configmgr)". Alternatively, the tool can be launched from the command line with `/usr/lib64/ICAClient/util/configmgr -icaroot /usr/lib64/ICAClient`. In the tool, mappings are configured in the tab file access.
+
 ## References
 
 - <https://kenfallon.com/citrix-ssl-error-61-globalsign-root-ca/> with a tip on how to install the missing certificate
+- <https://docs.citrix.com/en-us/receiver/windows/current-release/optimize/map-client-devices.html> with explanations on device mapping for Windows

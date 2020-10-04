@@ -1,6 +1,11 @@
 # Redirects from what the browser requests to what we serve
 # https://www.netlify.com/docs/redirects/
 
+# http and https don't need separate rules if you force_ssl!
+http://riemann.cc/* https://blog.riemann.cc/:splat 301!
+http://riemann.fr/* https://blog.riemann.cc/:splat 301!
+http://blog.riemann.fr/* https://blog.riemann.cc/:splat 301!
+
 /atom.xml /feed.xml
 /files/rriemann.asc /assets/files/rriemann.asc
 

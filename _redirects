@@ -15,7 +15,7 @@ http://blog.riemann.fr/* https://blog.riemann.cc/:splat 301!
 /files/* https://people.physik.hu-berlin.de/~rriemann/:splat 302
 
 # Proxying piwik
-/piwik/* https://rriemann.rigel.uberspace.de/piwik/:splat 200
+/piwik/* https://rriemann.uber.space/piwik/:splat 200
 
 
 # Travels (301 redirect)

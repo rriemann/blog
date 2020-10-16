@@ -3,7 +3,9 @@
 
 # http and https don't need separate rules if you force_ssl!
 http://riemann.cc/* https://blog.riemann.cc/:splat 301!
+http://www.riemann.cc/* https://blog.riemann.cc/:splat 301!
 http://riemann.fr/* https://blog.riemann.cc/:splat 301!
+http://www.riemann.fr/* https://blog.riemann.cc/:splat 301!
 http://blog.riemann.fr/* https://blog.riemann.cc/:splat 301!
 
 /atom.xml /feed.xml

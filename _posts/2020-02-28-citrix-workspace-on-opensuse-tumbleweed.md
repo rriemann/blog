@@ -2,7 +2,7 @@
 layout: post
 title: Citrix Workspace on openSUSE Tumbleweed
 date: 2020-02-28 13:00
-modified: 2020-05-12 09:14
+modified: 2021-02-02 17:35
 comments: true
 tags:
   - linux
@@ -16,6 +16,8 @@ keywords:
   - segmentation fault
   - segfault
 ---
+
+**Please find a 2021 update below**
 
 Some companies offer their employees to access their corporate computer work space remotely using a remote desktop connection. The company [Citrix](https://www.citrix.com/) provides software for such a connection. To connect, the employees need the software *Citrix Workspace* on their terminal devices. The company provides on their [download page](https://www.citrix.com/downloads/workspace-app/) also files for Linux including openSUSE. Unfortunately, their version 1912 from 12 December 2019 did not just work on my openSUSE Tumbleweed 64bit computer (and earlier versions I tried neither).
 
@@ -49,6 +51,19 @@ There are two options to get data from your host OS to your Citrix client:
 
 1. Clipboard: Copy'n'paste of text from the host to the client is suppoted on Linux. It did not work for me with files.
 2. Mapping client devices: folders from the host can be mapped in the client as distinct drives. This is very useful to exchange files between host and client. To configure this option, launch from the startmenu  "Citrix Receiver (configmgr)". Alternatively, the tool can be launched from the command line with `/usr/lib64/ICAClient/util/configmgr -icaroot /usr/lib64/ICAClient`. In the tool, mappings are configured in the tab file access.
+
+## Update 2021
+
+At some point, the setup broke due to an expiring SSL certificate I believe. After some time trying, I ended up with the following easy setup:
+
+1. deinstall the outdated version: `zypper rm ICAClient`
+2. go to <https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html> and downoad the rpm. In my case it was `ICAClient-suse-21.1.0.14-0.x86_64.rpm`
+3. install the rpm with e.g. `zypper install [your folder]/ICAClient-suse-21.1.0.14-0.x86_64.rpm`
+4. try to open a file. In my case, I got a "SSL error 61" (see [Citrix help](https://support.citrix.com/article/CTX231524))
+5. I renamed the Citrix cacert storage: `mv /opt/Citrix/ICAClient/keystore/cacerts{,~}`
+6. I linked in the system storage: `ln -sv /etc/ssl/certs /opt/Citrix/ICAClient/keystore/cacerts`
+
+This did the trick!
 
 ## References
 

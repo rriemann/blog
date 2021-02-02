@@ -20,7 +20,7 @@ keywords:
   - bottle deposit
 lang: en
 published: true
-image: https://farm7.staticflickr.com/6158/6149364145_0591c49288_b.jpg
+image: https://live.staticflickr.com/4358/36746280130_da5fe8f655_h.jpg
 geojson:
   type: FeatureCollection
   features:
@@ -50,7 +50,7 @@ geojson:
           - 52.520777
 ---
 
-{% flickr 6149364145 "Bode Museum on Museum Island as seen from Strandbar Mitte." %}
+{% flickr 36746280130 "Strandbar Berlin Mitte." %}
 
 **This is a post about payment systems, bottle deposit and pragmatism of the people from Berlin at one of the very original outdoor bars in the heart of the city of Berlin. What happened?**
 

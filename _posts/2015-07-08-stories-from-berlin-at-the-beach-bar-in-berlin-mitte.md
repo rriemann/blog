@@ -21,6 +21,33 @@ keywords:
 lang: en
 published: true
 image: https://farm7.staticflickr.com/6158/6149364145_0591c49288_b.jpg
+geojson:
+  type: FeatureCollection
+  features:
+    - type: Feature
+      properties:
+        popup-html: Beach Bar (Strandbar)
+      geometry:
+        type: Point
+        coordinates:
+          - 13.394758
+          - 52.52254
+    - type: Feature
+      properties:
+        popup-html: Very cheap italian pizza
+      geometry:
+        type: Point
+        coordinates:
+          - 13.400686
+          - 52.523697
+    - type: Feature
+      properties:
+        popup-html: Fernsehturm
+      geometry:
+        type: Point
+        coordinates:
+          - 13.410701
+          - 52.520777
 ---
 
 {% flickr 6149364145 "Bode Museum on Museum Island as seen from Strandbar Mitte." %}
@@ -38,11 +65,9 @@ Right at this place, the [Beach Bar] offers throughout the summer open air balls
 
 <!--more-->
 
-<iframe width="100%" height="500px" frameBorder="0" src="https://a.tiles.mapbox.com/v4/rriemann.mli0jmfp.html?access_token=pk.eyJ1IjoicnJpZW1hbm4iLCJhIjoiODgwZGJiNTdjYmRlOWE1NzkwMGQwMDljZWUzMTMzYzAifQ.fFrHR0eLYKhxLsUbDrD0vQ"></iframe>
+{% mapbox width="100%" zoom="20" show_popup="true" %}
 
-[Big Map](https://api.tiles.mapbox.com/v4/rriemann.mli0jmfp/page.html?access_token=pk.eyJ1IjoicnJpZW1hbm4iLCJhIjoiODgwZGJiNTdjYmRlOWE1NzkwMGQwMDljZWUzMTMzYzAifQ.fFrHR0eLYKhxLsUbDrD0vQ)
-
-{% flickr 6149360587 "People Dancing at the Beach Bar." %}
+{% flickr 9740175522 "People Dancing at the Beach Bar." %}
 
 So I've been there with few friends to watch and dance a bit Swing (Lindy Hop). My friends left a bit earlier and I went to the bar to get a drink.
 

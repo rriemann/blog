@@ -13,4 +13,4 @@ layout: null
         Language: English / Deutsch / Français
         Doctype: HTML5
         Tools: Kate Editor, Atom Editor, Markdown, Jekyll, Hydejack Theme
-        Code: https://github.com/rriemann/blog.riemann.cc/
+        Code: https://gitlab.com/rriemann/blog.riemann.cc/

@@ -124,6 +124,4 @@ If not indicated differently, the content of this website is published under the
 
 I built this website with the static site generator [Jekyll](https://jekylrb.com) and the Jekyll template [Hydejack](https://qwtel.com/hydejack/) in its pro version. The website is hosted at [Netlify](https://netlify.com/).
 
-The source code used to create this website is [publicly available on GitHub](https://github.com/rriemann/blog.riemann.cc/).
-
 *[PGP]: Pretty Good Privacy

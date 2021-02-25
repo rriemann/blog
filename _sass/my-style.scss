@@ -1,23 +1,29 @@
 
 @import "my-fonts";
 
+// custom cover image in post-webcomic layouts
+.content.layout-post-webcomic .aspect-ratio img {
+  object-fit: contain;
+  background-color: inherit;
+}
+
+// allow the use of lead with flickr plugin
+figure.lead {
+  img {
+    display: block;
+    max-width: calc(100% + 2rem);
+    width: calc(100% + 2rem);
+    height: auto;
+    border-radius: .5rem;
+  }
+}
+
 img.emoji {
   width: 20px;
   height: 20px;
   // vertical-align: middle;
   display: initial;
   margin-bottom: initial;
-}
-
-// italic image caption
-.content figure {
-  img {
-    // margin-bottom: inherit;
-  }
-  figcaption {
-    font-style: italic;
-    font-size: smaller;
-  }
 }
 
 .content {

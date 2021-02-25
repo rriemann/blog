@@ -521,7 +521,7 @@
           <text term="presented at" text-case="capitalize-first"/>
         </else>
       </choose>
-      <text variable="event"/>
+      <text variable="eventtitle"/>
     </group>
   </macro>
   <macro name="description">
@@ -602,6 +602,12 @@
               <text variable="genre" text-case="capitalize-first"/>
             </if>
           </choose>
+          <group delimiter=" ">
+            <text variable="genre" text-case="capitalize-first"/>
+            <text macro="event"/>
+          </group>
+          <text variable="event-place"/>
+          <text macro="day-month"/>
           <text macro="publisher"/>
         </group>
       </else>
@@ -629,7 +635,7 @@
       </group>
     </layout>
   </citation>
-  <bibliography hanging-indent="true" et-al-min="11" et-al-use-first="7" subsequent-author-substitute="&#8212;&#8212;&#8212;" entry-spacing="0">
+  <bibliography hanging-indent="true" et-al-min="11" et-al-use-first="7" entry-spacing="0">
     <sort>
       <key macro="contributors"/>
       <key variable="issued"/>

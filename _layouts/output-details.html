@@ -1,71 +1,95 @@
 ---
-# Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
 #
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 #
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 #
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 layout: base
 ---
 
 {% assign entry = page.entry %}
 {% assign separator = site.data.strings.separator | default:"|" %}
-{% assign nsd = site.hydejack.no_structured_data | default:site.no_structured_data %}
 
-<article class="page" role="article" {% unless nsd %}vocab="http://schema.org/" typeof="CreativeWork"{% endunless %}>
-  <meta property="mainEntityOfPage" content="{{ page.url | absolute_url }}"/>
+<article class="page mb6" role="article">
 
   <header>
-    <h1 class="page-title" property="name">{{ entry.title }}</h1>
-
+    <h1 class="page-title" property="name">{{ page.title }}</h1>
     <p class="post-date heading">
-      <a href="{{ '/output/' | relative_url }}">Output</a>
-      {{ separator }}
-      {% comment %}
-      {% assign output_format = site.data.strings.date_formats.output | default:"%Y-%m-%d" %}
-      <time datetime="{{ entry.date | date_to_xmlschema }}" property="datePublished">{{ entry.date | date:output_format }}</time>
-      {% endcomment %}
-      {{ entry.month | capitalize }} {{ entry.year }}
-      <span class="fr">
+      <span>
+        <a href="{{ '/output/' | relative_url }}" class="flip-title" property="genre">Papers and Talks</a>
+
+        {% unless site.hydejack.hide_dates %}
+          {{ separator }}
+          <time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date:'%b %Y' }}</time>
+        {% endunless %}
+        {% if entry.eventtitle %}
+          {{ separator }}
+          {{ entry.eventtitle }}
+        {% endif %}
+      </span>
+
+      <span class="ellipsis ml1" data-tippy-content="{{ site.data.strings.links | default:'Links' }}">
         <span class="sr-only">{{ separator }} {{ site.data.strings.links | default:"Links" }}{{ site.data.strings.colon }}</span>
-        {% if entry.doi %}
-          <a class="external" href="https://doi.org/{{ entry.doi }}" property="sameAs">DOI</a>
-        {% endif %}
-        {% if entry.x-slides %}
-          <a class="external" href="{{ entry.x-slides }}">Slides</a>
-        {% endif %}
-        {% if entry.x-download %}
-          <a class="external" href="{{ entry.x-download }}" property="sameAs">Download</a>
-        {% endif %}
+        <span class="{{ site.data.strings.links_icon | default:'icon-link' }}" title="{{ site.data.strings.links | default:'Links' }}"></span>
         {% if entry.url %}
           <a class="external" href="{{ entry.url }}" property="sameAs">Website</a>
         {% endif %}
+        {% for link in project.links %}
+          <a class="external" href="{{ link.url }}" property="sameAs">{{ link.title }}</a>
+          {% unless forloop.last %}{{ separator }}{% endunless %}
+        {% endfor %}
       </span>
-      <div class="clearfix"></div>
-      {% if entry.author %}
-        <strong>Authors:</strong>
-        {{ entry.author }}
-      {% endif %}
     </p>
+
+    {% comment %}
+    {% include components/message.html text=entry.abstract alt="" %}
+    {% endcomment %}
+    {% if project.caption %}<meta property="disambiguatingDescription" content="{{ project.caption }}"/>{% endif %}
   </header>
 
+  {% if entry.author %}
+  <p>
+    <strong>Authors:</strong>
+    {{ entry.author }}
+  </p>
+  {% endif %}
+
+  <p>
+    <a href="{{ entry.url }}" property="sameAs" class="btn btn-sm btn-primary mt1">
+      Website
+    </a>
+    {% if entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}" property="sameAs" class="btn btn-sm btn-primary mt1">
+        DOI
+      </a>
+    {% endif %}
+    {% if entry.x-slides %}
+      <a href="{{ entry.x-slides }}" property="sameAs" class="btn btn-sm btn-primary mt1">
+        <small class="icon-file-empty"></small>
+        Slides
+      </a>
+    {% endif %}
+    {% if entry.x-download %}
+      <a href="{{ entry.x-download }}" property="sameAs" class="btn btn-sm btn-primary mt1">
+        <small class="icon-file-pdf"></small>
+        Download
+      </a>
+    {% endif %}
+  </p>
+
   {% if entry.abstract %}
+  <h3>Abstract</h3>
   <p class="message">
-    <strong>Abstract:</strong>
     {{entry.abstract}}
   </p>
   {% endif %}
@@ -76,22 +100,18 @@ layout: base
   {% reference entry.key %}
 
   <h3>BibTeX</h3>
-  <pre>{{ entry.bibtex }}</pre>
 
+  {% capture formated_bibtex %}
+  ~~~bibtex
+  // file: '{{entry.key}}.bib'
+{{ entry.bibtex }}
+  ~~~
+  {% endcapture %}
+
+  {{ formated_bibtex | markdownify }}
 </article>
 
-<hr class="dingbat related" />
+<!--author-->
 
-{% assign addons = site.hydejack.output_addons %}
-{% unless addons %}{% assign addons = "about,newsletter" | split:"," %}{% endunless %}
-{% for addon in addons %}
-  {% case addon %}
-  {% when 'about' %}
-     {% include about.html %}
-  {% when 'newsletter' %}
-    {% include pro/newsletter.html %}
-  {% when 'other' %}
-    {% include other-outputs.html %}
-  {% else %}
-  {% endcase %}
-{% endfor %}
+{% include components/dingbat.html %}
+{% include body/comments.html %}

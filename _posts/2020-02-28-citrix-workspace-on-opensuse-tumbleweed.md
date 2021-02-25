@@ -22,6 +22,8 @@ Please find a 2021 update below!
 
 Some companies offer their employees to access their corporate computer work space remotely using a remote desktop connection. The company [Citrix](https://www.citrix.com/) provides software for such a connection. To connect, the employees need the software *Citrix Workspace* on their terminal devices. The company provides on their [download page](https://www.citrix.com/downloads/workspace-app/) also files for Linux including openSUSE. Unfortunately, their version 1912 from 12 December 2019 did not just work on my openSUSE Tumbleweed 64bit computer (and earlier versions I tried neither).
 
+<!--more-->
+
 ## Segmentation Fault and Missing Libraries
 
 First, I tried to install the software package from the vendor.

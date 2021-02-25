@@ -7,9 +7,16 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: /assets/img/central-america/saling-me-jean.jpg
+hide_image: true
+related_posts:
+  - _posts/2013-06-04-das-karibische-meer-unterwasser.md
+  - _posts/2013-04-29-waserfaelle-und-vulkan-in-basse-terre.md
 ---
 
-### Prolog
+# Das Karibische Meer
+
+## Prolog
 
 Während die ersten Bewohner Guadeloupes, südamerikanische Übersiedler ab 3500
 v. Chr., und deutlich später der Namensgeber Christoph Kolumbus höchstpersönlich[^1] im
@@ -19,7 +26,10 @@ Vielleicht liegt es daran, dass man üblicherweise bei der Anreise, der Klassike
 ist Paris–Guadeloupe in 8:30h, eine gesunde Distanz zum Meer wahrt. Im Gegensatz
 dazu ist man zu Kolumbus' Zeiten etwa 5 Wochen unterwegs gewesen.
 
-{% include figure image_path="/assets/img/central-america/sailing-water.jpg" alt="Das Wasser ist wirklich türkis." caption="Das Wasser ist wirklich türkis." %}{:.pull-left}
+![Das Wasser ist wirklich türkis.](/assets/img/central-america/sailing-water.jpg){:.align-center loading="lazy" width="330" heigh="440"}
+
+Das Wasser ist wirklich türkis.
+{:.figcaption}
 
 Bislang haben sich meine Berichte eher auf Süßwasserausflüge konzentriert. Das
 war nur die halbe Wahrheit. Die andere Hälfte hat sich gewaschen, besser: gesalzen!
@@ -33,7 +43,7 @@ hindurch schwimmen. Aber ich möchte nicht vorweg greifen.
 
 <!--more-->
 
-### Kanu Fahren Und Windsurfen
+## Kanu Fahren Und Windsurfen
 
 Schon in der ersten Woche auf Guadeloupe bin ich mit einem Einheimischen vor den
 verschlossenen Türen des lokalen Handynetz-Discounters ins Gespräch gekommen.
@@ -50,7 +60,7 @@ Ich kann gerne jeden Samstag kommen. Allerdings ist seitdem stets etwas dazwisch
 gekommen. Sei es nun das Chorprobenwochenende, schlechtes Wetter, Wetter ohne Wind
 oder andere Ausflüge. Nach Geld wurde ich nie gefragt. Glück gehabt.
 
-### Wellensurfen
+## Wellensurfen
 
 Wellensurfen kann man in Guadeloupe natürlich auch. Zuletzt habe ich das in Peru
 2009 probiert. Hier waren die Wellen zwar auch noch mäßig, für mich aber schon zu
@@ -58,7 +68,7 @@ groß. Nach einer Stunde im strömenden Regen habe ich mich geschlagen gegeben u
 es seitdem dabei belassen. Ein Surfboard kann man beim Beachboy direkt am Strand
 für etwa 15€/halber Tag mieten. Mein vorläufiges Fazit: Windsurfen ist interessanter.
 
-### Segeln
+## Segeln
 
 Natürlich wäre es ziemlich cool gewesen in der Segelschule auch Segelunterricht
 zu bekommen. Leider ist es soweit nicht gekommen. Dafür hätte ich mich wohl noch
@@ -75,7 +85,10 @@ waren zwei Tage zusammen unterwegs: Ein Tag Anfahrt von Saint-François zur
 Nachbarinsel nach Marie-Galante, Übernachtung auf dem Boot, ein Tag Rückfahrt
 zum Heimathafen.
 
-{% include figure image_path="/assets/img/central-america/saling-me-jean_thumb.jpg" alt="Unser Kapitän arbeitet – ich schaue konzentriert zu." caption="Unser Kapitän arbeitet – ich schaue konzentriert zu." %}
+![Unser Kapitän arbeitet – ich schaue konzentriert zu.](/assets/img/central-america/saling-me-jean.jpg){:.lead loading="lazy" width="1200" height="899"}
+
+Unser Kapitän arbeitet – ich schaue konzentriert zu.
+{:.figcaption}
 
 Unser Boot misst 10m Länge – ebenso unser Mast. Die Segelfläche böte mit 60qm
 Platz für (m)eine vollständige 2,5-Zimmer-Wohnung. Insgesamt wiegt unser Schiff
@@ -94,7 +107,10 @@ wird, da wir uns dann schon daran gewöhnt haben würden. In Marie-Galante angek
 verbringen wir die Nacht vor dem Hafen. Die Nacht wie auch unser Schlaf verlaufen
 ruhig.
 
-{% include figure image_path="/assets/img/central-america/sailing-crew.jpg" alt="Unsere Crew – eine Person macht das Photo." caption="Unsere Crew – eine Person macht das Photo." %}
+![Unsere Crew – eine Person macht das Photo.](/assets/img/central-america/sailing-crew.jpg){:.load loading="lazy" width="680" height="510"}
+
+Unsere Crew – eine Person macht das Photo.
+{:.figcaption}
 
 Tags darauf unternehmen wir mit dem Kanu einen kurzen Landgang um frisches
 Baguette nachzukaufen – was sonst. Auf der Heimreise geht es uns in der Tat etwas besser.
@@ -103,13 +119,20 @@ den unser Boot seit geraumer Zeit durch das Meer schleift. Schnell wird dieser
 an Bord geholt und in Rum ertränkt[^3]. Nur zwei Stunden später beschließen wir
 den Abend auf unserem Boot mit gegrilltem Fisch.
 
-{% include figure image_path="/assets/img/central-america/sailing-fishing.jpg" alt="Wer ist uns denn da an den Haken gegangen?" caption="Wer ist uns denn da an den Haken gegangen?" %}
+![Wer ist uns denn da an den Haken gegangen?](/assets/img/central-america/sailing-fishing.jpg){:.align-center loading="lazy"}
 
-{% include figure image_path="/assets/img/central-america/sailing-fish.jpg" alt="Unser Fisch: Fröhlich und tot." caption="Unser Fisch: Fröhlich und tot." %}{:.pull-left}
+Wer ist uns denn da an den Haken gegangen?
+{:.figcaption}
 
-{% include figure image_path="/assets/img/central-america/sailing-fish-cutted.jpg" alt="Unser Fisch: Nicht mehr fröhlich." caption="Unser Fisch: Nicht mehr fröhlich." %}{:.pull-left}
+![Unser Fisch: Fröhlich und tot.](/assets/img/central-america/sailing-fish.jpg){:.align-center loading="lazy"}
 
-<div class="clearfix" />
+Unser Fisch: Fröhlich und tot.
+{:.figcaption}
+
+![Unser Fisch: Nicht mehr fröhlich.](/assets/img/central-america/sailing-fish-cutted.jpg){:.align-center loading="lazy"}
+
+Unser Fisch: Nicht mehr fröhlich.
+{:.figcaption}
 
 Während der Fahrt haben wir noch vielerlei interessante Dinge erfahren. Zum Beispiel,
 dass es keine gute Idee wäre zwischen Guadeloupe und Marie-Galante baden zu gehen.
@@ -117,7 +140,7 @@ In der Karibik gibt es sehr wohl Haie, die sich jedoch nicht nahe der von Riffen
 geschützten Inseln aufhalten, da es dort nichts zu futtern gibt. Wir gehen also nicht
 baden und es bleibt weiterhin kein Haiunfall bekannt.
 
-### Fortsetzung Folgt
+## Fortsetzung Folgt
 
 Das war noch nicht alles. Jedoch fallen mir gleich die Augen zu und ich schließe
 lieber selber, bevor sie sich von alleine schließen… oder so. Gute Nacht!

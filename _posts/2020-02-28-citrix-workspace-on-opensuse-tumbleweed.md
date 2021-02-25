@@ -2,7 +2,7 @@
 layout: post
 title: Citrix Workspace on openSUSE Tumbleweed
 date: 2020-02-28 13:00
-modified: 2021-02-02 17:35
+last_modified_at: 2021-02-02 17:35
 comments: true
 tags:
   - linux
@@ -17,7 +17,8 @@ keywords:
   - segfault
 ---
 
-**Please find a 2021 update below**
+Please find a 2021 update below!
+{:.note title="Update"}
 
 Some companies offer their employees to access their corporate computer work space remotely using a remote desktop connection. The company [Citrix](https://www.citrix.com/) provides software for such a connection. To connect, the employees need the software *Citrix Workspace* on their terminal devices. The company provides on their [download page](https://www.citrix.com/downloads/workspace-app/) also files for Linux including openSUSE. Unfortunately, their version 1912 from 12 December 2019 did not just work on my openSUSE Tumbleweed 64bit computer (and earlier versions I tried neither).
 

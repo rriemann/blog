@@ -70,9 +70,11 @@ You also do not want to read the lengthy privacy policy <https://www.pottermore.
 
 
 
-**Legal Notice:** Wizard House names may be protected under some legal acts in some countries.
+Wizard House names may be protected under some legal acts in some countries.
+{:.note title="Legal Notice"}
 
-**Privacy Notice:** No personal data from this quiz is stored or transferred.
+No personal data from this quiz is stored or transferred.
+{:.note title="Privacy Notice"}
 
 
 ## Automated Decision Making
@@ -83,4 +85,46 @@ The following formular is employed to determine your house:
 this.house = this.houses[Math.floor(Math.random()*this.houses.length)]
 ```
 
-**Full Source:** [read on Github](https://github.com/rriemann/blog.riemann.cc/blob/master/_posts/2018-08-07-privacy-friendly-wizard-house-quiz.md)
+## Source Code
+
+{% raw %}
+~~~html
+<div id="app">
+  <form style="border: 1px solid black; padding: 5px">
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-5 col-form-label">Favourite Time:</label>
+      <div class="col-sm-7">
+        <button v-on:click="setHouse($event)" class="btn btn-primary btn-sm" id="staticEmail">Now!</button>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-5 col-form-label">Your Wizard House:</label>
+      <div class="col-sm-7" id="inputPassword">
+        {{ house }}
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  var app5 = new Vue({
+  el: '#app',
+  data: {
+    house: '',
+    houses: [
+      `Slytherin`,
+      `Hufflepuff`,
+      `Ravenclaw`,
+      `Griffondor`,
+    ]
+  },
+  methods: {
+    setHouse: function (event) {
+      this.house = this.houses[Math.floor(Math.random()*this.houses.length)];
+      event.preventDefault();
+    }
+  }
+  })
+</script>
+~~~
+{% endraw %}

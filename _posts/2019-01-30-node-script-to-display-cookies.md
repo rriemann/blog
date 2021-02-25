@@ -2,7 +2,7 @@
 layout: "post"
 title: "Node Script to Display Cookies"
 date: "2019-01-30 23:04"
-modified: "2019-05-24 12:34"
+last_modified_at: "2019-05-24 12:34"
 comments: true
 tags:
   - node
@@ -19,10 +19,10 @@ With some advice from StackOverflow, I wrote a short node script that I placed i
 
 Then, you can call `get-cookies.js https://google.com` to get all installed cookies upon request of the page given as a parameter (here: `https://google.com`). Note that Puppeteer creates its own Chromium user profile which it cleans up on every run.
 
-## get-cookies.js
+## Source Code of 'get-cookies.js'
 
 
-```js
+~~~js
 #!/usr/bin/env node
 
 const puppeteer = require('puppeteer');
@@ -56,4 +56,4 @@ const url = process.argv[2];
     await browser.close();
   }
 })();
-```
+~~~

@@ -7,9 +7,17 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: /assets/img/central-america/local-bus.jpg
+hide_image: true
+related_posts:
+  - _posts/2013-04-14-speisen-und-trinken-in-gwada-1.md
+  - _posts/2013-05-15-das-karibische-meer.md
 ---
 
-{% include figure image_path="/assets/img/central-america/local-bus.jpg" alt="Selterner Anblick: Lokaler Bus" caption="Selterner Anblick: Lokaler Bus" width="400px" %}{:.pull-right}
+![Selterner Anblick: Lokaler Bus](/assets/img/central-america/local-bus.jpg){:.lead loading="lazy" width="400px"}
+
+Selterner Anblick: Lokaler Bus
+{:.figcaption}
 
 Die Verkehrssituation in Guadeloupe ist ziemlich ernüchternd – zumindest war ich
 zuvor anderes gewohnt[^1]. Schon nach meiner Ankunft wäre es für mich teuer geworden,
@@ -22,7 +30,11 @@ der Küste entlang bedienen und von der EU kofinanziert werden. Busse fahren nur
 <!--more-->
 
 
-{% include figure image_path="/assets/img/central-america/no-schedule_thumb.jpg" alt="Ganz ehrlich: <br/> Kein Plan" caption="Ganz ehrlich: <br/> Kein Plan" width="$3" %}{:.pull-left}
+![Ganz ehrlich: <br/> Kein Plan](/assets/img/central-america/no-schedule_thumb.jpg){:.align-center loading="lazy" width="200" height="430"}
+
+Ganz ehrlich:\
+Kein Plan
+{:.figcaption}
 
 Einen Fahrplan gibt es nicht, obwohl sämtliche Haltestellen dafür Platz böten.
 Manchmal kommt direkt ein Bus – manchmal muss man auch 30 Minuten warten. Der Tarif ist
@@ -34,14 +46,14 @@ Herbergsvater bereiterklärt jemanden loszuschicken. Da die Insel ja nicht so gr
 man innerhalb von 2h auch jede Ecke erreichen kann, ist das tatsächlich eine praktikable
 Notlösung.
 
-{% include figure image_path="/assets/img/central-america/grill-stop_thumb.jpg" alt="Sonntags: Grill-Stelle statt Halte-Stelle" caption="Sonntags: Grill-Stelle statt Halte-Stelle" width="400px" %}{:.pull-right}
+![Sonntags: Grill-Stelle statt Halte-Stelle](/assets/img/central-america/grill-stop.jpg){:.lead loading="lazy" width="1024" height="577"}
+
+Sonntags: Grill-Stelle statt Halte-Stelle"
+{:.figcaption}
 
 Lustigerweise werden die unbenutzten Haltestellen Sonntags teils anderweitig genutzt.
 Die Haltestelle in Basse-Terre beherbergt so zum Beispiel einen kleinen Grill-Stand.
 Das ist nur vernünftig. Schließlich kann es jeden Augenblick wie aus Eimern gießen.
-
-
-{:.clearfix}
 
 ### Per Anhalter durch <strike>die Galaxis</strike> Guadeloupe
 

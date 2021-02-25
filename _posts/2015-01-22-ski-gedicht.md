@@ -6,9 +6,17 @@ tags:
 - german
 comments: true
 lang: de
+image: /assets/img/alps_small.jpeg
+hide_image: true
+related_posts:
+  - _posts/2016-09-23-herbst-gedicht.md
+  - _posts/2011-03-20-spring.md
 ---
 
-{% include figure image_path="/assets/img/alps_small.jpeg" alt="Les Deux Alpes, Frankreich" caption="Les Deux Alpes, Frankreich" %}{:.pull-right}
+![Les Deux Alpes, Frankreich](/assets/img/alps_small.jpeg){:.lead loading="lazy" width="1600" height="885"}
+
+Les Deux Alpes, Frankreich
+{:.figcaption}
 
 Leise rieselt der Schnee.   
 Still und klar liegt der See   

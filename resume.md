@@ -17,4 +17,9 @@ right_column:
  # - skills
  - education
  - interests
+
+buttons:
+  print: true
+  pdf: /resume.pdf
+  json: /resume.json
 ---

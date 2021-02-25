@@ -2,6 +2,7 @@
 layout: "post"
 title: "Browsing with HTTP Referer and Data Protection"
 date: "2018-06-27 23:23"
+last_modified_at: 2018-06-28
 published: true
 categories: [digitalisation]
 tags:
@@ -15,7 +16,14 @@ keywords:
 description: |
   Web browsers inform web servers in many cases about the referring webpage when users browse the web. I consider if this can be a good data protection practice.
 image: /assets/img/http-referer.png
+hide_image: true
 ---
+
+![Screenshot showing HTTP referer](/assets/img/http-referer.png){:.align-center loading="lazy" width="753" height="190"}
+
+Screenshot showing HTTP referer.
+{:.figcaption}
+
 
 Consider a web page with URL *α* on web server *A* containing a link to a web page with URL *β* on web server *B*. If a web page visitor clicks on the link to *β*, many browsers send along with the request to server *B* for the web page *β* the referring webpage *α*. This information is sent in form of a HTTP request header.
 

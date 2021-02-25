@@ -18,13 +18,15 @@ keywords:
 lang: en
 published: true
 image: /assets/img/roadtrip-raul-taciu-203109-unsplash.jpg
+hide_image: true
 description: |
   At the beginning of March, I started my retreat stay in the French Alps to take care for myself and rest. Before the great rest though, I had to get from Brussels to the Alps: My first road trip.
 ---
 
-{% include figure image_path="/assets/img/roadtrip-raul-taciu-203109-unsplash.jpg" caption="The black slope for all road trip novices. Photo by [Raul Taciu](https://unsplash.com/photos/4hYTyh64rmk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)." %}
+![The black slope for all road trip novices.](/assets/img/roadtrip-raul-taciu-203109-unsplash.jpg){:.lead loading="lazy" width="1200" height="560"}
 
-**At the beginning of March, I started my retreat stay in the French Alps to take care for myself and rest. Before the great rest though, I had to get from Brussels to the Alps: My first road trip.**
+The black slope for all road trip novices. Photo by [Raul Taciu](https://unsplash.com/photos/4hYTyh64rmk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
+{:.figcaption}
 
 > If the mountain won't come to the prophet, then the prophet must go to the mountain.[^prophet]
 {:.lead}
@@ -71,11 +73,24 @@ My itinerary to the French Alps brings me to few Swiss cities I do not know yet.
 
 I continue my journey to the French Alps and leave again the highway to the city centre of the Swiss *de facto* capital Bern. Given my experience in Basel, I decide to give up finding a free parking spot and take the central parking house right next to the old town. The sun shines. Bern was founded in the Middle Age and the centre still reflects this charm.
 
-{% include figure image_path="/assets/img/people-of-bern.jpg" caption="People of Bern enjoying a warm Sunday afternoon in early March." alt="People of Bern enjoying a warm Sunday afternoon in early March." %}
+![People of Bern enjoying a warm Sunday afternoon in early March.](/assets/img/people-of-bern.jpg){:.lead loading="lazy" width="1280" height="720"}
 
-{% include figure image_path="/assets/img/einstein-museum-living-room.jpg" caption="The living room of Einstein in Bern." alt="The living room of Einstein in Bern." %}
+People of Bern enjoying a warm Sunday afternoon in early March.
+{:.figcaption}
 
-{% include figure image_path="/assets/img/einstein-museum-guest-book.jpg" caption="The guest book of the Einstein Museum Bern. <br/> It is full of personal data." alt="The guest book of the Einstein Museum Bern. It is full of personal data." %}{:.align-right}
+![The living room of Einstein in Bern.](/assets/img/einstein-museum-living-room.jpg){:.lead loading="lazy" width="1280" height="720"}
+
+The living room of Einstein in Bern.
+{:.figcaption}
+
+<div markdown=1 class="align-right">
+![The guest book of the Einstein Museum Bern. It is full of personal data.](/assets/img/einstein-museum-guest-book.jpg){: loading="lazy"}
+
+The guest book of the Einstein Museum Bern.<br/>
+It is full of personal data.
+{:.figcaption}
+
+</div>
 
 While strawling to the old city, I discover an Einstein museum installed in his former flat. In the museum I learn that Einstein’ first and only daughter has been lost. I wonder if this daughter is still alive and knows her famous parents. On the way out, I notice the guest book of the museum, in which people—many apparently greedy for significance after the recent impressions from Einstein’s live–let other people know of their visit. For many, this is just a guest book. For me, it is a filing system containing personal data subject to data protection laws. As I need to arrive in the Alps before sunset, I decide to not inform the only present staff member of this recent discovery and just leave.
 

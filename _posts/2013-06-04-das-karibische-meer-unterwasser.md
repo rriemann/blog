@@ -7,9 +7,14 @@ categories: [travels]
 tags: [central-america, german]
 lang: de
 layout: post
+image: https://live.staticflickr.com/4050/4448404135_71bc266205_h.jpg
+hide_image: true
+related_posts:
+  - _posts/2013-05-15-das-karibische-meer.md
+  - _posts/2013-05-26-festival-terre-de-blues.md
 ---
 
-{% flickr 4448404135 "Korallenriff." %}
+{% flickr 4448404135 "Korallenriff." %}{:.lead}
 
 Während ich mich [zunächst](2013-05-15-das-karibische-meer.md) dem Karibischen Meer nur oberflächlich genähert habe, bin ich in den letzten beiden Wochen dem Meer im wahrsten Sinne auf den Grund gegangen. Was war passiert?
 
@@ -39,7 +44,11 @@ Segeln sieht vom Land soviel leichter aus, als von Bord. Das ist mein Fazit.
 
 Am 1. Juni bin ich aus Guadeloupe abgereist und schreibe euch nun aus Miami Beach. Max ist bereits einen Tag vor mir nach Köln abgereist und hat mein Gepäck um meine Französisch-Bücher erleichtert. Einen Tag nach mir sind unsere Berliner Nachbarn nach Haue geflogen und haben meine Sonnenbrille mitgenommen. Die Gewichtsersparnis ist hier vernachlässigbar. Ich bin ihnen aber trotzdem dankbar. :wink: Seit dem ich in Miami bin, hat sich die Sonne auch noch nicht blicken lassen. Schicksal – ich werde mir wohl schnell wieder eine Brille kaufen müssen.
 
-{% include figure image_path="/assets/img/central-america/guadeloupe-letters.jpg" alt="Unser Appartment ist gesäubert, das Gepäck verstaut: <br> Zeit für Last-Minute-Post." caption="Unser Appartment ist gesäubert, das Gepäck verstaut: <br> Zeit für Last-Minute-Post." %}
+![Unser Appartment ist gesäubert, das Gepäck verstaut: <br> Zeit für Last-Minute-Post.](/assets/img/central-america/guadeloupe-letters.jpg){:.align-center loading="lazy" width="680" height="382"}
+
+Unser Appartment ist gesäubert, das Gepäck verstaut:\
+Zeit für Last-Minute-Post.
+{:.figcaption}
 
 [Gallerie]: http://www.flickr.com/photos/myobis/sets/72157623874247087/
 [Festival]: /2013/05/26/festival-terre-de-blues/

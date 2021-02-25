@@ -14,12 +14,9 @@ keywords:
   - uBlock
 lang: en
 published: true
+image: /assets/img/ublock-firefox.jpg
+description: Facebook tries to adapt the personal stream in such a way that we like it. However, the result is not perfect.
 ---
-
-{% include figure image_path="/assets/img/ublock-firefox.jpg" alt="Blocking websites" caption="Blocking websites" %}{:.pull-right}
-
-**Facebook tries to adapt the personal stream in such a way that we like it. However,
-the result is not perfect.**
 
 ## Crawling the Facebook timeline
 
@@ -90,6 +87,11 @@ I also took personal counter measures against scam.
 ### Selfies
 
 {% include figure image_path="/assets/img/selfies-autocorrection.jpg" alt="My PC doesn’t know “selfies”." caption="My PC doesn’t know “selfies”." %}
+
+![My PC doesn’t know ‘selfies’.](/assets/img/selfies-autocorrection.jpg){:.align-center width="276" height="233" loading="lazy"}
+
+My PC doesn’t know ‘selfies’.
+{:.figcaption}
 
 But there is more on the Facebook timeline: Selfies. I find this somehow quite ego-centric[^3]. This week, I came across a photo album tagged with `#selfie-time`. This was obviously the self-chosen motto. Now, one is allowed to let go all constraints. Problem solved.
 

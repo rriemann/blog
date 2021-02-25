@@ -1,13 +1,14 @@
 ---
 title: Webcomic №11
-license: cc-by-nc-sa
-subtitle: 'Too often sending mails feels like this.'
-svg: 'no_response.svg'
-png: 'no_response.png'
+description: 'Too often sending mails feels like this.'
+image: /assets/img/webcomic/no_response.svg
 comments: true
 tags:
-- webcomic
-- art
+  - webcomic
+  - art
 lang: en
 layout: post-webcomic
+related_posts:
+  - _posts/2011-01-01-alone_again.md
+  - _posts/2011-02-11-living_with_it.md
 ---

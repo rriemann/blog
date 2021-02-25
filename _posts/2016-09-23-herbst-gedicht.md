@@ -6,15 +6,22 @@ tags:
 - german
 comments: true
 lang: de
+image: /assets/img/louis_pradel_morning.jpg
+hide_image: true
+related_posts:
+  - _posts/2011-12-13-herbst_gedicht.md
+  - _posts/2015-01-22-ski-gedicht.md
 ---
 
-{% include figure image_path="/assets/img/louis_pradel_morning.jpg" alt="Place Louis Pradel (Opéra) in Lyon, France: Hatschi!" caption="Place Louis Pradel (Opéra) in Lyon, France: Hatschi!" %}
+![Place Louis Pradel (Opéra) in Lyon, France: Hatschi!](/assets/img/louis_pradel_morning.jpg){:.lead loading="lazy" width="1600" height="735"}
+
+Place Louis Pradel (Opéra) in Lyon, France: Hatschi!
+{:.figcaption}
+
 *Nach meinem ersten [Herbst-Gedicht aus dem Jahr 2010](2011-12-13-herbst_gedicht.md)
 nun 6 Jahre später ein versöhnliches Gedicht zur selben Jahreszeit.*
 
----
-
-# Morgentliche Träumerei
+## Morgentliche Träumerei
 
 Mühelos rolle ich den Berg hinunter   
 und biege ab, die Opéra zu meiner Rechten,   

@@ -22,13 +22,6 @@ keywords:
 image: /assets/img/open-letter-gdpr-faq-coder.png
 ---
 
-<figure>
-  <img src="{{ "/assets/img/open-letter-gdpr-faq-coder.png" | absolute_url }}" alt="A programmer working alone from home">
-  <figcaption><div class="caption">Un programmatore che lavora da solo da casa.</div>
-<div class="license">© unsplash/<a href="https://unsplash.com/photos/9SoCnyQmkzI">jefflssantos</a> <a href="https://unsplash.com/license">Unsplash License</a>
-</div></figcaption>
-</figure>
-
 | Versione in lingua | Inglese                                | Francese                               | Tedesco                                | Italiano                               |
 | ------------------ | -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- |
 | on-line            | :gb: [aperto][eno]                     | :fr: [aperto][fro]                     | :de: [aperto][deo]                     | :it: [aperto][ito]                     |
@@ -46,9 +39,9 @@ image: /assets/img/open-letter-gdpr-faq-coder.png
 [ito]: 2018-06-06-open-letter-call-for-a-collaborative-data-protection-faq-it.md
 [itp]: {{ '/assets/files/gdpr-faq/open-letter-gdpr-faq-it.pdf' | absolute_url }}
 
-<div style="text-align:right">
+
 Bruxelles, 6 giugno 2018
-</div>
+{:.text-right}
 
 
 **Cari professionisti della protezione dei dati e dell’IT,**

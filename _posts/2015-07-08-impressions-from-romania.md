@@ -12,6 +12,66 @@ keywords:
 lang: en
 published: true
 image: https://farm6.staticflickr.com/5470/18073336322_580ec52c6d_b.jpg
+geojson:
+  type: FeatureCollection
+  features:
+  - type: Feature
+    properties:
+      id: marker-cce9243961b3640abfd389f1c61fb56e
+      title: Bucharest
+      description: strolling through the city for a few days
+      marker-size: large
+      marker-color: "#CB4D51"
+      marker-symbol: lodging
+    geometry:
+      coordinates:
+      - 26.136474
+      - 44.469071
+      type: Point
+    id: cia3sr82r01dvj9krf40b3vyw
+  - type: Feature
+    properties:
+      id: marker-ia3tpnp20
+      title: Braşov
+      description: over-night stay, visiting schools and outskirts
+      marker-size: medium
+      marker-color: "#CB4D51"
+      marker-symbol: lodging
+    geometry:
+      coordinates:
+      - 25.607585
+      - 45.655448
+      type: Point
+    id: cia3u2bd400b8kwm9ls0dpusw
+  - type: Feature
+    properties:
+      id: marker-ia3txq1e1
+      title: Sinaia
+      description: one-day trip to visit city and a castle
+      marker-size: medium
+      marker-color: "#CB4D51"
+      marker-symbol: building
+    geometry:
+      coordinates:
+      - 25.540251
+      - 45.356518
+      type: Point
+    id: cia3u2bd600b9kwm9fyy1fghf
+  - type: Feature
+    properties:
+      id: marker-ia40lmym0
+      title: Castle Dracula
+      description: 'survived: check'
+      marker-size: medium
+      marker-color: "#CB4D51"
+      marker-symbol: danger
+    geometry:
+      coordinates:
+      - 25.370893
+      - 45.517444
+      type: Point
+    id: cia40o5rn02upigm4bbn7k4w4
+  id: rriemann.6480367d
 ---
 
 **Back in February 2015, I was overtaken by school holidays: My French
@@ -25,7 +85,7 @@ Why Romania? I used [Kayak Explore](http://www.kayak.de/explore/GVA/) to find ch
 
 <!--more-->
 
-{% gist 01e5ef43cc5402394a8b1f8a914a0779 %}
+{% mapbox width="100%" zoom="14" show_popup="true" %}
 
 ## Business as Usual
 

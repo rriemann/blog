@@ -4,17 +4,12 @@ title: "Check-In Guadeloupe"
 date: 2013-04-09 06:30
 comments: true
 categories: [travels]
+image: /assets/img/central-america/blue-sky-palm.jpg
+description: Die Sonne steht hier senkrecht über mir.
 tags: [central-america, german]
 lang: de
 layout: post
 ---
-
-<div class="thumbnail pull-right" markdown="0" style="width: 400px;">
-  <a href="/assets/img/central-america/blue-sky-palm.jpg">
-    <img src="/assets/img/central-america/blue-sky-palm.jpg" style="width:100%" />
-  </a>
-  <div class="caption">Die Sonne steht hier senkrecht über mir.</div>
-</div>
 
 ### Herzlich Willkommen!
 
@@ -75,6 +70,6 @@ Für einen ersten Eindruck muss das erstmal reichen!
 
 > Je ne veux pas travailler. – Ich will nicht arbeiten.
 
-{% include video id="ANVQScgIeag" provider="youtube" %}
+{% include audio id="track/4YgSlaIvdQfu8JU78x7MaZ" provider="spotify" %}
 
-*Pink Martini - Sympathique*
+Open song *Pink Martini - Sympathique* [on Youtube](https://youtu.be/ANVQScgIeag) or [on Spotify](https://open.spotify.com/track/4YgSlaIvdQfu8JU78x7MaZ?si=740df53ee7344d2e).

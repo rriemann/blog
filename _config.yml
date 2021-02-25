@@ -443,6 +443,9 @@ matomo_analytics:
 flickr:
   width_viewport: "(min-width: 90em) calc(48rem-2*1rem), (min-width: 54em) calc(42rem-1rem-1.5rem), (min-width: 40em) calc(38rem-1rem-1.5rem), calc(100vw-2rem)"
 
+maps:
+  mapbox:
+    access_token: pk.eyJ1IjoicnJpZW1hbm4iLCJhIjoiYWZlNzY2Y2ZlMTk4YTkyN2ZhY2YyNzIwOWI3ZDU2MGQifQ.527GES6dRvU6qArdTPgpGw
 
 # Jekyll Compose Defaults
 # ---------------------------------------------------------------------------------------

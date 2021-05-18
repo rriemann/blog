@@ -335,6 +335,8 @@ exclude:
 include:
   - .well-known
   - LICENSE.md
+  - _headers
+  - _redirects
 
 
 # Plugins
